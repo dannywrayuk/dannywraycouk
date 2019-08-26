@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
+import { Provider } from 'react-redux';
+import {Switch, Route, Redirect} from 'react-router-dom';
 import './App.css';
+import configureStore from '../../../store/configureStore';
+import rootReducer from '../../../state/rootReducer';
+import HomePage from '../../ecosystems/HomePage';
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const ROUTES = {
+  BASE: '/',
+  ERROR: '/error'
 }
+
+const store = configureStore(rootReducer);
+
+const App = () => (
+  <Provider store={store}>
+    <Fragment>
+      <Switch>
+        <Route
+          exact
+          path={ROUTES.BASE}
+          render={props => <HomePage {...props}/>}
+        />
+        <Redirect to={ROUTES.ERROR} />
+      </Switch>
+    </Fragment>
+  </Provider>
+);
 
 export default App;
