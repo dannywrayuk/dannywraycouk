@@ -1,7 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const HomePageMain = () => (
-  <p>hello</p>
+  <div>
+    <Helmet>
+      <title>Home | Danny Wray</title>
+    </Helmet>
+    <p>hello</p>
+  </div>
 );
 
 export default HomePageMain;
