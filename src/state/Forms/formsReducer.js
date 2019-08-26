@@ -1,9 +1,9 @@
-import { combineForms } from 'react-redux-form'
+import { combineForms } from 'react-redux-form';
 
 const exampleForm = {
-    exampleElement: ''
+  exampleElement: '',
 };
 
 export default combineForms({
-    exampleForm
+  exampleForm,
 }, 'forms');
