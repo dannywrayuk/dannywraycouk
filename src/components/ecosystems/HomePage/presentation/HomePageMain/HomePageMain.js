@@ -1,13 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from '../../../../_atoms/Head';
 
 const HomePageMain = () => (
-  <div>
-    <Helmet>
-      <title>Home | Danny Wray</title>
-    </Helmet>
-    <p>hello</p>
-  </div>
+  <Head title="howdy" />
 );
 
 export default HomePageMain;

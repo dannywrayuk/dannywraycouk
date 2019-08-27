@@ -1,7 +1,7 @@
 import actionTypes from './HomePageActionTypes';
 
 const initialState = {
-  stage: 'potato',
+  stage: 'MAIN',
 };
 
 const HomePageReducer = (state = initialState, action) => {
