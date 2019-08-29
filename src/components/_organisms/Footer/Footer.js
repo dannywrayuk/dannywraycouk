@@ -5,7 +5,7 @@ import style from './Footer.css';
 
 const Footer = () => (
   <div className={style.container}>
-    <p>{textStore.footer.copyright}</p>
+    <p className={style.text}>{textStore.footer.copyright}</p>
   </div>
 );
 
