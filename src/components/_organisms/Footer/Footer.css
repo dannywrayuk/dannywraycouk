@@ -1,0 +1,8 @@
+@import '../../../css/colors.css';
+
+.container {
+    background-color: var(--MainYellow);
+    width: 100%;
+    text-align: center;
+}
+

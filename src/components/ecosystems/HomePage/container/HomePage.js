@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import appConstants from '../../../../utilities/AppConstants';
 import HomePageMain from '../presentation/HomePageMain';
 
+
 const HomePage = (props) => {
   const { stage } = props;
   const { STAGES } = appConstants.HomePage;
