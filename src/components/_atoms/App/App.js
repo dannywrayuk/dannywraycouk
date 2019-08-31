@@ -5,13 +5,13 @@ import style from './App.css';
 
 const App = ({ header, content, footer }) => (
   <section className={style.App}>
-    <section className="header">
+    <section>
       {header}
     </section>
-    <section className={style.content}>
+    <div className={style.content}>
       {content}
-    </section>
-    <section className="footer">
+    </div>
+    <section>
       {footer}
     </section>
   </section>
