@@ -6,5 +6,8 @@ const SharedContent = {
   footer: {
     copyright: '© Danny Wray 2019',
   },
+  HomePageMain: {
+    Title: 'this is the main homepage',
+  },
 };
 export default SharedContent;
