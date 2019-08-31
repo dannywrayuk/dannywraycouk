@@ -1,15 +1,17 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+import style from './App.css';
+
 const App = ({ header, content, footer }) => (
-  <section id="app">
-    <section id="header">
+  <section className={style.App}>
+    <section>
       {header}
     </section>
-    <section id="content">
+    <div className={style.content}>
       {content}
-    </section>
-    <section id="footer">
+    </div>
+    <section>
       {footer}
     </section>
   </section>

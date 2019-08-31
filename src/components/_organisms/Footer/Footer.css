@@ -1,0 +1,13 @@
+@import '../../../css/colors.css';
+@import '../../../css/spacing.css';
+
+.container {
+    background-color: var(--MainYellow);
+    width: 100%;
+    text-align: center;
+}
+
+.text{
+    padding: var(--ySpaceSmall) 0 var(--ySpaceMedium) 0;
+}
+
