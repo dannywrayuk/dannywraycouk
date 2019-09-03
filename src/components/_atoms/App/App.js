@@ -18,9 +18,9 @@ const App = ({ header, content, footer }) => (
 );
 
 App.propTypes = {
-  header: propTypes.func.isRequired,
-  content: propTypes.func.isRequired,
-  footer: propTypes.func.isRequired,
+  header: propTypes.element.isRequired,
+  content: propTypes.element.isRequired,
+  footer: propTypes.element.isRequired,
 };
 
 

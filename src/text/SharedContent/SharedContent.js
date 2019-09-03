@@ -8,6 +8,9 @@ const SharedContent = {
   },
   HomePageMain: {
     Title: 'this is the main homepage',
+    Header: {
+      Link: 'some link',
+    },
   },
 };
 export default SharedContent;
