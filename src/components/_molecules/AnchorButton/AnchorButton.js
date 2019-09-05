@@ -5,10 +5,12 @@ import AbstractElement from '../../_atoms/AbstractElement';
 
 const AnchorButton = ({
   children,
+  to,
   ...props
 }) => (
   <AbstractElement
     as="a"
+    href={to}
     {...props}
   >
     {children}

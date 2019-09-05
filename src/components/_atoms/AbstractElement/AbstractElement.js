@@ -13,9 +13,6 @@ const AbstractElement = ({
   ...props
 }) => {
   const style = mergeStyles(baseStyle, modifierStyles);
-  console.log(baseStyle);
-  console.log(modifierStyles);
-  console.log(style);
   return (
     <ElementType
       className={resolveCSS(style, cssType)}

@@ -1,0 +1,24 @@
+.container{
+    height: 30px;
+    display: inline-flex;
+}
+.icon{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 30px;
+    background-color: var(--MainYellow);
+    color: white;
+    font-size: 2rem;
+}
+.url{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: gray;
+}

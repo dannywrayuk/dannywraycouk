@@ -9,7 +9,11 @@ const SharedContent = {
   HomePageMain: {
     Title: 'this is the main homepage',
     Header: {
-      Link: 'some link',
+      HomeLink: 'Home',
+      BlogLink: 'Blog',
+      PhysicsLink: 'Physics',
+      ProjectLink: 'Projects',
+      MoreLink: 'More',
     },
   },
 };

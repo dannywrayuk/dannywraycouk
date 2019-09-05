@@ -1,26 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withText } from '../../../text/textStore';
-import LinkButton from '../../_molecules/LinkButton';
+import Logo from '../../_atoms/Logo';
 
 import style from './Header.css';
 
-const Header = ({ Text }) => (
-  <div className={style.div}>
-    <p className={style.text}>D</p>
-    <LinkButton
-      to="banter"
-      modifierStyles={{
-        root: style.xxx,
-      }}
-    >
-      <Text path="Link" />
-    </LinkButton>
+const Header = () => (
+  <div className={style.bar}>
+    <div className={style.logo}>
+      <Logo />
+    </div>
+    {/* <div className={style.controls}>
+      <div className={style.navitems}>
+        <div>navitems</div>
+      </div>
+      <div className={style.search}>
+        <div>search</div>
+      </div>
+    </div> */}
   </div>
 );
 
-Header.propTypes = {
-  Text: PropTypes.func.isRequired,
-};
-
-export default withText('HomePageMain.Header')(Header);
+export default Header;

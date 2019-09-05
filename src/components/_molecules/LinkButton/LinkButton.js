@@ -17,15 +17,11 @@ const LinkButton = ({
 );
 
 LinkButton.propTypes = {
-  to: PropType.string,
   children: PropType.node,
-  style: PropType.shape({}),
 };
 
 LinkButton.defaultProps = {
-  to: null,
   children: null,
-  style: null,
 };
 
 export default LinkButton;

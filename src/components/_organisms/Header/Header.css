@@ -1,16 +1,17 @@
+@import '../../../css/colors.css';
+@import '../../../css/spacing.css';
 
-.div{
-    background-image: linear-gradient(270deg, #e09406 0%, #eca219 51%, #FFCA1E 100%);
-    height: 80px;
+.bar{
+    position: fixed;
+    width: 100%;
+    top:0;
+    background-color: white;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
+
+    height: var(--ySpaceHeader);
 }
-
-.text{
-    font-size: 4rem;
-    color: white;
-    margin: 0 0 0 15px;
-    float:left;
-}
-
-.xxx {
-    background-color: #e09406;
+.logo{
+    height: 100%;
+    padding: 9px 10px 10px 9px;
 }
