@@ -1,0 +1,38 @@
+.box{
+    display: flex;
+    background-color: #d3d3d3;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.imageContainer{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 5px; 
+}
+
+.image{
+    display: inline-flex;
+    height: 20px;
+    fill: #494949
+}
+
+.input{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .box{
+        min-width: 200px;
+    }
+    .input{
+        display: inline-flex;
+    }
+}

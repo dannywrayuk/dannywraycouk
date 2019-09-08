@@ -1,12 +1,17 @@
 import React from 'react';
-import textStore from '../../../text/SharedContent';
+import PropTypes from 'prop-types';
+import { withText } from '../../../text/textStore';
 
 import style from './Footer.css';
 
-const Footer = () => (
+const Footer = ({ Text }) => (
   <div className={style.container}>
-    <p className={style.text}>{textStore.footer.copyright}</p>
+    <Text path="copyright" />
   </div>
 );
 
-export default Footer;
+Footer.propTypes = {
+  Text: PropTypes.func.isRequired,
+};
+
+export default withText('Footer')(Footer);

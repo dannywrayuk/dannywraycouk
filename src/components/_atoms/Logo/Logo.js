@@ -1,11 +1,18 @@
 import React from 'react';
-import style from './Logo.css';
+import PropTypes from 'prop-types';
+import image from '../../../images/svg/logoicon.svg';
 
-const Logo = () => (
-  <div className={style.container}>
-    <div className={style.icon}>D</div>
-    <div className={style.url}>dannywray</div>
-  </div>
+
+const Logo = ({ className }) => (
+  <img src={image} alt="" className={className} />
 );
+
+Logo.propTypes = {
+  className: PropTypes.string,
+};
+
+Logo.defaultProps = {
+  className: '',
+};
 
 export default Logo;

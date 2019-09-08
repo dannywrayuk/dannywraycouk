@@ -6,12 +6,8 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     height: 100%;
-    width: 30px;
-    background-color: var(--MainYellow);
-    color: white;
-    font-size: 2rem;
+    width: 20px;
 }
 .url{
     display: inline-flex;
@@ -19,6 +15,8 @@
     justify-content: center;
     height: 100%;
     margin-left: 10px;
-    font-size: 1.5rem;
-    color: gray;
+    font-size: 1.35rem;
+    letter-spacing: -1px;
+    color: #727272;
+    white-space: nowrap;
 }

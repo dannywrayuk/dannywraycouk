@@ -8,11 +8,9 @@ import textContent from '../../../text/SharedContent';
 import { TextStore } from '../../../text/textStore';
 import template from '../../../text/Store/template';
 import jsx from '../../../text/Store/jsx';
+import AppConstants from '../../../utilities/AppConstants';
 
-const ROUTES = {
-  BASE: '/',
-  ERROR: '/error',
-};
+const ROUTES = AppConstants.ROUTES.HOMEPAGE;
 
 const store = configureStore(rootReducer);
 

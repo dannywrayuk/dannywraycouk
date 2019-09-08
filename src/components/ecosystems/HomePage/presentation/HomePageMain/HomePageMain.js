@@ -4,15 +4,12 @@ import Head from '../../../../_atoms/Head';
 import { withText } from '../../../../../text/textStore';
 
 
-const HomePageMain = ({ Text }) => (
-  <>
-    <Head title="howdy" />
-    <Text path="Title" />
-  </>
+const HomePageMain = ({ Text: text }) => (
+  <Head title={text({ path: 'defaultTitle' })} />
 );
 
 HomePageMain.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('HomePageMain')(HomePageMain);
+export default withText('Meta')(HomePageMain);
