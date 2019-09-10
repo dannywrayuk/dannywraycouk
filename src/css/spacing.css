@@ -3,5 +3,7 @@
     --ySpaceMedium: 60px;
     --ySpaceLarge: 100px;
     --ySpaceHeader: 48px;
-    /* --xSpace: */
+
+    --mobileBreakpoint:600px;
+    --desktopBreakpoint:992;
 }

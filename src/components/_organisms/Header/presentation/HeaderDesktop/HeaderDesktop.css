@@ -1,5 +1,5 @@
-@import '../../../css/colors.css';
-@import '../../../css/spacing.css';
+@import '../../../../../css/colors.css';
+@import '../../../../../css/spacing.css';
 
 .bar{
     display: flex;

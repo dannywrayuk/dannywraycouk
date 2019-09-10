@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withText } from '../../../text/textStore';
-import LogoWithText from '../../_atoms/LogoWithText';
-import LinkButton from '../../_molecules/LinkButton';
-import SearchBox from '../../_molecules/SearchBox';
+import { withText } from '../../../../../text/textStore';
+import LogoWithText from '../../../../_atoms/LogoWithText';
+import LinkButton from '../../../../_molecules/LinkButton';
+import SearchBox from '../../../../_molecules/SearchBox';
 
-import style from './Header.css';
-import AppConstants from '../../../utilities/AppConstants';
+import style from './HeaderDesktop.css';
+import AppConstants from '../../../../../utilities/AppConstants';
 
 const links = AppConstants.ROUTES.HOMEPAGE;
 

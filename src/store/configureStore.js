@@ -7,7 +7,7 @@ const midldlewareConfig = () => {
   const config = [
     applyMiddleware(thunkMiddleware, callAPIMiddleware),
   ];
-  if (process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION__()) {
+  if (process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION__) {
     config.push(window.__REDUX_DEVTOOLS_EXTENSION__());
   }
   return config;

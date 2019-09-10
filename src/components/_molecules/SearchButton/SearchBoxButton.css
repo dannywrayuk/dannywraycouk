@@ -1,3 +1,11 @@
+
+.hidebox{
+    display: flex;
+    background-color: #d3d3d3;
+    height: 30px;
+    border-radius: 5px;
+}
+
 .box{
     display: flex;
     background-color: #d3d3d3;
@@ -18,6 +26,20 @@
     fill: #494949
 }
 
+.hideinput {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 5px;
+
+    max-width: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
 .input{
     display: inline-flex;
     flex-direction: column;
@@ -25,4 +47,7 @@
     background-color: #d3d3d3;
     border: none;
     border-radius: 5px;
+
+    max-width: 800px;
+    transition: 1s;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { BreakpointProvider } from 'react-socks';
 import configureStore from '../../../store/configureStore';
 import rootReducer from '../../../state/rootReducer';
 import HomePage from '../../ecosystems/HomePage';
@@ -22,16 +23,18 @@ const App = () => (
     }}
     value={textContent}
   >
-    <Provider store={store}>
-      <Switch>
-        <Route
-          exact
-          path={ROUTES.BASE}
-          render={props => <HomePage {...props} />}
-        />
-        <Redirect to={ROUTES.ERROR} />
-      </Switch>
-    </Provider>
+    <BreakpointProvider>
+      <Provider store={store}>
+        <Switch>
+          <Route
+            exact
+            path={ROUTES.BASE}
+            render={props => <HomePage {...props} />}
+          />
+          <Redirect to={ROUTES.ERROR} />
+        </Switch>
+      </Provider>
+    </BreakpointProvider>
   </TextStore>
 );
 
