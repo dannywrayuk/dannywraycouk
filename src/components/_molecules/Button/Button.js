@@ -7,10 +7,10 @@ import baseStyle from './Button.css';
 
 const Button = ({
   children,
-  modifierStyles,
+  className,
   ...props
 }) => {
-  const style = mergeStyles(baseStyle, modifierStyles);
+  const style = mergeStyles(baseStyle, { root: className });
   return (
     <AbstractElement
       modifierStyles={style}
@@ -24,12 +24,12 @@ const Button = ({
 
 Button.propTypes = {
   children: PropType.node,
-  modifierStyles: PropType.PropTypes.shape({}),
+  className: PropType.PropTypes.shape({}),
 };
 
 Button.defaultProps = {
   children: null,
-  modifierStyles: null,
+  className: null,
 };
 
 export default Button;
