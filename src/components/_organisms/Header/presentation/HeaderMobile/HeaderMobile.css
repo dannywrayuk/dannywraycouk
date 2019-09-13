@@ -33,7 +33,7 @@
 .logoContainer{
     display: inline-flex;
     overflow: hidden;
-    max-width: 100vw;
+    max-width: 90vw;
     flex-grow: 1;
     transition: 1s;
 }
@@ -42,6 +42,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .searchFill{
     display: inline-flex;
     padding-right: 10px;

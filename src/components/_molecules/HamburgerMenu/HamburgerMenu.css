@@ -1,0 +1,67 @@
+.menu {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Button {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 2;
+    margin: 0px 10px 0px auto;
+    padding-left: 10px;
+    transition: 1s;
+}
+
+.ButtonClicked {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 2;
+    margin: 0px 10px 0px auto;
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+.link{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 20px;
+    color: #686868;
+    font-size: 1rem;
+    letter-spacing: -1px;
+    border-top-color: white;
+}
+
+.menuContainer{
+    display: inline-flex;
+    max-width: 0px;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.menuFill{
+    display: inline-flex;
+    max-width: calc(100vw - 90px);
+    transition: 0.5s;
+}
+@media screen and (max-width: 390px) {
+    .menuFill{
+            overflow: scroll;
+        }
+  }
+
+.extender{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 2;
+    margin-left:auto;
+    height: 100%;
+}

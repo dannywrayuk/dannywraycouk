@@ -6,9 +6,9 @@ import Button from '../Button';
 import { ReactComponent as SearchIcon } from '../../../images/svg/search.svg';
 import { ReactComponent as CloseIcon } from '../../../images/svg/close.svg';
 
-import style from './SearchBoxButton.css';
+import style from './SearchButton.css';
 
-const SearchBoxMobile = ({
+const SearchButton = ({
   Text: text,
   onSearchClick,
   onCloseClick,
@@ -41,11 +41,11 @@ const SearchBoxMobile = ({
   </div>
 );
 
-SearchBoxMobile.propTypes = {
+SearchButton.propTypes = {
   Text: PropTypes.func.isRequired,
   onSearchClick: PropTypes.func.isRequired,
   onCloseClick: PropTypes.func.isRequired,
   isExtended: PropTypes.bool.isRequired,
 };
 
-export default withText('Search')(SearchBoxMobile);
+export default withText('Search')(SearchButton);

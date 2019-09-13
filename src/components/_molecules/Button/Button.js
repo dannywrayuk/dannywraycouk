@@ -1,5 +1,5 @@
 import React from 'react';
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import AbstractElement from '../../_atoms/AbstractElement';
 import mergeStyles from '../../../utilities/css/mergeStyles';
 
@@ -23,8 +23,8 @@ const Button = ({
 };
 
 Button.propTypes = {
-  children: PropType.node,
-  className: PropType.PropTypes.shape({}),
+  children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {

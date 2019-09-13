@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
+import Button from '../../_molecules/Button';
 
 import { ReactComponent as Hamburger } from '../../../images/svg/hamburger.svg';
 import style from './HamburgerButton.css';
