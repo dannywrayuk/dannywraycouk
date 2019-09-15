@@ -19,8 +19,8 @@ MorePage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ MorePageReducer }) => ({
-  stage: MorePageReducer.stage,
+const mapStateToProps = ({ CoreStage }) => ({
+  stage: CoreStage.MorePage,
 });
 
 export default connect(mapStateToProps)(MorePage);

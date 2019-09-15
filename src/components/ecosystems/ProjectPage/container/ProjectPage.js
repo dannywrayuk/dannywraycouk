@@ -19,8 +19,8 @@ ProjectPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ ProjectPageReducer }) => ({
-  stage: ProjectPageReducer.stage,
+const mapStateToProps = ({ CoreStage }) => ({
+  stage: CoreStage.ProjectPage,
 });
 
 export default connect(mapStateToProps)(ProjectPage);

@@ -1,10 +1,14 @@
-import actionTypes from './HomePageActionTypes';
+import actionTypes from './CoreStageActionTypes';
 
 const initialState = {
-  stage: 'MAIN',
+  HomePage: 'MAIN',
+  BlogPage: 'MAIN',
+  PhysicsPage: 'MAIN',
+  ProjectPage: 'MAIN',
+  MorePage: 'MAIN',
 };
 
-const HomePageReducer = (state = initialState, action) => {
+const CoreStageReducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.EXAMPLE_REQUEST: {
       return {
@@ -19,7 +23,7 @@ const HomePageReducer = (state = initialState, action) => {
     case actionTypes.EXAMPLE_SUCCESS: {
       return {
         ...state,
-        stage: action.data,
+        ...action.data,
       };
     }
     default:
@@ -27,4 +31,4 @@ const HomePageReducer = (state = initialState, action) => {
   }
 };
 
-export default HomePageReducer;
+export default CoreStageReducer;

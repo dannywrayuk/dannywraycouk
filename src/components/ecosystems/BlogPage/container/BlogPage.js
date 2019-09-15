@@ -19,8 +19,8 @@ BlogPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ BlogPageReducer }) => ({
-  stage: BlogPageReducer.stage,
+const mapStateToProps = ({ CoreStage }) => ({
+  stage: CoreStage.BlogPage,
 });
 
 export default connect(mapStateToProps)(BlogPage);

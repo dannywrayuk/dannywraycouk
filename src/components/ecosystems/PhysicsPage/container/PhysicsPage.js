@@ -19,8 +19,8 @@ PhysicsPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ PhysicsPageReducer }) => ({
-  stage: PhysicsPageReducer.stage,
+const mapStateToProps = ({ CoreStage }) => ({
+  stage: CoreStage.PhysicsPage,
 });
 
 export default connect(mapStateToProps)(PhysicsPage);

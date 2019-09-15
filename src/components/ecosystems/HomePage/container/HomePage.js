@@ -19,8 +19,8 @@ HomePage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ HomePageReducer }) => ({
-  stage: HomePageReducer.stage,
+const mapStateToProps = ({ CoreStage }) => ({
+  stage: CoreStage.HomePage,
 });
 
 export default connect(mapStateToProps)(HomePage);
