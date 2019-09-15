@@ -1,7 +1,7 @@
 import actionTypes from './HomePageActionTypes';
 
-export const homePage = data => async (dispatch) => {
-  dispatch({ type: actionTypes.EXAMPLE_REQUEST });
+export const HomePage = data => async (dispatch) => {
+  dispatch({ type: actionTypes.EXAMPLE_REQUEST, data });
 };
 
-export default { homePage };
+export default { HomePage };

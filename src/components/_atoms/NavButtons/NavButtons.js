@@ -7,12 +7,12 @@ import { withText } from '../../../text/textStore';
 
 import style from './NavButtons.css';
 
-const links = AppConstants.ROUTES.HOMEPAGE;
+const { ROUTES } = AppConstants;
 
 const NavButtons = ({ Text }) => (
   <>
     <LinkButton
-      to={links.BLOG}
+      to={ROUTES.BLOG}
       modifierStyles={{
         root: style.link,
       }}
@@ -20,7 +20,7 @@ const NavButtons = ({ Text }) => (
       <Text path="BlogLink" />
     </LinkButton>
     <LinkButton
-      to={links.PHYSICS}
+      to={ROUTES.PHYSICS}
       modifierStyles={{
         root: style.link,
       }}
@@ -28,7 +28,7 @@ const NavButtons = ({ Text }) => (
       <Text path="PhysicsLink" />
     </LinkButton>
     <LinkButton
-      to={links.PROJECTS}
+      to={ROUTES.PROJECTS}
       modifierStyles={{
         root: style.link,
       }}
@@ -36,7 +36,7 @@ const NavButtons = ({ Text }) => (
       <Text path="ProjectLink" />
     </LinkButton>
     <LinkButton
-      to={links.MORE}
+      to={ROUTES.MORE}
       modifierStyles={{
         root: style.link,
       }}

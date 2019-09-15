@@ -9,7 +9,7 @@ import AppConstants from '../../../../../utilities/AppConstants';
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderMobile.css';
 
-const links = AppConstants.ROUTES.HOMEPAGE;
+const { ROUTES } = AppConstants;
 
 const HeaderMobile = () => {
   const [searchExtended, setSearchExtended] = useState(false);
@@ -39,7 +39,7 @@ const HeaderMobile = () => {
       </div>
       <div className={(searchExtended || menuExtended) ? style.logoHide : style.logoContainer}>
         <div className={style.alignLogo}>
-          <LinkButton to={links.BASE}>
+          <LinkButton to={ROUTES.BASE}>
             <Logo />
           </LinkButton>
         </div>

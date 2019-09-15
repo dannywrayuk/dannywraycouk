@@ -10,12 +10,12 @@ import AppConstants from '../../../../../utilities/AppConstants';
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderDesktop.css';
 
-const links = AppConstants.ROUTES.HOMEPAGE;
+const { ROUTES } = AppConstants;
 
 const HeaderDesktop = ({ Tablet }) => (
   <div className={sharedStyle.bar}>
     <div className={style.logo}>
-      <LinkButton to={links.BASE}>
+      <LinkButton to={ROUTES.BASE}>
         <Logo showText={!Tablet} />
       </LinkButton>
     </div>
