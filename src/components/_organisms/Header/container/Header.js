@@ -5,8 +5,11 @@ import HeaderMobile from '../presentation/HeaderMobile';
 
 const Header = () => (
   <>
-    <Breakpoint medium up>
+    <Breakpoint large up>
       <HeaderDesktop />
+    </Breakpoint>
+    <Breakpoint medium only>
+      <HeaderDesktop Tablet />
     </Breakpoint>
     <Breakpoint small down>
       <HeaderMobile />

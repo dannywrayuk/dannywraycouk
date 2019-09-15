@@ -1,55 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withText } from '../../../../../text/textStore';
-import LogoWithText from '../../../../_atoms/LogoWithText';
-import LinkButton from '../../../../_molecules/LinkButton';
+import Logo from '../../../../_atoms/Logo';
 import SearchBox from '../../../../_molecules/SearchBox';
-
-import style from './HeaderDesktop.css';
+import NavButtons from '../../../../_atoms/NavButtons';
+import LinkButton from '../../../../_molecules/LinkButton';
 import AppConstants from '../../../../../utilities/AppConstants';
+
+
+import sharedStyle from '../../container/Header.css';
+import style from './HeaderDesktop.css';
 
 const links = AppConstants.ROUTES.HOMEPAGE;
 
-const Header = ({ Text }) => (
-  <div className={style.bar}>
+const HeaderDesktop = ({ Tablet }) => (
+  <div className={sharedStyle.bar}>
     <div className={style.logo}>
-      <LogoWithText />
+      <LinkButton to={links.BASE}>
+        <Logo showText={!Tablet} />
+      </LinkButton>
     </div>
     <div className={style.controls}>
-      <div className={style.navitems}>
-        <LinkButton
-          to={links.BLOG}
-          modifierStyles={{
-            root: style.link,
-          }}
-        >
-          <Text path="BlogLink" />
-        </LinkButton>
-        <LinkButton
-          to={links.PHYSICS}
-          modifierStyles={{
-            root: style.link,
-          }}
-        >
-          <Text path="PhysicsLink" />
-        </LinkButton>
-        <LinkButton
-          to={links.PROJECTS}
-          modifierStyles={{
-            root: style.link,
-          }}
-        >
-          <Text path="ProjectLink" />
-        </LinkButton>
-        <LinkButton
-          to={links.MORE}
-          modifierStyles={{
-            root: style.link,
-          }}
-        >
-          <Text path="MoreLink" />
-        </LinkButton>
-      </div>
+      <NavButtons />
       <div className={style.search}>
         <SearchBox />
       </div>
@@ -57,8 +28,12 @@ const Header = ({ Text }) => (
   </div>
 );
 
-Header.propTypes = {
-  Text: PropTypes.func.isRequired,
+HeaderDesktop.propTypes = {
+  Tablet: PropTypes.bool,
 };
 
-export default withText('HomePageMain.Header')(Header);
+HeaderDesktop.defaultProps = {
+  Tablet: false,
+};
+
+export default HeaderDesktop;

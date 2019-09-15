@@ -27,14 +27,14 @@
     flex-direction: column;
     justify-content: center;
     width:100%;
-    transition: 1s;
+    transition: 0.5s;
 }
 .inputHide{
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     width:100%;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0;
     visibility: hidden;
 }
@@ -50,14 +50,14 @@
     max-width: 10px;
     fill: #494949;
     margin: 0px 5px;
-    transition: 1s;
+    transition: 0.5s;
 }
 .closeHide{
     display: inline-flex;
     height: 10px;
     fill: #494949;
     max-width:0px;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0;
 }
 

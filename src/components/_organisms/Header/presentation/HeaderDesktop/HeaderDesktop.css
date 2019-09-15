@@ -1,17 +1,3 @@
-@import '../../../../../css/colors.css';
-@import '../../../../../css/spacing.css';
-
-.bar{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    top:0;
-    background-color: white;
-    -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);
-
-    height: var(--ySpaceHeader);
-}
 .logo{
     margin: 0px 40px 0px 25px;
     display: inline-flex;
@@ -24,10 +10,6 @@
     flex-grow: 1;
 }
 
-.navitems{
-    display: flex;
-}
-
 .search{
     display: inline-flex;
     flex-direction: column;
@@ -35,22 +17,4 @@
     margin-left: auto;
     margin-right: 20px;
     order: 2;
-}
-
-.link{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 20px;
-    color: #686868;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    border-top-color: white;
-}
-
-.link:hover{
-    border: solid;
-    border-width: 3px 0px;
-    border-top-color: white;
 }

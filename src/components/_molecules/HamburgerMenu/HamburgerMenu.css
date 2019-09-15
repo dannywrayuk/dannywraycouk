@@ -11,7 +11,7 @@
     order: 2;
     margin: 0px 10px 0px auto;
     padding-left: 10px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .ButtonClicked {
@@ -21,19 +21,7 @@
     order: 2;
     margin: 0px 10px 0px auto;
     transform: rotate(90deg);
-    transition: 1s;
-}
-
-.link{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    text-decoration: none;
-    padding: 0 20px;
-    color: #686868;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    border-top-color: white;
+    transition: 0.5s;
 }
 
 .menuContainer{
@@ -51,7 +39,7 @@
     max-width: calc(100vw - 90px);
     transition: 0.5s;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 325 px) {
     .menuFill{
             overflow: scroll;
         }

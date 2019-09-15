@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { withText } from '../../../../../text/textStore';
-import LogoWithText from '../../../../_atoms/LogoWithText';
+import Logo from '../../../../_atoms/Logo';
 import SearchButton from '../../../../_molecules/SearchButton';
 import HamburgerMenu from '../../../../_molecules/HamburgerMenu';
+import LinkButton from '../../../../_molecules/LinkButton';
+import AppConstants from '../../../../../utilities/AppConstants';
 
+import sharedStyle from '../../container/Header.css';
 import style from './HeaderMobile.css';
 
+const links = AppConstants.ROUTES.HOMEPAGE;
 
-const Header = () => {
+const HeaderMobile = () => {
   const [searchExtended, setSearchExtended] = useState(false);
   const [menuExtended, setMenuExtended] = useState(false);
 
@@ -26,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <div className={style.bar}>
+    <div className={sharedStyle.bar}>
       <div className={menuExtended ? style.menuFill : style.menuContainer}>
         <HamburgerMenu
           onClick={hamburgerClick}
@@ -35,7 +39,9 @@ const Header = () => {
       </div>
       <div className={(searchExtended || menuExtended) ? style.logoHide : style.logoContainer}>
         <div className={style.alignLogo}>
-          <LogoWithText />
+          <LinkButton to={links.BASE}>
+            <Logo />
+          </LinkButton>
         </div>
       </div>
       <div className={searchExtended ? style.searchFill : style.searchContainer}>
@@ -50,4 +56,4 @@ const Header = () => {
 };
 
 
-export default withText('HomePageMain.Header')(Header);
+export default withText('HomePageMain.Header')(HeaderMobile);
