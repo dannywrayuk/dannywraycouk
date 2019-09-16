@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+
 import callAPIMiddleware from './callAPIMiddleware';
 
 const midldlewareConfig = () => {

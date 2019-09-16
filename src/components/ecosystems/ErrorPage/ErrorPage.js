@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { withText } from '../../../text/textStore';
+import React from 'react';
+
 import Head from '../../_atoms/Head';
+import { withText } from '../../../text/textStore';
 
 const ErrorPage = ({ Text: text }) => (
   <>

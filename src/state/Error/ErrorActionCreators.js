@@ -1,4 +1,5 @@
 import HttpStatus from 'http-status-codes';
+
 import actionTypes from './ErrorActionTypes';
 
 export const raiseTechnicalError = () => ({

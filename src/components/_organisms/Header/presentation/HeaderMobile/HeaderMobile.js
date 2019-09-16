@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { withText } from '../../../../../text/textStore';
+
 import Logo from '../../../../_atoms/Logo';
-import SearchButton from '../../../../_molecules/SearchButton';
 import HamburgerMenu from '../../../../_molecules/HamburgerMenu';
 import LinkButton from '../../../../_molecules/LinkButton';
+import SearchButton from '../../../../_molecules/SearchButton';
+import { withText } from '../../../../../text/textStore';
 import AppConstants from '../../../../../utilities/AppConstants';
-
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderMobile.css';
 

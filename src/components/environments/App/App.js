@@ -1,23 +1,24 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { BreakpointProvider } from 'react-socks';
-import configureStore from '../../../store/configureStore';
+
+import AppBase from '../../_atoms/App';
+import Footer from '../../_organisms/Footer';
+import Header from '../../_organisms/Header';
 import rootReducer from '../../../state/rootReducer';
-import HomePage from '../../ecosystems/HomePage';
+import configureStore from '../../../store/configureStore';
+import textContent from '../../../text/SharedContent';
+import jsx from '../../../text/Store/jsx';
+import template from '../../../text/Store/template';
+import { TextStore } from '../../../text/textStore';
+import AppConstants from '../../../utilities/AppConstants';
 import BlogPage from '../../ecosystems/BlogPage';
+import ErrorPage from '../../ecosystems/ErrorPage';
+import HomePage from '../../ecosystems/HomePage';
+import MorePage from '../../ecosystems/MorePage';
 import PhysicsPage from '../../ecosystems/PhysicsPage';
 import ProjectPage from '../../ecosystems/ProjectPage';
-import MorePage from '../../ecosystems/MorePage';
-import ErrorPage from '../../ecosystems/ErrorPage';
-import textContent from '../../../text/SharedContent';
-import { TextStore } from '../../../text/textStore';
-import template from '../../../text/Store/template';
-import jsx from '../../../text/Store/jsx';
-import AppConstants from '../../../utilities/AppConstants';
-import AppBase from '../../_atoms/App';
-import Header from '../../_organisms/Header';
-import Footer from '../../_organisms/Footer';
 
 const { ROUTES } = AppConstants;
 

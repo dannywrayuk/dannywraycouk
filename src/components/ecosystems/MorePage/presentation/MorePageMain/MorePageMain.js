@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import Head from '../../../../_atoms/Head';
 import { withText } from '../../../../../text/textStore';
 

@@ -1,11 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import { ReactComponent as CloseIcon } from '../../../images/svg/close.svg';
+import { ReactComponent as SearchIcon } from '../../../images/svg/search.svg';
 import { withText } from '../../../text/textStore';
 import Button from '../Button';
-
-import { ReactComponent as SearchIcon } from '../../../images/svg/search.svg';
-import { ReactComponent as CloseIcon } from '../../../images/svg/close.svg';
-
 import style from './SearchButton.css';
 
 const SearchButton = ({

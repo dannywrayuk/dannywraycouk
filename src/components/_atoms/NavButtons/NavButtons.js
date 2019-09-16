@@ -1,10 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import LinkButton from '../../_molecules/LinkButton';
-import AppConstants from '../../../utilities/AppConstants';
 import { withText } from '../../../text/textStore';
-
+import AppConstants from '../../../utilities/AppConstants';
 import style from './NavButtons.css';
 
 const { ROUTES } = AppConstants;

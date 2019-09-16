@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import HamburgerButton from '../../_atoms/HamburgerButton';
 import NavButtons from '../../_atoms/NavButtons';
-
 import style from './HamburgerMenu.css';
 
 const HamburgerMenu = ({ onClick, isExtended }) => (

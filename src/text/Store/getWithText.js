@@ -1,5 +1,6 @@
-import React, { forwardRef } from 'react';
 import hoistNonReactStatics from 'hoist-non-react-statics';
+import React, { forwardRef } from 'react';
+
 import getText from './getText';
 
 export default ({ Consumer, hocs }) => (basePath = '') => (OriginalComponent) => {

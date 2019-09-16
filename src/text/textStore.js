@@ -1,7 +1,7 @@
 import createStore from './Store/createStore';
+import withJsx from './Store/withJsx';
 import withMarkdown from './Store/withMarkdown';
 import withTemplate from './Store/withTemplate';
-import withJsx from './Store/withJsx';
 
 const {
   Text,

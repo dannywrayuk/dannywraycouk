@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { withText } from '../../../text/textStore';
+import React from 'react';
 
 import image from '../../../images/svg/logoicon.svg';
+import { withText } from '../../../text/textStore';
 import style from './Logo.css';
 
 const Logo = ({ Text, showText }) => (

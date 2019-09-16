@@ -1,6 +1,7 @@
-import React from 'react';
 import propTypes from 'prop-types';
+import React from 'react';
 import { Helmet } from 'react-helmet';
+
 import TextStore from '../../../text/SharedContent';
 import AppConstants from '../../../utilities/AppConstants';
 

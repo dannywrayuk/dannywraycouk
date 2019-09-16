@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import mergeStyles from '../../../utilities/css/mergeStyles';
 import baseStyle from './AbstractElement.css';
 

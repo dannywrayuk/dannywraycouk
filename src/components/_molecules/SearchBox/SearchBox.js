@@ -1,8 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { withText } from '../../../text/textStore';
+import React from 'react';
 
 import { ReactComponent as SvgImage } from '../../../images/svg/search.svg';
+import { withText } from '../../../text/textStore';
 import style from './SearchBox.css';
 
 const SearchBox = ({ Text: text }) => (
