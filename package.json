@@ -2,6 +2,19 @@
   "name": "dannywraycouk",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "serve": "serve -s build",
+    "prod": "npm run build & npm run serve",
+    "lint": "eslint \"src/**/*.js\" --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && git add ."
+    }
+  },
   "dependencies": {
     "@babel/core": "7.5.5",
     "@svgr/webpack": "4.3.2",
@@ -64,19 +77,6 @@
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "4.3.1"
-  },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "serve": "serve -s build",
-    "prod": "npm run build & npm run serve",
-    "lint": "eslint \"src/**/*.js\" --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && git add ."
-    }
   },
   "eslintConfig": {
     "extends": "react-app"
