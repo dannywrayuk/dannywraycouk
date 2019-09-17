@@ -18,5 +18,7 @@
     font-size: 1.35rem;
     letter-spacing: -1px;
     color: #727272;
+    text-decoration: none;
+    text-decoration-color: chartreuse;
     white-space: nowrap;
 }

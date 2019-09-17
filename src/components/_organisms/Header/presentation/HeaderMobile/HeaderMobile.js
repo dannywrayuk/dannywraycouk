@@ -40,7 +40,7 @@ const HeaderMobile = () => {
       <div className={(searchExtended || menuExtended) ? style.logoHide : style.logoContainer}>
         <div className={style.alignLogo}>
           <LinkButton to={ROUTES.BASE}>
-            <Logo />
+            <Logo showText />
           </LinkButton>
         </div>
       </div>
