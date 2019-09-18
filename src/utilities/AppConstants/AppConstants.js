@@ -5,6 +5,7 @@ const AppConstants = {
     PHYSICS: '/physics',
     PROJECTS: '/projects',
     MORE: '/more',
+    SEARCH: '/search',
     ERROR: '/error',
   },
   HomePage: {

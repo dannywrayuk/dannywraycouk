@@ -64,6 +64,10 @@ const App = () => (
                 render={props => <MorePage {...props} />}
               />
               <Route
+                path={ROUTES.SEARCH}
+                render={props => <MorePage {...props} />}
+              />
+              <Route
                 exact
                 path={ROUTES.ERROR}
                 render={props => <ErrorPage {...props} />}
