@@ -9,7 +9,7 @@
     "serve": "serve -s build",
     "prod": "npm run build & npm run serve",
     "lint:js": "eslint \"src/**/*.js\" --fix",
-    "lint:css": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\"",
+    "lint:css": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\" --fix",
     "lint": "npm run lint:css && npm run lint:js",
     "major": "npm update && ./node_modules/npm-check-updates/bin/ncu -u && npm i && npm outdated"
   },
