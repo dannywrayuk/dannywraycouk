@@ -5,6 +5,8 @@ const AppConstants = {
     PHYSICS: '/physics',
     PROJECTS: '/projects',
     MORE: '/more',
+    SEARCH_TERM: '/search/:term',
+    SEARCH_BLANK: '/search',
     ERROR: '/error',
   },
   HomePage: {
@@ -32,6 +34,12 @@ const AppConstants = {
     },
   },
   More: {
+    STAGES: {
+      MAIN: 'MAIN',
+      ERROR: 'ERROR',
+    },
+  },
+  Search: {
     STAGES: {
       MAIN: 'MAIN',
       ERROR: 'ERROR',

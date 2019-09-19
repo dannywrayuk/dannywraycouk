@@ -6,6 +6,7 @@ const initialState = {
   PhysicsPage: 'MAIN',
   ProjectPage: 'MAIN',
   MorePage: 'MAIN',
+  SearchPage: 'MAIN',
 };
 
 const CoreStageReducer = (state = initialState, action) => {

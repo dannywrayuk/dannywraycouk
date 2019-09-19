@@ -19,6 +19,7 @@ import HomePage from '../../ecosystems/HomePage';
 import MorePage from '../../ecosystems/MorePage';
 import PhysicsPage from '../../ecosystems/PhysicsPage';
 import ProjectPage from '../../ecosystems/ProjectPage';
+import SearchPage from '../../ecosystems/SearchPage';
 
 const { ROUTES } = AppConstants;
 
@@ -62,6 +63,15 @@ const App = () => (
                 exact
                 path={ROUTES.MORE}
                 render={props => <MorePage {...props} />}
+              />
+              <Route
+                path={ROUTES.SEARCH_TERM}
+                render={props => <SearchPage {...props} />}
+              />
+              <Route
+                exact
+                path={ROUTES.SEARCH_BLANK}
+                render={props => <SearchPage {...props} />}
               />
               <Route
                 exact
