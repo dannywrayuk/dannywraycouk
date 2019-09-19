@@ -49,8 +49,8 @@
 
 .closeimage{
 	display: inline-flex;
-	height: 10px;
-	max-width: 10px;
+	height: 15px;
+	max-width: 15px;
 	fill: #494949;
 	margin: 0px 5px;
 	transition: 0.5s;
@@ -58,7 +58,7 @@
 
 .closeHide{
 	display: inline-flex;
-	height: 10px;
+	height: 15px;
 	fill: #494949;
 	max-width: 0px;
 	transition: 0.5s;

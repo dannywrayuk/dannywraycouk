@@ -65,7 +65,12 @@ const App = () => (
                 render={props => <MorePage {...props} />}
               />
               <Route
-                path={ROUTES.SEARCH}
+                path={ROUTES.SEARCH_TERM}
+                render={props => <SearchPage {...props} />}
+              />
+              <Route
+                exact
+                path={ROUTES.SEARCH_BLANK}
                 render={props => <SearchPage {...props} />}
               />
               <Route

@@ -4,7 +4,7 @@ import React from 'react';
 import Logo from '../../../../_atoms/Logo';
 import NavButtons from '../../../../_atoms/NavButtons';
 import LinkButton from '../../../../_molecules/LinkButton';
-import SearchBox from '../../../../_molecules/SearchBox';
+import Search from '../../../../_molecules/Search';
 import AppConstants from '../../../../../utilities/AppConstants';
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderDesktop.css';
@@ -21,7 +21,7 @@ const HeaderDesktop = ({ Tablet }) => (
     <div className={style.controls}>
       <NavButtons />
       <div className={style.search}>
-        <SearchBox />
+        <Search />
       </div>
     </div>
   </div>
