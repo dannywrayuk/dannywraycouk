@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Logo from '../../../../_atoms/Logo';
 import HamburgerMenu from '../../../../_molecules/HamburgerMenu';
 import LinkButton from '../../../../_molecules/LinkButton';
-import SearchButton from '../../../../_molecules/SearchButton';
+import Search from '../../../../_molecules/Search';
 import { withText } from '../../../../../text/textStore';
 import AppConstants from '../../../../../utilities/AppConstants';
 import sharedStyle from '../../container/Header.css';
@@ -45,10 +45,11 @@ const HeaderMobile = () => {
         </div>
       </div>
       <div className={searchExtended ? style.searchFill : style.searchContainer}>
-        <SearchButton
+        <Search
           onSearchClick={searchClick}
           onCloseClick={closeClick}
           isExtended={searchExtended}
+          dynamic
         />
       </div>
     </div>

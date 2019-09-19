@@ -1,56 +1,56 @@
 @import '../../../css/spacing.css';
 
 .mobile {
-    display: contents;
+	display: contents;
 }
 
 .tablet{
-    display: contents;
+	display: contents;
 }
 
 .desktop{
-    display: contents;
+	display: contents;
 }
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
-    .mobile {
-        display: contents;
-    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.mobile {
+		display: contents;
+	}
     
-    .tablet{
-        display: none;
-    }
+	.tablet{
+		display: none;
+	}
     
-    .desktop{
-        display: none;
-    }
- }
+	.desktop{
+		display: none;
+	}
+}
 
- @media only screen and (min-width: 600px) {
-    .mobile {
-        display: none;
-    }
+@media only screen and (min-width: 600px) {
+	.mobile {
+		display: none;
+	}
     
-    .tablet{
-        display: contents;
-    }
+	.tablet{
+		display: contents;
+	}
     
-    .desktop{
-        display: none;
-    }
- }
+	.desktop{
+		display: none;
+	}
+}
  
- @media only screen and (min-width: 992px) {
-    .mobile {
-        display: none;
-    }
+@media only screen and (min-width: 992px) {
+	.mobile {
+		display: none;
+	}
     
-    .tablet{
-        display: none;
-    }
+	.tablet{
+		display: none;
+	}
     
-    .desktop{
-        display: contents;
-    }
- }
+	.desktop{
+		display: contents;
+	}
+}
