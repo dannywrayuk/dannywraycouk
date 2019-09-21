@@ -8,14 +8,26 @@
     "test": "node scripts/test.js",
     "serve": "serve -s build",
     "prod": "npm run build & npm run serve",
-    "lint:js": "eslint \"src/**/*.js\" --fix",
-    "lint:css": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\" --fix",
+    "lint:js": "eslint \"src/**/*.js\"",
+    "lint:js:fix": "eslint \"src/**/*.js\" --fix",
+    "lint:css": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\"",
+    "lint:css:fix": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\" --fix",
     "lint": "npm run lint:css && npm run lint:js",
     "major": "npm update && ./node_modules/npm-check-updates/bin/ncu -u && npm i && npm outdated"
   },
+  "lint-staged":{
+    "src/**/*.js":[
+      "npm run --silent lint:js:fix",
+      "git add"
+    ],
+    "src/**/*.css":[
+      "npm run --silent lint:css:fix",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && git add ."
+      "pre-commit": "lint-staged"
     }
   },
   "dependencies": {
@@ -96,6 +108,7 @@
     "eslint-plugin-simple-import-sort": "^4.0.0",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "npm-check-updates": "^3.1.23"
   },
   "eslintConfig": {
