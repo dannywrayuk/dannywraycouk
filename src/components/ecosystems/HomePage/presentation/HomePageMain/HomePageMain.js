@@ -2,9 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Head from '../../../../_atoms/Head';
+import Icon from '../../../../_atoms/Icon';
 import SectionMarker from '../../../../_atoms/SectionMarker';
 import Heading from '../../../../_molecules/Heading';
-import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper/ResponsiveWrapper';
+import ResponsiveDivider from '../../../../_molecules/ResponsiveDivider';
+import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import Card from '../../../../_organisms/Card';
 import { withText } from '../../../../../text/textStore';
 // import style from './HomePageMain.css';
@@ -18,7 +20,7 @@ const HomePageMain = ({ Text, Text: text }) => (
           <Text path="defaultTitle" />
         </Heading>
         <Heading level={2} center>
-          <Text path="defaultTitle" />
+          <Text path="Pangram" />
         </Heading>
         <Heading level={3}>
           <Text path="defaultTitle" />
@@ -37,13 +39,46 @@ const HomePageMain = ({ Text, Text: text }) => (
         <p>card1</p>
       </Card>
       <Card footer={<p>footer</p>}>
-        <p>card2</p>
+        <ResponsiveDivider
+          FirstSection={(
+            <p>
+            Build apps fast, without managing infrastructure
+            Firebase gives you functionality like analytics, databases, messaging
+            and crash reporting so you can move quickly and focus on your users.
+            </p>
+)}
+          SecondSection={(
+            <p>
+            Backed by Google, trusted by top apps
+            Firebase is built on Google infrastructure and
+            scales automatically, for even the largest apps.
+            </p>
+)}
+          ThirdSection={(
+            <p>
+            One platform, with products that work better together
+            Firebase products work great individually but share data and insights,
+            so they work even better together.
+            </p>
+)}
+        />
       </Card>
       <Card>
-        <p>card3</p>
+        <ResponsiveDivider
+          FirstSection={
+            <p>first section</p>
+        }
+          SecondSection={
+            <p>second section</p>
+        }
+        />
       </Card>
       <Card>
-        <p>card4</p>
+        <Icon icon="home" />
+        <Icon icon="home" rounded />
+        <Icon icon="home" twotone />
+        <Icon icon="home" sharp />
+        <Icon icon="home" outlined />
       </Card>
       <Card>
         <p>card5</p>
