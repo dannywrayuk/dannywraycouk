@@ -3,16 +3,13 @@
 	padding: 50px 80px;
 }
 
+.WrapperStatic{
+	display: flex;
+	padding: 50px 80px;
+}
+
 .Content{
 	margin: 0 20px;
-}
-
-.Thirds{
-	flex: 1 1 calc(100%/3);
-}
-
-.Halfed{
-	flex: 1 1 50%;
 }
 
 @media only screen and (max-width: 1000px) {

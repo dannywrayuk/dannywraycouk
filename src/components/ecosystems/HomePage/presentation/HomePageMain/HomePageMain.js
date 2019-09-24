@@ -5,7 +5,7 @@ import Head from '../../../../_atoms/Head';
 import Icon from '../../../../_atoms/Icon';
 import SectionMarker from '../../../../_atoms/SectionMarker';
 import Heading from '../../../../_molecules/Heading';
-import ResponsiveDivider from '../../../../_molecules/ResponsiveDivider';
+import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import Card from '../../../../_organisms/Card';
 import { withText } from '../../../../../text/textStore';
@@ -39,39 +39,33 @@ const HomePageMain = ({ Text, Text: text }) => (
         <p>card1</p>
       </Card>
       <Card footer={<p>footer</p>}>
-        <ResponsiveDivider
-          FirstSection={(
+        <ResponsiveDivider>
+          <ResponsiveElement width={1}>
             <p>
-            Build apps fast, without managing infrastructure
-            Firebase gives you functionality like analytics, databases, messaging
-            and crash reporting so you can move quickly and focus on your users.
+              Build apps fast, without managing infrastructure
+              Firebase gives you functionality like analytics, databases, messaging
+              and crash reporting so you can move quickly and focus on your users.
             </p>
-)}
-          SecondSection={(
+          </ResponsiveElement>
+          <ResponsiveElement width={3}>
             <p>
-            Backed by Google, trusted by top apps
-            Firebase is built on Google infrastructure and
-            scales automatically, for even the largest apps.
+              Backed by Google, trusted by top apps
+              Firebase is built on Google infrastructure and
+              scales automatically, for even the largest apps.
             </p>
-)}
-          ThirdSection={(
+          </ResponsiveElement>
+          <ResponsiveElement width={2}>
             <p>
-            One platform, with products that work better together
-            Firebase products work great individually but share data and insights,
-            so they work even better together.
+              One platform, with products that work better together
+              Firebase products work great individually but share data and insights,
+              so they work even better together.
             </p>
-)}
-        />
+          </ResponsiveElement>
+        </ResponsiveDivider>
       </Card>
       <Card>
-        <ResponsiveDivider
-          FirstSection={
-            <p>first section</p>
-        }
-          SecondSection={
-            <p>second section</p>
-        }
-        />
+        <p>first section</p>
+        <p>second section</p>
       </Card>
       <Card>
         <Icon icon="home" />
