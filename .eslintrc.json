@@ -18,14 +18,12 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "simple-import-sort"
+        "react"
     ],
     "rules": {
         "react/jsx-filename-extension": [0],
         "import/extensions": "off",
         "arrow-parens":"off",
-        "react/jsx-props-no-spreading": "off",
-        "simple-import-sort/sort": "error"
+        "react/jsx-props-no-spreading": "off"
     }
 }
