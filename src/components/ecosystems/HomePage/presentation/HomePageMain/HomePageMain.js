@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
+import { withText } from '../../../../../text/textStore';
 import Head from '../../../../_atoms/Head';
 import Icon from '../../../../_atoms/Icon';
 import SectionMarker from '../../../../_atoms/SectionMarker';
@@ -8,7 +9,7 @@ import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import Card from '../../../../_organisms/Card';
-import { withText } from '../../../../../text/textStore';
+
 // import style from './HomePageMain.css';
 
 const HomePageMain = ({ Text, Text: text }) => (

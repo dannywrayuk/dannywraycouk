@@ -1,10 +1,9 @@
-import propTypes from 'prop-types';
 import React from 'react';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import appConstants from '../../../../utilities/AppConstants';
 import HomePageMain from '../presentation/HomePageMain';
-
 
 const HomePage = (props) => {
   const { stage } = props;

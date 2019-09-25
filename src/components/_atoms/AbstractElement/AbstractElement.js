@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import mergeStyles from '../../../utilities/css/mergeStyles';
+
 import baseStyle from './AbstractElement.css';
 
 const resolveCSS = (styles, cssType) => styles[cssType] || styles.root;

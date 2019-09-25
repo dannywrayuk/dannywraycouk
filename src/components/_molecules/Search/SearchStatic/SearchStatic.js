@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { ReactComponent as SvgImage } from '../../../../images/svg/search.svg';
 import { withText } from '../../../../text/textStore';
 import Button from '../../Button';
+
 import style from './SearchStatic.css';
 
 const SearchStatic = ({ Text: text, handlers }) => (

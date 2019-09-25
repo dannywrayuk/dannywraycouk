@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Head from '../../../../_atoms/Head';
 import { withText } from '../../../../../text/textStore';
-
+import Head from '../../../../_atoms/Head';
 
 const SearchPageMain = ({ Text: text, match }) => {
   const searchTerm = match.params.term;

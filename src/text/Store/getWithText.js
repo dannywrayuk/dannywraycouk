@@ -1,5 +1,6 @@
-import hoistNonReactStatics from 'hoist-non-react-statics';
 import React, { forwardRef } from 'react';
+
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
 import getText from './getText';
 

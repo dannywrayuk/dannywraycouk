@@ -1,5 +1,5 @@
-import propTypes from 'prop-types';
 import React from 'react';
+import propTypes from 'prop-types';
 
 import style from './App.css';
 

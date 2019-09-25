@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import AbstractElement from '../../_atoms/AbstractElement';
 import mergeStyles from '../../../utilities/css/mergeStyles';
+import AbstractElement from '../../_atoms/AbstractElement';
+
 import baseStyle from './Button.css';
 
 const Button = ({

@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { withText } from '../../../text/textStore';
-
 
 const Font = ({ Text: text, name }) => (
   <Helmet>

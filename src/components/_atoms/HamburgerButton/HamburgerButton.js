@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Button from '../../_molecules/Button';
 import { ReactComponent as Hamburger } from '../../../images/svg/hamburger.svg';
-import style from './HamburgerButton.css';
+import Button from '../../_molecules/Button';
 
+import style from './HamburgerButton.css';
 
 const HamburgerButton = ({ onClick }) => (
   <Button onClick={onClick}>

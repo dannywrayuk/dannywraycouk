@@ -1,9 +1,8 @@
-import PropType from 'prop-types';
 import React from 'react';
+import PropType from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import AbstractElement from '../../_atoms/AbstractElement';
-
 
 const LinkButton = ({
   children,

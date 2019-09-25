@@ -1,11 +1,12 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
+import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
 import NavButtons from '../../../../_atoms/NavButtons';
 import LinkButton from '../../../../_molecules/LinkButton';
 import Search from '../../../../_molecules/Search';
-import AppConstants from '../../../../../utilities/AppConstants';
+
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderDesktop.css';
 

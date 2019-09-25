@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import mergeStyles from '../../../utilities/css/mergeStyles';
+
 import style from './Heading.css';
 
 const Heading = ({

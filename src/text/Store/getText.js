@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 import extractText from './extractText';
 
-
 export default ({
   storeParams,
   storeValue,

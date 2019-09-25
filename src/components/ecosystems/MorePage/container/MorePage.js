@@ -1,10 +1,9 @@
-import propTypes from 'prop-types';
 import React from 'react';
+import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import AppConstants from '../../../../utilities/AppConstants';
 import MorePageMain from '../presentation/MorePageMain';
-
 
 const MorePage = (props) => {
   const { stage } = props;
