@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as CloseIcon } from '../../../../images/svg/close.svg';
-import { ReactComponent as SearchIcon } from '../../../../images/svg/search.svg';
 import { withText } from '../../../../text/textStore';
+import Icon from '../../../_atoms/Icon';
 import Button from '../../Button';
 
 import style from './SearchDynamic.css';
@@ -21,7 +20,7 @@ const SearchDynamic = ({
         className={style.closeContainer}
         onClick={() => { onCloseClick(); handlers.setSearchValue(''); }}
       >
-        <CloseIcon className={isExtended ? style.closeimage : style.closeHide} />
+        <Icon icon="highlight_off" twotone className={isExtended ? style.closeimage : style.closeHide} />
       </Button>
       <div className={isExtended ? style.inputContainer : style.inputHide}>
         <fieldset className={style.field}>
@@ -39,7 +38,7 @@ const SearchDynamic = ({
         className={style.searchContainer}
         onClick={isExtended ? handlers.handleSearch : onSearchClick}
       >
-        <SearchIcon className={style.searchimage} />
+        <Icon icon="search" rounded className={style.searchimage} />
       </Button>
     </div>
   </div>

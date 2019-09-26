@@ -19,8 +19,6 @@
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: auto;
-	order: 2;
 }
 
 .inputContainer{
@@ -49,17 +47,17 @@
 
 .closeimage{
 	display: inline-flex;
-	height: 15px;
+	font-size: 15px;
 	max-width: 15px;
-	fill: #494949;
+	color: #494949;
 	margin: 0px 5px;
 	transition: 0.5s;
 }
 
 .closeHide{
 	display: inline-flex;
-	height: 15px;
-	fill: #494949;
+	font-size: 0px;
+	color: #494949;
 	max-width: 0px;
 	transition: 0.5s;
 	opacity: 0;
@@ -89,8 +87,6 @@
 
 
 .searchimage{
-	display: inline-flex;
-	height: 20px;
-	fill: #494949;
+	color: #494949;
 	margin: 0px 5px;
 }

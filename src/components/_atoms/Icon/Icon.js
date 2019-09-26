@@ -1,26 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconURL from '../../../utilities/IconURL';
+import style from './Icon.css';
 
 const Icon = ({
-  icon, outlined, rounded, twotone, sharp,
+  icon, outlined, rounded, twotone, sharp, className,
 }) => {
-  let variant = '';
+  let variant = 'filled';
+  let c = 0;
   if (outlined) {
-    variant += 'outlined';
+    variant = 'outlined';
+    c++;
   }
   if (twotone) {
-    variant += 'twotone';
+    variant = 'twotone';
+    c++;
   }
   if (rounded) {
-    variant += 'round';
+    variant = 'round';
+    c++;
   }
   if (sharp) {
-    variant += 'sharp';
+    variant = 'sharp';
+    c++;
   }
-  if (variant.length > 9) { throw new Error('Only one style can be specified at one time.'); }
-  return (<img src={IconURL(icon, variant)} alt="" />
+  if (c > 1) { throw new Error('Only one style can be specified at one time.'); }
+  return (<i className={`${className} ${style[variant]} ${style.Icon}`}>{icon}</i>
   );
 };
 
@@ -30,6 +35,7 @@ Icon.propTypes = {
   rounded: PropTypes.bool,
   twotone: PropTypes.bool,
   sharp: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Icon.defaultProps = {
@@ -37,6 +43,7 @@ Icon.defaultProps = {
   rounded: false,
   twotone: false,
   sharp: false,
+  className: '',
 };
 
 export default Icon;

@@ -24,6 +24,7 @@
         "react/jsx-filename-extension": [0],
         "import/extensions": "off",
         "arrow-parens":"off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "no-plusplus": "off"
     }
 }

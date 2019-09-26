@@ -27,7 +27,7 @@ const AbstractElement = ({
 
 AbstractElement.propTypes = {
   children: PropTypes.node,
-  as: PropTypes.oneOfType([PropTypes.func, PropTypes.string]).isRequired,
+  as: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.shape({})]).isRequired,
   modifierStyles: PropTypes.shape({}),
   cssType: PropTypes.string,
 };

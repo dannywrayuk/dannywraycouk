@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as SvgImage } from '../../../../images/svg/search.svg';
 import { withText } from '../../../../text/textStore';
+import Icon from '../../../_atoms/Icon';
 import Button from '../../Button';
 
 import style from './SearchStatic.css';
@@ -13,7 +13,7 @@ const SearchStatic = ({ Text: text, handlers }) => (
       className={style.imageContainer}
       onClick={handlers.handleSearch}
     >
-      <SvgImage className={style.image} />
+      <Icon icon="search" className={style.image} rounded />
     </Button>
     <input
       type="text"

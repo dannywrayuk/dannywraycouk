@@ -46,6 +46,5 @@ const AppConstants = {
     },
   },
   SiteColor: '#FFCA1E',
-  IconURL: 'https://fonts.gstatic.com/s/i/materialicons$var$/v1/24px.svg',
 };
 export default AppConstants;
