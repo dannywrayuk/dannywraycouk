@@ -5,6 +5,7 @@ import { withText } from '../../../../../text/textStore';
 import Head from '../../../../_atoms/Head';
 import Icon from '../../../../_atoms/Icon';
 import SectionMarker from '../../../../_atoms/SectionMarker';
+import ShapeBlob from '../../../../_atoms/ShapeBlob';
 import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
@@ -76,7 +77,15 @@ const HomePageMain = ({ Text, Text: text }) => (
         <Icon icon="home" outlined />
       </Card>
       <Card>
-        <p>card5</p>
+        <ShapeBlob>
+          <Icon icon="home" />
+        </ShapeBlob>
+        <ShapeBlob shadow>
+          <Icon icon="home" />
+        </ShapeBlob>
+        <ShapeBlob shadow borderColor="#000">
+          <img src="/static/media/logoicon.a82be5a5.svg" width={24} alt="" />
+        </ShapeBlob>
       </Card>
     </ResponsiveWrapper>
   </>
