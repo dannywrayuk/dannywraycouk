@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
-import NavButtons from '../../../../_atoms/NavButtons';
 import LinkButton from '../../../../_molecules/LinkButton';
+import NavButtons from '../../../../_molecules/NavButtons';
 import Search from '../../../../_molecules/Search';
 
 import sharedStyle from '../../container/Header.css';

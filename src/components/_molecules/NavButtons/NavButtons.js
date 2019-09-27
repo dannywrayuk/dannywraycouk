@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { withText } from '../../../text/textStore';
 import AppConstants from '../../../utilities/AppConstants';
-import LinkButton from '../../_molecules/LinkButton';
+import LinkButton from '../LinkButton';
 
 import style from './NavButtons.css';
 

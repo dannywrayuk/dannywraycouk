@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { withText } from '../../../../text/textStore';
@@ -13,36 +13,44 @@ const SearchDynamic = ({
   onCloseClick,
   isExtended,
   handlers,
-}) => (
-  <div className={style.wrapper}>
-    <div className={style.box}>
-      <Button
-        className={style.closeContainer}
-        onClick={() => { onCloseClick(); handlers.setSearchValue(''); }}
-      >
-        <Icon icon="highlight_off" twotone className={isExtended ? style.closeimage : style.closeHide} />
-      </Button>
-      <div className={isExtended ? style.inputContainer : style.inputHide}>
-        <fieldset className={style.field}>
-          <input
-            type="text"
-            className={style.input}
-            placeholder={text({ path: 'placeholder' })}
-            value={handlers.searchValue}
-            onChange={handlers.handleChange}
-            onKeyDown={handlers.handleKeyPress}
-          />
-        </fieldset>
+}) => {
+  const [closeStyle, setCloseStyle] = useState(style.closeHide);
+  const [inputStyle, setInputStyle] = useState(style.inputHide);
+  useEffect(() => {
+    setCloseStyle(isExtended ? style.closeimage : style.closeHide);
+    setInputStyle(isExtended ? style.inputContainer : style.inputHide);
+  }, [isExtended]);
+  return (
+    <div className={style.wrapper}>
+      <div className={style.box}>
+        <Button
+          className={style.closeContainer}
+          onClick={() => { onCloseClick(); handlers.setSearchValue(''); }}
+        >
+          <Icon icon="highlight_off" twotone className={closeStyle} />
+        </Button>
+        <div className={inputStyle}>
+          <fieldset className={style.field}>
+            <input
+              type="text"
+              className={style.input}
+              placeholder={text({ path: 'placeholder' })}
+              value={handlers.searchValue}
+              onChange={handlers.handleChange}
+              onKeyDown={handlers.handleKeyPress}
+            />
+          </fieldset>
+        </div>
+        <Button
+          className={style.searchContainer}
+          onClick={isExtended ? handlers.handleSearch : onSearchClick}
+        >
+          <Icon icon="search" rounded className={style.searchimage} />
+        </Button>
       </div>
-      <Button
-        className={style.searchContainer}
-        onClick={isExtended ? handlers.handleSearch : onSearchClick}
-      >
-        <Icon icon="search" rounded className={style.searchimage} />
-      </Button>
     </div>
-  </div>
-);
+  );
+};
 
 SearchDynamic.propTypes = {
   Text: PropTypes.func.isRequired,

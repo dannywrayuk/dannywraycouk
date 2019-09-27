@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import style from './Icon.css';
@@ -6,26 +6,30 @@ import style from './Icon.css';
 const Icon = ({
   icon, outlined, rounded, twotone, sharp, className,
 }) => {
-  let variant = 'filled';
-  let c = 0;
-  if (outlined) {
-    variant = 'outlined';
-    c++;
-  }
-  if (twotone) {
-    variant = 'twotone';
-    c++;
-  }
-  if (rounded) {
-    variant = 'round';
-    c++;
-  }
-  if (sharp) {
-    variant = 'sharp';
-    c++;
-  }
-  if (c > 1) { throw new Error('Only one style can be specified at one time.'); }
-  return (<i className={`${className} ${style[variant]} ${style.Icon}`}>{icon}</i>
+  const [iconStyle, setIconStyle] = useState(style.hidden);
+  useEffect(() => {
+    let variant = 'filled';
+    let c = 0;
+    if (outlined) {
+      variant = 'outlined';
+      c++;
+    }
+    if (twotone) {
+      variant = 'twotone';
+      c++;
+    }
+    if (rounded) {
+      variant = 'round';
+      c++;
+    }
+    if (sharp) {
+      variant = 'sharp';
+      c++;
+    }
+    if (c > 1) { throw new Error('Only one style can be specified at one time.'); }
+    setIconStyle(`${className} ${style[variant]} ${style.Icon}`);
+  }, [className]);
+  return (<i className={iconStyle}>{icon}</i>
   );
 };
 

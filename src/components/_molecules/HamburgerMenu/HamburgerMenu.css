@@ -24,6 +24,10 @@
 	transition: 0.5s;
 }
 
+.hamburger {
+	color: #494949;
+}
+
 .menuContainer{
 	display: inline-flex;
 	max-width: 0px;

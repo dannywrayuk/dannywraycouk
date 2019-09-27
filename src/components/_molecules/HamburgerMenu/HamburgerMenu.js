@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import HamburgerButton from '../../_atoms/HamburgerButton';
-import NavButtons from '../../_atoms/NavButtons';
+import Icon from '../../_atoms/Icon';
+import Button from '../Button';
+import NavButtons from '../NavButtons';
 
 import style from './HamburgerMenu.css';
 
-const HamburgerMenu = ({ onClick, isExtended }) => (
-  <>
-    <div className={isExtended ? style.menuFill : style.menuContainer}>
-      <NavButtons />
-    </div>
-    <div className={isExtended ? style.ButtonClicked : style.Button}>
-      <HamburgerButton onClick={onClick} />
-    </div>
-  </>
-);
+const HamburgerMenu = ({ onClick, isExtended }) => {
+  const [menuStyle, setMenuStyle] = useState(style.menuContainer);
+  const [buttonStyle, setButtonStyle] = useState(style.Button);
+  useEffect(() => {
+    setMenuStyle(isExtended ? style.menuFill : style.menuContainer);
+    setButtonStyle(isExtended ? style.ButtonClicked : style.Button);
+  }, [isExtended]);
+
+  return (
+    <>
+      <div className={menuStyle}>
+        <NavButtons />
+      </div>
+      <div className={buttonStyle}>
+        <Button onClick={onClick}>
+          <Icon icon="menu" rounded className={style.hamburger} />
+        </Button>
+      </div>
+    </>
+  );
+};
 
 HamburgerMenu.propTypes = {
   onClick: PropTypes.func,

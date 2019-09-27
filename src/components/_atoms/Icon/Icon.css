@@ -42,3 +42,7 @@
 .sharp{
 	font-family: 'Material Icons Sharp';
 }
+
+.hidden{
+	display: none;
+}
