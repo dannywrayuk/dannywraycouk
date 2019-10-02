@@ -10,6 +10,7 @@ const SharedContent = {
     copyright: '© Danny Wray 2019',
   },
   HomePageMain: {
+    HeadTitle: 'Home | Danny Wray',
     Title: "Hi, I'm Danny.",
     SubTitle: 'A Theoretical Physics Undergraduate at the University of Nottingham.',
     Description: "I've always been interested in software and this website is the result of my endeavour into the world of web design. If we have similar interests you might find some useful stuff here, so I hope you stick around :)",
