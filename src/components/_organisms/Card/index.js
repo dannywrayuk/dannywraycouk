@@ -1,1 +1,1 @@
-export { default } from './Card.js';
+export { Card, CardContent, CardFooter } from './Card.js';
