@@ -18,7 +18,9 @@ const ShapeBlob = ({
       backgroundColor: color,
       borderColor,
       width: size,
+      minWidth: size,
       height: size,
+      minHeight: size,
     });
   }, []);
   return (

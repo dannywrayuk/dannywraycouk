@@ -47,28 +47,28 @@ const SharedContent = {
       },
       Catagories: {
         1: {
-          Name: 'Quantum Mechanics',
-          Description: 'Really Small Things.\n',
+          Title: 'Quantum Mechanics',
+          SubTitle: 'Really Small Things.',
         },
         2: {
-          Name: 'Thermodynamics',
-          Description: 'Really Jiggly Things.',
+          Title: 'Thermodynamics',
+          SubTitle: 'Really Jiggly Things.',
         },
         3: {
-          Name: 'Classical Mechanics',
-          Description: 'Really Normal Things.',
+          Title: 'Classical Mechanics',
+          SubTitle: 'Really Normal Things.',
         },
         4: {
-          Name: 'Electromagnetism',
-          Description: 'Really Sticky Things.',
+          Title: 'Electromagnetism',
+          SubTitle: 'Really Sticky Things.',
         },
         5: {
-          Name: 'Astrophysics',
-          Description: 'Really Big Things.',
+          Title: 'Astrophysics',
+          SubTitle: 'Really Big Things.',
         },
         6: {
-          Name: 'Mathematics',
-          Description: 'Really Abstract Things.',
+          Title: 'Mathematics',
+          SubTitle: 'Really Abstract Things.',
         },
       },
     },

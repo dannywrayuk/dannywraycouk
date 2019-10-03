@@ -1,0 +1,15 @@
+.wrapper{
+	display: flex;
+	min-width: 270px;
+}
+
+.textContent{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+}
+
+.subtitle{
+	color: grey;
+}

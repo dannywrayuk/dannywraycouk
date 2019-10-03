@@ -1,5 +1,6 @@
 .Wrapper{
 	display: flex;
+	text-align: left;
 	padding: 50px 80px;
 }
 
@@ -9,6 +10,8 @@
 }
 
 .Content{
+	display: inline-flex;
+	flex-direction: column;
 	margin: 0 20px;
 }
 
@@ -24,7 +27,7 @@
 		display: block;
 		padding: 0px;
 	}
-    
+
 	.Content{
 		margin: 20px 0px;
 	}
