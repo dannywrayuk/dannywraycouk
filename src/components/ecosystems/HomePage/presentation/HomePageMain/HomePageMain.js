@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import { ReactComponent as Apple } from '../../../../../images/svg/apple.svg';
 import { ReactComponent as Atom } from '../../../../../images/svg/atom.svg';
 import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
+import { ReactComponent as Lightning } from '../../../../../images/svg/lightning.svg';
 import { ReactComponent as Pi } from '../../../../../images/svg/pi.svg';
 import { ReactComponent as Sun } from '../../../../../images/svg/sun.svg';
 import { withText } from '../../../../../text/textStore';
 import Head from '../../../../_atoms/Head';
-import Icon from '../../../../_atoms/Icon';
-// import Logo from '../../../../_atoms/Logo';
 import ShapeBlob from '../../../../_atoms/ShapeBlob';
 import Heading from '../../../../_molecules/Heading';
 import IconCard from '../../../../_molecules/IconCard';
@@ -31,11 +30,6 @@ const HomePageMain = ({ Text, Text: text }) => (
           <Text path="SubTitle" />
         </Heading>
       </ResponsiveElement>
-      {/* <center>
-        <ResponsiveElement width={1}>
-          <Logo className={style.logo} />
-        </ResponsiveElement>
-      </center> */}
     </ResponsiveDivider>
     <Card>
       <CardContent>
@@ -105,7 +99,7 @@ const HomePageMain = ({ Text, Text: text }) => (
           <ResponsiveElement>
             <IconCard strings="HomePageMain.PhysicsCard.Catagories.4">
               <ShapeBlob>
-                <Icon icon="flash_on" />
+                <Lightning width="25px" />
               </ShapeBlob>
             </IconCard>
           </ResponsiveElement>
