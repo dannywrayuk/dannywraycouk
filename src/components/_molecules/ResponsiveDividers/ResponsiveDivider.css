@@ -1,34 +1,33 @@
 .Wrapper{
-	display: flex;
-	text-align: left;
-	padding: 50px 80px;
+  display: flex;
+  text-align: left;
+  padding: 50px 80px;
 }
 
 .WrapperStatic{
-	display: flex;
-	padding: 50px 80px;
+  display: flex;
+  padding: 50px 80px;
 }
 
 .Content{
-	display: inline-flex;
-	flex-direction: column;
-	margin: 0 20px;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 20px;
 }
 
 @media only screen and (max-width: 1000px) {
-	.Wrapper{
-		padding: 0px 0px 20px;
-		margin-top: 20px;
-	}
+  .Wrapper{
+    padding: 20px 0px 20px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-	.Wrapper{
-		display: block;
-		padding: 0px;
-	}
+  .Wrapper{
+    display: block;
+    padding: 0px;
+  }
 
-	.Content{
-		margin: 20px 0px;
-	}
+  .Content{
+    margin: 20px 0px;
+  }
 }
