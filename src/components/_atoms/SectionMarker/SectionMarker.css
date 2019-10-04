@@ -1,9 +1,9 @@
 .SectionMarker{
-	margin: 50px 0;
-	border: solid 1px lightgray;
+  margin: 50px 0;
+  border: solid 1px lightgray;
 }
 
 .SectionMarkerDashed{
-	margin: 50px 0;
-	border: dashed 1px lightgray;
+  margin: 50px 0;
+  border: dashed 1px lightgray;
 }

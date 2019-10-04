@@ -1,26 +1,26 @@
 .container{
-	height: 30px;
-	display: inline-flex;
+  height: 30px;
+  display: inline-flex;
 }
 
 .icon{
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	width: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 20px;
 }
 
 .url{
-	display: inline-flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 100%;
-	margin-left: 10px;
-	font-size: 1.35rem;
-	letter-spacing: -1px;
-	color: #727272;
-	text-decoration: none;
-	text-decoration-color: chartreuse;
-	white-space: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 10px;
+  font-size: 1.35rem;
+  letter-spacing: -1px;
+  color: #727272;
+  text-decoration: none;
+  text-decoration-color: chartreuse;
+  white-space: nowrap;
 }

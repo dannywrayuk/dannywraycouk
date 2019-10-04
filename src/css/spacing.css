@@ -1,9 +1,9 @@
 :root {
-	--ySpaceSmall: 25px;
-	--ySpaceMedium: 60px;
-	--ySpaceLarge: 100px;
-	--ySpaceHeader: 48px;
+  --ySpaceSmall: 25px;
+  --ySpaceMedium: 60px;
+  --ySpaceLarge: 100px;
+  --ySpaceHeader: 48px;
 
-	--mobileBreakpoint: 600px;
-	--desktopBreakpoint: 992;
+  --mobileBreakpoint: 600px;
+  --desktopBreakpoint: 992;
 }

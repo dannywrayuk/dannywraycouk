@@ -1,6 +1,6 @@
 .root{
-	text-decoration: none;
-	-webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .root:focus {outline: none;}
