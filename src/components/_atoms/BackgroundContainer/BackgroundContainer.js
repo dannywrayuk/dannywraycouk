@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import style from './BackgroundContainer.css';
-
 const BackgroundContainer = ({ children, image }) => (
-  <div style={{ background: `url(${image})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+  <div style={{
+    height: '100%',
+    background: `url(${image})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  }}
+  >
     {children}
   </div>
 );

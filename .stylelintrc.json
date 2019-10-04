@@ -6,7 +6,7 @@
         "ignore": ["stylelint-commands", "after-comment"]
       } ],
       "declaration-colon-space-after": "always",
-      "indentation": ["tab", {
+      "indentation": [2, {
         "except": ["value"]
       }],
       "max-empty-lines": 2,
