@@ -11,5 +11,4 @@
 .content{
 	flex: 1 0 auto;
 	margin-top: var(--ySpaceHeader);
-	padding-bottom: 10px;
 }

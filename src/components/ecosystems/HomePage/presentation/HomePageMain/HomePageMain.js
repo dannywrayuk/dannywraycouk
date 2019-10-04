@@ -7,7 +7,9 @@ import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
 import { ReactComponent as Lightning } from '../../../../../images/svg/lightning.svg';
 import { ReactComponent as Pi } from '../../../../../images/svg/pi.svg';
 import { ReactComponent as Sun } from '../../../../../images/svg/sun.svg';
+import testbackground from '../../../../../images/svg/testbackground.svg';
 import { withText } from '../../../../../text/textStore';
+import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
 import ShapeBlob from '../../../../_atoms/ShapeBlob';
 import Heading from '../../../../_molecules/Heading';
@@ -19,123 +21,125 @@ import { Card, CardContent, CardFooter } from '../../../../_organisms/Card';
 import style from './HomePageMain.css';
 
 const HomePageMain = ({ Text, Text: text }) => (
-  <ResponsiveWrapper>
-    <Head title={text({ path: 'HeadTitle' })} />
-    <ResponsiveDivider>
-      <ResponsiveElement width={2}>
-        <Heading>
-          <Text path="Title" />
-        </Heading>
-        <Heading level={2}>
-          <Text path="SubTitle" />
-        </Heading>
-      </ResponsiveElement>
-    </ResponsiveDivider>
-    <Card>
-      <CardContent>
-        <ResponsiveDivider>
-          <ResponsiveElement>
-            <Heading level={4}>
-              <Text path="IntroCard.Programming.Title" />
-            </Heading>
-            <p>
-              <Text path="IntroCard.Programming.Body" />
-            </p>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <Heading level={4}>
-              <Text path="IntroCard.Physics.Title" />
-            </Heading>
-            <p>
-              <Text path="IntroCard.Physics.Body" />
-            </p>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <Heading level={4}>
-              <Text path="IntroCard.More.Title" />
-            </Heading>
-            <p>
-              <Text path="IntroCard.More.Body" />
-            </p>
-          </ResponsiveElement>
-        </ResponsiveDivider>
-      </CardContent>
-      <CardFooter>
-        <Text path="IntroCard.FooterText" />
-      </CardFooter>
-    </Card>
-    <Card>
-      <CardContent>
-        <Heading level={2} center>
-          <Text path="PhysicsCard.Title" />
-        </Heading>
-        <ResponsiveDivider>
-          <ResponsiveElement>
-            <Text path="Description" />
-          </ResponsiveElement>
-        </ResponsiveDivider>
-        <div className={style.physicsblobs}>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
-              <ShapeBlob>
-                <Atom width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.2">
-              <ShapeBlob>
-                <Flame width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.3">
-              <ShapeBlob>
-                <Apple width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.4">
-              <ShapeBlob>
-                <Lightning width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.5">
-              <ShapeBlob>
-                <Sun width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-          <ResponsiveElement>
-            <IconCard strings="HomePageMain.PhysicsCard.Catagories.6">
-              <ShapeBlob>
-                <Pi width="25px" />
-              </ShapeBlob>
-            </IconCard>
-          </ResponsiveElement>
-        </div>
-      </CardContent>
-    </Card>
-    <Card>
-      <CardContent>
-        <Text path="BlogCard.Title" />
-      </CardContent>
-    </Card>
-    <Card>
-      <CardContent>
-        <Text path="ProjectCard.Title" />
-      </CardContent>
-    </Card>
-    <Card>
-      <CardContent>
-        <Text path="MoreCard.Title" />
-      </CardContent>
-    </Card>
-  </ResponsiveWrapper>
+  <Background image={testbackground}>
+    <ResponsiveWrapper>
+      <Head title={text({ path: 'HeadTitle' })} />
+      <ResponsiveDivider>
+        <ResponsiveElement width={2}>
+          <Heading>
+            <Text path="Title" />
+          </Heading>
+          <Heading level={2}>
+            <Text path="SubTitle" />
+          </Heading>
+        </ResponsiveElement>
+      </ResponsiveDivider>
+      <Card>
+        <CardContent>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Heading level={4}>
+                <Text path="IntroCard.Programming.Title" />
+              </Heading>
+              <p>
+                <Text path="IntroCard.Programming.Body" />
+              </p>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <Heading level={4}>
+                <Text path="IntroCard.Physics.Title" />
+              </Heading>
+              <p>
+                <Text path="IntroCard.Physics.Body" />
+              </p>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <Heading level={4}>
+                <Text path="IntroCard.More.Title" />
+              </Heading>
+              <p>
+                <Text path="IntroCard.More.Body" />
+              </p>
+            </ResponsiveElement>
+          </ResponsiveDivider>
+        </CardContent>
+        <CardFooter>
+          <Text path="IntroCard.FooterText" />
+        </CardFooter>
+      </Card>
+      <Card>
+        <CardContent>
+          <Heading level={2} center>
+            <Text path="PhysicsCard.Title" />
+          </Heading>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <div className={style.physicsblobs}>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
+                <ShapeBlob>
+                  <Atom width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.2">
+                <ShapeBlob>
+                  <Flame width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.3">
+                <ShapeBlob>
+                  <Apple width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.4">
+                <ShapeBlob>
+                  <Lightning width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.5">
+                <ShapeBlob>
+                  <Sun width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <IconCard strings="HomePageMain.PhysicsCard.Catagories.6">
+                <ShapeBlob>
+                  <Pi width="25px" />
+                </ShapeBlob>
+              </IconCard>
+            </ResponsiveElement>
+          </div>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <Text path="BlogCard.Title" />
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <Text path="ProjectCard.Title" />
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent>
+          <Text path="MoreCard.Title" />
+        </CardContent>
+      </Card>
+    </ResponsiveWrapper>
+  </Background>
 );
 
 HomePageMain.propTypes = {
