@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Sponge from '../../../../../images/gif/sponge.gif';
 import { ReactComponent as Apple } from '../../../../../images/svg/apple.svg';
 import { ReactComponent as Atom } from '../../../../../images/svg/atom.svg';
 import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
@@ -125,17 +126,67 @@ const HomePageMain = ({ Text, Text: text }) => (
       </Card>
       <Card>
         <CardContent>
-          <Text path="BlogCard.Title" />
+          <Heading level={2} center>
+            <Text path="ProjectCard.Title" />
+          </Heading>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <ResponsiveDivider>
+            <ResponsiveElement width={2}>
+              <Text path="Description" />
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <img src={Sponge} alt="" width="300px" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <img src={Sponge} alt="" width="300px" />
+            </ResponsiveElement>
+            <ResponsiveElement width={2}>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
         </CardContent>
       </Card>
       <Card>
         <CardContent>
-          <Text path="ProjectCard.Title" />
+          <Heading level={2} center>
+            <Text path="BlogCard.Title" />
+          </Heading>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <ResponsiveDivider>
+            <ResponsiveElement width={2}>
+              <Text path="Description" />
+            </ResponsiveElement>
+            <ResponsiveElement>
+              <img src={Sponge} alt="" width="300px" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
         </CardContent>
       </Card>
       <Card>
         <CardContent>
-          <Text path="MoreCard.Title" />
+          <Heading level={2} center>
+            <Text path="MoreCard.Title" />
+          </Heading>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <Text path="Description" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
         </CardContent>
       </Card>
     </ResponsiveWrapper>
