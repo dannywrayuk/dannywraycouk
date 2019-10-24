@@ -7,6 +7,7 @@ const BackgroundContainer = ({ children, image }) => (
     background: `url(${image})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
   }}
   >
     {children}
