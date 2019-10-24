@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Sponge from '../../../../../images/gif/sponge.gif';
 import { ReactComponent as Apple } from '../../../../../images/svg/apple.svg';
 import { ReactComponent as Atom } from '../../../../../images/svg/atom.svg';
-import testbackground from '../../../../../images/svg/background.svg';
+import background from '../../../../../images/svg/background.svg';
 import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
 import { ReactComponent as Lightning } from '../../../../../images/svg/lightning.svg';
 import { ReactComponent as Pi } from '../../../../../images/svg/pi.svg';
@@ -22,7 +22,7 @@ import { Card, CardContent, CardFooter } from '../../../../_organisms/Card';
 import style from './HomePageMain.css';
 
 const HomePageMain = ({ Text, Text: text }) => (
-  <Background image={testbackground}>
+  <Background image={background}>
     <ResponsiveWrapper>
       <Head title={text({ path: 'HeadTitle' })} />
       <ResponsiveDivider>
