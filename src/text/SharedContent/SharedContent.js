@@ -22,29 +22,27 @@ const SharedContent = {
       MoreLink: 'More',
     },
     IntroCard: {
-      FooterText: 'Source code to any Physics or Computing projects can be found over in the projects section.',
       Programming: {
-        Title: 'The title about programming',
-        Body: 'the stuff that i wanted to say about programming that very important and has to be said at the very top of the page',
+        Title: 'Learn some Physics',
+        Body: "I'm trying typeset all my university notes so they look pretty. There will be quite a lot of content there eventually. Check them out!",
       },
       Physics: {
-        Title: 'The title about physics',
-        Body: 'the stuff that i wanted to say about programming that very important and has to be said at the very top of the page',
+        Title: 'Why not some Programming too?',
+        Body: 'I have a few programming projects in the works. I like simulating physical systems and building tools to speed up programming.',
       },
       More: {
-        Title: 'The title about other stuff',
-        Body: 'the stuff that i wanted to say about programming that very important and has to be said at the very top of the page',
+        Title: "But that's not all",
+        Body: "You'll find all kinds of junk on this site, such as a small blog where I post pictures. Stick around, I'm sure you'll find something interesting.",
       },
+      FooterText: 'Follow me!',
     },
     BlogCard: {
-      Title: 'Blog card',
+      Title: 'Whats a Blog?',
+      SubTitle: "Seriously. I have no idea what I'm supposed to write here. I usually just use it for pictures I've taken or anything else that doesn't really fit anywhere else. Here are some pictures lifted from my instagram you might like.",
     },
     PhysicsCard: {
       Title: 'A Whole Lotta Physics',
-      Paragraph: {
-        1: 'words',
-        2: 'more words',
-      },
+      SubTitle: "Sometimes the hardest part about learning physics is knowing where to look for information. I'm working through my university notes and uploading a typeset version of everything I learned. It's a work in progress so please be patient, but hopefully this will help out some poor students in the future.",
       Catagories: {
         1: {
           Title: 'Quantum Mechanics',
@@ -71,13 +69,17 @@ const SharedContent = {
           SubTitle: 'Really Abstract Things.',
         },
       },
-    },
-    ProjectCard: {
-      Title: 'Projects card',
+      FooterText: 'Source code to any Physics or Computing projects can be found over in the Projects section.',
     },
     MoreCard: {
-      Title: 'More card',
+      Title: 'And everything else..',
+      SubTitle: "I'm always doing something, and it's not always physics (suprisingly), so all the random junk will probably end up over in the More section. If you can't find what you're looking for, use the search box in the top right (please use it, I spent ages getting that to work)",
     },
+  },
+  ComingSoon: {
+    HeadTitle: 'Coming Soon | Danny Wray',
+    Title: 'Coming Soon..',
+    SubTitle: "Looks like I haven't finished that bit yet.",
   },
   Search: {
     placeholder: 'Search...',

@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import mergeStyles from '../../../utilities/css/mergeStyles';
-
 import style from './Heading.css';
 
 const Heading = ({
   children, level, className, center,
 }) => {
   const Tag = `h${level}`;
-  const merged = mergeStyles(center ? style.HeadingCenter : style.Heading, className);
+  const merged = `${center ? style.HeadingCenter : style.Heading} ${className}`;
   return (
     <Tag className={merged}>
       {children}

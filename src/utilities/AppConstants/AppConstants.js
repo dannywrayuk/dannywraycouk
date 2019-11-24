@@ -46,5 +46,8 @@ const AppConstants = {
     },
   },
   SiteColor: '#FFCA1E',
+  TwitterLink: 'https://twitter.com/dannywrayuk',
+  InstagramLink: 'https://www.instagram.com/dannywrayuk/',
+  SpotifyLink: 'https://open.spotify.com/user/sciencekidd97',
 };
 export default AppConstants;

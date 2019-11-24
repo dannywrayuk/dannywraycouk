@@ -13,13 +13,14 @@ import AppConstants from '../../../utilities/AppConstants';
 import AppBase from '../../_atoms/App';
 import Footer from '../../_organisms/Footer';
 import Header from '../../_organisms/Header';
-import BlogPage from '../../ecosystems/BlogPage';
+// import BlogPage from '../../ecosystems/BlogPage';
 import ErrorPage from '../../ecosystems/ErrorPage';
 import HomePage from '../../ecosystems/HomePage';
-import MorePage from '../../ecosystems/MorePage';
-import PhysicsPage from '../../ecosystems/PhysicsPage';
-import ProjectPage from '../../ecosystems/ProjectPage';
-import SearchPage from '../../ecosystems/SearchPage';
+
+// import MorePage from '../../ecosystems/MorePage';
+// import PhysicsPage from '../../ecosystems/PhysicsPage';
+// import ProjectPage from '../../ecosystems/ProjectPage';
+// import SearchPage from '../../ecosystems/SearchPage';
 
 const { ROUTES } = AppConstants;
 
@@ -47,31 +48,31 @@ const App = () => (
               <Route
                 exact
                 path={ROUTES.BLOG}
-                render={props => <BlogPage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 exact
                 path={ROUTES.PHYSICS}
-                render={props => <PhysicsPage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 exact
                 path={ROUTES.PROJECTS}
-                render={props => <ProjectPage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 exact
                 path={ROUTES.MORE}
-                render={props => <MorePage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 path={ROUTES.SEARCH_TERM}
-                render={props => <SearchPage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 exact
                 path={ROUTES.SEARCH_BLANK}
-                render={props => <SearchPage {...props} />}
+                render={props => <ErrorPage {...props} />}
               />
               <Route
                 exact

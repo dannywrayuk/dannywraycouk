@@ -17,3 +17,7 @@ h4{
 .HeadingCenter{
   text-align: center;
 }
+
+.Heading{
+  margin-bottom: 10px;
+}

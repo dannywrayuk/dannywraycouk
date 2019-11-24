@@ -1,15 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Sponge from '../../../../../images/gif/sponge.gif';
+import InstagramImage1 from '../../../../../images/png/instagram_image1.jpg';
+import InstagramImage2 from '../../../../../images/png/instagram_image2.jpg';
+import Me from '../../../../../images/png/me.png';
 import { ReactComponent as Apple } from '../../../../../images/svg/apple.svg';
 import { ReactComponent as Atom } from '../../../../../images/svg/atom.svg';
 import background from '../../../../../images/svg/background.svg';
 import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
+import { ReactComponent as Instagram } from '../../../../../images/svg/instagram.svg';
 import { ReactComponent as Lightning } from '../../../../../images/svg/lightning.svg';
 import { ReactComponent as Pi } from '../../../../../images/svg/pi.svg';
+import { ReactComponent as Spotify } from '../../../../../images/svg/spotify.svg';
 import { ReactComponent as Sun } from '../../../../../images/svg/sun.svg';
+import { ReactComponent as Twitter } from '../../../../../images/svg/twitter.svg';
 import { withText } from '../../../../../text/textStore';
+import AppConstants from '../../../../../utilities/AppConstants';
 import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
 import ShapeBlob from '../../../../_atoms/ShapeBlob';
@@ -34,6 +40,9 @@ const HomePageMain = ({ Text, Text: text }) => (
             <Text path="SubTitle" />
           </Heading>
         </ResponsiveElement>
+        <center>
+          <img className={style.titleImage} src={Me} alt="" width={250} height={250} />
+        </center>
       </ResponsiveDivider>
       <Card>
         <CardContent>
@@ -66,6 +75,15 @@ const HomePageMain = ({ Text, Text: text }) => (
         </CardContent>
         <CardFooter>
           <Text path="IntroCard.FooterText" />
+          <a href={AppConstants.TwitterLink}>
+            <Twitter className={style.socialIcons} />
+          </a>
+          <a href={AppConstants.InstagramLink}>
+            <Instagram className={style.socialIcons} />
+          </a>
+          <a href={AppConstants.SpotifyLink}>
+            <Spotify className={style.socialIcons} />
+          </a>
         </CardFooter>
       </Card>
       <Card>
@@ -75,10 +93,10 @@ const HomePageMain = ({ Text, Text: text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Text path="Description" />
+              <Text path="PhysicsCard.SubTitle" />
             </ResponsiveElement>
           </ResponsiveDivider>
-          <div className={style.physicsblobs}>
+          <div className={style.textAlignCenter}>
             <ResponsiveElement>
               <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
                 <ShapeBlob>
@@ -123,39 +141,9 @@ const HomePageMain = ({ Text, Text: text }) => (
             </ResponsiveElement>
           </div>
         </CardContent>
-      </Card>
-      <Card>
-        <CardContent>
-          <Heading level={2} center>
-            <Text path="ProjectCard.Title" />
-          </Heading>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <Text path="Description" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement width={2}>
-              <Text path="Description" />
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <img src={Sponge} alt="" width="300px" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <Text path="Description" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <img src={Sponge} alt="" width="300px" />
-            </ResponsiveElement>
-            <ResponsiveElement width={2}>
-              <Text path="Description" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-        </CardContent>
+        <CardFooter>
+          <Text path="PhysicsCard.FooterText" />
+        </CardFooter>
       </Card>
       <Card>
         <CardContent>
@@ -164,17 +152,17 @@ const HomePageMain = ({ Text, Text: text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Text path="Description" />
+              <Text path="BlogCard.SubTitle" />
             </ResponsiveElement>
           </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement width={2}>
-              <Text path="Description" />
+          <div className={style.textAlignCenter}>
+            <ResponsiveElement>
+              <img src={InstagramImage2} alt="" width="300px" />
             </ResponsiveElement>
             <ResponsiveElement>
-              <img src={Sponge} alt="" width="300px" />
+              <img src={InstagramImage1} alt="" width="300px" />
             </ResponsiveElement>
-          </ResponsiveDivider>
+          </div>
         </CardContent>
       </Card>
       <Card>
@@ -184,7 +172,7 @@ const HomePageMain = ({ Text, Text: text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Text path="Description" />
+              <Text path="MoreCard.SubTitle" />
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
