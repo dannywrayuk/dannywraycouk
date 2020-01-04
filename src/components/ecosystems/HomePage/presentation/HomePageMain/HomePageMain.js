@@ -167,18 +167,6 @@ const HomePageMain = ({ Text, Text: text }) => (
           </div>
         </CardContent>
       </Card>
-      <Card>
-        <CardContent>
-          <Heading level={2} center>
-            <Text path="MoreCard.Title" />
-          </Heading>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <Text path="MoreCard.SubTitle" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-        </CardContent>
-      </Card>
     </ResponsiveWrapper>
   </Background>
 );
