@@ -74,14 +74,16 @@ const HomePageMain = ({ Text, Text: text }) => (
           </ResponsiveDivider>
         </CardContent>
         <CardFooter>
-          <Text path="IntroCard.FooterText" />
-          <a href={AppConstants.TwitterLink}>
+          <div className={style.followText}>
+            <Text path="IntroCard.FooterText" />
+          </div>
+          <a href={AppConstants.TwitterLink} className={style.followText}>
             <Twitter className={style.socialIcons} />
           </a>
-          <a href={AppConstants.InstagramLink}>
+          <a href={AppConstants.InstagramLink} className={style.followText}>
             <Instagram className={style.socialIcons} />
           </a>
-          <a href={AppConstants.SpotifyLink}>
+          <a href={AppConstants.SpotifyLink} className={style.followText}>
             <Spotify className={style.socialIcons} />
           </a>
         </CardFooter>
