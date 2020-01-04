@@ -25,7 +25,8 @@
 }
 
 .hamburger {
-  color: #494949;
+  height: 20px;
+  fill: #494949;
 }
 
 .menuContainer{

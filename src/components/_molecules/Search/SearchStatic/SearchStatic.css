@@ -14,8 +14,8 @@
 
 .image{
   display: inline-flex;
-  font-size: 20px;
-  color: #494949
+  height: 20px;
+  fill: #494949
 }
 
 .input{

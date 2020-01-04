@@ -47,17 +47,17 @@
 
 .closeimage{
   display: inline-flex;
-  font-size: 15px;
+  height: 15px;
   max-width: 15px;
-  color: #494949;
+  fill: #494949;
   margin: 0px 5px;
   transition: 0.5s;
 }
 
 .closeHide{
   display: inline-flex;
-  font-size: 0px;
-  color: #494949;
+  width: 0px;
+  fill: #494949;
   max-width: 0px;
   transition: 0.5s;
   opacity: 0;
@@ -87,6 +87,7 @@
 
 
 .searchimage{
-  color: #494949;
+  fill: #494949;
+  height: 20px;
   margin: 0px 5px;
 }

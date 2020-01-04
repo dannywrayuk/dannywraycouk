@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '../../_atoms/Icon';
 import Button from '../Button';
 import NavButtons from '../NavButtons';
+import { ReactComponent as Hamburger } from '../../../images/svg/hamburger.svg';
 
 import style from './HamburgerMenu.css';
 
@@ -22,7 +22,7 @@ const HamburgerMenu = ({ onClick, isExtended }) => {
       </div>
       <div className={buttonStyle}>
         <Button onClick={onClick}>
-          <Icon icon="menu" rounded className={style.hamburger} />
+          <Hamburger className={style.hamburger} />
         </Button>
       </div>
     </>

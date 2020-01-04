@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { withText } from '../../../../text/textStore';
-import Icon from '../../../_atoms/Icon';
+import { ReactComponent as Search } from '../../../../images/svg/search.svg';
+import { ReactComponent as Close } from '../../../../images/svg/close.svg';
 import Button from '../../Button';
 
 import style from './SearchDynamic.css';
@@ -27,7 +28,7 @@ const SearchDynamic = ({
           className={style.closeContainer}
           onClick={() => { onCloseClick(); handlers.setSearchValue(''); }}
         >
-          <Icon icon="highlight_off" twotone className={closeStyle} />
+          <Close className={closeStyle} />
         </Button>
         <div className={inputStyle}>
           <fieldset className={style.field}>
@@ -45,7 +46,7 @@ const SearchDynamic = ({
           className={style.searchContainer}
           onClick={isExtended ? handlers.handleSearch : onSearchClick}
         >
-          <Icon icon="search" rounded className={style.searchimage} />
+          <Search className={style.searchimage} />
         </Button>
       </div>
     </div>
