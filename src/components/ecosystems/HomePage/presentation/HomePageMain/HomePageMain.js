@@ -4,31 +4,24 @@ import PropTypes from 'prop-types';
 import InstagramImage1 from '../../../../../images/png/instagram_image1.jpg';
 import InstagramImage2 from '../../../../../images/png/instagram_image2.jpg';
 import Me from '../../../../../images/png/me.png';
-import { ReactComponent as Apple } from '../../../../../images/svg/apple.svg';
-import { ReactComponent as Atom } from '../../../../../images/svg/atom.svg';
-import background from '../../../../../images/svg/background.svg';
-import { ReactComponent as Flame } from '../../../../../images/svg/flame.svg';
+import backgroundimage from '../../../../../images/svg/background.svg';
 import { ReactComponent as Instagram } from '../../../../../images/svg/instagram.svg';
-import { ReactComponent as Lightning } from '../../../../../images/svg/lightning.svg';
-import { ReactComponent as Pi } from '../../../../../images/svg/pi.svg';
 import { ReactComponent as Spotify } from '../../../../../images/svg/spotify.svg';
-import { ReactComponent as Sun } from '../../../../../images/svg/sun.svg';
 import { ReactComponent as Twitter } from '../../../../../images/svg/twitter.svg';
 import { withText } from '../../../../../text/textStore';
 import AppConstants from '../../../../../utilities/AppConstants';
 import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
-import ShapeBlob from '../../../../_atoms/ShapeBlob';
 import Heading from '../../../../_molecules/Heading';
-import IconCard from '../../../../_molecules/IconCard';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent, CardFooter } from '../../../../_organisms/Card';
+import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
 
 import style from './HomePageMain.css';
 
 const HomePageMain = ({ Text, Text: text }) => (
-  <Background image={background}>
+  <Background image={backgroundimage}>
     <ResponsiveWrapper>
       <Head title={text({ path: 'HeadTitle' })} />
       <ResponsiveDivider>
@@ -98,50 +91,7 @@ const HomePageMain = ({ Text, Text: text }) => (
               <Text path="PhysicsCard.SubTitle" />
             </ResponsiveElement>
           </ResponsiveDivider>
-          <div className={style.textAlignCenter}>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
-                <ShapeBlob>
-                  <Atom width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.2">
-                <ShapeBlob>
-                  <Flame width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.3">
-                <ShapeBlob>
-                  <Apple width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.4">
-                <ShapeBlob>
-                  <Lightning width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.5">
-                <ShapeBlob>
-                  <Sun width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-            <ResponsiveElement>
-              <IconCard strings="HomePageMain.PhysicsCard.Catagories.6">
-                <ShapeBlob>
-                  <Pi width="25px" />
-                </ShapeBlob>
-              </IconCard>
-            </ResponsiveElement>
-          </div>
+          <PhysicsIcons />
         </CardContent>
         <CardFooter>
           <Text path="PhysicsCard.FooterText" />

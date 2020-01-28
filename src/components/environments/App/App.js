@@ -16,9 +16,9 @@ import Header from '../../_organisms/Header';
 // import BlogPage from '../../ecosystems/BlogPage';
 import ErrorPage from '../../ecosystems/ErrorPage';
 import HomePage from '../../ecosystems/HomePage';
-
 // import MorePage from '../../ecosystems/MorePage';
-// import PhysicsPage from '../../ecosystems/PhysicsPage';
+import PhysicsPage from '../../ecosystems/PhysicsPage';
+
 // import ProjectPage from '../../ecosystems/ProjectPage';
 // import SearchPage from '../../ecosystems/SearchPage';
 
@@ -53,7 +53,7 @@ const App = () => (
               <Route
                 exact
                 path={ROUTES.PHYSICS}
-                render={props => <ErrorPage {...props} />}
+                render={props => <PhysicsPage {...props} />}
               />
               <Route
                 exact

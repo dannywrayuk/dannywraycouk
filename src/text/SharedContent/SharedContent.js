@@ -76,6 +76,11 @@ const SharedContent = {
       SubTitle: "I'm always doing something, and it's not always physics (suprisingly), so all the random junk will probably end up over in the More section. If you can't find what you're looking for, use the search box in the top right (please use it, I spent ages getting that to work)",
     },
   },
+  PhysicsPage: {
+    PhysicsMainTitle: 'Danny Wray | Physics',
+    Heading: 'A Whole Lotta Physics',
+    Body: '',
+  },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',
     Title: 'Coming Soon..',

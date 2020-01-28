@@ -22,9 +22,11 @@
         "react"
     ],
     "rules": {
-        "react/jsx-filename-extension": [0],
+        "react/jsx-filename-extension": [
+            0
+        ],
         "import/extensions": "off",
-        "arrow-parens":"off",
+        "arrow-parens": "off",
         "react/jsx-props-no-spreading": "off",
         "no-plusplus": "off",
         "linebreak-style": "off"
