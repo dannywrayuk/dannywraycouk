@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withText } from '../../../../text/textStore';
 import { ReactComponent as Search } from '../../../../images/svg/search.svg';
+import { withText } from '../../../../text/textStore';
 import Button from '../../Button';
 
 import style from './SearchStatic.css';

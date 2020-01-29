@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import { ReactComponent as Hamburger } from '../../../images/svg/hamburger.svg';
 import Button from '../Button';
 import NavButtons from '../NavButtons';
-import { ReactComponent as Hamburger } from '../../../images/svg/hamburger.svg';
 
 import style from './HamburgerMenu.css';
 

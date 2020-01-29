@@ -7,7 +7,7 @@ const SharedContent = {
     Pangram: 'Pack my box with five dozen liquor jugs',
   },
   Footer: {
-    copyright: '© Danny Wray 2019',
+    copyright: '© Danny Wray 2020',
   },
   HomePageMain: {
     HeadTitle: 'Home | Danny Wray',
@@ -27,11 +27,11 @@ const SharedContent = {
         Body: "I'm trying typeset all my university notes so they look pretty. There will be quite a lot of content there eventually. Check them out!",
       },
       Physics: {
-        Title: 'Why not some Programming too?',
+        Title: 'Programming too?',
         Body: 'I have a few programming projects in the works. I like simulating physical systems and building tools to speed up programming.',
       },
       More: {
-        Title: "But that's not all",
+        Title: "That's not all..",
         Body: "You'll find all kinds of junk on this site, such as a small blog where I post pictures. Stick around, I'm sure you'll find something interesting.",
       },
       FooterText: 'Follow me!',
@@ -79,7 +79,8 @@ const SharedContent = {
   PhysicsPage: {
     PhysicsMainTitle: 'Danny Wray | Physics',
     Heading: 'A Whole Lotta Physics',
-    Body: '',
+    Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require any prerequisites to understand.",
+    UnderCard: "Not everything on here is finished and it's probably going to be a long process, but below you'll find my most recent addition.",
   },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',

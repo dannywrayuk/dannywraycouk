@@ -5,11 +5,7 @@ import InstagramImage1 from '../../../../../images/png/instagram_image1.jpg';
 import InstagramImage2 from '../../../../../images/png/instagram_image2.jpg';
 import Me from '../../../../../images/png/me.png';
 import backgroundimage from '../../../../../images/svg/background.svg';
-import { ReactComponent as Instagram } from '../../../../../images/svg/instagram.svg';
-import { ReactComponent as Spotify } from '../../../../../images/svg/spotify.svg';
-import { ReactComponent as Twitter } from '../../../../../images/svg/twitter.svg';
 import { withText } from '../../../../../text/textStore';
-import AppConstants from '../../../../../utilities/AppConstants';
 import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
@@ -17,6 +13,7 @@ import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/Res
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent, CardFooter } from '../../../../_organisms/Card';
 import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
+import SocialIcons from '../../../../_organisms/SocialIcons';
 
 import style from './HomePageMain.css';
 
@@ -44,7 +41,7 @@ const HomePageMain = ({ Text, Text: text }) => (
               <Heading level={4}>
                 <Text path="IntroCard.Programming.Title" />
               </Heading>
-              <p>
+              <p className={style.threeSubTitle}>
                 <Text path="IntroCard.Programming.Body" />
               </p>
             </ResponsiveElement>
@@ -52,7 +49,7 @@ const HomePageMain = ({ Text, Text: text }) => (
               <Heading level={4}>
                 <Text path="IntroCard.Physics.Title" />
               </Heading>
-              <p>
+              <p className={style.threeSubTitle}>
                 <Text path="IntroCard.Physics.Body" />
               </p>
             </ResponsiveElement>
@@ -60,7 +57,7 @@ const HomePageMain = ({ Text, Text: text }) => (
               <Heading level={4}>
                 <Text path="IntroCard.More.Title" />
               </Heading>
-              <p>
+              <p className={style.threeSubTitle}>
                 <Text path="IntroCard.More.Body" />
               </p>
             </ResponsiveElement>
@@ -70,15 +67,7 @@ const HomePageMain = ({ Text, Text: text }) => (
           <div className={style.followText}>
             <Text path="IntroCard.FooterText" />
           </div>
-          <a href={AppConstants.TwitterLink} className={style.followText}>
-            <Twitter className={style.socialIcons} />
-          </a>
-          <a href={AppConstants.InstagramLink} className={style.followText}>
-            <Instagram className={style.socialIcons} />
-          </a>
-          <a href={AppConstants.SpotifyLink} className={style.followText}>
-            <Spotify className={style.socialIcons} />
-          </a>
+          <SocialIcons />
         </CardFooter>
       </Card>
       <Card>
@@ -88,7 +77,9 @@ const HomePageMain = ({ Text, Text: text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Text path="PhysicsCard.SubTitle" />
+              <p className={style.subTitle}>
+                <Text path="PhysicsCard.SubTitle" />
+              </p>
             </ResponsiveElement>
           </ResponsiveDivider>
           <PhysicsIcons />
@@ -104,7 +95,9 @@ const HomePageMain = ({ Text, Text: text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Text path="BlogCard.SubTitle" />
+              <p className={style.subTitle}>
+                <Text path="BlogCard.SubTitle" />
+              </p>
             </ResponsiveElement>
           </ResponsiveDivider>
           <div className={style.textAlignCenter}>

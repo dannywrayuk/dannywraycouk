@@ -6,9 +6,12 @@ import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
+import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../../../_organisms/Card';
 import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
+
+import style from './PhysicsPageMain.css';
 
 const PhysicsPageMain = ({ Text: text, Text }) => (
   <Background image={backgroundimage}>
@@ -16,14 +19,24 @@ const PhysicsPageMain = ({ Text: text, Text }) => (
     <ResponsiveWrapper>
       <Card>
         <CardContent>
-          <Heading>
+          <Heading center>
             <Text path="Heading" />
           </Heading>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent>
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <p className={style.IntroductionText}>
+                <Text path="Body" />
+              </p>
+            </ResponsiveElement>
+          </ResponsiveDivider>
           <PhysicsIcons />
+          <ResponsiveDivider>
+            <ResponsiveElement>
+              <p className={style.IntroductionText}>
+                <Text path="UnderCard" />
+              </p>
+            </ResponsiveElement>
+          </ResponsiveDivider>
         </CardContent>
       </Card>
     </ResponsiveWrapper>
