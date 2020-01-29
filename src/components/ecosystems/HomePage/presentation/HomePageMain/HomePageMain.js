@@ -23,12 +23,14 @@ const HomePageMain = ({ Text, Text: text }) => (
       <Head title={text({ path: 'HeadTitle' })} />
       <ResponsiveDivider>
         <ResponsiveElement width={2}>
-          <Heading>
-            <Text path="Title" />
-          </Heading>
-          <Heading level={2}>
-            <Text path="SubTitle" />
-          </Heading>
+          <div className={style.bannerText}>
+            <Heading>
+              <Text path="Title" />
+            </Heading>
+            <Heading level={2}>
+              <Text path="SubTitle" />
+            </Heading>
+          </div>
         </ResponsiveElement>
         <center>
           <img className={style.titleImage} src={Me} alt="" width={250} height={250} />
