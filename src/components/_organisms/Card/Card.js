@@ -3,17 +3,22 @@ import PropTypes from 'prop-types';
 
 import style from './Card.css';
 
-const Card = ({ children }) => (
-  <div className={style.Card}>
-    {children}
-  </div>
+const Card = ({ children, topper }) => (
+  <>
+    {topper ? (<div className={style.topper} />) : null}
+    <div className={style.Card}>
+      {children}
+    </div>
+  </>
 );
 
 Card.propTypes = {
   children: PropTypes.node,
+  topper: PropTypes.bool,
 };
 Card.defaultProps = {
   children: null,
+  topper: false,
 };
 
 const CardContent = ({ children }) => (

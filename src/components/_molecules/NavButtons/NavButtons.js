@@ -13,33 +13,25 @@ const NavButtons = ({ Text }) => (
   <>
     <LinkButton
       to={ROUTES.BLOG}
-      modifierStyles={{
-        root: style.link,
-      }}
+      className={style.link}
     >
       <Text path="BlogLink" />
     </LinkButton>
     <LinkButton
       to={ROUTES.PHYSICS}
-      modifierStyles={{
-        root: style.link,
-      }}
+      className={style.link}
     >
       <Text path="PhysicsLink" />
     </LinkButton>
     <LinkButton
       to={ROUTES.PROJECTS}
-      modifierStyles={{
-        root: style.link,
-      }}
+      className={style.link}
     >
       <Text path="ProjectLink" />
     </LinkButton>
     <LinkButton
       to={ROUTES.MORE}
-      modifierStyles={{
-        root: style.link,
-      }}
+      className={style.link}
     >
       <Text path="MoreLink" />
     </LinkButton>

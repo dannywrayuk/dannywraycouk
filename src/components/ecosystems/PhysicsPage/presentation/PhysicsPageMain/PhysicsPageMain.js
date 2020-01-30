@@ -17,7 +17,7 @@ const PhysicsPageMain = ({ Text: text, Text }) => (
   <Background image={backgroundimage}>
     <Head title={text({ path: 'PhysicsMainTitle' })} />
     <ResponsiveWrapper>
-      <Card>
+      <Card topper>
         <CardContent>
           <Heading center>
             <Text path="Heading" />

@@ -14,8 +14,7 @@ const ErrorPage = ({ Text, Text: text }) => (
   <Background image={background}>
     <ResponsiveWrapper>
       <Head title={text({ path: 'HeadTitle' })} />
-      <div style={{ height: '30px' }} />
-      <Card>
+      <Card topper>
         <CardContent>
           <ResponsiveDivider>
             <ResponsiveElement>

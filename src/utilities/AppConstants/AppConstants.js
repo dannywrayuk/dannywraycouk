@@ -3,6 +3,7 @@ const AppConstants = {
     BASE: '/',
     BLOG: '/blog',
     PHYSICS: '/physics',
+    PHYSICS_SECTION: '/physics/:section',
     PROJECTS: '/projects',
     MORE: '/more',
     SEARCH_TERM: '/search/:term',
@@ -25,6 +26,14 @@ const AppConstants = {
     STAGES: {
       MAIN: 'MAIN',
       ERROR: 'ERROR',
+    },
+    SECTIONS: {
+      QUANTUM: '/physics/quantum',
+      THERMAL: '/physics/thermal',
+      CLASSICAL: '/physics/classical',
+      ELECTROMAG: '/physics/electromag',
+      ASTRO: '/physics/astro',
+      MATHS: '/physics/maths',
     },
   },
   Projects: {

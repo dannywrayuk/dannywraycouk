@@ -50,8 +50,11 @@ const App = () => (
                 path={ROUTES.BLOG}
                 render={props => <ErrorPage {...props} />}
               />
+              {/* <Route
+                path={ROUTES.PHYSICS_SECTION}
+                render={props => <PhysicsPage {...props} />}
+              /> */}
               <Route
-                exact
                 path={ROUTES.PHYSICS}
                 render={props => <PhysicsPage {...props} />}
               />

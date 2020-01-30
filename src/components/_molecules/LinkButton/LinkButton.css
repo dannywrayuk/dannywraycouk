@@ -1,0 +1,16 @@
+.LinkButton {
+  color: unset;
+  border: none; 
+  background: inherit;
+  outline: none;
+  cursor: pointer;
+  text-decoration: inherit;
+}
+
+.LinkButton:visited, .LinkButton:hover,.LinkButton:active{
+  border: none; 
+  background: inherit;
+  outline: none;
+  cursor: pointer;
+  text-decoration: inherit;
+}
