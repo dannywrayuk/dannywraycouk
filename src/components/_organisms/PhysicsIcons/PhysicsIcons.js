@@ -15,7 +15,7 @@ import { ResponsiveElement } from '../../_molecules/ResponsiveDividers';
 import style from './PhysicsIcons.css';
 
 const PhysicsIcons = () => (
-  <div className={style.textAlignCenter}>
+  <div className={style.iconsContainer}>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.QUANTUM}>
         <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
