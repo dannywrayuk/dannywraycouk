@@ -1,6 +1,0 @@
-const actionTypes = {
-  EXAMPLE_REQUEST: 'EXAMPLE_REQUEST',
-  EXAMPLE_FINISHED: 'EXAMPLE_FINISHED',
-  EXAMPLE_SUCCESS: 'EXAMPLE_SUCCESS',
-};
-export default actionTypes;

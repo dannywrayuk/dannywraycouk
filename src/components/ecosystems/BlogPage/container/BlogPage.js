@@ -1,7 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { connect } from 'react-redux';
-
 import AppConstants from '../../../../utilities/AppConstants';
 import BlogPageMain from '../presentation/BlogPageMain';
 
@@ -19,8 +17,4 @@ BlogPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ CoreStage }) => ({
-  stage: CoreStage.BlogPage,
-});
-
-export default connect(mapStateToProps)(BlogPage);
+export default BlogPage;

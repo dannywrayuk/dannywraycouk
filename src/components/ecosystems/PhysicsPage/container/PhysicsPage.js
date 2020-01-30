@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import AppConstants from '../../../../utilities/AppConstants';
 import PhysicsPageMain from '../presentation/PhysicsPageMain';
@@ -19,8 +18,4 @@ PhysicsPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ CoreStage }) => ({
-  stage: CoreStage.PhysicsPage,
-});
-
-export default connect(mapStateToProps)(PhysicsPage);
+export default PhysicsPage;

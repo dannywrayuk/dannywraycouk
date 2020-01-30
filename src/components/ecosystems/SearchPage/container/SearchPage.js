@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import AppConstants from '../../../../utilities/AppConstants';
 import SearchPageMain from '../presentation/SearchPageMain';
@@ -19,8 +18,5 @@ SearchPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ CoreStage }) => ({
-  stage: CoreStage.SearchPage,
-});
 
-export default connect(mapStateToProps)(SearchPage);
+export default SearchPage;

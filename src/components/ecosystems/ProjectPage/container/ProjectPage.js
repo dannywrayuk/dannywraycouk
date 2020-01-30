@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import AppConstants from '../../../../utilities/AppConstants';
 import ProjectPageMain from '../presentation/ProjectPageMain';
@@ -19,8 +18,4 @@ ProjectPage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ CoreStage }) => ({
-  stage: CoreStage.ProjectPage,
-});
-
-export default connect(mapStateToProps)(ProjectPage);
+export default ProjectPage;

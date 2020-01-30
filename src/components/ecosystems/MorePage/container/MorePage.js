@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import AppConstants from '../../../../utilities/AppConstants';
 import MorePageMain from '../presentation/MorePageMain';
@@ -19,8 +18,4 @@ MorePage.propTypes = {
   stage: propTypes.string.isRequired,
 };
 
-const mapStateToProps = ({ CoreStage }) => ({
-  stage: CoreStage.MorePage,
-});
-
-export default connect(mapStateToProps)(MorePage);
+export default MorePage;
