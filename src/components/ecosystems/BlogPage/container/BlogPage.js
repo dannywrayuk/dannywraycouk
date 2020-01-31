@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+
 import AppConstants from '../../../../utilities/AppConstants';
 import BlogPageMain from '../presentation/BlogPageMain';
 
