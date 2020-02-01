@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  min-width: 170px;
 }
 
 .subtitle{
