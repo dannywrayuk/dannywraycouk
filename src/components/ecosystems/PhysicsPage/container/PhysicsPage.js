@@ -1,24 +1,35 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import AppConstants from '../../../../utilities/AppConstants';
+import ErrorPage from '../../ErrorPage';
 import PhysicsPageMain from '../presentation/PhysicsPageMain';
+import PhysicsSectionPage from '../presentation/PhysicsSectionPage';
 
 const PhysicsPage = (props) => {
   const { match } = props;
-  const searchTerm = match.params.section;
-  console.log(searchTerm);
-  const { stage } = props;
-  const { STAGES } = AppConstants.Physics;
-  const stageSelector = {
-    [STAGES.MAIN]: <PhysicsPageMain {...props} />,
-    [STAGES.ERROR]: <PhysicsPageMain {...props} />,
-  };
-  return stageSelector[stage] || stageSelector[STAGES.ERROR];
+  const { section } = match.params;
+  const { SECTIONS } = AppConstants.Physics;
+
+  let page;
+  if (section === undefined) {
+    page = <PhysicsPageMain {...props} />;
+  } else if (section.toUpperCase() in SECTIONS) {
+    page = <PhysicsSectionPage {...props} />;
+  } else {
+    page = <ErrorPage {...props} />;
+  }
+  return page;
 };
 
 PhysicsPage.propTypes = {
-  stage: propTypes.string.isRequired,
+  match: PropTypes.object,
+  params: PropTypes.object,
+};
+
+PhysicsPage.defaultProps = {
+  match: { params: { section: 0 } },
+  params: { section: 0 },
 };
 
 export default PhysicsPage;

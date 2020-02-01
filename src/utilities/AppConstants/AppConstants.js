@@ -10,23 +10,7 @@ const AppConstants = {
     SEARCH_BLANK: '/search',
     ERROR: '/error',
   },
-  HomePage: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
-    },
-  },
-  Blog: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
-    },
-  },
   Physics: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
-    },
     SECTIONS: {
       QUANTUM: '/physics/quantum',
       THERMAL: '/physics/thermal',
@@ -34,24 +18,6 @@ const AppConstants = {
       ELECTROMAG: '/physics/electromag',
       ASTRO: '/physics/astro',
       MATHS: '/physics/maths',
-    },
-  },
-  Projects: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
-    },
-  },
-  More: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
-    },
-  },
-  Search: {
-    STAGES: {
-      MAIN: 'MAIN',
-      ERROR: 'ERROR',
     },
   },
   SiteColor: '#FFCA1E',
