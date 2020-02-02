@@ -15,7 +15,7 @@ import style from './PhysicsPageMain.css';
 
 const PhysicsPageMain = ({ Text: text, Text }) => (
   <Background image={backgroundimage}>
-    <Head title={text({ path: 'PhysicsMainTitle' })} />
+    <Head title={text({ path: 'Title' })} />
     <ResponsiveWrapper>
       <Card topper>
         <CardContent>
@@ -47,4 +47,4 @@ PhysicsPageMain.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('PhysicsPage')(PhysicsPageMain);
+export default withText('PhysicsPage.MainPage')(PhysicsPageMain);

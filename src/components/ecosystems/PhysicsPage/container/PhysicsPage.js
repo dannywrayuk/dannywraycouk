@@ -7,8 +7,7 @@ import PhysicsPageMain from '../presentation/PhysicsPageMain';
 import PhysicsSectionPage from '../presentation/PhysicsSectionPage';
 
 const PhysicsPage = (props) => {
-  const { match } = props;
-  const { section } = match.params;
+  const { match: { params: { section } } } = props;
   const { SECTIONS } = AppConstants.Physics;
 
   let page;

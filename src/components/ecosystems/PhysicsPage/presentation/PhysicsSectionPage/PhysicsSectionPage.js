@@ -6,22 +6,39 @@ import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
 import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
+import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../../../_organisms/Card';
+import Contents from '../../../../_organisms/Contents';
 
-const PhysicsSectionPage = (props) => {
-  const { match } = props;
+import style from './PhysicsSectionPage.css';
+
+const PhysicsSectionPage = ({ match, Text, Text: text }) => {
   const { section } = match.params;
-  const { Text: text } = props;
   return (
     <Background image={backgroundimage}>
-      <Head title={text({ path: 'PhysicsMainTitle' })} />
+      <Head title={text({ path: `${section}.Title` })} />
       <ResponsiveWrapper>
         <Card topper>
           <CardContent>
             <Heading center>
-              {section}
+              <Text path={`${section}.Heading`} />
             </Heading>
+            <Heading level={4} center className={style.subHeading}>
+              <Text path={`${section}.SubHeading`} />
+            </Heading>
+            <ResponsiveDivider>
+              <ResponsiveElement>
+                <p className={style.IntroductionText}>
+                  <Text path="Body" />
+                </p>
+              </ResponsiveElement>
+            </ResponsiveDivider>
+            <ResponsiveDivider>
+              <ResponsiveElement>
+                <Contents section={section} />
+              </ResponsiveElement>
+            </ResponsiveDivider>
           </CardContent>
         </Card>
       </ResponsiveWrapper>
@@ -40,4 +57,4 @@ PhysicsSectionPage.defaultProps = {
   params: { section: 0 },
 };
 
-export default withText('PhysicsPage')(PhysicsSectionPage);
+export default withText('PhysicsPage.Sections')(PhysicsSectionPage);

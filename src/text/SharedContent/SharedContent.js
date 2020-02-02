@@ -43,32 +43,6 @@ const SharedContent = {
     PhysicsCard: {
       Title: 'A Whole Lotta Physics',
       SubTitle: "Sometimes the hardest part about learning physics is knowing where to look for information. I'm working through my university notes and uploading a typeset version of everything I learned. It's a work in progress so please be patient, but hopefully this will help out some poor students in the future.",
-      Catagories: {
-        1: {
-          Title: 'Quantum Mechanics',
-          SubTitle: 'Really Small Things.',
-        },
-        2: {
-          Title: 'Thermodynamics',
-          SubTitle: 'Really Jiggly Things.',
-        },
-        3: {
-          Title: 'Classical Mechanics',
-          SubTitle: 'Really Normal Things.',
-        },
-        4: {
-          Title: 'Electromagnetism',
-          SubTitle: 'Really Sticky Things.',
-        },
-        5: {
-          Title: 'Astrophysics',
-          SubTitle: 'Really Big Things.',
-        },
-        6: {
-          Title: 'Mathematics',
-          SubTitle: 'Really Abstract Things.',
-        },
-      },
       FooterText: 'Source code to any Physics or Computing projects can be found over in the Projects section.',
     },
     MoreCard: {
@@ -77,10 +51,45 @@ const SharedContent = {
     },
   },
   PhysicsPage: {
-    PhysicsMainTitle: 'Danny Wray | Physics',
-    Heading: 'A Whole Lotta Physics',
-    Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require any prerequisites to understand.",
-    UnderCard: "Not everything on here is finished and it's probably going to be a long process, but below you'll find my most recent addition.",
+    MainPage: {
+      Title: 'Danny Wray | Physics',
+      Heading: 'A Whole Lotta Physics',
+      Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require any prerequisites to understand.",
+      UnderCard: "Not everything on here is finished and it's probably going to be a long process, but below you'll find my most recent addition.",
+    },
+    Sections: {
+      quantum: {
+        Title: 'Danny Wray | Quantum Mechanics',
+        Heading: 'Quantum Mechanics',
+        SubHeading: 'Really Small Things.',
+      },
+      thermal: {
+        Title: 'Danny Wray | Thermodynamics',
+        Heading: 'Thermodynamics',
+        SubHeading: 'Really Jiggly Things.',
+      },
+      classical: {
+        Title: 'Danny Wray | Classical Mechanics',
+        Heading: 'Classical Mechanics',
+        SubHeading: 'Really Normal Things.',
+      },
+      electromag: {
+        Title: 'Danny Wray | Electromagnetism',
+        Heading: 'Electromagnetism',
+        SubHeading: 'Really Sticky Things.',
+      },
+      astro: {
+        Title: 'Danny Wray | Astrophysics',
+        Heading: 'Astrophysics',
+        SubHeading: 'Really Big Things.',
+      },
+      maths: {
+        Title: 'Danny Wray | Mathematics',
+        Heading: 'Mathematics',
+        SubHeading: 'Really Abstract Things.',
+      },
+      Body: "test text placeholder Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require any prerequisites to understand.",
+    },
   },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',

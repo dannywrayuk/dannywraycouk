@@ -18,7 +18,7 @@ const PhysicsIcons = () => (
   <div className={style.iconsContainer}>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.QUANTUM}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.1">
+        <IconCard strings="PhysicsPage.Sections.quantum">
           <ShapeBlob>
             <Atom width="25px" />
           </ShapeBlob>
@@ -27,7 +27,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.THERMAL}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.2">
+        <IconCard strings="PhysicsPage.Sections.thermal">
           <ShapeBlob>
             <Flame width="25px" />
           </ShapeBlob>
@@ -36,7 +36,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.CLASSICAL}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.3">
+        <IconCard strings="PhysicsPage.Sections.classical">
           <ShapeBlob>
             <Apple width="25px" />
           </ShapeBlob>
@@ -45,7 +45,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.ELECTROMAG}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.4">
+        <IconCard strings="PhysicsPage.Sections.electromag">
           <ShapeBlob>
             <Lightning width="25px" />
           </ShapeBlob>
@@ -54,7 +54,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.ASTRO}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.5">
+        <IconCard strings="PhysicsPage.Sections.astro">
           <ShapeBlob>
             <Sun width="25px" />
           </ShapeBlob>
@@ -63,7 +63,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.MATHS}>
-        <IconCard strings="HomePageMain.PhysicsCard.Catagories.6">
+        <IconCard strings="PhysicsPage.Sections.maths">
           <ShapeBlob>
             <Pi width="25px" />
           </ShapeBlob>

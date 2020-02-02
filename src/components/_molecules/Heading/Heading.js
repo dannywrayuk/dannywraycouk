@@ -18,7 +18,7 @@ const Heading = ({
 Heading.propTypes = {
   children: PropTypes.node,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
-  className: PropTypes.shape(),
+  className: PropTypes.string,
   center: PropTypes.bool,
 };
 

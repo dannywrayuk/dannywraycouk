@@ -10,10 +10,10 @@ const IconCard = ({ Text, children, strings }) => (
     {children}
     <div className={style.textContent}>
       <div>
-        <Text path={`${strings}.Title`} />
+        <Text path={`${strings}.Heading`} />
       </div>
       <div className={style.subtitle}>
-        <Text path={`${strings}.SubTitle`} />
+        <Text path={`${strings}.SubHeading`} />
       </div>
     </div>
   </div>
