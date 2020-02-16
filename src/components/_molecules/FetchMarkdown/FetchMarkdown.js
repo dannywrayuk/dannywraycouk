@@ -1,46 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Async from 'react-async';
-import ReactMarkdown from 'react-markdown/with-html';
-import MathJax from 'react-mathjax';
 
-import RemarkMathPlugin from 'remark-math';
-
-function MarkdownRender(props) {
-  const newProps = {
-    ...props,
-    plugins: [RemarkMathPlugin],
-    renderers: {
-      // eslint-disable-next-line react/destructuring-assignment, react/prop-types
-      ...props.renderers,
-      math: (p) => <MathJax.Node formula={p.value} />,
-      inlineMath: (p) => <MathJax.Node inline formula={p.value} />,
-    },
-  };
-  return (
-    <MathJax.Provider input="tex">
-      <ReactMarkdown {...newProps} />
-    </MathJax.Provider>
-  );
-}
-
+import katex from 'rehype-katex';
+import stringify from 'rehype-stringify';
+import math from 'remark-math';
+import markdown from 'remark-parse';
+import remark2rehype from 'remark-rehype';
+import unified from 'unified';
 
 const FetchMarkdown = ({ location, containerName }) => {
-  const loadData = () => fetch(location).then(response => response.text());
+  const parseText = (data) => {
+    let test;
+    unified()
+      .use(markdown)
+      .use(math)
+      .use(remark2rehype)
+      .use(katex)
+      .use(stringify)
+      .process(data, (err, file) => { test = String(file); });
+    return test;
+  };
+  const fetchData = () => fetch(location).then(response => response.text());
+  const loadData = async () => parseText(await fetchData());
+
   return (
     <Async promiseFn={loadData}>
       {({ data, err, isLoading }) => {
         if (isLoading) return 'Loading...';
         if (data) {
           return (
-            <MarkdownRender
-              className={containerName}
-              source={data}
-              escapeHtml={false}
-            />
+            // eslint-disable-next-line react/no-danger
+            <div className={containerName} dangerouslySetInnerHTML={{ __html: data }} />
           );
         }
-        return `Something went wrong: ${err.message}`;
+        return `Something went wrong: ${err}`;
       }}
     </Async>
   );

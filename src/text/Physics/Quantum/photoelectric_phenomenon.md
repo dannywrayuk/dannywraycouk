@@ -7,12 +7,6 @@ y^2=x^2+1
 $$
 is not inline
 
-||
-|:--:|
-| I'm centered! |
-
-# Example text {style=text-align:center}
-
 
 # Live demo
 Changes are automatically rendered as you type.
@@ -28,7 +22,7 @@ Changes are automatically rendered as you type.
 
 ## How about some code?
 
-\`\`\`js
+```js
 
 var React = require('react');
 var Markdown = require('react-markdown');
@@ -37,7 +31,7 @@ React.render(
   document.getElementById('content')
 );
 
-\`\`\`
+```
 
 Pretty neat, eh?
 

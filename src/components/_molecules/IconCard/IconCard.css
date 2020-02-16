@@ -1,6 +1,7 @@
 .wrapper{
   display: flex;
   min-width: 270px;
+  transition: 0.2s;
 }
 
 .textContent{
@@ -9,6 +10,10 @@
   justify-content: center;
   text-align: left;
   min-width: 170px;
+}
+
+.wrapper:hover{
+  transform: scale(1.1);
 }
 
 .subtitle{

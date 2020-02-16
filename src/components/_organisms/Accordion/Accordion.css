@@ -17,6 +17,7 @@
 .titleContainer:hover{
   background-color: #f1f1f1;
   padding-left: 25px;
+  transform: scale(1.03);
 }
 
 .title{
@@ -39,6 +40,7 @@
 .elementContainer:hover{
   background-color: #f1f1f1;
   padding-left: 25px;
+  transform: scale(0.97);
 }
 
 
