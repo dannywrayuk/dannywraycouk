@@ -35,9 +35,7 @@ const PhysicsSectionPage = ({ match, Text, Text: text }) => {
               </ResponsiveElement>
             </ResponsiveDivider>
             <ResponsiveDivider>
-              <ResponsiveElement>
-                <Contents section={section} />
-              </ResponsiveElement>
+              <Contents section={section} />
             </ResponsiveDivider>
           </CardContent>
         </Card>

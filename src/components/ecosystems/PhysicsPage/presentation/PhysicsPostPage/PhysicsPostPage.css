@@ -1,0 +1,25 @@
+.subHeading {
+  color: #777;
+  font-style: italic;
+}
+
+.IntroductionText{
+  text-align: center;
+  line-height: 30px;
+  margin: 0px auto;
+  color: #333;
+}
+
+.contentContainer b{
+  width: 100%;
+}
+
+.contentContainer p {
+  margin-bottom: 20px;
+}
+
+
+.contentContainer label {
+  text-align: center;
+  width: 100%;
+}

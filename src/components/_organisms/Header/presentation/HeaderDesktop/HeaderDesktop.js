@@ -15,7 +15,7 @@ const { ROUTES } = AppConstants;
 const HeaderDesktop = ({ Tablet }) => (
   <div className={sharedStyle.bar}>
     <div className={style.logo}>
-      <LinkButton to={ROUTES.BASE}>
+      <LinkButton className={style.linkfix} to={ROUTES.BASE}>
         <Logo showText={!Tablet} />
       </LinkButton>
     </div>

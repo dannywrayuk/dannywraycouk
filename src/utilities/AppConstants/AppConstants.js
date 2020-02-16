@@ -4,6 +4,7 @@ const AppConstants = {
     BLOG: '/blog',
     PHYSICS: '/physics',
     PHYSICS_SECTION: '/physics/:section',
+    PHYSICS_POST: '/physics/:section/:post',
     PROJECTS: '/projects',
     MORE: '/more',
     SEARCH_TERM: '/search/:term',

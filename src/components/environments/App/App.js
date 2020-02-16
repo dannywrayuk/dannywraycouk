@@ -45,6 +45,10 @@ const App = () => (
               render={props => <ErrorPage {...props} />}
             />
             <Route
+              path={ROUTES.PHYSICS_POST}
+              render={props => <PhysicsPage {...props} />}
+            />
+            <Route
               path={ROUTES.PHYSICS_SECTION}
               render={props => <PhysicsPage {...props} />}
             />

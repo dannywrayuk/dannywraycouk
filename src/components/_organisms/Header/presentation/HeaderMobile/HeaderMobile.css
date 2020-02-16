@@ -33,6 +33,10 @@
   justify-content: center;
 }
 
+.linkfix{
+  height: 30px;
+}
+
 
 .searchFill{
   display: inline-flex;
