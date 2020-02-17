@@ -30,7 +30,7 @@ const PhysicsSectionPage = ({ match, Text, Text: text }) => {
             <ResponsiveDivider>
               <ResponsiveElement>
                 <p className={style.IntroductionText}>
-                  <Text path="Body" />
+                  <Text path={`${section}.Body`} />
                 </p>
               </ResponsiveElement>
             </ResponsiveDivider>

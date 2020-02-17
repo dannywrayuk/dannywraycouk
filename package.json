@@ -63,6 +63,7 @@
     "html-webpack-plugin": "4.0.0-beta.5",
     "http-status-codes": "^1.4.0",
     "identity-obj-proxy": "3.0.0",
+    "is-hexadecimal": "^1.0.4",
     "is-wsl": "^2.1.1",
     "jest": "25.1.0",
     "jest-environment-jsdom-fourteen": "1.0.1",

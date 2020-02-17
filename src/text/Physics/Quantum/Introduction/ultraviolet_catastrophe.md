@@ -81,8 +81,6 @@ $$
 I(f) = \frac{2f^2}{c^2} \frac{hf}{e^{\frac{hf}{kT}}-1} \tag{1.1.10}
 $$
 
-
-
 <b><label>Planck's Law - 1900</label></b>
 
 This is the final equation that Planck arrived at. Using experimental data, he fine-tuned his answer to find that $h=6.626 \times 10^{-34}$ which we now call 'Plancks Constant'. The accuracy of this model was completely undeniable. The curve perfectly fits the observed intensity values. It's not the accuracy of the result that is most breath-taking here, however, it's that to arrive at this result we had to let $E = nhf$. Since we no longer let $h \to 0$ it follows that when we do the sum over all $n$ that not every value of $E$ is accessed since there are finite gaps of size $hf$ between them. This is the literal quantisation of energy and where Quantum Mechanics gets it's name.
