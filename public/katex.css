@@ -12,15 +12,8 @@
         position: relative !important;
         float: right;
     }
-  }
-
-  @media only screen and (max-width: 420px) {
-
-    .katex-display>.katex>.katex-html>.tag{
-        position: relative !important;
-        float: right;
-    }
-    .math{
+    .katex-display>.katex>.katex-html{
         transform: scale(0.8);
     }
   }
+

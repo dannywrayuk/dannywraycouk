@@ -93,6 +93,9 @@ $$
 <hr/>
 
 Equation $(2.4.7)$ is usually taken as the solution but it is possible to write the wavefunction without the need to define the function $u(x)$. This is done by exploiting that the sine and cosine in $(2.4.5)$ alternate between $0$ and $\pm 1$ for integer values of $n$. Squaring these functions causes them to oscillate between $0$ and $1$ and they can be used as a coefficient in the wavefunction to select the correct term for a given value of $n$. This form is almost never used as it is far too messy, but looks like this
+
+<article>
+
 $$
 \psi(x)=
 \begin{aligned}
@@ -102,4 +105,5 @@ $$
 	\end{cases} 
 	\end{aligned}\\(2.4.8)
 $$
- 
+
+</article>
