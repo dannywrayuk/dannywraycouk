@@ -4,8 +4,9 @@
   height: 200px;
 }
 
-.textAlignCenter{
-  text-align: center;
+.alignCenter{
+  display: flex;
+  justify-content: center;
 }
 
 .titleImage{

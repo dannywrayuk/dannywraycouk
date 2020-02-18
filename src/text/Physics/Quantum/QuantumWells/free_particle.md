@@ -1,6 +1,7 @@
 ## A Free Particle
-17th August 2018
-A solution to the Schrodinger equation for a Free Particle
+<date>17th August 2018</date>
+<label>A solution to the Schrodinger equation for a Free Particle</label>
+<hr/>
 
 The time independent Schrodinger equation has different solutions depending on the potential that the particle feels. As we find the first solution it would make sense if it was the simplest possible potential, or, $V=V_0$. When we put this potential into the Schrodinger equation it becomes
 $$
@@ -54,9 +55,5 @@ $$
 \psi=\left(Ae^{-ikx}+Be^{ikx}\right)\exp{\left(\frac{-i\hbar k^2}{2m}t\right)} \tag{2.2.8}
 $$
 
-
-<a href="https://www.desmos.com/calculator/eee88rqsyc">
-	<img src="/post/freeparticle/22.png">
-</a>
-	
-	A plot of the wavefunction.
+[![]([data:instagram_image1])](https://www.desmos.com/calculator/eee88rqsyc)
+<label>A plot of the wavefunction.</label>

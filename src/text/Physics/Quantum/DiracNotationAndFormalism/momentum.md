@@ -1,6 +1,7 @@
 ## Momentum
-6th October 2018
-Deriving the expressions for the momentum operator and exploring its properties.
+<date>6th October 2018</date>
+<label>Deriving the expressions for the momentum operator and exploring its properties.</label>
+<hr/>
 
 It's at this stage when we start looking at the momentum operator that the mathematics seems to become simpler. This is much less to do with the actual content becoming easier and is mainly becasue the calculations we have done so far have proven things that we can now rely on to make our lives easier. Momentum is the second of the three most important operators for general quantum mechanics and is where we will now focus our attention. Due to the second posutulate, we formulate the equation in the exact same way as $(3.2.1)$ for the postition operator. That is, the eigenvalues of the momentum operator give the measureable value of momentum
 $$
@@ -67,7 +68,7 @@ $$
 $$
 Proving that the operator $(3.3.3)$ is hermitian.
 
-This proof of the momentum operator can sometimes seem a little bit underwhelming, it involves assuming that the wavefunction is a sine wave. However I believe it's the most approprite proof at this level. For a more rigorous proof using a general wavefunction see this appendix post <a href="/post/formalism3b">here.
+This proof of the momentum operator can sometimes seem a little bit underwhelming, it involves assuming that the wavefunction is a sine wave. However I believe it's the most approprite proof at this level. For a more rigorous proof using a general wavefunction see this appendix post [here]('#').
 
 
 As before, the next stage would be to solve for the eigenstates of the momentum operator. These are the states that have definite values and no uncertainty. Unlike before this is very easy to solve for, since we can use $(3.2.9)$ to turn it into an easier problem. We will call the eigenstates $|p\rangle$. 

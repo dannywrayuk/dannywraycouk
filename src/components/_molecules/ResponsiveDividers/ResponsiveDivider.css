@@ -30,5 +30,7 @@
 
   .Content{
     margin: 20px 0px;
+    width: 100%;
+    justify-content: center;
   }
 }

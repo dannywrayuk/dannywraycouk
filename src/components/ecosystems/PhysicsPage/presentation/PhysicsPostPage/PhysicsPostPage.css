@@ -10,16 +10,37 @@
   color: #333;
 }
 
-.contentContainer b{
+.contentContainer p {
+  margin-bottom: 20px;
   width: 100%;
+  text-align: justify;
+  display: inline-block;
 }
 
-.contentContainer p {
+.contentContainer h2 {
+  display: block;
+  text-align: center;
+}
+
+.contentContainer date {
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.contentContainer label {
+  display: block;
+  text-align: center;
+}
+
+.contentContainer hr {
+  opacity: 50%;
   margin-bottom: 20px;
 }
 
-
-.contentContainer label {
-  text-align: center;
+.contentContainer img {
+  display: block;
+  margin: 50px auto 10px;
   width: 100%;
+  max-width: 500px;
 }

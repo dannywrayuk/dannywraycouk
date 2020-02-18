@@ -1,7 +1,7 @@
 ## Structure of the Atom
-
-9th August 2018
-Quantum Theories answer to the Structure of Atoms.
+<date>9th August 2018</date>
+<label>Quantum Theories answer to the Structure of Atoms.</label>
+<hr/>
 
 
 
@@ -37,11 +37,8 @@ In this model the electron acts like a mass on a spring and gives a frequency ve
 
 It was the Geiger-Marsden Gold foil experiment that completely threw out Thompsons model. The experiment involved firing alpha particles (ionised helium atoms) at a gold foil. The positive alpha particles would interact with the positive charge in the gold atoms causing a repulsive force. Using the same method as used for the electron previously the force curve can be calculated and is shown in figure $(1.4.1)$. This graph has a maximum point that is dependent on the radius of the positive charge inside the atom $R$. It was expected that the maximum would be reasonably small as the radius of the positive charge would be comparable to the radius of the atom and that the alpha particles would pass through largely unaffected. The observed result couldn't have been more different. Most of the alpha particles went through unaffected but some bounced back at an extreme angle. Using the force that would be required to cause this level of deflection the radius of the nucleus could be calculated thanks to the relationship between the maximum force and the radius. The radius of the positive charge was $10^{5}$ times smaller than the size of an atom. This means that Thompsons prediction of an electron oscillating in positive charge was not possible and that most of the mass and positive charge was concentrated in a nucleus at the centre of the atom.
 
-
-<a href="https://www.desmos.com/calculator/w45hv2vuvm">
-    <img src="/post/structureofatoms/14.png">
-</a>
-Force on an alpha particle with varying distance.
+[![]([data:instagram_image1])](https://www.desmos.com/calculator/w45hv2vuvm)
+<label>Force on an alpha particle with varying distance.</label>
 
 
 

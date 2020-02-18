@@ -1,6 +1,7 @@
 ## Position
-30th September 2018
-Deriving the expressions for the position operator and exploring its properties.
+<date>30th September 2018</date>
+<label>Deriving the expressions for the position operator and exploring its properties.</label>
+<hr/>
 
 Now the requirements for an operator that represents an observable have been understood, we can begin to derive useful operators such as position and momentum. I would like to point out that since kets are an abstract representation of the state of a system, that operators are also completely abstract. Just like kets, however, we can restirct ourselves to say position space and then begin to write down an expression for these operators based upon that. In most of quantuim mechanics it is assumed that calculations are done in position space, which is why we will derive these operators in position space as they will be most useful.
 We will start with the position operator $\widehat{X}$. This operator should satisfy that
@@ -61,7 +62,7 @@ using the expectation of a continuous function is
 $$
 \int_{-\infty}^{\infty} x^2p(x) dx = x_0^2
 $$
-    and recalling $(1.5.7)$ to write
+and recalling $(1.5.7)$ to write
 $$
 \int_{-\infty}^{\infty} u(x)^*x^2u(x) dx = x_0^2
 $$

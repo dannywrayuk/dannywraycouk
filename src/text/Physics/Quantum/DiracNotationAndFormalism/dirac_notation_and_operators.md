@@ -1,6 +1,7 @@
 ## Dirac Notation and Operators
-26th September 2018
-An Introduction to Dirac Notation
+<date>26th September 2018</date>
+<label>An Introduction to Dirac Notation</label>
+<hr/>
 
 
 

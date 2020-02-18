@@ -1,6 +1,7 @@
 ## Photoelectric Phenomenon
-<abbr>8th July 2018</abbr>
-Einstein's experiment that showcased the particle nature of light.
+<date>8th July 2018</date>
+<label>Einstein's experiment that showcased the particle nature of light.</label>
+<hr/>
 
 After Planck discovered that energy was quantised into chunks he was quite sceptical, justifiably, since nowhere else in
 nature had this kind of behaviour been observed. It also goes against everything we experience in our daily lives. For
@@ -38,7 +39,7 @@ frequency $f_0$
 $$
 K_{max}=h(f-f_0) \tag{1.2.2}
 $$
-<i>Photoelectric Effect 1905</i>
+<label>**Photoelectric Effect 1905**<label>
 
 From this form of the effect and realising that kinetic energy is strictly positive we can conclude that for the effect
 to occur $f>f_0$. This is in perfect alignment with the frequency dependent emission of electrons displayed by metal.

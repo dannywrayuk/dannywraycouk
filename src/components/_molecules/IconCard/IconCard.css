@@ -2,6 +2,7 @@
   display: flex;
   min-width: 270px;
   transition: 0.2s;
+  justify-content: center;
 }
 
 .textContent{

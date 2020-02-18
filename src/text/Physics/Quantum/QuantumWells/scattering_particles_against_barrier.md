@@ -1,6 +1,7 @@
 ## Scattering Particles Against a Barrier
-3rd September 2018
-The Behaviour of Particles Against a Barrier Potential
+<date>3rd September 2018</date>
+<label>The Behaviour of Particles Against a Barrier Potential</label>
+<hr/>
 
 
 

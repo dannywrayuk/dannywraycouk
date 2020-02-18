@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
+import * as Images from '../../../../../text/Physics/Images.js';
 import * as Posts from '../../../../../text/Physics/Posts.js';
 import Background from '../../../../_atoms/BackgroundContainer';
 import FetchMarkdown from '../../../../_molecules/FetchMarkdown';
-import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
+import { ResponsiveDivider } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../../../_organisms/Card';
 
@@ -19,9 +20,11 @@ const PhysicsPostPage = (props) => {
         <Card topper>
           <CardContent>
             <ResponsiveDivider>
-              <ResponsiveElement>
-                <FetchMarkdown containerName={style.contentContainer} location={Posts[post]} />
-              </ResponsiveElement>
+              <FetchMarkdown
+                containerName={style.contentContainer}
+                location={Posts[post]}
+                auxData={Images}
+              />
             </ResponsiveDivider>
           </CardContent>
         </Card>

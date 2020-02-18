@@ -102,14 +102,18 @@ const HomePageMain = ({ Text, Text: text }) => (
               </p>
             </ResponsiveElement>
           </ResponsiveDivider>
-          <div className={style.textAlignCenter}>
+          <ResponsiveDivider>
             <ResponsiveElement>
-              <img src={InstagramImage2} alt="" width="300px" />
+              <div className={style.alignCenter}>
+                <img src={InstagramImage2} alt="" width="300px" />
+              </div>
             </ResponsiveElement>
             <ResponsiveElement>
-              <img src={InstagramImage1} alt="" width="300px" />
+              <div className={style.alignCenter}>
+                <img src={InstagramImage1} alt="" width="300px" />
+              </div>
             </ResponsiveElement>
-          </div>
+          </ResponsiveDivider>
         </CardContent>
       </Card>
     </ResponsiveWrapper>

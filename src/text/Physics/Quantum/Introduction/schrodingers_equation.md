@@ -1,6 +1,7 @@
-Schrodinger’s Equation
-15th August 2018
-The Wave Formulation of Quantum Mechanics
+## Schrodinger’s Equation
+<date>15th August 2018</date>
+<label>The Wave Formulation of Quantum Mechanics</label>
+<hr/>
 
 
 Motivated by de Broglie’s work on the wave particle duality of the electron, in 1926, Erwin Schrodinger sought a general equation of 'electron waves' that could be applied in different scenarios and predict the behaviour of electrons. To do this he first considered a classical wave equation.
@@ -62,7 +63,7 @@ $$
 E\psi=\frac{-\hbar^2}{2m}\nabla^2\psi +V\psi \tag{1.5.5}
 $$
 
-	The Time Independent Schrodinger Equation
+<label>**The Time Independent Schrodinger Equation**</label>
 
 
 
@@ -101,7 +102,7 @@ $$
 i\hbar\dot{\psi}=\frac{-\hbar^2}{2m}\nabla^2\psi +V\psi \tag{1.5.6}
 $$
 
-The Time Dependent Schrodinger Equation
+<label>**The Time Dependent Schrodinger Equation**</label>
 
 
 
@@ -115,13 +116,13 @@ $$
 $$
 Since the particle has to be somewhere. There are two more requirements physicists like to have on a wavefunction to make it 'Physical', these are that
 
-A wavefunction and the wavefunctions first derivative are required to be continuous at everypoint for the wave function to be physical.
-
+<label>*A wavefunction and the wavefunctions first derivative are required to be continuous at everypoint for the wave function to be physical.*</label>
 
 
 The Schrodinger Equation is possibly the most important equations in quantum mechanics and will be used in many, many more contexts.
 
 
+<hr/>
 
 A small aside would be to show why the second form of the Schrodinger equation is more general than the first. It affectively boils down to the fact that the first form requires knowledge of the total energy before it can be used whereas the second does not. Consider a wave of 2 frequencies
 $$
@@ -139,4 +140,3 @@ $$
 E\psi \ne E_1\psi_1+E_2\psi_2
 $$
 which means by using the time dependent equation we are effectively solving the time independent equation for every frequency that makes up the wave.
-

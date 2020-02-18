@@ -1,6 +1,7 @@
 ## Time Dependence and Probability Current
-17th August 2018
-How Stationary States can evolve with time and the idea of Probability Current
+<date>17th August 2018</date>
+<label>How Stationary States can evolve with time and the idea of Probability Current</label>
+<hr/>
 
 
 Bohr's idea of stationary states refers to a state in which the probability function of a system is stationary. This does not mean that the wavefunction itself must be stationary. The time evolution of a stationary state wavefunction can be derived as shown.
@@ -61,7 +62,7 @@ $$
 \begin{aligned}
 |\psi|^2&=\psi\psi^*=q(x)T(t)q(x)^*T(t)^*\\
 		&=|q(x)|^2T(t)T(t)^*\\
-		&=|q(x)|^2 \exp{\left(\frac{-it}{\hbar}E \right)}\exp{\left(\frac{it}{\hbar}E \right)}\\
+		&=|q(x)|^2  \exp{\left(\frac{-it}{\hbar}E \right)} \exp{\left(\frac{it}{\hbar}E \right)}\\
 |\psi|^2&=|q(x)|^2
 \end{aligned}
 $$
@@ -95,7 +96,7 @@ $$
 $$
 Then integrating with respect to $x$
 $$
-J(x,t)=-\frac{i\hbar}{2m}\left(\psi^*\frac{\partial \psi}{\partial x}-\psi\frac{\partial \psi^*}{\partial x}\right) \\ \text{(2.1.6)}
+J(x,t)=-\frac{i\hbar}{2m}\left(\psi^*\frac{\partial \psi}{\partial x}-\psi\frac{\partial \psi^*}{\partial x}\right) \tag{2.1.6}
 
 $$
 This is the general form of the probability current and we may utilise it again later on in some scattering problems.

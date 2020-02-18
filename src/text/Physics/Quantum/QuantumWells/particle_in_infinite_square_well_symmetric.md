@@ -1,6 +1,7 @@
 ## Particle in a Symmetric Infinite Square Well
-20th August 2018
-Solving the Schrodinger Equation for a Symmetric Infinite Square Well Potential
+<date>20th August 2018</date>
+<label>Solving the Schrodinger Equation for a Symmetric Infinite Square Well Potential</label>
+<hr/>
 
 
 This solution of the Schrödinger equation isn’t necessary since the Infinite potential well has been solved in $(2.3)$, however a symmetric potential leads to a slightly different form of the solution and can be useful when solving other problems later. the symmetric potential we will be using is
@@ -84,13 +85,12 @@ $$
 E_n=\frac{\hbar^2(\frac{\pi n}{L})^2}{2m}=n^2\frac{h^2}{8mL}=n^2E_1 \tag{2.3.6}
 $$
 
+[![]([data:instagram_image1])](https://www.desmos.com/calculator/tjjyki30e7)
 
-<a href="https://www.desmos.com/calculator/tjjyki30e7">
-	<img src="/post/particleinabox2/24.png">
-	
-A plot of the wavefunction.
+<label>A plot of the wavefunction.</label>
 
 
+<hr/>
 
 Equation $(2.4.7)$ is usually taken as the solution but it is possible to write the wavefunction without the need to define the function $u(x)$. This is done by exploiting that the sine and cosine in $(2.4.5)$ alternate between $0$ and $\pm 1$ for integer values of $n$. Squaring these functions causes them to oscillate between $0$ and $1$ and they can be used as a coefficient in the wavefunction to select the correct term for a given value of $n$. This form is almost never used as it is far too messy, but looks like this
 $$
