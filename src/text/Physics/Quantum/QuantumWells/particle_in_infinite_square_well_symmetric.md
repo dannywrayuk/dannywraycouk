@@ -15,6 +15,9 @@ This solution of the Schrödinger equation isn’t necessary since the Infinite 
 	\end{aligned} \tag{2.4.1}
 $$
 Again, we start with the free particle solution inside the box and require that the wave function is zero in places that are unphysical
+
+<div class="[style:largeEquation]">
+
 $$
 \psi(x)=
 \begin{aligned}
@@ -24,7 +27,12 @@ $$
 	\end{cases}
 	\end{aligned}
 $$
+</div>
+
 Only this time we are going to notice that the wavefunction inside the box can be written as a product of a sine and a cosine
+
+<div class="[style:largeEquation]">
+
 $$
 \psi(x)=
 \begin{aligned}
@@ -34,6 +42,9 @@ $$
 	\end{cases}
 	\end{aligned} \tag{2.4.2}
 $$
+
+</div>
+
 Following the same procedure as last time we can use that the wavefunction is zero in the corners to find some boundary conditions
 $$
 \psi(-\frac{L}{2})=\psi(\frac{L}{2})=0
@@ -52,6 +63,9 @@ $$
 A\sin \left( \frac{n \pi}{2} \right) + B\cos \left( \frac{n \pi}{2} \right)=0 \tag{2.4.5}
 $$
 For even values of $n$ we see the solution is that $B=0$ and for odd values the solution is $A=0$. This means the solution inside the box must be defined piecewise like the potential and depends on the value of $n$ as 
+
+<div class="[style:largeEquation]">
+
 $$
 \psi(x)_{inside}=
 \begin{aligned}
@@ -61,6 +75,8 @@ $$
 	\end{cases}
 	\end{aligned} \tag{2.4.6}
 $$
+</div>
+
 Using the exact same method as the in $(2.3.4)$ we can find the values of $A$ and $B$. They unsurprisingly turn out to be the same as $(2.3.4)$ and we can write down the final solution
 $$
 \psi(x)=
@@ -71,6 +87,9 @@ $$
 	\end{cases}
 	\end{aligned}
 $$
+
+<div class="[style:largeEquation]">
+
 $$
 u(x)=
 \begin{aligned}
@@ -80,6 +99,9 @@ u(x)=
 	\end{cases}
 	\end{aligned} \tag{2.4.7}
 $$
+
+</div>
+
 and corresponding energy levels
 $$
 E_n=\frac{\hbar^2(\frac{\pi n}{L})^2}{2m}=n^2\frac{h^2}{8mL}=n^2E_1 \tag{2.3.6}
@@ -94,7 +116,7 @@ $$
 
 Equation $(2.4.7)$ is usually taken as the solution but it is possible to write the wavefunction without the need to define the function $u(x)$. This is done by exploiting that the sine and cosine in $(2.4.5)$ alternate between $0$ and $\pm 1$ for integer values of $n$. Squaring these functions causes them to oscillate between $0$ and $1$ and they can be used as a coefficient in the wavefunction to select the correct term for a given value of $n$. This form is almost never used as it is far too messy, but looks like this
 
-<article>
+<div class="[style:largeEquation]">
 
 $$
 \psi(x)=
@@ -106,4 +128,4 @@ $$
 	\end{aligned}\\(2.4.8)
 $$
 
-</article>
+</div>

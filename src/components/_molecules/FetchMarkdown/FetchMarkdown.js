@@ -11,17 +11,30 @@ import unified from 'unified';
 
 const escapeRegExp = (str) => str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
 
-const FetchMarkdown = ({ location, containerName, auxData }) => {
+const FetchMarkdown = ({
+  location, containerName, auxData, styleData,
+}) => {
   const dataLinker = (data) => {
     let modifiedData = data;
     let match = 'nan';
-    const reg = /\[data:([a-zA-Z\d_]+)\]/gm;
+    const reg = /\[(data|style):([a-zA-Z\d_]+)\]/gm;
     while (match) {
       match = reg.exec(modifiedData) || 0;
-      if (auxData[match[1]] !== undefined) {
-        modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), auxData[match[1]]);
-      } else if (match) {
-        modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), '');
+      if (match !== 0) {
+        if (match[1] === 'data') {
+          if (auxData[match[2]] !== undefined) {
+            modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), auxData[match[2]]);
+          } else {
+            modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), '');
+          }
+        }
+        if (match[1] === 'style') {
+          if (styleData[match[2]] !== undefined) {
+            modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), styleData[match[2]]);
+          } else {
+            modifiedData = modifiedData.replace(new RegExp(escapeRegExp(match[0]), 'g'), '');
+          }
+        }
       }
     }
     return modifiedData;
@@ -60,10 +73,12 @@ FetchMarkdown.propTypes = {
   location: PropTypes.string.isRequired,
   containerName: PropTypes.string.isRequired,
   auxData: PropTypes.object,
+  styleData: PropTypes.object,
 };
 
 FetchMarkdown.defaultProps = {
   auxData: {},
+  styleData: {},
 };
 
 export default FetchMarkdown;

@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
-import * as Images from '../../../../../text/Physics/Images.js';
-import * as Posts from '../../../../../text/Physics/Posts.js';
 import Background from '../../../../_atoms/BackgroundContainer';
 import FetchMarkdown from '../../../../_molecules/FetchMarkdown';
 import { ResponsiveDivider } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../../../_organisms/Card';
+import * as Images from './content/Images';
+import * as Posts from './content/Posts';
 
-import style from './PhysicsPostPage.css';
+import postStyle from './content/styles.css';
 
 const PhysicsPostPage = (props) => {
   const { match: { params: { post } } } = props;
@@ -21,9 +21,10 @@ const PhysicsPostPage = (props) => {
           <CardContent>
             <ResponsiveDivider>
               <FetchMarkdown
-                containerName={style.contentContainer}
+                containerName={postStyle.contentContainer}
                 location={Posts[post]}
                 auxData={Images}
+                styleData={postStyle}
               />
             </ResponsiveDivider>
           </CardContent>

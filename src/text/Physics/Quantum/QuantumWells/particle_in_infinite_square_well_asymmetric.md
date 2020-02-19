@@ -16,6 +16,9 @@ V(x)=
 	\end{aligned}\tag{2.3.1}
 $$
 Interestingly, we don't need to solve the Schrödinger equation for this potential. All this potential does is take the free particle solution $(2.2.5)$ and impose boundary conditions onto it. This is because inside the box the Schrödinger equation is just that of a free particle as the potential is zero. Outside the box the wavefunction must be zero as there is infinite potential energy, this would require infinite kinetic energy to overcome. Knowing this we can write down a none specific solution using the free particle solution $(2.2.5)$
+
+<div class="[style:largeEquation]">
+
 $$
 \psi(x)=
 \begin{aligned}
@@ -25,6 +28,8 @@ $$
 	\end{cases}
 	\end{aligned} \tag{2.3.2}
 $$
+</div>
+
 Knowing that the wavefunction is zero in the corners of the box we can write
 $$
 \psi(0)=\psi(L)=0
@@ -75,6 +80,9 @@ $$
 A=\sqrt{\frac{2}{L}}\tag{2.3.4}
 $$ 
 And we can write down the final form of the wavefunction
+
+<div class="[style:largeEquation]">
+
 $$
 \psi(x)=
 \begin{aligned}
@@ -84,6 +92,7 @@ $$
 	\end{cases}
 	\end{aligned} \tag{2.3.5}
 $$
+</div>
 
 [![]([data:instagram_image1])](https://www.desmos.com/calculator/ooizwuua1f)
 

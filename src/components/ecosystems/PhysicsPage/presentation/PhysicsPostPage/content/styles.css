@@ -1,13 +1,5 @@
-.subHeading {
-  color: #777;
-  font-style: italic;
-}
-
-.IntroductionText{
-  text-align: center;
-  line-height: 30px;
-  margin: 0px auto;
-  color: #333;
+.red{
+  color: red;
 }
 
 .contentContainer p {
@@ -16,37 +8,42 @@
   text-align: justify;
   display: inline-block;
 }
-
+  
 .contentContainer h2 {
   display: block;
   text-align: center;
 }
-
+  
 .contentContainer date {
   display: block;
   text-align: center;
   font-style: italic;
 }
-
+  
 .contentContainer label {
   display: block;
   text-align: center;
 }
-
+  
 .contentContainer hr {
   opacity: 50%;
   margin-bottom: 20px;
 }
-
+  
 .contentContainer img {
   display: block;
   margin: 50px auto 10px;
   width: 100%;
   max-width: 500px;
 }
-
+  
 @media only screen and (max-width: 1000px) {
-  .contentContainer >article{
+  .largeEquation :global(.katex-display>.katex>.katex-html){
+    white-space: nowrap;
+  }
+
+  .contentContainer  .largeEquation{
+    white-space: nowrap;
     overflow: auto;
     background: linear-gradient(90deg, white 0%, rgba(255,255,255,0)),
     linear-gradient(-90deg, white 0%, rgba(255,255,255,0)) 100% 0,
@@ -66,4 +63,5 @@
     background-attachment: local, local, scroll, scroll;
   }
 }
-
+  
+  

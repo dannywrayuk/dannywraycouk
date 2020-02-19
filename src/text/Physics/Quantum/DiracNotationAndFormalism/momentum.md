@@ -38,6 +38,9 @@ $$
 \widehat{P}=-i\hbar\frac{d}{dx} \tag{3.3.3}
 $$
 The form of this operator only furthers the point that operators dont usually make sense on their own. This derivation heavily relies on the operator being linear and to be valid we much check it obeys $(3.1.6)$
+
+<div class="[style:largeEquation]">
+
 $$
 \begin{aligned}
 \widehat{P}(a\psi_1+b\psi_2)&=-i\hbar\frac{d}{dx}(a\psi_1+b\psi_2)\\
@@ -45,7 +48,12 @@ $$
 &=a\widehat{P}\psi_1 + b\widehat{P}\psi_2\\
 \end{aligned}
 $$
+</div>
+
 From this we can clearly conclude that the operator is linear. Finally we must check it is hermitian using $(3.1.9)$
+
+<div class="[style:largeEquation]">
+
 $$
 \begin{aligned}
 \left( \langle\psi|\widehat{P}|\phi\rangle \right)^* &= \langle\phi|\widehat{P}|\psi\rangle\\
@@ -54,10 +62,17 @@ $$
 &=\left(i\hbar\int_{-\infty}^{\infty}\frac{d}{dx}\psi(x)^*\phi(x) dx \right)^*
 \end{aligned}
 $$
+</div>
+
 Using integration by parts
+
+<div class="[style:largeEquation]">
+
 $$
 =\left(i\hbar [\phi(x)\psi(x)^*]_{-\infty}^{\infty} - i\hbar\int_{-\infty}^{\infty}\psi(x)^*\frac{d}{dx}\phi(x) dx\right)^*
 $$
+</div>
+
 using $(3.1.4)$ the evaluated term must be zero
 $$
 \begin{aligned}

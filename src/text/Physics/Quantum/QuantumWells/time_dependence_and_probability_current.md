@@ -25,7 +25,7 @@ $$
 And dividing by $(2.1.1)$
 $$
 
-i\hbar \frac{1}{T(t)}\frac{\partial}{\partial t}T(t)=\frac{-\hbar^2}{2m}\frac{1}{q(x)}\frac{\partial^2}{\partial x^2}q(x) +V \\ \text{(2.1.2)}
+i\hbar \frac{1}{T(t)}\frac{\partial}{\partial t}T(t)=\frac{-\hbar^2}{2m}\frac{1}{q(x)}\frac{\partial^2}{\partial x^2}q(x) +V \tag{2.1.2}
 
 $$
 Since the LHS depends only on $t$ and the RHS only on $x$ they must both be equal to a constant. If we name this constant E then focusing on the RHS
@@ -58,6 +58,9 @@ $$
 $$
 It's interesting to note that this is a periodic function with an angular frequency of $\omega = E/\hbar$ which rearranging recovers the plank relationship $E=hf$.
 We can also confirm that this leaves the probability function stationary by calculating $|\psi|^2$
+
+<div class="[style:largeEquation]">
+
 $$
 \begin{aligned}
 |\psi|^2&=\psi\psi^*=q(x)T(t)q(x)^*T(t)^*\\
@@ -66,8 +69,9 @@ $$
 |\psi|^2&=|q(x)|^2
 \end{aligned}
 $$
-Which clearly has no time dependence since $|T(t)|^2=1$. This is the mechanism by which the wavefunction of a stationary state is not, well, stationary.
 
+</div>
+Which clearly has no time dependence since $|T(t)|^2=1$. This is the mechanism by which the wavefunction of a stationary state is not, well, stationary.
 
 
 The idea of probability current crops up from time to time so I thought I'd throw this onto the end here. Probability current is particularly useful when investigating whether a particle is reflected or transferred through a barrier. It is defined as the probability a particle crosses a point $x$ in the positive direction. We eventually wish to find a function that satisfies
