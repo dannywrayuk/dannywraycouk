@@ -35,6 +35,7 @@
   transition: 0.1s;
   justify-content: left;
   text-align: left;
+  white-space: pre-wrap;
 }
 
 .elementContainer:hover{

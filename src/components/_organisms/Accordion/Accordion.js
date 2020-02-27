@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as Circle } from '../../../images/svg/circle.svg';
@@ -24,12 +24,17 @@ import style from './Accordion.css';
 
 const Accordion = ({ structure }) => {
   const [open, setOpen] = useState(false);
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
+
   const openToggle = () => {
     setOpen(!open);
   };
 
-  // num elements * element size + margin for smooth animation
-  const sectionSize = structure.sections.length * 39 + 20;
+  useEffect(() => {
+    setHeight(ref.current.offsetHeight + 20);
+  });
+
 
   return (
     <div>
@@ -42,17 +47,19 @@ const Accordion = ({ structure }) => {
       <div
         className={style.section}
         style={open ? {
-          maxHeight: sectionSize,
+          maxHeight: height,
           opacity: 1,
           marginBottom: 20,
         } : { maxHeight: 0, opacity: 0 }}
       >
-        {structure.sections.map((d) => (
-          <LinkButton key={d.title} to={window.location.pathname + d.link || '#'} className={style.elementContainer}>
-            <Circle className={style.Circle} />
-            {d.title}
-          </LinkButton>
-        ))}
+        <div ref={ref}>
+          {structure.sections.map((d) => (
+            <LinkButton key={d.title} to={window.location.pathname + d.link || '#'} className={style.elementContainer}>
+              <Circle className={style.Circle} />
+              {d.title}
+            </LinkButton>
+          ))}
+        </div>
       </div>
 
     </div>

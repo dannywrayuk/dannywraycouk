@@ -141,10 +141,5 @@
             "title": "Spin",
             "sections": []
         }
-    ],
-    "thermal": {},
-    "classical": {},
-    "electromag": {},
-    "astro": {},
-    "maths": {}
+    ]
 }
