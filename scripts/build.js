@@ -71,13 +71,13 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log(warnings.join('\n\n'));
         console.log(
           '\nSearch for the ' +
-            chalk.underline(chalk.yellow('keywords')) +
-            ' to learn more about each warning.'
+          chalk.underline(chalk.yellow('keywords')) +
+          ' to learn more about each warning.'
         );
         console.log(
           'To ignore, add ' +
-            chalk.cyan('// eslint-disable-next-line') +
-            ' to the line before.\n'
+          chalk.cyan('// eslint-disable-next-line') +
+          ' to the line before.\n'
         );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
@@ -110,7 +110,7 @@ checkBrowsers(paths.appPath, isInteractive)
       printBuildError(err);
       process.exit(1);
     }
-  )
+  ).then(() => modifyIndex())
   .catch(err => {
     if (err && err.message) {
       console.log(err.message);
@@ -168,7 +168,7 @@ function build(previousFileSizes) {
         console.log(
           chalk.yellow(
             '\nTreating warnings as errors because process.env.CI = true.\n' +
-              'Most CI servers set it automatically.\n'
+            'Most CI servers set it automatically.\n'
           )
         );
         return reject(new Error(messages.warnings.join('\n\n')));
@@ -183,9 +183,20 @@ function build(previousFileSizes) {
   });
 }
 
+const version = require('../package.json').version;
+
 function copyPublicFolder() {
   fs.copySync(paths.appPublic, paths.appBuild, {
     dereference: true,
     filter: file => file !== paths.appHtml,
   });
+  fs.rename(paths.appBuild + '/static', paths.appBuild + '/' + version);
+}
+
+function modifyIndex() {
+  let str = fs.readFileSync(paths.appBuild + '/index.html')
+  const reg = /\[version\]/g;
+  str = String(str).replace(reg, version);
+  fs.writeFileSync(paths.appBuild + '/index.html', str)
+  fs.copyFileSync(paths.appBuild + '/index.html', paths.appBuild + `/${version}/index.html`)
 }

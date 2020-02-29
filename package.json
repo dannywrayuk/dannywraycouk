@@ -1,20 +1,23 @@
 {
   "name": "dannywraycouk",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
+    "deploy:major": "npm version major --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
+    "deploy:minor": "npm version minor --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
+    "deploy:patch": "npm version patch --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "serve": "serve -s build",
-    "prod": "npm run build & npm run serve",
+    "serve": "serve -S build",
+    "upload": "node aws/upload.js",
+    "invalidate-index": "node aws/invalidate_index.js",
     "lint:js": "eslint \"src/**/*.js\"",
     "lint:js:fix": "eslint \"src/**/*.js\" --fix",
     "lint:css": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\"",
     "lint:css:fix": "./node_modules/stylelint/bin/stylelint.js \"src/**/*.css\" --fix",
     "lint": "npm run lint:css && npm run lint:js",
-    "major": "npm update && ./node_modules/npm-check-updates/bin/ncu -u && npm i && npm outdated",
-    "importsort": "NODE_ENV=development BABEL_ENV=development node ./node_modules/import-sort-cli/lib/index.js 'src/**/*.js' --write"
+    "importsort": "NODE_ENV=development BABEL_ENV=development node ./node_modules/import-sort-cli/lib/index.js 'src/**/*.js' --write",
+    "update-packages": "npm update && ./node_modules/npm-check-updates/bin/ncu -u && npm i && npm outdated"
   },
   "importSort": {
     ".js": {
@@ -43,6 +46,7 @@
     "@svgr/webpack": "5.1.0",
     "@typescript-eslint/eslint-plugin": "2.18.0",
     "@typescript-eslint/parser": "2.18.0",
+    "aws-cli-js": "^2.0.6",
     "babel-eslint": "10.0.3",
     "babel-jest": "^25.1.0",
     "babel-loader": "8.0.6",
