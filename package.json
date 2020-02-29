@@ -6,6 +6,7 @@
     "deploy:major": "npm version major --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
     "deploy:minor": "npm version minor --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
     "deploy:patch": "npm version patch --no-git-tag-version && npm run build && npm run upload && npm run invalidate-index",
+    "rollback": "node aws/change_version.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "serve": "serve -S build",
