@@ -55,6 +55,9 @@ is! Initially, as single photons pass through the slit there is a seemingly rand
 detector. As more and more particles are let through the pattern appears. In the classical areas of high intensity there
 is a higher probability of a single particle landing there. This is what produces the pattern in the particle model.
 
+<div style="max-width: 500px; margin: 0 auto; height: 30vh">
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/GzbKb59my3U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 *In this video clip you can see the distribution of single particles traveling through the double slit and how they are more probable to land in the classically intense regions, giving rise to the interference pattern.*
 

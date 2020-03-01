@@ -55,5 +55,5 @@ $$
 \psi=\left(Ae^{-ikx}+Be^{ikx}\right)\exp{\left(\frac{-i\hbar k^2}{2m}t\right)} \tag{2.2.8}
 $$
 
-[![]([data:instagram_image1])](https://www.desmos.com/calculator/eee88rqsyc)
+[![]([data:figure221])](https://www.desmos.com/calculator/eee88rqsyc)
 <label>A plot of the wavefunction.</label>

@@ -199,7 +199,7 @@ u^2+v^2=\Lambda^2
 $$
 Plotting these functions, there are indeed solutions.
 
-[![]([data:instagram_image1])](https://www.desmos.com/calculator/hhskmovpjt)
+[![]([data:figure251])](https://www.desmos.com/calculator/hhskmovpjt)
 <label>The intersections of this graph correspond the the physical solutions for the vaules of $k$ and $\kappa$</label>
 
 
@@ -214,6 +214,6 @@ There is only one solution between $n< v < (n+1)$
 
 Because of the final point, to find the allowed values of $k$ a numerical method can be used with an initial value of $v=n+1/2$ and the wavefunction can be found. We also find that as $V_0 \to \infty$ that the wavefunction becomes that of the infinite potential well $(2.4)$ as would be expected.
 
-[![]([data:instagram_image1])](https://www.desmos.com/calculator/obikem00ni)
+[![]([data:figure252])](https://www.desmos.com/calculator/obikem00ni)
 <label>A plot of the wavefunction.</label>
 

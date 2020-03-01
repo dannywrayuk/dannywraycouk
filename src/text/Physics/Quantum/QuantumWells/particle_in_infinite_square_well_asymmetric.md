@@ -94,7 +94,7 @@ $$
 $$
 </div>
 
-[![]([data:instagram_image1])](https://www.desmos.com/calculator/ooizwuua1f)
+[![]([data:figure231])](https://www.desmos.com/calculator/ooizwuua1f)
 
 	
 A plot of the wavefunction.

@@ -24,7 +24,7 @@ const SharedContent = {
     IntroCard: {
       Programming: {
         Title: 'Learn some Physics',
-        Body: "I'm trying typeset all my university notes so they look pretty. There will be quite a lot of content there eventually. Check them out!",
+        Body: "I'm trying to typeset all my university notes so they look pretty. There will be quite a lot of content there eventually. Check them out!",
       },
       Physics: {
         Title: 'Programming too?',

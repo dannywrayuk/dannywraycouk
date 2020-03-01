@@ -107,7 +107,7 @@ $$
 E_n=\frac{\hbar^2(\frac{\pi n}{L})^2}{2m}=n^2\frac{h^2}{8mL}=n^2E_1 \tag{2.3.6}
 $$
 
-[![]([data:instagram_image1])](https://www.desmos.com/calculator/tjjyki30e7)
+[![]([data:figure241])](https://www.desmos.com/calculator/tjjyki30e7)
 
 <label>A plot of the wavefunction.</label>
 
