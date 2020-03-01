@@ -195,7 +195,7 @@ function copyPublicFolder() {
 
 function modifyIndex() {
   let str = fs.readFileSync(paths.appBuild + '/index.html')
-  const reg = /\[version\]/g;
+  const reg = /static/g;
   str = String(str).replace(reg, version);
   fs.writeFileSync(paths.appBuild + '/index.html', str)
   fs.copyFileSync(paths.appBuild + '/index.html', paths.appBuild + `/${version}/index.html`)
