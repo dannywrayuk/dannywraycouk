@@ -349,7 +349,7 @@ module.exports = function (webpackEnv) {
               loader: require.resolve('url-loader'),
               options: {
                 limit: imageInlineSizeLimit,
-                name: version + '/media/[name].[hash:8].[ext]',
+                name: 'static/media/[name].[hash:8].[ext]',
               },
             },
             // Process application JS with Babel.
@@ -487,7 +487,7 @@ module.exports = function (webpackEnv) {
               // by webpacks internal loaders.
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
               options: {
-                name: version + '/media/[name].[hash:8].[ext]',
+                name: 'static/media/[name].[hash:8].[ext]',
               },
             },
             // ** STOP ** Are you adding a new loader?
