@@ -9,6 +9,8 @@ import markdown from 'remark-parse';
 import remark2rehype from 'remark-rehype';
 import unified from 'unified';
 
+import LoadingSpinner from '../LoadingSpinner';
+
 const escapeRegExp = (str) => str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
 
 const FetchMarkdown = ({
@@ -56,7 +58,7 @@ const FetchMarkdown = ({
   return (
     <Async promiseFn={loadData}>
       {({ data, err, isLoading }) => {
-        if (isLoading) return 'Loading...';
+        if (isLoading) return <LoadingSpinner />;
         if (data) {
           return (
             // eslint-disable-next-line react/no-danger

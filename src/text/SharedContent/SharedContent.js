@@ -5,6 +5,7 @@ const SharedContent = {
     defaultKeywords: 'Physics, Maths, Computing, Theoretical Physics, Quantum Mechanics, Astrophysics, Propgramming, C plus Plus, cpp, c++, javascript, React',
     defaultAuthor: 'Danny Wray',
     Pangram: 'Pack my box with five dozen liquor jugs',
+    Loading: 'Loading...',
   },
   Footer: {
     copyright: '© Danny Wray 2020',
