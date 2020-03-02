@@ -592,7 +592,7 @@ module.exports = function (webpackEnv) {
       new WorkboxWebpackPlugin.GenerateSW({
         clientsClaim: true,
         swDest: version + '/service-worker.js',
-        exclude: [/\.map$/, /asset-manifest\.json$/],
+        exclude: [/\.map$/, /asset-manifest\.json$/, /index.html/],
         navigateFallback: publicUrl + '/index.html',
         navigateFallbackDenylist: [
           // Exclude URLs starting with /_, as they're likely an API call
