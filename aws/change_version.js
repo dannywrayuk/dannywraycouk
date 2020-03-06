@@ -2,7 +2,7 @@ const awsCli = require('aws-cli-js');
 
 const aws = new awsCli.Aws();
 
-const BUCKET_NAME = require('./credentials.json').S3.url.website_main;
+const BUCKET_NAME = require('./credentials.json').S3.URL.website_main;
 
 const VERSION = process.argv[2];
 if (VERSION === undefined || !VERSION.match(/\d.\d.\d/)) {
