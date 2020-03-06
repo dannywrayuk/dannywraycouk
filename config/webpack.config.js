@@ -480,6 +480,20 @@ module.exports = function (webpackEnv) {
             // This loader doesn't use a "test" so it will catch all modules
             // that fall through the other loaders.
             {
+              test: /\.svg$/,
+              loader: require.resolve('file-loader'),
+              options: {
+                name: 'static/media/[name].[hash:8].[ext]',
+              },
+            },
+            {
+              test: /\.(md|txt)$/,
+              loader: require.resolve('file-loader'),
+              options: {
+                name: 'static/text/[name].[hash:8].[ext]',
+              },
+            },
+            {
               loader: require.resolve('file-loader'),
               // Exclude `js` files to keep "css" loader working as it injects
               // its runtime that would otherwise be processed through "file" loader.
@@ -487,7 +501,7 @@ module.exports = function (webpackEnv) {
               // by webpacks internal loaders.
               exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
               options: {
-                name: 'static/media/[name].[hash:8].[ext]',
+                name: 'static/etc/[name].[hash:8].[ext]',
               },
             },
             // ** STOP ** Are you adding a new loader?
