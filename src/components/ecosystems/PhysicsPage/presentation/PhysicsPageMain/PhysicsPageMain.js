@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
 import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
-import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
@@ -13,9 +13,11 @@ import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
 
 import style from './PhysicsPageMain.css';
 
-const PhysicsPageMain = ({ Text: text, Text }) => (
+const PhysicsPageMain = ({ Text, Text: text }) => (
   <Background image={backgroundimage}>
-    <Head title={text({ path: 'Title' })} />
+    <Helmet>
+      <title>{`${text({ path: 'Title' })}`}</title>
+    </Helmet>
     <ResponsiveWrapper>
       <Card topper>
         <CardContent>

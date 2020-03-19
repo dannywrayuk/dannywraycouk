@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import { withText } from '../../../../../text/textStore';
-import Head from '../../../../_atoms/Head';
 
 const BlogPageMain = ({ Text: text }) => (
   <>
-    <Head title={text({ path: 'defaultTitle' })} />
+    <Helmet>
+      <title>{`${text({ path: 'defaultTitle' })}`}</title>
+    </Helmet>
     <p>blog</p>
   </>
 );

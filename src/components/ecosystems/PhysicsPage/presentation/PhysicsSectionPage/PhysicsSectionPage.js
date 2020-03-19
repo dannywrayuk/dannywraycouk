@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
 import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
-import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
@@ -17,7 +17,9 @@ const PhysicsSectionPage = ({ match, Text, Text: text }) => {
   const { section } = match.params;
   return (
     <Background image={backgroundimage}>
-      <Head title={text({ path: `${section}.Title` })} />
+      <Helmet>
+        <title>{`${text({ path: `${section}.Title` })}`}</title>
+      </Helmet>
       <ResponsiveWrapper>
         <Card topper>
           <CardContent>

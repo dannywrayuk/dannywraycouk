@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import InstagramImage1 from '../../../../../images/png/instagram_image1.jpg';
 import InstagramImage2 from '../../../../../images/png/instagram_image2.jpg';
@@ -7,7 +8,6 @@ import Me from '../../../../../images/png/me.png';
 import backgroundimage from '../../../../../images/svg/background.svg';
 import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
-import Head from '../../../../_atoms/Head';
 import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
@@ -19,8 +19,10 @@ import style from './HomePageMain.css';
 
 const HomePageMain = ({ Text, Text: text }) => (
   <Background image={backgroundimage}>
+    <Helmet>
+      <title>{`${text({ path: 'HeadTitle' })}`}</title>
+    </Helmet>
     <ResponsiveWrapper>
-      <Head title={text({ path: 'HeadTitle' })} />
       <ResponsiveDivider>
         <ResponsiveElement width={2}>
           <div className={style.bannerText}>
