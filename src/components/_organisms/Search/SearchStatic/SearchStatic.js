@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ReactComponent as Search } from '../../../../images/svg/search.svg';
 import { withText } from '../../../../text/textStore';
-import Button from '../../Button';
+import Button from '../../../_molecules/Button';
 
 import style from './SearchStatic.css';
 

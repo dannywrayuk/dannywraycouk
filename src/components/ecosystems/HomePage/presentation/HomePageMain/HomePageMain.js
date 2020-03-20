@@ -11,9 +11,9 @@ import Background from '../../../../_atoms/BackgroundContainer';
 import Heading from '../../../../_molecules/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_molecules/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
+import SocialIcons from '../../../../_molecules/SocialIcons';
 import { Card, CardContent, CardFooter } from '../../../../_organisms/Card';
 import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
-import SocialIcons from '../../../../_organisms/SocialIcons';
 
 import style from './HomePageMain.css';
 

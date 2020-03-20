@@ -5,7 +5,7 @@ import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
 import HamburgerMenu from '../../../../_molecules/HamburgerMenu';
 import LinkButton from '../../../../_molecules/LinkButton';
-import Search from '../../../../_molecules/Search';
+import Search from '../../../Search';
 
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderMobile.css';

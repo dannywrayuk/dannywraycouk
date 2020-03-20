@@ -5,23 +5,24 @@ import { ReactComponent as LinkedIn } from '../../../images/svg/linkedin.svg';
 import { ReactComponent as Spotify } from '../../../images/svg/spotify.svg';
 import { ReactComponent as Twitter } from '../../../images/svg/twitter.svg';
 import AppConstants from '../../../utilities/AppConstants';
+import AnchorButton from '../AnchorButton';
 
 import style from './SocialIcons.css';
 
 const SocialIcons = () => (
   <>
-    <a href={AppConstants.TwitterLink} className={style.followText}>
+    <AnchorButton to={AppConstants.TwitterLink} className={style.followText}>
       <Twitter className={style.socialIcons} />
-    </a>
-    <a href={AppConstants.InstagramLink} className={style.followText}>
+    </AnchorButton>
+    <AnchorButton to={AppConstants.InstagramLink} className={style.followText}>
       <Instagram className={style.socialIcons} />
-    </a>
-    <a href={AppConstants.LinkedInLink} className={style.followText}>
+    </AnchorButton>
+    <AnchorButton to={AppConstants.LinkedInLink} className={style.followText}>
       <LinkedIn className={style.socialIcons} />
-    </a>
-    <a href={AppConstants.SpotifyLink} className={style.followText}>
+    </AnchorButton>
+    <AnchorButton to={AppConstants.SpotifyLink} className={style.followText}>
       <Spotify className={style.socialIcons} />
-    </a>
+    </AnchorButton>
   </>
 );
 
