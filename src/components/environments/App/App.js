@@ -10,14 +10,14 @@ import AppConstants from '../../../utilities/AppConstants';
 import AppBase from '../../_atoms/App';
 import Footer from '../../_organisms/Footer';
 import Header from '../../_organisms/Header';
-// import BlogPage from '../../ecosystems/BlogPage';
-import ErrorPage from '../../ecosystems/ErrorPage';
-import HomePage from '../../ecosystems/HomePage';
-// import MorePage from '../../ecosystems/MorePage';
-import PhysicsPage from '../../ecosystems/PhysicsPage';
+// import BlogPage from '../../ecosystems/Blog';
+import ErrorPage from '../../ecosystems/Error';
+import HomePage from '../../ecosystems/Home';
+// import MorePage from '../../ecosystems/More';
+import PhysicsPage from '../../ecosystems/Physics';
 
-// import ProjectPage from '../../ecosystems/ProjectPage';
-// import SearchPage from '../../ecosystems/SearchPage';
+// import ProjectPage from '../../ecosystems/Project';
+// import SearchPage from '../../ecosystems/Search';
 
 const { ROUTES } = AppConstants;
 
