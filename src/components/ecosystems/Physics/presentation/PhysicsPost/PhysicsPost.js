@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
 import Background from '../../../../_atoms/BackgroundContainer';
+import { ResponsiveDivider } from '../../../../_atoms/ResponsiveDividers';
+import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import FetchMarkdown from '../../../../_molecules/FetchMarkdown';
-import { ResponsiveDivider } from '../../../../_molecules/ResponsiveDividers';
-import ResponsiveWrapper from '../../../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../../../_organisms/Card';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';

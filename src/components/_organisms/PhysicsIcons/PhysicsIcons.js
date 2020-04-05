@@ -7,10 +7,10 @@ import { ReactComponent as Lightning } from '../../../images/svg/lightning.svg';
 import { ReactComponent as Pi } from '../../../images/svg/pi.svg';
 import { ReactComponent as Sun } from '../../../images/svg/sun.svg';
 import AppConstants from '../../../utilities/AppConstants';
+import { ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ShapeBlob from '../../_atoms/ShapeBlob';
 import IconCard from '../../_molecules/IconCard';
 import LinkButton from '../../_molecules/LinkButton';
-import { ResponsiveElement } from '../../_molecules/ResponsiveDividers';
 
 import style from './PhysicsIcons.css';
 

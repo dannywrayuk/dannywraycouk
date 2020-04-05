@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet';
 import background from '../../../images/svg/background.svg';
 import { withText } from '../../../text/textStore';
 import Background from '../../_atoms/BackgroundContainer';
+import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
+import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import Heading from '../../_molecules/Heading';
-import { ResponsiveDivider, ResponsiveElement } from '../../_molecules/ResponsiveDividers';
-import ResponsiveWrapper from '../../_molecules/ResponsiveWrapper';
 import { Card, CardContent } from '../../_organisms/Card';
 
 const Error = ({ Text, Text: text }) => (
