@@ -6,22 +6,28 @@ const SharedContent = {
     defaultAuthor: 'Danny Wray',
     Pangram: 'Pack my box with five dozen liquor jugs',
     Loading: 'Loading...',
+    Search: {
+      placeholder: 'Search...',
+    },
+    Logo: {
+      name: 'Danny Wray',
+    },
+  },
+  Header: {
+    HomeLink: 'Home',
+    BlogLink: 'Blog',
+    PhysicsLink: 'Physics',
+    ProjectLink: 'Projects',
+    MoreLink: 'More',
   },
   Footer: {
     copyright: '© Danny Wray 2020',
   },
-  HomePageMain: {
+  Home: {
     HeadTitle: 'Home | Danny Wray',
     Title: "Hi, I'm Danny.",
     SubTitle: 'A Theoretical Physics Undergraduate at the University of Nottingham.',
     Description: "I've always been interested in software and this website is the result of my endeavour into the world of web design. If we have similar interests you might find some useful stuff here, so I hope you stick around :)",
-    Header: {
-      HomeLink: 'Home',
-      BlogLink: 'Blog',
-      PhysicsLink: 'Physics',
-      ProjectLink: 'Projects',
-      MoreLink: 'More',
-    },
     IntroCard: {
       Programming: {
         Title: 'Learn some Physics',
@@ -51,8 +57,8 @@ const SharedContent = {
       SubTitle: "I'm always doing something, and it's not always physics (suprisingly), so all the random junk will probably end up over in the More section. If you can't find what you're looking for, use the search box in the top right (please use it, I spent ages getting that to work)",
     },
   },
-  PhysicsPage: {
-    MainPage: {
+  Physics: {
+    Main: {
       Title: 'Danny Wray | Physics',
       Heading: 'A Whole Lotta Physics',
       Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of Physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require much background knowledge to understand.",
@@ -101,15 +107,6 @@ const SharedContent = {
     HeadTitle: 'Coming Soon | Danny Wray',
     Title: 'Coming Soon..',
     SubTitle: "Looks like I haven't finished that bit yet.",
-  },
-  Search: {
-    placeholder: 'Search...',
-  },
-  Logo: {
-    name: 'Danny Wray',
-  },
-  Fonts: {
-    Lobster: 'https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign',
   },
 };
 export default SharedContent;

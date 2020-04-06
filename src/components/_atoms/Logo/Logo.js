@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import image from '../../../images/svg/logoicon.svg';
-import { withText } from '../../../text/textStore';
+import withText from '../Text';
 
 import style from './Logo.css';
 
@@ -10,11 +10,11 @@ const Logo = ({ Text, showText, className }) => (
   <div className={style.container}>
     <img src={image} alt="" className={`${style.icon} ${className}`} />
     {showText
-    && (
-    <div className={style.url}>
-      <Text path="name" />
-    </div>
-    )}
+      && (
+        <div className={style.url}>
+          <Text path="name" />
+        </div>
+      )}
   </div>
 );
 
@@ -29,4 +29,4 @@ Logo.defaultProps = {
   className: '',
 };
 
-export default withText('Logo')(Logo);
+export default withText('Meta.Logo')(Logo);

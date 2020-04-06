@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import { ReactComponent as Close } from '../../../../images/svg/close.svg';
 import { ReactComponent as Search } from '../../../../images/svg/search.svg';
-import { withText } from '../../../../text/textStore';
+import withText from '../../../_atoms/Text';
 import Button from '../../../_molecules/Button';
 
 import style from './SearchDynamic.css';
 
 const SearchDynamic = ({
-  Text: text,
+  Text,
   onSearchClick,
   onCloseClick,
   isExtended,
@@ -35,7 +35,7 @@ const SearchDynamic = ({
             <input
               type="text"
               className={style.input}
-              placeholder={text({ path: 'placeholder' })}
+              placeholder={Text.get('placeholder')}
               value={handlers.searchValue}
               onChange={handlers.handleChange}
               onKeyDown={handlers.handleKeyPress}
@@ -61,4 +61,4 @@ SearchDynamic.propTypes = {
   handlers: PropTypes.shape().isRequired,
 };
 
-export default withText('Search')(SearchDynamic);
+export default withText('Meta.Search')(SearchDynamic);

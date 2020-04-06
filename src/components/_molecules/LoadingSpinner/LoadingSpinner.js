@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as Spinner } from '../../../images/svg/atom.svg';
-import { withText } from '../../../text/textStore';
+import withText from '../../_atoms/Text';
 
 import style from './LoadingSpinner.css';
 

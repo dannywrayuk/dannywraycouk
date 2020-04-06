@@ -6,10 +6,10 @@ import InstagramImage1 from '../../../images/png/instagram_image1.jpg';
 import InstagramImage2 from '../../../images/png/instagram_image2.jpg';
 import Me from '../../../images/png/me.png';
 import backgroundimage from '../../../images/svg/background.svg';
-import { withText } from '../../../text/textStore';
 import Background from '../../_atoms/BackgroundContainer';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
+import withText from '../../_atoms/Text';
 import Heading from '../../_molecules/Heading';
 import SocialIcons from '../../_molecules/SocialIcons';
 import { Card, CardContent, CardFooter } from '../../_organisms/Card';
@@ -17,10 +17,10 @@ import PhysicsIcons from '../../_organisms/PhysicsIcons';
 
 import style from './Home.css';
 
-const Home = ({ Text, Text: text }) => (
+const Home = ({ Text }) => (
   <Background image={backgroundimage}>
     <Helmet>
-      <title>{`${text({ path: 'HeadTitle' })}`}</title>
+      <title>{`${Text.get('HeadTitle')}`}</title>
     </Helmet>
     <ResponsiveWrapper>
       <ResponsiveDivider>
@@ -126,4 +126,4 @@ Home.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('HomePageMain')(Home);
+export default withText('Home')(Home);

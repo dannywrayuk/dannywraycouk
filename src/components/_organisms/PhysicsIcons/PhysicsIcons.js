@@ -18,7 +18,7 @@ const PhysicsIcons = () => (
   <div className={style.iconsContainer}>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.QUANTUM}>
-        <IconCard strings="PhysicsPage.Sections.quantum">
+        <IconCard strings="Physics.Sections.quantum">
           <ShapeBlob className={style.shapeBlob}>
             <Atom width="25px" />
           </ShapeBlob>
@@ -27,7 +27,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.THERMAL}>
-        <IconCard strings="PhysicsPage.Sections.thermal">
+        <IconCard strings="Physics.Sections.thermal">
           <ShapeBlob className={style.shapeBlob}>
             <Flame width="25px" />
           </ShapeBlob>
@@ -36,7 +36,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.CLASSICAL}>
-        <IconCard strings="PhysicsPage.Sections.classical">
+        <IconCard strings="Physics.Sections.classical">
           <ShapeBlob className={style.shapeBlob}>
             <Apple width="25px" />
           </ShapeBlob>
@@ -45,7 +45,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.ELECTROMAG}>
-        <IconCard strings="PhysicsPage.Sections.electromag">
+        <IconCard strings="Physics.Sections.electromag">
           <ShapeBlob className={style.shapeBlob}>
             <Lightning width="25px" />
           </ShapeBlob>
@@ -54,7 +54,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.ASTRO}>
-        <IconCard strings="PhysicsPage.Sections.astro">
+        <IconCard strings="Physics.Sections.astro">
           <ShapeBlob className={style.shapeBlob}>
             <Sun width="25px" />
           </ShapeBlob>
@@ -63,7 +63,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.SECTIONS.MATHS}>
-        <IconCard strings="PhysicsPage.Sections.maths">
+        <IconCard strings="Physics.Sections.maths">
           <ShapeBlob className={style.shapeBlob}>
             <Pi width="25px" />
           </ShapeBlob>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { withText } from '../../../../../text/textStore';
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
+import withText from '../../../../_atoms/Text';
 import HamburgerMenu from '../../../../_molecules/HamburgerMenu';
 import LinkButton from '../../../../_molecules/LinkButton';
 import Search from '../../../Search';
@@ -58,4 +58,4 @@ const HeaderMobile = () => {
 };
 
 
-export default withText('HomePageMain.Header')(HeaderMobile);
+export default withText('Header')(HeaderMobile);

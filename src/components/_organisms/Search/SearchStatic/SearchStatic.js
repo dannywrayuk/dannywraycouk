@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ReactComponent as Search } from '../../../../images/svg/search.svg';
-import { withText } from '../../../../text/textStore';
+import withText from '../../../_atoms/Text';
 import Button from '../../../_molecules/Button';
 
 import style from './SearchStatic.css';
 
-const SearchStatic = ({ Text: text, handlers }) => (
+const SearchStatic = ({ Text, handlers }) => (
   <div className={style.box}>
     <Button
       className={style.imageContainer}
@@ -18,7 +18,7 @@ const SearchStatic = ({ Text: text, handlers }) => (
     <input
       type="text"
       className={style.input}
-      placeholder={text({ path: 'placeholder' })}
+      placeholder={Text.get('placeholder')}
       value={handlers.searchValue}
       onChange={handlers.handleChange}
       onKeyDown={handlers.handleKeyPress}
@@ -31,4 +31,4 @@ SearchStatic.propTypes = {
   handlers: PropTypes.shape().isRequired,
 };
 
-export default withText('Search')(SearchStatic);
+export default withText('Meta.Search')(SearchStatic);

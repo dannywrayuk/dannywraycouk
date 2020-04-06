@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
-import { withText } from '../../../../../text/textStore';
 import Background from '../../../../_atoms/BackgroundContainer';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
+import withText from '../../../../_atoms/Text';
 import Heading from '../../../../_molecules/Heading';
 import { Card, CardContent } from '../../../../_organisms/Card';
 import Contents from '../../../../_organisms/Contents';
 
 import style from './PhysicsSection.css';
 
-const PhysicsSection = ({ match, Text, Text: text }) => {
+const PhysicsSection = ({ match, Text }) => {
   const { section } = match.params;
   return (
     <Background image={backgroundimage}>
       <Helmet>
-        <title>{`${text({ path: `${section}.Title` })}`}</title>
+        <title>{`${Text.get(`${section}.Title`)}`}</title>
       </Helmet>
       <ResponsiveWrapper>
         <Card topper>
@@ -57,4 +57,4 @@ PhysicsSection.defaultProps = {
   params: { section: 0 },
 };
 
-export default withText('PhysicsPage.Sections')(PhysicsSection);
+export default withText('Physics.Sections')(PhysicsSection);

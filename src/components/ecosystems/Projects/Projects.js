@@ -4,16 +4,17 @@ import { Helmet } from 'react-helmet';
 
 import withText from '../../_atoms/Text';
 
-const More = ({ Text }) => (
+const Projects = ({ Text }) => (
   <>
     <Helmet>
-      <title>{`${Text.get('defaultTitle')}`}</title>
+      <title>{`${Text.get('HeadTitle')}`}</title>
     </Helmet>
-    <p>more</p>
+    <p>project</p>
   </>
 );
-More.propTypes = {
+
+Projects.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('Meta')(More);
+export default withText('Meta')(Projects);

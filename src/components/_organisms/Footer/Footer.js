@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withText } from '../../../text/textStore';
+import withText from '../../_atoms/Text';
 
 import style from './Footer.css';
 

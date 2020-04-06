@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-import { withText } from '../../../../../text/textStore';
+import withText from '../../../../_atoms/Text';
 
-const SearchMain = ({ Text: text, searchTerm }) => (
+const SearchMain = ({ Text, searchTerm }) => (
   <>
     <Helmet>
-      <title>{`${text({ path: 'defaultTitle' })}`}</title>
+      <title>{`${Text.get('defaultTitle')}`}</title>
     </Helmet>
     <p>{searchTerm}</p>
   </>

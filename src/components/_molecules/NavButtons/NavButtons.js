@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withText } from '../../../text/textStore';
 import AppConstants from '../../../utilities/AppConstants';
+import withText from '../../_atoms/Text';
 import LinkButton from '../LinkButton';
 
 import style from './NavButtons.css';
@@ -43,4 +43,4 @@ NavButtons.propTypes = {
 };
 
 
-export default withText('HomePageMain.Header')(NavButtons);
+export default withText('Header')(NavButtons);

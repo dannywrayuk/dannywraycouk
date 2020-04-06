@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 import background from '../../../images/svg/background.svg';
-import { withText } from '../../../text/textStore';
 import Background from '../../_atoms/BackgroundContainer';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
+import withText from '../../_atoms/Text';
 import Heading from '../../_molecules/Heading';
 import { Card, CardContent } from '../../_organisms/Card';
 
-const Error = ({ Text, Text: text }) => (
+const Error = ({ Text }) => (
   <Background image={background}>
     <ResponsiveWrapper>
       <Helmet>
-        <title>{`${text({ path: 'HeadTitle' })}`}</title>
+        <title>{`${Text.get('HeadTitle')}`}</title>
       </Helmet>
       <Card topper>
         <CardContent>
