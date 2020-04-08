@@ -6,16 +6,16 @@ import Accordion from '../Accordion';
 
 import style from './Contents.css';
 
-const Contents = ({ section }) => (
+const Contents = ({ catagory }) => (
   <div className={style.contents}>
-    {contents[section] && contents[section].length > 0 ? contents[section].map((d) => (
-      <Accordion key={`${section}${d.title}`} structure={d} />
+    {contents[catagory] && contents[catagory].length > 0 ? contents[catagory].map((d) => (
+      <Accordion key={`${catagory}${d.title}`} structure={d} />
     )) : null }
   </div>
 );
 
 Contents.propTypes = {
-  section: PropTypes.string.isRequired,
+  catagory: PropTypes.string.isRequired,
 };
 
 

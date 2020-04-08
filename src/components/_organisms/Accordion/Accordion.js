@@ -12,6 +12,7 @@ import style from './Accordion.css';
 //
 // {
 //     *title,
+//      link
 //     *sections: [
 //         {
 //             *title,
@@ -53,8 +54,8 @@ const Accordion = ({ structure }) => {
         } : { maxHeight: 0, opacity: 0 }}
       >
         <div ref={ref}>
-          {structure.sections.map((d) => (
-            <LinkButton key={d.title} to={window.location.pathname + d.link || '#'} className={style.elementContainer}>
+          {structure.posts.map((d) => (
+            <LinkButton key={d.title} to={`${window.location.pathname}${structure.link}${d.link}` || '#'} className={style.elementContainer}>
               <Circle className={style.Circle} />
               {d.title}
             </LinkButton>

@@ -2,7 +2,8 @@
     "quantum": [
         {
             "title": "Introduction",
-            "sections": [
+            "link": "/introduction",
+            "posts": [
                 {
                     "title": "The Ultraviolet Catastrophe",
                     "link": "/ultraviolet_catastrophe"
@@ -27,7 +28,8 @@
         },
         {
             "title": "Quantum Wells",
-            "sections": [
+            "link": "/quantum_wells",
+            "posts": [
                 {
                     "title": "Time Dependence and Probability Current",
                     "link": "/time_dependence_and_probability_current"
@@ -56,7 +58,8 @@
         },
         {
             "title": "Dirac Notation and Formalism",
-            "sections": [
+            "link": "/formalism",
+            "posts": [
                 {
                     "title": "Dirac Notation and Operators",
                     "link": "/dirac_notation_and_operators"
@@ -93,7 +96,8 @@
         },
         {
             "title": "Quantum Harmonic Oscillator",
-            "sections": [
+            "link": "/quantum_harmonic_oscillator",
+            "posts": [
                 {
                     "title": "Classical Properties",
                     "link": "/classical_properties"
@@ -114,7 +118,8 @@
         },
         {
             "title": "Hydrogen",
-            "sections": [
+            "link": "/hydrogen",
+            "posts": [
                 {
                     "title": "Angular Momentum",
                     "link": "/angular_momentum"
@@ -139,7 +144,8 @@
         },
         {
             "title": "Spin",
-            "sections": []
+            "link": "/spin",
+            "posts": []
         }
     ]
 }
