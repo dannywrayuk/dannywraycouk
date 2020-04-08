@@ -23,8 +23,8 @@ const PhysicsPost = ({ catagory, section, post }) => {
         <Card topper>
           <CardContent>
             <ResponsiveDivider>
-              <div>
-                <div className={style.topper}>
+              <div className={style.wrapper}>
+                <div className={style.wrapper}>
                   <Heading className={style.center} level={2}>
                     {title}
                   </Heading>
