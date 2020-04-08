@@ -1,151 +1,145 @@
 {
-    "quantum": [
-        {
+    "quantum": {
+        "introduction": {
             "title": "Introduction",
-            "link": "/introduction",
-            "posts": [
-                {
+            "posts": {
+                "ultraviolet_catastrophe": {
                     "title": "The Ultraviolet Catastrophe",
-                    "link": "/ultraviolet_catastrophe"
+                    "date": "6th June 2018",
+                    "description": "Max Planck's accidental discovery of the quantisation of energy."
                 },
-                {
+                "photoelectric_phenomenon": {
                     "title": "Photoelectric Phenomenon",
-                    "link": "/photoelectric_phenomenon"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "uncertainty_principle": {
                     "title": "The Uncertainty Principle",
-                    "link": "/uncertainty_principle"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "structure_of_the_atom": {
                     "title": "Structure of the Atom",
-                    "link": "/structure_of_the_atom"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "schrodingers_equation": {
                     "title": "Schrodinger's Equation",
-                    "link": "/schrodingers_equation"
+                    "date": "",
+                    "description": ""
                 }
-            ]
+            }
         },
-        {
+        "quantum_wells": {
             "title": "Quantum Wells",
-            "link": "/quantum_wells",
-            "posts": [
-                {
+            "posts": {
+                "time_dependence_and_probability_current": {
                     "title": "Time Dependence and Probability Current",
-                    "link": "/time_dependence_and_probability_current"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "free_particle": {
                     "title": "A Free Particle",
-                    "link": "/free_particle"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "particle_in_infinite_square_well_asymmetric": {
                     "title": "Particle in an Infinite Square Well Asymmetric",
-                    "link": "/particle_in_infinite_square_well_asymmetric"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "particle_in_infinite_square_well_symmetric": {
                     "title": "Particle in an Infinite Square Well Symmetric",
-                    "link": "/particle_in_infinite_square_well_symmetric"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "particle_in_finite_square_well": {
                     "title": "Particle in a Finite Square Well",
-                    "link": "/particle_in_finite_square_well"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "scattering_particles_against_barrier": {
                     "title": "Scattering Particles Against a Barrier",
-                    "link": "/scattering_particles_against_barrier"
+                    "date": "",
+                    "description": ""
                 }
-            ]
+            }
         },
-        {
+        "formalism": {
             "title": "Dirac Notation and Formalism",
-            "link": "/formalism",
-            "posts": [
-                {
+            "posts": {
+                "dirac_notation_and_operators": {
                     "title": "Dirac Notation and Operators",
-                    "link": "/dirac_notation_and_operators"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "position": {
                     "title": "Position",
-                    "link": "/position"
+                    "date": "",
+                    "description": ""
                 },
-                {
+                "momentum": {
                     "title": "Momentum",
-                    "link": "/momentum"
+                    "date": "",
+                    "description": ""
                 },
-                {
-                    "title": "Superposition",
-                    "link": "/superposition"
+                "superposition": {
+                    "title": "Superposition"
                 },
-                {
-                    "title": "Expectation and Measurement",
-                    "link": "/expectation_and_measurement"
+                "expectation_and_measurement": {
+                    "title": "Expectation and Measurement"
                 },
-                {
-                    "title": "Ehrenfest Theorem",
-                    "link": "/ehrenfest_theorem"
+                "ehrenfest_theorem": {
+                    "title": "Ehrenfest Theorem"
                 },
-                {
-                    "title": "Appendix: Momentum Operator",
-                    "link": "/appendix_momentum_operator"
+                "appendix_momentum_operator": {
+                    "title": "Appendix: Momentum Operator"
                 },
-                {
-                    "title": "Appendix: Uncertainty and Commutation",
-                    "link": "/appendix_uncertainty_commutation"
+                "appendix_uncertainty_commutation": {
+                    "title": "Appendix: Uncertainty and Commutation"
                 }
-            ]
+            }
         },
-        {
+        "quantum_harmonic_oscillator": {
             "title": "Quantum Harmonic Oscillator",
-            "link": "/quantum_harmonic_oscillator",
-            "posts": [
-                {
-                    "title": "Classical Properties",
-                    "link": "/classical_properties"
+            "posts": {
+                "classical_properties": {
+                    "title": "Classical Properties"
                 },
-                {
-                    "title": "Brute Force Solution",
-                    "link": "/brute_force_solution"
+                "brute_force_solution": {
+                    "title": "Brute Force Solution"
                 },
-                {
-                    "title": "Ladder Operators",
-                    "link": "/ladder_operators"
+                "ladder_operators": {
+                    "title": "Ladder Operators"
                 },
-                {
-                    "title": "Energy in the QHO",
-                    "link": "/energy_in_QHO"
+                "energy_in_QHO": {
+                    "title": "Energy in the QHO"
                 }
-            ]
+            }
         },
-        {
+        "hydrogen": {
             "title": "Hydrogen",
-            "link": "/hydrogen",
-            "posts": [
-                {
-                    "title": "Angular Momentum",
-                    "link": "/angular_momentum"
+            "posts": {
+                "angular_momentum": {
+                    "title": "Angular Momentum"
                 },
-                {
-                    "title": "Central Problem",
-                    "link": "/central_problem"
+                "central_problem": {
+                    "title": "Central Problem"
                 },
-                {
-                    "title": "Radial Equation",
-                    "link": "/radial_equation"
+                "radial_equation": {
+                    "title": "Radial Equation"
                 },
-                {
-                    "title": "Use of a Basis",
-                    "link": "/use_of_a_basis"
+                "use_of_a_basis": {
+                    "title": "Use of a Basis"
                 },
-                {
-                    "title": "Evolution in Time",
-                    "link": "/evolution_in_time"
+                "evolution_in_time": {
+                    "title": "Evolution in Time"
                 }
-            ]
+            }
         },
-        {
+        "spin": {
             "title": "Spin",
-            "link": "/spin",
             "posts": []
         }
-    ]
+    }
 }

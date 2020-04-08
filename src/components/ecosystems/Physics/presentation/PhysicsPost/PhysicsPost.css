@@ -1,0 +1,20 @@
+.topper{
+  width: 100%;
+  display: inline;
+}
+
+.center{
+  display: block;
+  text-align: center;
+}
+
+.date{
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.ruler {
+  opacity: 50%;
+  margin: 20px 0px;
+}

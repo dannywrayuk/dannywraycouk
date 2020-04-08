@@ -9,17 +9,20 @@ import LinkButton from '../../_molecules/LinkButton';
 import style from './Accordion.css';
 
 // Expected structure:
-//
+// [
+// *title,
 // {
 //     *title,
-//      link
-//     *sections: [
-//         {
+//     *posts: {
+//         *link:{
 //             *title,
-//             link,
+//              date,
+//              blurb,
+//              description,
 //         }
-//     ]
+//     }
 // }
+// ]
 // all marked with * are required
 
 
@@ -42,7 +45,7 @@ const Accordion = ({ structure }) => {
       <div>
         <Button open onClick={openToggle} className={style.titleContainer} style={open ? { backgroundColor: '#ccc', paddingLeft: 25 } : null}>
           <Arrow className={`${style.Arrow} ${open && style.ArrowOpen}`} />
-          <h3 className={style.title}>{structure.title}</h3>
+          <h3 className={style.title}>{structure[1].title}</h3>
         </Button>
       </div>
       <div
@@ -54,10 +57,10 @@ const Accordion = ({ structure }) => {
         } : { maxHeight: 0, opacity: 0 }}
       >
         <div ref={ref}>
-          {structure.posts.map((d) => (
-            <LinkButton key={d.title} to={`${window.location.pathname}${structure.link}${d.link}` || '#'} className={style.elementContainer}>
+          {Object.entries(structure[1].posts).map((d) => (
+            <LinkButton key={d[1].title} to={`${window.location.pathname}/${structure[0]}/${d[0]}` || '#'} className={style.elementContainer}>
               <Circle className={style.Circle} />
-              {d.title}
+              {d[1].title}
             </LinkButton>
           ))}
         </div>
@@ -69,7 +72,7 @@ const Accordion = ({ structure }) => {
 
 
 Accordion.propTypes = {
-  structure: PropTypes.object.isRequired,
+  structure: PropTypes.array.isRequired,
 };
 
 export default Accordion;

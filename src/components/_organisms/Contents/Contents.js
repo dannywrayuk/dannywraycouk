@@ -8,9 +8,9 @@ import style from './Contents.css';
 
 const Contents = ({ catagory }) => (
   <div className={style.contents}>
-    {contents[catagory] && contents[catagory].length > 0 ? contents[catagory].map((d) => (
-      <Accordion key={`${catagory}${d.title}`} structure={d} />
-    )) : null }
+    {Object.entries(contents[catagory]).map((d) => (
+      <Accordion key={`${catagory}${d[0]}`} structure={d} />
+    ))}
   </div>
 );
 

@@ -13,28 +13,39 @@ import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 
 import postStyle from './content/styles.css';
+import style from './PhysicsPost.css';
 
-const PhysicsPost = ({ catagory, section, post }) => (
-  <Background image={backgroundimage}>
-    <ResponsiveWrapper>
-      <Card topper>
-        <CardContent>
-          <ResponsiveDivider>
-            <Heading level={2}>
-              {contents[catagory].find(s => s.link === `/${section}`).posts.find(p => p.link === `/${post}`).title}
-            </Heading>
-            <FetchMarkdown
-              containerName={postStyle.contentContainer}
-              location={Posts[post]}
-              auxData={Images}
-              styleData={postStyle}
-            />
-          </ResponsiveDivider>
-        </CardContent>
-      </Card>
-    </ResponsiveWrapper>
-  </Background>
-);
+const PhysicsPost = ({ catagory, section, post }) => {
+  const { title, date, description } = contents[catagory][section].posts[post];
+  return (
+    <Background image={backgroundimage}>
+      <ResponsiveWrapper>
+        <Card topper>
+          <CardContent>
+            <ResponsiveDivider>
+              <div>
+                <div className={style.topper}>
+                  <Heading className={style.center} level={2}>
+                    {title}
+                  </Heading>
+                  <p className={style.date}>{date || ''}</p>
+                  <p className={style.center}>{description || ''}</p>
+                  <hr className={style.ruler} />
+                </div>
+                <FetchMarkdown
+                  containerName={postStyle.contentContainer}
+                  location={Posts[post]}
+                  auxData={Images}
+                  styleData={postStyle}
+                />
+              </div>
+            </ResponsiveDivider>
+          </CardContent>
+        </Card>
+      </ResponsiveWrapper>
+    </Background>
+  );
+};
 
 
 PhysicsPost.propTypes = {
