@@ -1,8 +1,3 @@
-## Photoelectric Phenomenon
-<date>8th July 2018</date>
-<label>Einstein's experiment that showcased the particle nature of light.</label>
-<hr/>
-
 After Planck discovered that energy was quantised into chunks he was quite sceptical, justifiably, since nowhere else in
 nature had this kind of behaviour been observed. It also goes against everything we experience in our daily lives. For
 instance, when observing a ball slow down we see its velocity decrease smoothly. However, in the quantum version of this

@@ -1,9 +1,3 @@
-## Time Dependence and Probability Current
-<date>17th August 2018</date>
-<label>How Stationary States can evolve with time and the idea of Probability Current</label>
-<hr/>
-
-
 Bohr's idea of stationary states refers to a state in which the probability function of a system is stationary. This does not mean that the wavefunction itself must be stationary. The time evolution of a stationary state wavefunction can be derived as shown.
 
 We start with the Schrodinger Equation $(1.5.6)$

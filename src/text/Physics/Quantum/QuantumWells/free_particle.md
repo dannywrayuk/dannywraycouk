@@ -1,8 +1,3 @@
-## A Free Particle
-<date>17th August 2018</date>
-<label>A solution to the Schrodinger equation for a Free Particle</label>
-<hr/>
-
 The time independent Schrodinger equation has different solutions depending on the potential that the particle feels. As we find the first solution it would make sense if it was the simplest possible potential, or, $V=V_0$. When we put this potential into the Schrodinger equation it becomes
 $$
 E\psi=\frac{-\hbar^2}{2m}\nabla^2\psi + V_0\psi

@@ -17,8 +17,8 @@ import style from './PhysicsIcons.css';
 const PhysicsIcons = () => (
   <div className={style.iconsContainer}>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.QUANTUM}>
-        <IconCard strings="Physics.Sections.quantum">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.QUANTUM}>
+        <IconCard strings="Physics.Catagories.quantum">
           <ShapeBlob className={style.shapeBlob}>
             <Atom width="25px" />
           </ShapeBlob>
@@ -26,8 +26,8 @@ const PhysicsIcons = () => (
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.THERMAL}>
-        <IconCard strings="Physics.Sections.thermal">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.THERMAL}>
+        <IconCard strings="Physics.Catagories.thermal">
           <ShapeBlob className={style.shapeBlob}>
             <Flame width="25px" />
           </ShapeBlob>
@@ -35,8 +35,8 @@ const PhysicsIcons = () => (
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.CLASSICAL}>
-        <IconCard strings="Physics.Sections.classical">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.CLASSICAL}>
+        <IconCard strings="Physics.Catagories.classical">
           <ShapeBlob className={style.shapeBlob}>
             <Apple width="25px" />
           </ShapeBlob>
@@ -44,8 +44,8 @@ const PhysicsIcons = () => (
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.ELECTROMAG}>
-        <IconCard strings="Physics.Sections.electromag">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.ELECTROMAG}>
+        <IconCard strings="Physics.Catagories.electromag">
           <ShapeBlob className={style.shapeBlob}>
             <Lightning width="25px" />
           </ShapeBlob>
@@ -53,8 +53,8 @@ const PhysicsIcons = () => (
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.ASTRO}>
-        <IconCard strings="Physics.Sections.astro">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.ASTRO}>
+        <IconCard strings="Physics.Catagories.astro">
           <ShapeBlob className={style.shapeBlob}>
             <Sun width="25px" />
           </ShapeBlob>
@@ -62,8 +62,8 @@ const PhysicsIcons = () => (
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
-      <LinkButton to={AppConstants.Physics.SECTIONS.MATHS}>
-        <IconCard strings="Physics.Sections.maths">
+      <LinkButton to={AppConstants.Physics.CATAGORIES.MATHS}>
+        <IconCard strings="Physics.Catagories.maths">
           <ShapeBlob className={style.shapeBlob}>
             <Pi width="25px" />
           </ShapeBlob>

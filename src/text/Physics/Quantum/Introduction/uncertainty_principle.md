@@ -1,8 +1,3 @@
-## The Uncertainty Principle
-<date>20th July 2018</date>
-<label>How analysis of the Photon Model lead Heisenberg to the Uncertainty Principle.</label>
-<hr/>
-
 We have seen how the photon model was successful in describing the Photoelectric effect and how the classical intensity on the detector of a double slit experiment corresponds to the probability of a single electron landing in that region. It was Einstein himself who was quite strongly opposed to this notion. The problem was that the probabilistic nature of this system completely undermined the principle of determinism. That is, the initial conditions of a system completely determine the time evolution of the system. If the position on the detector was only defined by a probability, then it cannot be predicted, and violates determinism. Einstein rejected the idea that some systems have elements that are fundamentally probabilistic and was quite vocal about his dislike. It was in this context that the quote "God does not play dice with the universe" was meant.
 One way to investigate this problem would be model a photon as a small wave packet mathematically and then follow its path, we could then try and understand the dynamics. 
 

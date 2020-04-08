@@ -1,10 +1,3 @@
-## Dirac Notation and Operators
-<date>26th September 2018</date>
-<label>An Introduction to Dirac Notation</label>
-<hr/>
-
-
-
 So far, most of the quantum mechanics we have done has felt very scattered and a little bit disorganised. Dirac
 Notation is a attempt to create a system by which all quantum mechanical problems can be tackled within a formal
 framework. The formalism is built upon a set of postulates which cannot be proved, their validity is based upon the

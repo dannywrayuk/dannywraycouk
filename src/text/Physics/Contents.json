@@ -1,145 +1,145 @@
 {
-    "quantum": [
-        {
+    "quantum": {
+        "introduction": {
             "title": "Introduction",
-            "sections": [
-                {
+            "posts": {
+                "ultraviolet_catastrophe": {
                     "title": "The Ultraviolet Catastrophe",
-                    "link": "/ultraviolet_catastrophe"
+                    "date": "6th June 2018",
+                    "description": "Max Planck's accidental discovery of the quantisation of energy."
                 },
-                {
+                "photoelectric_phenomenon": {
                     "title": "Photoelectric Phenomenon",
-                    "link": "/photoelectric_phenomenon"
+                    "date": "8th July 2018",
+                    "description": "Einstein's experiment that showcased the particle nature of light."
                 },
-                {
+                "uncertainty_principle": {
                     "title": "The Uncertainty Principle",
-                    "link": "/uncertainty_principle"
+                    "date": "20th July 2018",
+                    "description": "How analysis of the Photon Model lead Heisenberg to the Uncertainty Principle."
                 },
-                {
+                "structure_of_the_atom": {
                     "title": "Structure of the Atom",
-                    "link": "/structure_of_the_atom"
+                    "date": "9th August 2018",
+                    "description": "Quantum Theories answer to the Structure of Atoms."
                 },
-                {
+                "schrodingers_equation": {
                     "title": "Schrodinger's Equation",
-                    "link": "/schrodingers_equation"
+                    "date": "15th August 2018",
+                    "description": "The Wave Formulation of Quantum Mechanics."
                 }
-            ]
+            }
         },
-        {
+        "quantum_wells": {
             "title": "Quantum Wells",
-            "sections": [
-                {
+            "posts": {
+                "time_dependence_and_probability_current": {
                     "title": "Time Dependence and Probability Current",
-                    "link": "/time_dependence_and_probability_current"
+                    "date": "17th August 2018",
+                    "description": "How Stationary States can evolve with time and the idea of Probability Current."
                 },
-                {
+                "free_particle": {
                     "title": "A Free Particle",
-                    "link": "/free_particle"
+                    "date": "17th August 2018",
+                    "description": "A solution to the Schrodinger equation for a Free Particle."
                 },
-                {
-                    "title": "Particle in an Infinite Square Well Asymmetric",
-                    "link": "/particle_in_infinite_square_well_asymmetric"
+                "particle_in_infinite_square_well_asymmetric": {
+                    "title": "Particle in an Asymmetric Infinite Square Well.",
+                    "date": "19th August 2018",
+                    "description": "Solving the Schrodinger Equation for an Asymmetric Infinite Square Well Potential."
                 },
-                {
-                    "title": "Particle in an Infinite Square Well Symmetric",
-                    "link": "/particle_in_infinite_square_well_symmetric"
+                "particle_in_infinite_square_well_symmetric": {
+                    "title": "Particle in a Symmetric Infinite Square Well",
+                    "date": "20th August 2018",
+                    "description": "Solving the Schrodinger Equation for a Symmetric Infinite Square Well Potential."
                 },
-                {
+                "particle_in_finite_square_well": {
                     "title": "Particle in a Finite Square Well",
-                    "link": "/particle_in_finite_square_well"
+                    "date": "1st September 2018",
+                    "description": "Solving the Schrodinger Equation for a Finite Square Well Potential."
                 },
-                {
+                "scattering_particles_against_barrier": {
                     "title": "Scattering Particles Against a Barrier",
-                    "link": "/scattering_particles_against_barrier"
+                    "date": "3rd September 2018",
+                    "description": "The Behaviour of Particles Against a Barrier Potential."
                 }
-            ]
+            }
         },
-        {
+        "formalism": {
             "title": "Dirac Notation and Formalism",
-            "sections": [
-                {
+            "posts": {
+                "dirac_notation_and_operators": {
                     "title": "Dirac Notation and Operators",
-                    "link": "/dirac_notation_and_operators"
+                    "date": "26th September 2018",
+                    "description": "An Introduction to Dirac Notation."
                 },
-                {
+                "position": {
                     "title": "Position",
-                    "link": "/position"
+                    "date": "30th September 2018",
+                    "description": "Deriving the expressions for the position operator and exploring its properties."
                 },
-                {
+                "momentum": {
                     "title": "Momentum",
-                    "link": "/momentum"
+                    "date": "6th October 2018",
+                    "description": "Deriving the expressions for the momentum operator and exploring its properties."
                 },
-                {
-                    "title": "Superposition",
-                    "link": "/superposition"
+                "superposition": {
+                    "title": "Superposition"
                 },
-                {
-                    "title": "Expectation and Measurement",
-                    "link": "/expectation_and_measurement"
+                "expectation_and_measurement": {
+                    "title": "Expectation and Measurement"
                 },
-                {
-                    "title": "Ehrenfest Theorem",
-                    "link": "/ehrenfest_theorem"
+                "ehrenfest_theorem": {
+                    "title": "Ehrenfest Theorem"
                 },
-                {
-                    "title": "Appendix: Momentum Operator",
-                    "link": "/appendix_momentum_operator"
+                "appendix_momentum_operator": {
+                    "title": "Appendix: Momentum Operator"
                 },
-                {
-                    "title": "Appendix: Uncertainty and Commutation",
-                    "link": "/appendix_uncertainty_commutation"
+                "appendix_uncertainty_commutation": {
+                    "title": "Appendix: Uncertainty and Commutation"
                 }
-            ]
+            }
         },
-        {
+        "quantum_harmonic_oscillator": {
             "title": "Quantum Harmonic Oscillator",
-            "sections": [
-                {
-                    "title": "Classical Properties",
-                    "link": "/classical_properties"
+            "posts": {
+                "classical_properties": {
+                    "title": "Classical Properties"
                 },
-                {
-                    "title": "Brute Force Solution",
-                    "link": "/brute_force_solution"
+                "brute_force_solution": {
+                    "title": "Brute Force Solution"
                 },
-                {
-                    "title": "Ladder Operators",
-                    "link": "/ladder_operators"
+                "ladder_operators": {
+                    "title": "Ladder Operators"
                 },
-                {
-                    "title": "Energy in the QHO",
-                    "link": "/energy_in_QHO"
+                "energy_in_QHO": {
+                    "title": "Energy in the QHO"
                 }
-            ]
+            }
         },
-        {
+        "hydrogen": {
             "title": "Hydrogen",
-            "sections": [
-                {
-                    "title": "Angular Momentum",
-                    "link": "/angular_momentum"
+            "posts": {
+                "angular_momentum": {
+                    "title": "Angular Momentum"
                 },
-                {
-                    "title": "Central Problem",
-                    "link": "/central_problem"
+                "central_problem": {
+                    "title": "Central Problem"
                 },
-                {
-                    "title": "Radial Equation",
-                    "link": "/radial_equation"
+                "radial_equation": {
+                    "title": "Radial Equation"
                 },
-                {
-                    "title": "Use of a Basis",
-                    "link": "/use_of_a_basis"
+                "use_of_a_basis": {
+                    "title": "Use of a Basis"
                 },
-                {
-                    "title": "Evolution in Time",
-                    "link": "/evolution_in_time"
+                "evolution_in_time": {
+                    "title": "Evolution in Time"
                 }
-            ]
+            }
         },
-        {
+        "spin": {
             "title": "Spin",
-            "sections": []
+            "posts": []
         }
-    ]
+    }
 }

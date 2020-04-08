@@ -64,7 +64,7 @@ const SharedContent = {
       Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of Physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require much background knowledge to understand.",
       UnderCard: "Not everything on here is finished and it's probably going to be a long process, but below you'll find my most recent addition.",
     },
-    Sections: {
+    Catagories: {
       quantum: {
         Title: 'Danny Wray | Quantum Mechanics',
         Heading: 'Quantum Mechanics',

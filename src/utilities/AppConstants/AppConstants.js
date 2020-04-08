@@ -3,8 +3,8 @@ const AppConstants = {
     BASE: '/',
     BLOG: '/blog',
     PHYSICS: '/physics',
-    PHYSICS_SECTION: '/physics/:section',
-    PHYSICS_POST: '/physics/:section/:post',
+    PHYSICS_SECTION: '/physics/:catagory',
+    PHYSICS_POST: '/physics/:catagory/:section/:post',
     PROJECTS: '/projects',
     MORE: '/more',
     SEARCH_TERM: '/search/:term',
@@ -12,7 +12,7 @@ const AppConstants = {
     ERROR: '/error',
   },
   Physics: {
-    SECTIONS: {
+    CATAGORIES: {
       QUANTUM: '/physics/quantum',
       THERMAL: '/physics/thermal',
       CLASSICAL: '/physics/classical',
