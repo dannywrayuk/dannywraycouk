@@ -58,9 +58,13 @@ const Accordion = ({ structure }) => {
       >
         <div ref={ref}>
           {Object.entries(structure[1].posts).map((d) => (
-            <LinkButton key={d[1].title} to={`${window.location.pathname}/${structure[0]}/${d[0]}` || '#'} className={style.elementContainer}>
+            <LinkButton key={d[1].title} to={d[1].date ? `${window.location.pathname}/${structure[0]}/${d[0]}` : '#'} className={style.elementContainer}>
               <Circle className={style.Circle} />
-              {d[1].title}
+              <div>
+                <p className={style.elementTitle}>{d[1].title}</p>
+                {d[1].description
+                 && (<p className={style.elementDescription}>{d[1].description}</p>)}
+              </div>
             </LinkButton>
           ))}
         </div>

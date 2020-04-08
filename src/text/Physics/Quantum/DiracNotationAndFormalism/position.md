@@ -1,8 +1,3 @@
-## Position
-<date>30th September 2018</date>
-<label>Deriving the expressions for the position operator and exploring its properties.</label>
-<hr/>
-
 Now the requirements for an operator that represents an observable have been understood, we can begin to derive useful operators such as position and momentum. I would like to point out that since kets are an abstract representation of the state of a system, that operators are also completely abstract. Just like kets, however, we can restirct ourselves to say position space and then begin to write down an expression for these operators based upon that. In most of quantuim mechanics it is assumed that calculations are done in position space, which is why we will derive these operators in position space as they will be most useful.
 We will start with the position operator $\widehat{X}$. This operator should satisfy that
 $$

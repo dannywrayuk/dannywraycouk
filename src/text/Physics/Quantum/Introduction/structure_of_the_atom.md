@@ -1,10 +1,3 @@
-## Structure of the Atom
-<date>9th August 2018</date>
-<label>Quantum Theories answer to the Structure of Atoms.</label>
-<hr/>
-
-
-
 As the work done by Einstein, Heisenberg, and Plank was being conducted there was very little understood about the structure of atoms. The idea of atoms had been around for quite some time and they were thought to be a fundamental particle. It was Thompson and Millikan that proved the existence of electrons, meaning atoms were made up of smaller constituent parts. The only other (semi) well established physics surrounding atoms at the time was emission spectra. It was correctly assumed that since hydrogen was the lightest gas that it would be the simplest in structure. Most efforts were focused on trying to understand the spectra of hydrogen first for this reason. The equation for the hydrogen spectra was given by 
 $$
 \frac{1}{\lambda}=R_{\infty}(\frac{1}{k^2}-\frac{1}{n^2}) \tag{1.4.1}

@@ -1,9 +1,3 @@
-## Particle in a Symmetric Infinite Square Well
-<date>20th August 2018</date>
-<label>Solving the Schrodinger Equation for a Symmetric Infinite Square Well Potential</label>
-<hr/>
-
-
 This solution of the Schrödinger equation isn’t necessary since the Infinite potential well has been solved in $(2.3)$, however a symmetric potential leads to a slightly different form of the solution and can be useful when solving other problems later. the symmetric potential we will be using is
  $$
  V(x)=

@@ -1,10 +1,3 @@
-## Scattering Particles Against a Barrier
-<date>3rd September 2018</date>
-<label>The Behaviour of Particles Against a Barrier Potential</label>
-<hr/>
-
-
-
 The final potential in this section on boxed shaped potentials is going to be the barrier potential. This potential takes the form of an inverted finite box. Again, it's going to be defined piecewise and has the form
 $$
  V(x)=

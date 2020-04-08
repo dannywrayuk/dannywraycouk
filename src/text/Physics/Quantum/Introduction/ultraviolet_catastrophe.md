@@ -1,9 +1,3 @@
-## The Ultraviolet Catastrophe
-<date>6th June 2018</date>
-<label>Max Planck's accidental discovery of the quantisation of energy.</label>
-<hr/>
-
-
 When being introduced to Quantum mechanics it's quite common to follow the discoveries chronologically and watch how quantum theory slowly develops quite naturally. Eventually it becomes obvious that quantum mechanics is the best explanation of particles on small scales. The story of quantum mechanics starts with the discovery made by Max Planck in the 1890's.
 
 Planck was a young German physicist and had been commissioned by an engineering firm to try and optimise the efficiency of light bulbs. The problem was that bulbs were emitting lots of their energy in wavelengths not visible to the human eye and was thus being wasted. To optimise this system Planck first had to develop the physics that would describe it. At the time there were very robust theories of Thermodynamics and Electromagnetism, this problem was one that bridged the gap.  

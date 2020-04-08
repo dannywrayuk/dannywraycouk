@@ -1,9 +1,3 @@
-## Schrodinger’s Equation
-<date>15th August 2018</date>
-<label>The Wave Formulation of Quantum Mechanics</label>
-<hr/>
-
-
 Motivated by de Broglie’s work on the wave particle duality of the electron, in 1926, Erwin Schrodinger sought a general equation of 'electron waves' that could be applied in different scenarios and predict the behaviour of electrons. To do this he first considered a classical wave equation.
 
 A classical wave equation uses vector calculus to take the state of a field and then describe how this field will evolve over time. The most simplistic version of this is the Laplace equation

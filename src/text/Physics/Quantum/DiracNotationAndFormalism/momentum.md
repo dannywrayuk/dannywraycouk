@@ -1,8 +1,3 @@
-## Momentum
-<date>6th October 2018</date>
-<label>Deriving the expressions for the momentum operator and exploring its properties.</label>
-<hr/>
-
 It's at this stage when we start looking at the momentum operator that the mathematics seems to become simpler. This is much less to do with the actual content becoming easier and is mainly becasue the calculations we have done so far have proven things that we can now rely on to make our lives easier. Momentum is the second of the three most important operators for general quantum mechanics and is where we will now focus our attention. Due to the second posutulate, we formulate the equation in the exact same way as $(3.2.1)$ for the postition operator. That is, the eigenvalues of the momentum operator give the measureable value of momentum
 $$
 \widehat{P}|\psi\rangle=p_0|\psi\rangle \tag{3.3.1}

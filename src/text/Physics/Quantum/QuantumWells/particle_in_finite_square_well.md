@@ -1,9 +1,3 @@
-## Particle in a Finite Square Well
-<date>1st September 2018</date>
-<label>Solving the Schrodinger Equation for a Finite Square Well Potential</label>
-<hr/>
-
-
 The next potential that would be appropriate to solve would be the case in which the walls of the box are not infinite. Having a finite potential means it is no longer unphysical for the particle to be in these regions and the condition of the wavefunction being zero can no longer simply be required. Instead in these regions the Schrödinger equation takes on the solution for the free particle, only in these cases we cannot disregard the $(2.2.6)$ solution in which $V_0>E$. When $V_0>E$ these states are called 'bound' states as the particle becomes contained within the well. These will be the focus of this solution. 'Unbound' states are when the particle has enough energy that the potential well cannot contain the particle and looks like a slightly perturbed free particle and so will not be the focus. The potential has the form
 $$
  V(x)=
