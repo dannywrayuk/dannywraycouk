@@ -1,0 +1,19 @@
+.wrapper{
+  width: 100%;
+}
+
+.center{
+  display: block;
+  text-align: center;
+}
+
+.date{
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.ruler {
+  opacity: 0.5;
+  margin: 20px 0px;
+}

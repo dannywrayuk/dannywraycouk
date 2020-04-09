@@ -1,0 +1,29 @@
+.fillContainer{
+  height: 100%;
+  width: 100%;
+}
+
+.Wrapper{
+  height: 100%;
+  margin: 0 20px;
+
+  /* This is really weird but works as a quick fix */
+  padding-bottom: 0.1px; 
+}
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1280px) {
+  .Wrapper{
+    height: 100%;
+    margin: 0 100px;
+  }
+}
+ 
+/* Extra large devices (large laptops and desktops, 1280px and up) */
+@media only screen and (min-width: 1480px) {
+  .Wrapper{
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+} 

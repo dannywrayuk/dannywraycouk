@@ -1,0 +1,46 @@
+
+.logo{
+  width: 200px;
+  height: 200px;
+}
+
+.alignCenter{
+  display: flex;
+  justify-content: center;
+}
+
+.titleImage{
+  border-radius: 50%;
+  border-color: var(--MainYellow);
+  border-width: 10px;
+  border-style: solid;
+}
+
+.followText{
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.subTitle{
+  text-align: center;
+  line-height: 30px;
+  margin: 0px auto;
+  color: #333;
+}
+
+.threeSubTitle{
+  line-height: 30px;
+  color: #333;
+}
+
+.bannerText{
+  margin: auto 0 auto;
+}
+
+.blogImage{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}

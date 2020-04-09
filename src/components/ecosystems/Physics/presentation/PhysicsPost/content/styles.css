@@ -1,0 +1,58 @@
+
+.contentContainer p {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: justify;
+  display: inline-block;
+}
+  
+.contentContainer h2 {
+  display: block;
+  text-align: center;
+}
+  
+.contentContainer label {
+  display: block;
+  text-align: center;
+}
+  
+.contentContainer hr {
+  opacity: 50%;
+  margin-bottom: 20px;
+}
+  
+.contentContainer img {
+  display: block;
+  margin: 50px auto 10px;
+  width: 100%;
+  max-width: 500px;
+}
+  
+@media only screen and (max-width: 1000px) {
+  .largeEquation :global(.katex-display>.katex>.katex-html){
+    white-space: nowrap;
+  }
+
+  .contentContainer  .largeEquation{
+    white-space: nowrap;
+    overflow: auto;
+    background: linear-gradient(90deg, white 0%, rgba(255,255,255,0)),
+    linear-gradient(-90deg, white 0%, rgba(255,255,255,0)) 100% 0,
+    radial-gradient(
+      farthest-side at 0% 50%,
+      rgba(0,0,0,.2),
+      rgba(0,0,0,0)
+    ),
+    radial-gradient(
+      farthest-side at 100% 50%,
+      rgba(0,0,0,.2),
+      rgba(0,0,0,0)
+    ) 100% 0%;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 100px 137px, 100px 137px, 14px 137px, 14px 137px;
+    background-attachment: local, local, scroll, scroll;
+  }
+}
+  
+  

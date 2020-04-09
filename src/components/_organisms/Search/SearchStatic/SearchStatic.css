@@ -1,0 +1,28 @@
+.box{
+  display: flex;
+  background-color: #d3d3d3;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.imageContainer{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 5px; 
+}
+
+.image{
+  display: inline-flex;
+  height: 20px;
+  fill: #494949
+}
+
+.input{
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,36 @@
+.Wrapper{
+  display: flex;
+  text-align: left;
+
+  padding: 50px 80px;
+}
+
+.WrapperStatic{
+  display: flex;
+  padding: 50px 80px;
+}
+
+.Content{
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Wrapper{
+    padding: 20px 0px 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .Wrapper{
+    display: block;
+    padding: 0px;
+  }
+
+  .Content{
+    margin: 20px 0px;
+    width: 100%;
+    justify-content: center;
+  }
+}
