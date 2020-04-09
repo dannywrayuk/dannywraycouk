@@ -36,10 +36,10 @@ However, I prefer
 
 While I'm not super strict on this, imported files should preserve their filename.
 ```javascript
-\\Good
+//Good
 import Something from './Something';
 
-\\Bad
+//Bad
 import Spaghetti from './Something'
 ```
 
