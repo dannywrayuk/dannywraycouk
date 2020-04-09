@@ -5,7 +5,6 @@ This repo contains the react app hosted as a static site via aws at dannywray.co
 
 # Coding Convention
 
-## Style
 For the most part the code follows the [Airbnb React/JSX Style](https://airbnb.io/javascript/react/) with a few notable exceptions seen in `.eslintrc.json`:
 
 ### Prefer Arrow function declarations

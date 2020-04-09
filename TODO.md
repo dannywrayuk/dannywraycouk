@@ -1,6 +1,6 @@
 # MAJOR:
 
-* ## Add Blog Project and More + Search
+* ### Add Blog Project and More + Search
     - [ ] Add Blog
         This will probably borrow many features from Physics.
     - [ ] Add Projects
@@ -11,25 +11,25 @@
 
 # MINOR:
 
-* ## Standardise CSS
+* ### Standardise CSS
     * The css of the website is awful, I'd like to standardise it all.
 
-* ## Dark Theme
+* ### Dark Theme
     * Once the css is easier to manage dark theme would be cool.
 
-* ## Review ResponsiveElement/Divider
+* ### Review ResponsiveElement/Divider
     * They might be a bit useless and cause clutter.
 
-* ## Redirector
+* ### Redirector
     * dannywray.co.uk/x should check x and redirect to another page if specified in a table.
 
 
 # PATCH:
 
-* ## Stretching on iOS
+* ### Stretching on iOS
     * Need to review the images on iOS devices for the blog section on homepage.
  
-* ## Add github to follow me section.
+* ### Add github to follow me section.
 
-* ## environments/App is unnecessary
+* ### environments/App is unnecessary
     * This components can be added to the entry folder and Atomic Design structure improved.
