@@ -37,3 +37,10 @@
 .bannerText{
   margin: auto 0 auto;
 }
+
+.blogImage{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}

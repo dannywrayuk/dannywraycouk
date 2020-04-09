@@ -107,12 +107,12 @@ const Home = ({ Text }) => (
           <ResponsiveDivider>
             <ResponsiveElement>
               <div className={style.alignCenter}>
-                <img src={InstagramImage2} alt="" width="300px" />
+                <img className={style.blogImage} src={InstagramImage2} alt="" />
               </div>
             </ResponsiveElement>
             <ResponsiveElement>
               <div className={style.alignCenter}>
-                <img src={InstagramImage1} alt="" width="300px" />
+                <img className={style.blogImage} src={InstagramImage1} alt="" />
               </div>
             </ResponsiveElement>
           </ResponsiveDivider>
