@@ -1,6 +1,6 @@
 # Overview
 
-This repo contains the react app hosted as a static site via aws at dannywray.co.uk. It was initally built using [create-react-app](https://github.com/facebook/create-react-app) then later ejected to accomidate changes to the webpack config.
+This repo contains the react app hosted as a static site via aws at dannywray.co.uk. It was initally built using [create-react-app](https://github.com/facebook/create-react-app) then later ejected to accommodate changes to the webpack config.
 
 
 # Coding Convention
