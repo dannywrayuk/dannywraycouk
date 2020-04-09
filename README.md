@@ -11,13 +11,13 @@ For the most part the code follows the [Airbnb React/JSX Style](https://airbnb.i
 ### Prefer Arrow function declarations
 
 Airbnb reccomend:
-```
+```javascript
     function Something({ hello }) {
     return <div>{hello}</div>;
     }
 ```
 However, I prefer 
-```
+```javascript
     const Something = ({ hello }) => (
         <div>
             {hello}
@@ -35,7 +35,7 @@ However, I prefer
 ## Importing Components
 
 While I'm not super strict on this, imported files should preserve their filename.
-```
+```javascript
 \\Good
 import Something from './Something';
 
@@ -46,7 +46,7 @@ import Spaghetti from './Something'
 
 ## Components
 React components should share the same name as both the file and the directory they are in. As of [Airbnb React/JSX Style](https://airbnb.io/javascript/react/) there should typically only be one component per file, however, im not too strict on this and dont mind having multiple of the same family in one file (see `_organisms/Card`). An example stateless component:
-```
+```javascript
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -74,13 +74,13 @@ All React code should be contained within the `src/` directory. The Components f
 
 ### Barrel Files
 To avoid ugly imports such as 
-```
+```javascript
  import Something from './Something/Something.js'
  ```
 Barrel files are used at the root of directories which export the required content as either a default or as a named export. An example barrel would be :
 
 `index.js`
-```
+```javascript
 export { default } from ./Something.js;
 ```
 And simplifyign the imports to only require the name of the component (etc) once.
