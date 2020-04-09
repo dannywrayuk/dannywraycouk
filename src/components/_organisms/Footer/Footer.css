@@ -5,5 +5,5 @@
   background-color: var(--MainYellow);
   width: 100%;
   text-align: center;
-  padding: var(--ySpaceSmall) 0 var(--ySpaceMedium) 0;
+  padding: var(--ySpaceSmall) 0 var(--ySpaceSmall) 0;
 }
