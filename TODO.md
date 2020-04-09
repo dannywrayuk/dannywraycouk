@@ -28,5 +28,8 @@
 
 * ## Stretching on iOS
     * Need to review the images on iOS devices for the blog section on homepage.
-
+ 
 * ## Add github to follow me section.
+
+* ## environments/App is unnecessary
+    * This components can be added to the entry folder and Atomic Design structure improved.

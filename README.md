@@ -1,68 +1,118 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
 
-## Available Scripts
+This repo contains the react app hosted as a static site via aws at dannywray.co.uk. It was initally built using [create-react-app](https://github.com/facebook/create-react-app) then later ejected to accomidate changes to the webpack config.
 
-In the project directory, you can run:
 
-### `npm start`
+# Coding Convention
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Style
+For the most part the code follows the [Airbnb React/JSX Style](https://airbnb.io/javascript/react/) with a few notable exceptions seen in `.eslintrc.json`:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Prefer Arrow function declarations
 
-### `npm test`
+Airbnb reccomend:
+```
+    function Something({ hello }) {
+    return <div>{hello}</div>;
+    }
+```
+However, I prefer 
+```
+    const Something = ({ hello }) => (
+        <div>
+            {hello}
+        </div>
+    );
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Naming
 
-### `npm run build`
+* Components use PascalCase.
+* Props use camelCase.
+* CSS classes use camelCase.
+* CSS variables use PascalCase.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Importing Components
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+While I'm not super strict on this, imported files should preserve their filename.
+```
+\\Good
+import Something from './Something';
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+\\Bad
+import Spaghetti from './Something'
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Components
+React components should share the same name as both the file and the directory they are in. As of [Airbnb React/JSX Style](https://airbnb.io/javascript/react/) there should typically only be one component per file, however, im not too strict on this and dont mind having multiple of the same family in one file (see `_organisms/Card`). An example stateless component:
+```
+import React from 'react';
+import PropTypes from 'prop-types';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+import style from './Something.css';
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const Something = ({ hello }) => (
+    <div>
+        {hello}
+    </div>
+);
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Something.propTypes = {
+    hello: PropTypes.string,
+}
 
-## Learn More
+Something.defaultProps = {
+    hello: 'yeet',
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+export default Something;
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## File Structure
+All React code should be contained within the `src/` directory. The Components follow the [Atomic Design](https://atomicdesign.bradfrost.com/) convention.
 
-### Code Splitting
+### Barrel Files
+To avoid ugly imports such as 
+```
+ import Something from './Something/Something.js'
+ ```
+Barrel files are used at the root of directories which export the required content as either a default or as a named export. An example barrel would be :
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+`index.js`
+```
+export { default } from ./Something.js;
+```
+And simplifyign the imports to only require the name of the component (etc) once.
 
-### Analyzing the Bundle Size
+### Components
+For a component named `Something`  in the `_atoms/` directory (for example) the file structure should be:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    components/
+    └──_atoms/
+        └── Something/
+            ├── Something.js
+            ├── Something.css
+            └── index.js
 
-### Making a Progressive Web App
+Notice that the Directory, .js and .css files all share the same name and casing as the component.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+For a component with multiple presentations (PartA and PartB) the directory is split into a container and presentation directory with a barrel file pointing to the contianer:
 
-### Advanced Configuration
+    components/
+    └──_atoms/
+        └── Something/
+            ├── index.js
+            ├── container/
+            |   └── Something.js
+            └── presentation/
+                ├── SomethingPartA/
+                |   ├── SomethingPartA.js
+                |   ├── SomethingPartA.css
+                |   └── index.js
+                └── SomethingPartB/
+                    ├── SomethingPartB.js
+                    ├── SomethingPartB.css
+                    └── index.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+There should be no blank css files. In any of these cases if no css is required the file should be removed not left blank.
