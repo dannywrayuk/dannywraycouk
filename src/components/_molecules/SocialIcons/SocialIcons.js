@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ReactComponent as GitHub } from '../../../images/svg/github.svg';
 import { ReactComponent as Instagram } from '../../../images/svg/instagram.svg';
 import { ReactComponent as LinkedIn } from '../../../images/svg/linkedin.svg';
 import { ReactComponent as Spotify } from '../../../images/svg/spotify.svg';
@@ -22,6 +23,9 @@ const SocialIcons = () => (
     </AnchorButton>
     <AnchorButton to={AppConstants.SpotifyLink} className={style.followText}>
       <Spotify className={style.socialIcons} />
+    </AnchorButton>
+    <AnchorButton to={AppConstants.GitHubLink} className={style.followText}>
+      <GitHub className={style.socialIcons} />
     </AnchorButton>
   </>
 );
