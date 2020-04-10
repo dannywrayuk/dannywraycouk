@@ -7,9 +7,8 @@ import {
 } from 'react-router-dom';
 import { BreakpointProvider } from 'react-socks';
 
-import AppBase from '../../components/_atoms/App';
-import Footer from '../../components/_organisms/Footer';
-import Header from '../../components/ecosystems/Header';
+import AppBase from '../../components/_atoms/AppBase';
+import Redirector from '../../components/_atoms/Redirector';
 import ErrorPage from '../../components/environments/Error';
 import HomePage from '../../components/environments/Home';
 import PhysicsPage from '../../components/environments/Physics';
@@ -25,62 +24,100 @@ const { ROUTES } = AppConstants;
 const App = () => (
   <BrowserRouter>
     <BreakpointProvider>
-      <AppBase
-        header={<Header />}
-        content={(
-          <Switch>
-            <Route
-              exact
-              path={ROUTES.BASE}
-              render={props => <HomePage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.BLOG}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Route
-              path={ROUTES.PHYSICS_POST}
-              render={props => <PhysicsPage {...props} />}
-            />
-            <Route
-              path={ROUTES.PHYSICS_SECTION}
-              render={props => <PhysicsPage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.PHYSICS}
-              render={props => <PhysicsPage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.PROJECTS}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.MORE}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Route
-              path={ROUTES.SEARCH_TERM}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.SEARCH_BLANK}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Route
-              exact
-              path={ROUTES.ERROR}
-              render={props => <ErrorPage {...props} />}
-            />
-            <Redirect to={ROUTES.ERROR} />
-          </Switch>
-)}
-        footer={<Footer />}
-      />
+      <Switch>
+        <Route
+          exact
+          path={ROUTES.BASE}
+          render={props => (
+            <AppBase>
+              <HomePage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.BLOG}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          path={ROUTES.PHYSICS_POST}
+          render={props => (
+            <AppBase>
+              <PhysicsPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          path={ROUTES.PHYSICS_SECTION}
+          render={props => (
+            <AppBase>
+              <PhysicsPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.PHYSICS}
+          render={props => (
+            <AppBase>
+              <PhysicsPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.PROJECTS}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.MORE}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          path={ROUTES.SEARCH_TERM}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.SEARCH_BLANK}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          exact
+          path={ROUTES.ERROR}
+          render={props => (
+            <AppBase>
+              <ErrorPage {...props} />
+            </AppBase>
+          )}
+        />
+        <Route
+          path={ROUTES.REDIRECTOR}
+          render={props => <Redirector {...props} />}
+        />
+        <Redirect to={ROUTES.REDIRECTOR} />
+      </Switch>
     </BreakpointProvider>
   </BrowserRouter>
 );

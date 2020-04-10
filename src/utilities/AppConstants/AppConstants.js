@@ -10,6 +10,7 @@ const AppConstants = {
     SEARCH_TERM: '/search/:term',
     SEARCH_BLANK: '/search',
     ERROR: '/error',
+    REDIRECTOR: '/:link',
   },
   Physics: {
     CATAGORIES: {

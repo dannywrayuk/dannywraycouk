@@ -20,9 +20,6 @@
 * ### Review ResponsiveElement/Divider
     * They might be a bit useless and cause clutter.
 
-* ### Redirector
-    * dannywray.co.uk/x should check x and redirect to another page if specified in a table.
-
 
 # PATCH:
 
@@ -32,6 +29,7 @@
 # HISTORY:
 | Date | Size | Feature |
 |---|---|---|
+| 10/04/20 | Minor | Added redirector to point to urls |
 | 10/04/20 | Patch | Moved enviroments/App |
 | 10/04/20 | Patch | Add github to Social Icons. |
 | **09/04/20** | **Release** | **Deploy v1.1.2** |
