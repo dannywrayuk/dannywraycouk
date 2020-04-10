@@ -6,7 +6,7 @@ import { ReactComponent as LinkedIn } from '../../../images/svg/linkedin.svg';
 import { ReactComponent as Spotify } from '../../../images/svg/spotify.svg';
 import { ReactComponent as Twitter } from '../../../images/svg/twitter.svg';
 import AppConstants from '../../../utilities/AppConstants';
-import AnchorButton from '../AnchorButton';
+import AnchorButton from '../../_molecules/AnchorButton';
 
 import style from './SocialIcons.css';
 

@@ -9,7 +9,7 @@ import markdown from 'remark-parse';
 import remark2rehype from 'remark-rehype';
 import unified from 'unified';
 
-import LoadingSpinner from '../LoadingSpinner';
+import LoadingSpinner from '../../_molecules/LoadingSpinner';
 
 const escapeRegExp = (str) => str.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
 

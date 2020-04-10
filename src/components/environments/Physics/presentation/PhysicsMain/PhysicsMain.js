@@ -4,38 +4,40 @@ import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../../../images/svg/background.svg';
 import Background from '../../../../_atoms/BackgroundContainer';
+import { Card, CardContent } from '../../../../_atoms/Card';
+import Heading from '../../../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import withText from '../../../../_atoms/Text';
-import Heading from '../../../../_molecules/Heading';
-import { Card, CardContent } from '../../../../_organisms/Card';
-import Contents from '../../../../_organisms/Contents';
+import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
 
-import style from './PhysicsCatagory.css';
+import style from './PhysicsMain.css';
 
-const PhysicsCatagory = ({ Text, catagory }) => (
+const PhysicsMain = ({ Text }) => (
   <Background image={backgroundimage}>
     <Helmet>
-      <title>{`${Text.get(`${catagory}.Title`)}`}</title>
+      <title>{`${Text.get('Title')}`}</title>
     </Helmet>
     <ResponsiveWrapper>
       <Card topper>
         <CardContent>
           <Heading center>
-            <Text path={`${catagory}.Heading`} />
-          </Heading>
-          <Heading level={4} center className={style.subHeading}>
-            <Text path={`${catagory}.SubHeading`} />
+            <Text path="Heading" />
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
               <p className={style.IntroductionText}>
-                <Text path={`${catagory}.Body`} />
+                <Text path="Body" />
               </p>
             </ResponsiveElement>
           </ResponsiveDivider>
+          <PhysicsIcons />
           <ResponsiveDivider>
-            <Contents catagory={catagory} />
+            <ResponsiveElement>
+              <p className={style.IntroductionText}>
+                <Text path="UnderCard" />
+              </p>
+            </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
       </Card>
@@ -43,9 +45,8 @@ const PhysicsCatagory = ({ Text, catagory }) => (
   </Background>
 );
 
-PhysicsCatagory.propTypes = {
+PhysicsMain.propTypes = {
   Text: PropTypes.func.isRequired,
-  catagory: PropTypes.string.isRequired,
 };
 
-export default withText('Physics.Catagories')(PhysicsCatagory);
+export default withText('Physics.Main')(PhysicsMain);

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import contents from '../../../text/Physics/Contents.json';
-import Accordion from '../Accordion';
+import Accordion from '../../_organisms/Accordion';
 
 import style from './Contents.css';
 

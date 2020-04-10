@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import backgroundimage from '../../../../../images/svg/background.svg';
 import contents from '../../../../../text/Physics/Contents.json';
 import Background from '../../../../_atoms/BackgroundContainer';
+import { Card, CardContent } from '../../../../_atoms/Card';
+import Heading from '../../../../_atoms/Heading';
 import { ResponsiveDivider } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
-import FetchMarkdown from '../../../../_molecules/FetchMarkdown';
-import Heading from '../../../../_molecules/Heading';
-import { Card, CardContent } from '../../../../_organisms/Card';
+import FetchMarkdown from '../../../../_organisms/FetchMarkdown';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 

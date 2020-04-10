@@ -7,13 +7,13 @@ import InstagramImage2 from '../../../images/png/instagram_image2.jpg';
 import Me from '../../../images/png/me.png';
 import backgroundimage from '../../../images/svg/background.svg';
 import Background from '../../_atoms/BackgroundContainer';
+import { Card, CardContent, CardFooter } from '../../_atoms/Card';
+import Heading from '../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
-import Heading from '../../_molecules/Heading';
-import SocialIcons from '../../_molecules/SocialIcons';
-import { Card, CardContent, CardFooter } from '../../_organisms/Card';
 import PhysicsIcons from '../../_organisms/PhysicsIcons';
+import SocialIcons from '../../_organisms/SocialIcons';
 
 import style from './Home.css';
 

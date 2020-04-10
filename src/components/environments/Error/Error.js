@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet';
 
 import background from '../../../images/svg/background.svg';
 import Background from '../../_atoms/BackgroundContainer';
+import { Card, CardContent } from '../../_atoms/Card';
+import Heading from '../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
-import Heading from '../../_molecules/Heading';
-import { Card, CardContent } from '../../_organisms/Card';
 
 const Error = ({ Text }) => (
   <Background image={background}>

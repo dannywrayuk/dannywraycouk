@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../utilities/AppConstants';
 import withText from '../../_atoms/Text';
-import LinkButton from '../LinkButton';
+import LinkButton from '../../_molecules/LinkButton';
 
 import style from './NavButtons.css';
 

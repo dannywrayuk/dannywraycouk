@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
 import LinkButton from '../../../../_molecules/LinkButton';
-import NavButtons from '../../../../_molecules/NavButtons';
-import Search from '../../../Search';
+import NavButtons from '../../../../_organisms/NavButtons';
+import Search from '../../../../_organisms/Search';
 
 import sharedStyle from '../../container/Header.css';
 import style from './HeaderDesktop.css';

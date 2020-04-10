@@ -29,14 +29,10 @@
 * ### Stretching on iOS
     * Need to review the images on iOS devices for the blog section on homepage.
  
-* ### Add github to follow me section.
-
-* ### environments/App is unnecessary
-    * This components can be added to the entry folder and Atomic Design structure improved.
-
 # HISTORY:
-| Date | Feature |
-|---|---|
-| 10/04/20 | Add github to Social Icons. |
-| 09/04/20 | **Deploy v1.1.2** |
+| Date | Size | Feature |
+|---|---|---|
+| 10/04/20 | Patch | Moved enviroments/App |
+| 10/04/20 | Patch | Add github to Social Icons. |
+| **09/04/20** | **Release** | **Deploy v1.1.2** |
 
