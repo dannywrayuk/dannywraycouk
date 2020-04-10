@@ -29,6 +29,7 @@
 # HISTORY:
 | Date | Size | Feature |
 |---|---|---|
+| **10/04/20** | **Release** | **Deploy v1.2.0** |
 | 10/04/20 | Minor | Added redirector to point to urls |
 | 10/04/20 | Patch | Moved enviroments/App |
 | 10/04/20 | Patch | Add github to Social Icons. |
