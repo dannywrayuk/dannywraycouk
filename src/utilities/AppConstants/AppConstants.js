@@ -10,6 +10,7 @@ const AppConstants = {
     SEARCH_TERM: '/search/:term',
     SEARCH_BLANK: '/search',
     ERROR: '/error',
+    REDIRECTOR: '/:link',
   },
   Physics: {
     CATAGORIES: {
@@ -26,6 +27,7 @@ const AppConstants = {
   InstagramLink: 'https://www.instagram.com/dannywrayuk/',
   LinkedInLink: 'https://www.linkedin.com/in/dannywrayuk/',
   SpotifyLink: 'https://open.spotify.com/user/sciencekidd97',
+  GitHubLink: 'https://github.com/dannywrayuk',
   version: `v${process.env.REACT_APP_VERSION}`,
 };
 export default AppConstants;

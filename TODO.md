@@ -20,16 +20,17 @@
 * ### Review ResponsiveElement/Divider
     * They might be a bit useless and cause clutter.
 
-* ### Redirector
-    * dannywray.co.uk/x should check x and redirect to another page if specified in a table.
-
 
 # PATCH:
 
 * ### Stretching on iOS
     * Need to review the images on iOS devices for the blog section on homepage.
  
-* ### Add github to follow me section.
+# HISTORY:
+| Date | Size | Feature |
+|---|---|---|
+| 10/04/20 | Minor | Added redirector to point to urls |
+| 10/04/20 | Patch | Moved enviroments/App |
+| 10/04/20 | Patch | Add github to Social Icons. |
+| **09/04/20** | **Release** | **Deploy v1.1.2** |
 
-* ### environments/App is unnecessary
-    * This components can be added to the entry folder and Atomic Design structure improved.
