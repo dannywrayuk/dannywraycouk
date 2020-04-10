@@ -35,8 +35,8 @@
     * This components can be added to the entry folder and Atomic Design structure improved.
 
 # HISTORY:
-|Date|Feature|
+| Date | Feature |
 |---|---|
-|10/4/20|Add github to follow me section.|
-|9/4/20|Deploy v1.1.2|
+| 10/04/20 | Add github to Social Icons. |
+| 09/04/20 | **Deploy v1.1.2** |
 
