@@ -17,10 +17,6 @@
 * ### Dark Theme
     * Once the css is easier to manage dark theme would be cool.
 
-* ### Review ResponsiveElement/Divider
-    * They might be a bit useless and cause clutter.
-
-
 # PATCH:
 
 * ### Stretching on iOS

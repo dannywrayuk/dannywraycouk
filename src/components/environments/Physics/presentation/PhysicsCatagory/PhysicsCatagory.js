@@ -35,7 +35,9 @@ const PhysicsCatagory = ({ Text, catagory }) => (
             </ResponsiveElement>
           </ResponsiveDivider>
           <ResponsiveDivider>
-            <Contents catagory={catagory} />
+            <ResponsiveElement>
+              <Contents catagory={catagory} />
+            </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
       </Card>
