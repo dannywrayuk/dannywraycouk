@@ -13,6 +13,7 @@
 
 * ### Standardise CSS
     * The css of the website is awful, I'd like to standardise it all.
+    * Styled Components?
 
 * ### Dark Theme
     * Once the css is easier to manage dark theme would be cool.
