@@ -22,6 +22,9 @@
 
 * ### Stretching on iOS
     * Need to review the images on iOS devices for the blog section on homepage.
+
+* ### Move entry/App... again
+    * I think it would make more sense to have it in the root of components/
  
 # HISTORY:
 | Date | Size | Feature |
