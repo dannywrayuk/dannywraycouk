@@ -13,6 +13,7 @@ import ErrorPage from '../../components/environments/Error';
 import HomePage from '../../components/environments/Home';
 import PhysicsPage from '../../components/environments/Physics';
 import AppConstants from '../../utilities/AppConstants';
+import GlobalStyle from './App.style';
 
 // import BlogPage from '../../ecosystems/Blog';
 // import MorePage from '../../ecosystems/More';
@@ -23,6 +24,7 @@ const { ROUTES } = AppConstants;
 
 const App = () => (
   <BrowserRouter>
+    <GlobalStyle />
     <BreakpointProvider>
       <Switch>
         <Route
