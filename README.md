@@ -39,7 +39,7 @@ While I'm not super strict on this, imported files should preserve their filenam
 import Something from './Something';
 
 //Bad
-import Spaghetti from './Something'
+import Spaghetti from './Something';
 ```
 
 
@@ -74,15 +74,15 @@ All React code should be contained within the `src/` directory. The Components f
 ### Barrel Files
 To avoid ugly imports such as 
 ```javascript
- import Something from './Something/Something.js'
+ import Something from './Something/Something.js';
  ```
 Barrel files are used at the root of directories which export the required content as either a default or as a named export. An example barrel would be :
 
 `index.js`
 ```javascript
-export { default } from ./Something.js;
+export { default } from './Something.js';
 ```
-And simplifyign the imports to only require the name of the component (etc) once.
+And simplifying the imports to only require the name of the component (etc) once.
 
 ### Components
 For a component named `Something`  in the `_atoms/` directory (for example) the file structure should be:
