@@ -10,8 +10,7 @@ import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/Respons
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import withText from '../../../../_atoms/Text';
 import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
-
-import style from './PhysicsMain.css';
+import { IntroductionText } from './PhysicsMain.style';
 
 const PhysicsMain = ({ Text }) => (
   <Background image={backgroundimage}>
@@ -26,17 +25,17 @@ const PhysicsMain = ({ Text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <p className={style.IntroductionText}>
+              <IntroductionText>
                 <Text path="Body" />
-              </p>
+              </IntroductionText>
             </ResponsiveElement>
           </ResponsiveDivider>
           <PhysicsIcons />
           <ResponsiveDivider>
             <ResponsiveElement>
-              <p className={style.IntroductionText}>
+              <IntroductionText>
                 <Text path="UnderCard" />
-              </p>
+              </IntroductionText>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>

@@ -10,8 +10,7 @@ import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/Respons
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import withText from '../../../../_atoms/Text';
 import Contents from '../../../../ecosystems/Contents';
-
-import style from './PhysicsCatagory.css';
+import { IntroductionText, SubHeading } from './PhysicsCatagory.style';
 
 const PhysicsCatagory = ({ Text, catagory }) => (
   <Background image={backgroundimage}>
@@ -24,14 +23,14 @@ const PhysicsCatagory = ({ Text, catagory }) => (
           <Heading center>
             <Text path={`${catagory}.Heading`} />
           </Heading>
-          <Heading level={4} center className={style.subHeading}>
+          <SubHeading level={4} center>
             <Text path={`${catagory}.SubHeading`} />
-          </Heading>
+          </SubHeading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <p className={style.IntroductionText}>
+              <IntroductionText>
                 <Text path={`${catagory}.Body`} />
-              </p>
+              </IntroductionText>
             </ResponsiveElement>
           </ResponsiveDivider>
           <ResponsiveDivider>

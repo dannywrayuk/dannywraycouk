@@ -1,46 +1,44 @@
+import styled from 'styled-components';
 
-.logo{
-  width: 200px;
-  height: 200px;
-}
-
-.alignCenter{
+export const AlignCenter = styled.div`
   display: flex;
   justify-content: center;
-}
+`;
 
-.titleImage{
+export const TitleImage = styled.img`
   border-radius: 50%;
   border-color: var(--MainYellow);
   border-width: 10px;
   border-style: solid;
-}
+  width: 250px;
+  height: 250px; 
+`;
 
-.followText{
+export const FollowText = styled.div`
   display: inline-flex;
   justify-content: center;
   vertical-align: middle;
-}
+`;
 
-.subTitle{
+export const SubTitle = styled.div`
   text-align: center;
   line-height: 30px;
   margin: 0px auto;
   color: #333;
-}
+`;
 
-.threeSubTitle{
+export const ThreeSubTitle = styled.div`
   line-height: 30px;
   color: #333;
-}
+`;
 
-.bannerText{
+export const BannerText = styled.div`
   margin: auto 0 auto;
-}
+`;
 
-.blogImage{
+export const BlogImage = styled.img`
   display: flex;
   justify-content: center;
   width: 100%;
   height: auto;
-}
+`;

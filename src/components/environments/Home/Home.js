@@ -14,8 +14,15 @@ import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
 import PhysicsIcons from '../../_organisms/PhysicsIcons';
 import SocialIcons from '../../_organisms/SocialIcons';
-
-import style from './Home.css';
+import {
+  AlignCenter,
+  BannerText,
+  BlogImage,
+  FollowText,
+  SubTitle,
+  ThreeSubTitle,
+  TitleImage,
+} from './Home.style';
 
 const Home = ({ Text }) => (
   <Background image={backgroundimage}>
@@ -25,18 +32,18 @@ const Home = ({ Text }) => (
     <ResponsiveWrapper>
       <ResponsiveDivider>
         <ResponsiveElement width={2}>
-          <div className={style.bannerText}>
+          <BannerText>
             <Heading>
               <Text path="Title" />
             </Heading>
             <Heading level={2}>
               <Text path="SubTitle" />
             </Heading>
-          </div>
+          </BannerText>
         </ResponsiveElement>
-        <center>
-          <img className={style.titleImage} src={Me} alt="" width={250} height={250} />
-        </center>
+        <AlignCenter>
+          <TitleImage src={Me} alt="" />
+        </AlignCenter>
       </ResponsiveDivider>
       <Card>
         <CardContent>
@@ -45,32 +52,32 @@ const Home = ({ Text }) => (
               <Heading level={4}>
                 <Text path="IntroCard.Programming.Title" />
               </Heading>
-              <p className={style.threeSubTitle}>
+              <ThreeSubTitle>
                 <Text path="IntroCard.Programming.Body" />
-              </p>
+              </ThreeSubTitle>
             </ResponsiveElement>
             <ResponsiveElement>
               <Heading level={4}>
                 <Text path="IntroCard.Physics.Title" />
               </Heading>
-              <p className={style.threeSubTitle}>
+              <ThreeSubTitle>
                 <Text path="IntroCard.Physics.Body" />
-              </p>
+              </ThreeSubTitle>
             </ResponsiveElement>
             <ResponsiveElement>
               <Heading level={4}>
                 <Text path="IntroCard.More.Title" />
               </Heading>
-              <p className={style.threeSubTitle}>
+              <ThreeSubTitle>
                 <Text path="IntroCard.More.Body" />
-              </p>
+              </ThreeSubTitle>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
         <CardFooter>
-          <div className={style.followText}>
+          <FollowText>
             <Text path="IntroCard.FooterText" />
-          </div>
+          </FollowText>
           <SocialIcons />
         </CardFooter>
       </Card>
@@ -81,9 +88,9 @@ const Home = ({ Text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <p className={style.subTitle}>
+              <SubTitle>
                 <Text path="PhysicsCard.SubTitle" />
-              </p>
+              </SubTitle>
             </ResponsiveElement>
           </ResponsiveDivider>
           <PhysicsIcons />
@@ -99,21 +106,21 @@ const Home = ({ Text }) => (
           </Heading>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <p className={style.subTitle}>
+              <SubTitle>
                 <Text path="BlogCard.SubTitle" />
-              </p>
+              </SubTitle>
             </ResponsiveElement>
           </ResponsiveDivider>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <div className={style.alignCenter}>
-                <img className={style.blogImage} src={InstagramImage2} alt="" />
-              </div>
+              <AlignCenter>
+                <BlogImage src={InstagramImage2} alt="" />
+              </AlignCenter>
             </ResponsiveElement>
             <ResponsiveElement>
-              <div className={style.alignCenter}>
-                <img className={style.blogImage} src={InstagramImage1} alt="" />
-              </div>
+              <AlignCenter>
+                <BlogImage src={InstagramImage1} alt="" />
+              </AlignCenter>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
