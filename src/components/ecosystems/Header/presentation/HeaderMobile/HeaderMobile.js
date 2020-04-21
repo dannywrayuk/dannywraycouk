@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
 import withText from '../../../../_atoms/Text';
-import LinkButton from '../../../../_molecules/LinkButton';
 import Search from '../../../../_organisms/Search';
 import HamburgerMenu from '../../../HamburgerMenu';
-
-import sharedStyle from '../../container/Header.css';
-import style from './HeaderMobile.css';
+import { Bar } from '../../container/Header.style';
+import {
+  AlignLogo,
+  Link,
+  LogoContainer,
+  MenuContainer,
+  SearchContainer,
+} from './HeaderMobile.style';
 
 const { ROUTES } = AppConstants;
 
@@ -31,29 +35,29 @@ const HeaderMobile = () => {
   };
 
   return (
-    <div className={sharedStyle.bar}>
-      <div className={menuExtended ? style.menuFill : style.menuContainer}>
+    <Bar>
+      <MenuContainer isExtended={menuExtended}>
         <HamburgerMenu
           onClick={hamburgerClick}
           isExtended={menuExtended}
         />
-      </div>
-      <div className={(searchExtended || menuExtended) ? style.logoHide : style.logoContainer}>
-        <div className={style.alignLogo}>
-          <LinkButton className={style.linkfix} to={ROUTES.BASE}>
+      </MenuContainer>
+      <LogoContainer isExtended={searchExtended || menuExtended}>
+        <AlignLogo>
+          <Link to={ROUTES.BASE}>
             <Logo showText />
-          </LinkButton>
-        </div>
-      </div>
-      <div className={searchExtended ? style.searchFill : style.searchContainer}>
+          </Link>
+        </AlignLogo>
+      </LogoContainer>
+      <SearchContainer isExtended={searchExtended}>
         <Search
           onSearchClick={searchClick}
           onCloseClick={closeClick}
           isExtended={searchExtended}
           dynamic
         />
-      </div>
-    </div>
+      </SearchContainer>
+    </Bar>
   );
 };
 
