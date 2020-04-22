@@ -14,4 +14,4 @@ export const Circle = styled(ShapeBlob)`
   min-width: 70px;
   height: 70px;
   min-height: 70px;
-  `;
+`;

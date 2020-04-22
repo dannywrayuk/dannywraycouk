@@ -3,21 +3,20 @@ import propTypes from 'prop-types';
 
 import Footer from '../../_organisms/Footer';
 import Header from '../../ecosystems/Header';
-
-import style from './AppBase.css';
+import { App, Content } from './AppBase.style';
 
 const AppBase = ({ header, children, footer }) => (
-  <section className={style.App}>
+  <App>
     <section>
       {header}
     </section>
-    <div className={style.content}>
+    <Content>
       {children}
-    </div>
+    </Content>
     <section>
       {footer}
     </section>
-  </section>
+  </App>
 );
 
 AppBase.propTypes = {

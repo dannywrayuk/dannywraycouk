@@ -1,16 +1,18 @@
-.container{
+import styled from 'styled-components';
+
+export const Container = styled.div`
   height: 30px;
   display: inline-flex;
-}
+`;
 
-.icon{
+export const Icon = styled.img`
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-}
+`;
 
-.url{
+export const NameText = styled.div`
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -22,4 +24,4 @@
   text-decoration: none;
   text-decoration-color: chartreuse;
   white-space: nowrap;
-}
+`;
