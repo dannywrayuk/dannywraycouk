@@ -8,69 +8,67 @@ import { ReactComponent as Pi } from '../../../images/svg/pi.svg';
 import { ReactComponent as Sun } from '../../../images/svg/sun.svg';
 import AppConstants from '../../../utilities/AppConstants';
 import { ResponsiveElement } from '../../_atoms/ResponsiveDividers';
-import ShapeBlob from '../../_atoms/ShapeBlob';
 import IconCard from '../../_molecules/IconCard';
 import LinkButton from '../../_molecules/LinkButton';
-
-import style from './PhysicsIcons.css';
+import { Circle, Container } from './PhysicsIcons.style';
 
 const PhysicsIcons = () => (
-  <div className={style.iconsContainer}>
+  <Container>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.QUANTUM}>
         <IconCard strings="Physics.Catagories.quantum">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Atom width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.THERMAL}>
         <IconCard strings="Physics.Catagories.thermal">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Flame width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.CLASSICAL}>
         <IconCard strings="Physics.Catagories.classical">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Apple width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.ELECTROMAG}>
         <IconCard strings="Physics.Catagories.electromag">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Lightning width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.ASTRO}>
         <IconCard strings="Physics.Catagories.astro">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Sun width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.MATHS}>
         <IconCard strings="Physics.Catagories.maths">
-          <ShapeBlob className={style.shapeBlob}>
+          <Circle>
             <Pi width="25px" />
-          </ShapeBlob>
+          </Circle>
         </IconCard>
       </LinkButton>
     </ResponsiveElement>
-  </div>
+  </Container>
 );
 
 

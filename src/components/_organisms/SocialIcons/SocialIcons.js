@@ -1,32 +1,32 @@
 import React from 'react';
 
-import { ReactComponent as GitHub } from '../../../images/svg/github.svg';
-import { ReactComponent as Instagram } from '../../../images/svg/instagram.svg';
-import { ReactComponent as LinkedIn } from '../../../images/svg/linkedin.svg';
-import { ReactComponent as Spotify } from '../../../images/svg/spotify.svg';
-import { ReactComponent as Twitter } from '../../../images/svg/twitter.svg';
 import AppConstants from '../../../utilities/AppConstants';
-import AnchorButton from '../../_molecules/AnchorButton';
-
-import style from './SocialIcons.css';
+import {
+  FollowText,
+  GitHub,
+  Instagram,
+  LinkedIn,
+  Spotify,
+  Twitter,
+} from './SocialIcons.style';
 
 const SocialIcons = () => (
   <>
-    <AnchorButton to={AppConstants.TwitterLink} className={style.followText}>
-      <Twitter className={style.socialIcons} />
-    </AnchorButton>
-    <AnchorButton to={AppConstants.InstagramLink} className={style.followText}>
-      <Instagram className={style.socialIcons} />
-    </AnchorButton>
-    <AnchorButton to={AppConstants.LinkedInLink} className={style.followText}>
-      <LinkedIn className={style.socialIcons} />
-    </AnchorButton>
-    <AnchorButton to={AppConstants.SpotifyLink} className={style.followText}>
-      <Spotify className={style.socialIcons} />
-    </AnchorButton>
-    <AnchorButton to={AppConstants.GitHubLink} className={style.followText}>
-      <GitHub className={style.socialIcons} />
-    </AnchorButton>
+    <FollowText to={AppConstants.TwitterLink}>
+      <Twitter />
+    </FollowText>
+    <FollowText to={AppConstants.InstagramLink}>
+      <Instagram />
+    </FollowText>
+    <FollowText to={AppConstants.LinkedInLink}>
+      <LinkedIn />
+    </FollowText>
+    <FollowText to={AppConstants.SpotifyLink}>
+      <Spotify />
+    </FollowText>
+    <FollowText to={AppConstants.GitHubLink}>
+      <GitHub />
+    </FollowText>
   </>
 );
 

@@ -1,9 +1,8 @@
-@import '../../../css/colors.css';
-@import '../../../css/spacing.css';
+import styled from 'styled-components';
 
-.container {
+export const Container = styled.div`
   background-color: var(--MainYellow);
   width: 100%;
   text-align: center;
   padding: var(--ySpaceSmall) 0 var(--ySpaceSmall) 0;
-}
+`;

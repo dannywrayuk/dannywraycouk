@@ -3,38 +3,24 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../utilities/AppConstants';
 import withText from '../../_atoms/Text';
-import LinkButton from '../../_molecules/LinkButton';
-
-import style from './NavButtons.css';
+import { Link } from './NavButtons.style';
 
 const { ROUTES } = AppConstants;
 
 const NavButtons = ({ Text }) => (
   <>
-    <LinkButton
-      to={ROUTES.BLOG}
-      className={style.link}
-    >
+    <Link to={ROUTES.BLOG}>
       <Text path="BlogLink" />
-    </LinkButton>
-    <LinkButton
-      to={ROUTES.PHYSICS}
-      className={style.link}
-    >
+    </Link>
+    <Link to={ROUTES.PHYSICS}>
       <Text path="PhysicsLink" />
-    </LinkButton>
-    <LinkButton
-      to={ROUTES.PROJECTS}
-      className={style.link}
-    >
+    </Link>
+    <Link to={ROUTES.PROJECTS}>
       <Text path="ProjectLink" />
-    </LinkButton>
-    <LinkButton
-      to={ROUTES.MORE}
-      className={style.link}
-    >
+    </Link>
+    <Link to={ROUTES.MORE}>
       <Text path="MoreLink" />
-    </LinkButton>
+    </Link>
   </>
 );
 
