@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import AlignCenter from '../../styled/AlignCenter';
+
 export const Wrapper = styled.div`
   display: flex;
   min-width: 270px;
@@ -11,10 +13,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+export const Content = styled(AlignCenter)`
   text-align: left;
   min-width: 170px;
 `;

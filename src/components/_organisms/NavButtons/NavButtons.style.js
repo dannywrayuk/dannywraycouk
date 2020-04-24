@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 import LinkButton from '../../_molecules/LinkButton';
+import AlignCenter from '../../styled/AlignCenter';
 
-export const Link = styled(LinkButton)`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const Link = styled(AlignCenter).attrs({
+  as: LinkButton,
+})`
   text-decoration: none;
   padding: 0 20px;
   color: #686868;

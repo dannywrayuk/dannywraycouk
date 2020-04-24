@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ReactComponent as atom } from '../../../images/svg/atom.svg';
+import { ReactComponent as SvgAtom } from '../../../images/svg/atom.svg';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   text-align: center;
 `;
 
-export const Spinner = styled(atom)`
+export const Spinner = styled(SvgAtom)`
   width: 40px;
   animation: spin 2s linear infinite;
   fill: var(--MainYellow);

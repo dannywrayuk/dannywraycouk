@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 
-import { ReactComponent as hamburger } from '../../../images/svg/hamburger.svg';
+import { ReactComponent as SvgHamburger } from '../../../images/svg/hamburger.svg';
+import AlignCenter from '../../styled/AlignCenter';
 
-export const Hamburger = styled(hamburger)`
+export const Hamburger = styled(SvgHamburger)`
     height: 20px;
     fill: #494949;
   `;
@@ -22,10 +23,7 @@ export const Menu = styled.div`
   `}
 `;
 
-export const ButtonWrapper = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const ButtonWrapper = styled(AlignCenter)`
   order: 2;
   margin: 0px 10px 0px auto;
   padding-left: 10px;
@@ -35,29 +33,3 @@ export const ButtonWrapper = styled.div`
   transform: rotate(90deg);
   `)}
 `;
-
-// .Button {
-
-// }
-
-// .ButtonClicked {
-
-// }
-
-
-// .menuContainer{
-//   display: inline-flex;
-//   max-width: 0px;
-//   overflow: hidden;
-
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: 0.5s;
-// }
-
-// .menuFill{
-//   display: inline-flex;
-//   max-width: calc(100vw - 90px);
-//   transition: 0.5s;
-// }
-// }

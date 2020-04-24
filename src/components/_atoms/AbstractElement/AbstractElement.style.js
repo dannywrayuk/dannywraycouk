@@ -1,8 +1,6 @@
-import { createElement } from 'react';
-
 import styled from 'styled-components';
 
-export const Element = styled(({ tag, children, ...props }) => createElement(tag, props, children))`
+export const Element = styled.div`
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   &:focus {outline: none;}

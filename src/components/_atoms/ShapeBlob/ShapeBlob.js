@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Align, Container } from './ShapeBlob.style';
+import AlignCenter from '../../styled/AlignCenter';
+import { Container } from './ShapeBlob.style';
 
 const ShapeBlob = ({
   children, shadow, square, ...props
 }) => (
   <Container shadow={shadow} square={square} {...props}>
-    <Align>
+    <AlignCenter>
       {children}
-    </Align>
+    </AlignCenter>
   </Container>
 );
 

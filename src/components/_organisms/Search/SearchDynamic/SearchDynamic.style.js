@@ -1,13 +1,12 @@
+import React from 'react';
+
 import styled, { css } from 'styled-components';
 
-import { ReactComponent as close } from '../../../../images/svg/close.svg';
-import { ReactComponent as search } from '../../../../images/svg/search.svg';
-import Button from '../../../_molecules/Button';
+import { ReactComponent as SvgClose } from '../../../../images/svg/close.svg';
+import { ReactComponent as SvgSearch } from '../../../../images/svg/search.svg';
+import AlignCenter from '../../../styled/AlignCenter';
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+export const Wrapper = styled(AlignCenter)`
   height: 100%;
   width: 100%;
 `;
@@ -20,34 +19,15 @@ export const Box = styled.div`
   width: 100%;
 `;
 
-export const SearchButton = styled(Button)`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-`;
 
-export const InputContainer = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const InputContainer = styled(AlignCenter)`
   width: 100%;
   transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
 
-  ${({ isExtended }) => isExtended && css`
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    transition: 0.5s;
+  ${({ isExtended }) => !isExtended && css`
+    opacity: 0;
+    visibility: hidden;
   `}
-`;
-
-export const CloseButton = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 
 export const Field = styled.fieldset`
@@ -71,13 +51,13 @@ export const Input = styled.input`
   border-radius: 5px;
 `;
 
-export const Search = styled(search)`
+export const Search = styled(SvgSearch)`
   fill: #494949;
   height: 20px;
   margin: 0px 5px;
 `;
 
-export const Close = styled(close)`
+export const Close = styled(({ isExtended, ...props }) => <SvgClose {...props} />)`
   display: inline-flex;
   fill: #494949;
   margin: 0px 5px;

@@ -1,10 +1,8 @@
-import { createElement } from 'react';
-
 import styled, { css } from 'styled-components';
 
-export const Element = styled(({ tag, children, ...props }) => createElement(`h${tag}`, props, children))`
-  ${({ tag }) => {
-    switch (tag) {
+export const Element = styled.h1`
+  ${({ level }) => {
+    switch (level) {
       default: return css`font-size: 3rem;`;
       case 2: return css`font-size: 2rem;`;
       case 3: return css`font-size: 1.5rem;`;

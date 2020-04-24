@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 import LinkButton from '../../../../_molecules/LinkButton';
+import AlignCenter from '../../../../styled/AlignCenter';
 
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(AlignCenter)`
   margin: 0px 40px 0px 25px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 
 
@@ -15,10 +13,7 @@ export const Controls = styled.div`
   flex-grow: 1;
 `;
 
-export const SearchWrapper = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const SearchWrapper = styled(AlignCenter)`
   margin-left: auto;
   margin-right: 20px;
   order: 2;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import { ReactComponent as search } from '../../../../images/svg/search.svg';
+import { ReactComponent as SvgSearch } from '../../../../images/svg/search.svg';
 import Button from '../../../_molecules/Button';
+import AlignCenter from '../../../styled/AlignCenter';
 
 export const Box = styled.div`
   display: flex;
@@ -10,23 +11,21 @@ export const Box = styled.div`
   border-radius: 5px;
 `;
 
-export const ImageContainer = styled(Button)`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const ImageContainer = styled(AlignCenter).attrs({
+  as: Button,
+})`
   margin: 0px 5px; 
 `;
 
-export const Search = styled(search)`
+export const Search = styled(SvgSearch)`
   display: inline-flex;
   height: 20px;
   fill: #494949;
 `;
 
-export const Input = styled.input`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+export const Input = styled(AlignCenter).attrs({
+  as: 'input',
+})`
   background-color: #d3d3d3;
   border: none;
   border-radius: 5px;

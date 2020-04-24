@@ -11,7 +11,7 @@ import FetchMarkdown from '../../../../_organisms/FetchMarkdown';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 import {
-  CenterDiv,
+  AlignCenter,
   CenterHeading,
   Date,
   Ruler,
@@ -34,7 +34,7 @@ const PhysicsPost = ({ catagory, section, post }) => {
                     {title}
                   </CenterHeading>
                   <Date>{date || ''}</Date>
-                  <CenterDiv>{description || ''}</CenterDiv>
+                  <AlignCenter>{description || ''}</AlignCenter>
                   <Ruler />
                 </Wrapper>
                 <FetchMarkdown

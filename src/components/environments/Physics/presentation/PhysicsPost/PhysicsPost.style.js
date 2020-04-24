@@ -10,7 +10,7 @@ export const CenterHeading = styled(Heading)`
   display: block;
   text-align: center;
 `;
-export const CenterDiv = styled.div`
+export const AlignCenter = styled.div`
   display: block;
   text-align: center;
 `;

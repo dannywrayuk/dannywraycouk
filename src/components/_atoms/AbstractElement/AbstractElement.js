@@ -9,7 +9,7 @@ const AbstractElement = ({
   ...props
 }) => (
   <Element
-    tag={as}
+    as={as}
     {...props}
   >
     {children}

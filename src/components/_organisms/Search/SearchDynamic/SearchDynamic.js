@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import withText from '../../../_atoms/Text';
+import Button from '../../../_molecules/Button';
+import AlignCenter from '../../../styled/AlignCenter';
 import {
   Box,
   Close,
-  CloseButton,
   Field,
   Input,
   InputContainer,
   Search,
-  SearchButton,
   Wrapper,
 } from './SearchDynamic.style';
 
@@ -23,11 +23,12 @@ const SearchDynamic = ({
 }) => (
   <Wrapper>
     <Box>
-      <CloseButton
+      <AlignCenter
+        as={Button}
         onClick={() => { onCloseClick(); handlers.setSearchValue(''); }}
       >
         <Close isExtended={isExtended} />
-      </CloseButton>
+      </AlignCenter>
       <InputContainer isExtended={isExtended}>
         <Field>
           <Input
@@ -39,11 +40,11 @@ const SearchDynamic = ({
           />
         </Field>
       </InputContainer>
-      <SearchButton
+      <AlignCenter
         onClick={isExtended ? handlers.handleSearch : onSearchClick}
       >
         <Search />
-      </SearchButton>
+      </AlignCenter>
     </Box>
   </Wrapper>
 );

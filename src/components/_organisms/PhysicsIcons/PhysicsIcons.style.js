@@ -15,3 +15,7 @@ export const Circle = styled(ShapeBlob)`
   height: 70px;
   min-height: 70px;
 `;
+
+export const Icon = styled.div`
+  height:25px;
+`;

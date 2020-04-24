@@ -15,9 +15,3 @@ export const Container = styled.div`
     border-radius: 50%;
   `}
 `;
-
-export const Align = styled.div`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-`;

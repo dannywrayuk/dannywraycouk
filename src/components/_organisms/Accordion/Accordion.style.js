@@ -1,7 +1,9 @@
+import React from 'react';
+
 import styled, { css } from 'styled-components';
 
-import { ReactComponent as circle } from '../../../images/svg/circle.svg';
-import { ReactComponent as arrow } from '../../../images/svg/triangle.svg';
+import { ReactComponent as SvgCircle } from '../../../images/svg/circle.svg';
+import { ReactComponent as SvgArrow } from '../../../images/svg/triangle.svg';
 import Heading from '../../_atoms/Heading';
 import Button from '../../_molecules/Button';
 import LinkButton from '../../_molecules/LinkButton';
@@ -76,7 +78,7 @@ export const ElementDescription = styled.div`
   color: #777777;
 `;
 
-export const Arrow = styled(arrow)`
+export const Arrow = styled(({ isOpen, ...props }) => <SvgArrow {...props} />)`
   transition: 0.5s;
   height: 15px;
   margin: auto 0;
@@ -85,7 +87,7 @@ export const Arrow = styled(arrow)`
   `}
 `;
 
-export const Circle = styled(circle)`
+export const Circle = styled(SvgCircle)`
   height: 5px;
   margin: auto 0 ;
   fill: var(--MainYellow);
