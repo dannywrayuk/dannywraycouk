@@ -47,6 +47,7 @@ export const TitleButton = styled(Button)`
 export const Title = styled(SmallTitle)`
   margin-left: 10px;
   margin-bottom: 0px;
+  text-align:left;
 `;
 
 export const Link = styled(LinkButton)`
@@ -84,7 +85,7 @@ export const Arrow = styled(({ isOpen, ...props }) => <SvgArrow {...props} />)`
 `;
 
 export const Circle = styled(SvgCircle)`
-  height: 7px;
-  margin: auto 0 ;
+  max-width: 7px;
+  margin: auto 15px auto 0 ;
   fill: var(--MainYellow);
   `;
