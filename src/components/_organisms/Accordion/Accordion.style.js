@@ -4,9 +4,10 @@ import styled, { css } from 'styled-components';
 
 import { ReactComponent as SvgCircle } from '../../../images/svg/circle.svg';
 import { ReactComponent as SvgArrow } from '../../../images/svg/triangle.svg';
-import Heading from '../../_atoms/Heading';
 import Button from '../../_molecules/Button';
 import LinkButton from '../../_molecules/LinkButton';
+import Paragraph from '../../styled/Paragraph';
+import SmallTitle from '../../styled/SmallTitle';
 
 export const DropDown = styled.div`
   transition: 0.5s;
@@ -43,8 +44,7 @@ export const TitleButton = styled(Button)`
 
 `;
 
-export const Title = styled(Heading)`
-  text-align: left;
+export const Title = styled(SmallTitle)`
   margin-left: 10px;
   margin-bottom: 0px;
 `;
@@ -68,14 +68,10 @@ export const Link = styled(LinkButton)`
   }
 `;
 
-export const ElementTitle = styled.div`
-  font-size: 1rem;
-  font-weight: 500;
-`;
 
-export const ElementDescription = styled.div`
+export const ElementDescription = styled(Paragraph)`
   padding-left: 20px;
-  color: #777777;
+  color: #777;
 `;
 
 export const Arrow = styled(({ isOpen, ...props }) => <SvgArrow {...props} />)`
@@ -88,7 +84,7 @@ export const Arrow = styled(({ isOpen, ...props }) => <SvgArrow {...props} />)`
 `;
 
 export const Circle = styled(SvgCircle)`
-  height: 5px;
+  height: 7px;
   margin: auto 0 ;
   fill: var(--MainYellow);
   `;

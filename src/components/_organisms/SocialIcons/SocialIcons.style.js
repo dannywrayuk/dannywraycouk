@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
 import AnchorButton from '../../_molecules/AnchorButton';
+import AlignCenter from '../../styled/AlignCenter';
 
-export const FollowText = styled(AnchorButton)`
-  display: inline-flex;
-  justify-content: center;
+export const FollowText = styled(AlignCenter).attrs({
+  as: AnchorButton,
+})`
   vertical-align: middle;
 `;
 
 export const Icon = styled.div`
-  display: inline-flex;
-  justify-content: center;
   margin-left: 15px;
   width: 20px;
   height: 20px;

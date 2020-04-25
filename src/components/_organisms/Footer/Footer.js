@@ -3,14 +3,17 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../utilities/AppConstants';
 import withText from '../../_atoms/Text';
+import Paragraph from '../../styled/Paragraph';
 import { Container } from './Footer.style';
 
 const Footer = ({ Text }) => (
   <Container>
-    <Text path="copyright" />
-    <div>
+    <Paragraph>
+      <Text path="copyright" />
+    </Paragraph>
+    <Paragraph>
       {AppConstants.version}
-    </div>
+    </Paragraph>
   </Container>
 );
 

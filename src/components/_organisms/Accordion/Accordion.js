@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
+import Paragraph from '../../styled/Paragraph';
 import {
   Arrow,
   Circle,
   DropDown,
   ElementDescription,
-  ElementTitle,
   Link,
   Title,
   TitleButton,
@@ -49,7 +49,7 @@ const Accordion = ({ structure }) => {
       <div>
         <TitleButton isOpen={isOpen} onClick={openToggle}>
           <Arrow isOpen={isOpen} />
-          <Title level={3}>{structure[1].title}</Title>
+          <Title>{structure[1].title}</Title>
         </TitleButton>
       </div>
       <DropDown isOpen={isOpen} height={height}>
@@ -58,7 +58,7 @@ const Accordion = ({ structure }) => {
             <Link key={d[1].title} to={d[1].date ? `${window.location.pathname}/${structure[0]}/${d[0]}` : '#'}>
               <Circle />
               <div>
-                <ElementTitle>{d[1].title}</ElementTitle>
+                <Paragraph>{d[1].title}</Paragraph>
                 {d[1].description
                  && (<ElementDescription>{d[1].description}</ElementDescription>)}
               </div>

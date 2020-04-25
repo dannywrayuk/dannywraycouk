@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  display: inline-flex;
-  text-align: center;
-  justify-content: center;
+import AlignCenter from '../../styled/AlignCenter';
+
+export const Container = styled(AlignCenter)`
   margin: 20px;
   transition:1s;
   
