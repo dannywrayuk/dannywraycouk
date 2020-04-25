@@ -24,8 +24,8 @@ export const Content = styled.div`
   flex-direction: column;
   margin: 0 20px;
 
-  ${({ width }) => width && css`
-    flex: ${width};
+  ${({ flexWidth }) => flexWidth && css`
+    flex: ${flexWidth};
   `}
 
   @media only screen and (max-width: 800px) {

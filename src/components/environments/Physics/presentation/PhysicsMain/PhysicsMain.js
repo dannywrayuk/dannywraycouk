@@ -5,12 +5,12 @@ import { Helmet } from 'react-helmet';
 import backgroundimage from '../../../../../images/svg/background.svg';
 import Background from '../../../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../../../_atoms/Card';
-import Heading from '../../../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import withText from '../../../../_atoms/Text';
 import PhysicsIcons from '../../../../_organisms/PhysicsIcons';
-import { IntroductionText } from './PhysicsMain.style';
+import BigTitle from '../../../../styled/BigTitle';
+import Paragraph from '../../../../styled/Paragraph';
 
 const PhysicsMain = ({ Text }) => (
   <Background image={backgroundimage}>
@@ -20,22 +20,22 @@ const PhysicsMain = ({ Text }) => (
     <ResponsiveWrapper>
       <Card topper>
         <CardContent>
-          <Heading center>
+          <BigTitle center>
             <Text path="Heading" />
-          </Heading>
+          </BigTitle>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <IntroductionText>
+              <Paragraph center>
                 <Text path="Body" />
-              </IntroductionText>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
           <PhysicsIcons />
           <ResponsiveDivider>
             <ResponsiveElement>
-              <IntroductionText>
+              <Paragraph center>
                 <Text path="UnderCard" />
-              </IntroductionText>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>

@@ -5,12 +5,13 @@ import { Helmet } from 'react-helmet';
 import backgroundimage from '../../../../../images/svg/background.svg';
 import Background from '../../../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../../../_atoms/Card';
-import Heading from '../../../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import withText from '../../../../_atoms/Text';
 import Contents from '../../../../ecosystems/Contents';
-import { IntroductionText, SubHeading } from './PhysicsCatagory.style';
+import BigTitle from '../../../../styled/BigTitle';
+import Paragraph from '../../../../styled/Paragraph';
+import { ItalicSmallTitle } from './PhysicsCatagory.style';
 
 const PhysicsCatagory = ({ Text, catagory }) => (
   <Background image={backgroundimage}>
@@ -20,17 +21,17 @@ const PhysicsCatagory = ({ Text, catagory }) => (
     <ResponsiveWrapper>
       <Card topper>
         <CardContent>
-          <Heading center>
+          <BigTitle center>
             <Text path={`${catagory}.Heading`} />
-          </Heading>
-          <SubHeading level={4} center>
+          </BigTitle>
+          <ItalicSmallTitle center>
             <Text path={`${catagory}.SubHeading`} />
-          </SubHeading>
+          </ItalicSmallTitle>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <IntroductionText>
+              <Paragraph>
                 <Text path={`${catagory}.Body`} />
-              </IntroductionText>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
           <ResponsiveDivider>

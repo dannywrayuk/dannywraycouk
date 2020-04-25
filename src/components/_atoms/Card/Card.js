@@ -10,7 +10,7 @@ import {
 
 const Card = ({ children, topper }) => (
   <>
-    <Topper topper={topper} />
+    {topper && <Topper />}
     <Container>
       {children}
     </Container>

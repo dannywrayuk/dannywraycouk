@@ -8,19 +8,19 @@ import Me from '../../../images/png/me.png';
 import backgroundimage from '../../../images/svg/background.svg';
 import Background from '../../_atoms/BackgroundContainer';
 import { Card, CardContent, CardFooter } from '../../_atoms/Card';
-import Heading from '../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
 import PhysicsIcons from '../../_organisms/PhysicsIcons';
 import SocialIcons from '../../_organisms/SocialIcons';
+import AlignCenter from '../../styled/AlignCenter';
+import BigTitle from '../../styled/BigTitle';
+import Paragraph from '../../styled/Paragraph';
+import SmallTitle from '../../styled/SmallTitle';
+import Title from '../../styled/Title';
 import {
-  AlignCenter,
-  BannerText,
   BlogImage,
-  FollowText,
-  SubTitle,
-  ThreeSubTitle,
+  CenterImage,
   TitleImage,
 } from './Home.style';
 
@@ -32,65 +32,65 @@ const Home = ({ Text }) => (
     <ResponsiveWrapper>
       <ResponsiveDivider>
         <ResponsiveElement width={2}>
-          <BannerText>
-            <Heading>
+          <AlignCenter>
+            <BigTitle>
               <Text path="Title" />
-            </Heading>
-            <Heading level={2}>
+            </BigTitle>
+            <Title>
               <Text path="SubTitle" />
-            </Heading>
-          </BannerText>
+            </Title>
+          </AlignCenter>
         </ResponsiveElement>
-        <AlignCenter>
+        <CenterImage>
           <TitleImage src={Me} alt="" />
-        </AlignCenter>
+        </CenterImage>
       </ResponsiveDivider>
-      <Card>
+      <Card topper>
         <CardContent>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Heading level={4}>
+              <SmallTitle>
                 <Text path="IntroCard.Programming.Title" />
-              </Heading>
-              <ThreeSubTitle>
+              </SmallTitle>
+              <Paragraph>
                 <Text path="IntroCard.Programming.Body" />
-              </ThreeSubTitle>
+              </Paragraph>
             </ResponsiveElement>
             <ResponsiveElement>
-              <Heading level={4}>
+              <SmallTitle>
                 <Text path="IntroCard.Physics.Title" />
-              </Heading>
-              <ThreeSubTitle>
+              </SmallTitle>
+              <Paragraph>
                 <Text path="IntroCard.Physics.Body" />
-              </ThreeSubTitle>
+              </Paragraph>
             </ResponsiveElement>
             <ResponsiveElement>
-              <Heading level={4}>
+              <SmallTitle>
                 <Text path="IntroCard.More.Title" />
-              </Heading>
-              <ThreeSubTitle>
+              </SmallTitle>
+              <Paragraph>
                 <Text path="IntroCard.More.Body" />
-              </ThreeSubTitle>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
         <CardFooter>
-          <FollowText>
+          <AlignCenter>
             <Text path="IntroCard.FooterText" />
-          </FollowText>
+          </AlignCenter>
           <SocialIcons />
         </CardFooter>
       </Card>
       <Card>
         <CardContent>
-          <Heading level={2} center>
+          <Title center>
             <Text path="PhysicsCard.Title" />
-          </Heading>
+          </Title>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <SubTitle>
+              <Paragraph center>
                 <Text path="PhysicsCard.SubTitle" />
-              </SubTitle>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
           <PhysicsIcons />
@@ -101,26 +101,26 @@ const Home = ({ Text }) => (
       </Card>
       <Card>
         <CardContent>
-          <Heading level={2} center>
+          <Title center>
             <Text path="BlogCard.Title" />
-          </Heading>
+          </Title>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <SubTitle>
+              <Paragraph center>
                 <Text path="BlogCard.SubTitle" />
-              </SubTitle>
+              </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <AlignCenter>
+              <CenterImage>
                 <BlogImage src={InstagramImage2} alt="" />
-              </AlignCenter>
+              </CenterImage>
             </ResponsiveElement>
             <ResponsiveElement>
-              <AlignCenter>
+              <CenterImage>
                 <BlogImage src={InstagramImage1} alt="" />
-              </AlignCenter>
+              </CenterImage>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>

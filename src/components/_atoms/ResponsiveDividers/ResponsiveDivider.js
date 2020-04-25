@@ -10,7 +10,7 @@ export const ResponsiveDivider = ({ children, isStatic }) => (
 );
 
 export const ResponsiveElement = ({ children, width }) => (
-  <Content style={{ flex: `${width}` }}>
+  <Content flexWidth={width}>
     {children}
   </Content>
 );

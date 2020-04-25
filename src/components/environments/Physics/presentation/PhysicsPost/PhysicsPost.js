@@ -5,17 +5,16 @@ import backgroundimage from '../../../../../images/svg/background.svg';
 import contents from '../../../../../text/Physics/Contents.json';
 import Background from '../../../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../../../_atoms/Card';
-import { ResponsiveDivider } from '../../../../_atoms/ResponsiveDividers';
+import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import FetchMarkdown from '../../../../_organisms/FetchMarkdown';
+import BigTitle from '../../../../styled/BigTitle';
+import Paragraph from '../../../../styled/Paragraph';
+import Ruler from '../../../../styled/Ruler';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 import {
-  AlignCenter,
-  CenterHeading,
   Date,
-  Ruler,
-  Wrapper,
 } from './PhysicsPost.style';
 
 import postStyle from './content/styles.css';
@@ -28,22 +27,22 @@ const PhysicsPost = ({ catagory, section, post }) => {
         <Card topper>
           <CardContent>
             <ResponsiveDivider>
-              <Wrapper>
-                <Wrapper>
-                  <CenterHeading level={2}>
-                    {title}
-                  </CenterHeading>
-                  <Date>{date || ''}</Date>
-                  <AlignCenter>{description || ''}</AlignCenter>
-                  <Ruler />
-                </Wrapper>
-                <FetchMarkdown
-                  containerName={postStyle.contentContainer}
-                  location={Posts[post]}
-                  auxData={Images}
-                  styleData={postStyle}
-                />
-              </Wrapper>
+              <ResponsiveElement>
+                <BigTitle center>
+                  {title}
+                </BigTitle>
+                <Date center>{date || ''}</Date>
+                <Paragraph center>{description || ''}</Paragraph>
+                <Ruler />
+              </ResponsiveElement>
+            </ResponsiveDivider>
+            <ResponsiveDivider>
+              <FetchMarkdown
+                containerName={postStyle.contentContainer}
+                location={Posts[post]}
+                auxData={Images}
+                styleData={postStyle}
+              />
             </ResponsiveDivider>
           </CardContent>
         </Card>
