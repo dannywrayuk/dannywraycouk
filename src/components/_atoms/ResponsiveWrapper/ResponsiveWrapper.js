@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './ResponsiveWrapper.css';
+import { Fill, Wrapper } from './ResponsiveWrapper.style';
 
 const ResponsiveWrapper = ({ children }) => (
-  <div className={style.fillContainer}>
-    <div className={style.Wrapper}>
+  <Fill>
+    <Wrapper>
       {children}
-    </div>
-  </div>
+    </Wrapper>
+  </Fill>
 );
 
 ResponsiveWrapper.propTypes = {

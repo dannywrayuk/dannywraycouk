@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './ResponsiveDivider.css';
+import { Content, Wrapper } from './ResponsiveDivider.style';
 
-export const ResponsiveDivider = ({ children, Static }) => (
-  <div className={Static ? style.WrapperStatic : style.Wrapper}>
+export const ResponsiveDivider = ({ children, isStatic }) => (
+  <Wrapper isStatic={isStatic}>
     {children}
-  </div>
+  </Wrapper>
 );
 
 export const ResponsiveElement = ({ children, width }) => (
-  <div className={style.Content} style={{ flex: `${width}` }}>
+  <Content flexWidth={width}>
     {children}
-  </div>
+  </Content>
 );
 
 ResponsiveDivider.propTypes = {
   children: PropTypes.node,
-  Static: PropTypes.bool,
+  isStatic: PropTypes.bool,
 };
 
 ResponsiveDivider.defaultProps = {
   children: null,
-  Static: false,
+  isStatic: false,
 };
 
 ResponsiveElement.propTypes = {

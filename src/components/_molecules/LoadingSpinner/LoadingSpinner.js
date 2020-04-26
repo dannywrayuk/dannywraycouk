@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as Spinner } from '../../../images/svg/atom.svg';
 import withText from '../../_atoms/Text';
-
-import style from './LoadingSpinner.css';
+import { Spinner, Wrapper } from './LoadingSpinner.style';
 
 const LoadingSpinner = ({ Text }) => (
-  <div className={style.wrapper}>
+  <Wrapper>
     <div>
-      <Spinner className={style.spinner} />
+      <Spinner />
       <p>
         <Text path="Loading" />
       </p>
     </div>
-  </div>
+  </Wrapper>
 );
 
 LoadingSpinner.propTypes = {

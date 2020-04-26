@@ -1,29 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ReactComponent as Search } from '../../../../images/svg/search.svg';
 import withText from '../../../_atoms/Text';
-import Button from '../../../_molecules/Button';
-
-import style from './SearchStatic.css';
+import {
+  Box,
+  ImageContainer,
+  Input,
+  Search,
+} from './SearchStatic.style';
 
 const SearchStatic = ({ Text, handlers }) => (
-  <div className={style.box}>
-    <Button
-      className={style.imageContainer}
-      onClick={handlers.handleSearch}
-    >
-      <Search className={style.image} />
-    </Button>
-    <input
+  <Box>
+    <ImageContainer onClick={handlers.handleSearch}>
+      <Search />
+    </ImageContainer>
+    <Input
       type="text"
-      className={style.input}
       placeholder={Text.get('placeholder')}
       value={handlers.searchValue}
       onChange={handlers.handleChange}
       onKeyDown={handlers.handleKeyPress}
     />
-  </div>
+  </Box>
 );
 
 SearchStatic.propTypes = {

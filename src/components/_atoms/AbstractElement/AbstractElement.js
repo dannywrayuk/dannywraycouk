@@ -1,30 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './AbstractElement.css';
+import { Element } from './AbstractElement.style';
 
 const AbstractElement = ({
   children,
-  className,
-  as: ElementType,
+  as,
   ...props
 }) => (
-  <ElementType
-    className={`${style.root} ${className}`}
+  <Element
+    as={as}
     {...props}
   >
     {children}
-  </ElementType>
+  </Element>
 );
 AbstractElement.propTypes = {
   children: PropTypes.node,
   as: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.shape({})]).isRequired,
-  className: PropTypes.string,
 };
 
 AbstractElement.defaultProps = {
   children: null,
-  className: null,
 };
 
 export default AbstractElement;
