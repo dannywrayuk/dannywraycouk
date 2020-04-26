@@ -8,14 +8,14 @@ export const Wrapper = styled.div`
   ${({ isStatic }) => isStatic && css`
     display: flex;
     padding: 50px 80px;
-  `}
+      `}
 
   @media only screen and (max-width: 1000px) {
     padding: 20px 0px 20px;
-  }
+    }
   @media only screen and (max-width: 800px) {
     display: block;
-    padding: 0px;
+    padding: 0;
   }
 `;
 
@@ -29,7 +29,7 @@ export const Content = styled.div`
   `}
 
   @media only screen and (max-width: 800px) {
-    margin: 20px 0px;
+    margin: 20px 0;
     width: 100%;
     justify-content: center;
   }

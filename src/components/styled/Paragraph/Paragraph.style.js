@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components';
 
 const Paragraph = styled.p`
-    color: #333;
-    line-height: 30px;
-    ${({ center }) => center && css`
-        text-align: center;
+  font-size: ${({ theme }) => theme.text.size.paragraph};
+  color: ${({ theme, dark }) => (dark ? theme.text.color.title : theme.text.color.paragraph)};
+  line-height: 30px;
+  ${({ center }) => center && css`
+    text-align: center;
+  `}
+  ${({ inline }) => inline && css`
+    display: inline;
   `}
 `;
 

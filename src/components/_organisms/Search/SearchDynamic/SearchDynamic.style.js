@@ -13,7 +13,7 @@ export const Wrapper = styled(AlignCenter)`
 
 export const Box = styled.div`
   display: flex;
-  background-color: #d3d3d3;
+  background-color: ${({ theme }) => theme.colors.accent};
   height: 30px;
   border-radius: 5px;
   width: 100%;
@@ -43,23 +43,23 @@ export const Input = styled.input`
   position: absolute;
   left: 0;
   width: 100%;
-  -webkit-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
   height: 100%;
-  background-color: #d3d3d3;
+  background-color: ${({ theme }) => theme.colors.accent};
   border-radius: 5px;
 `;
 
 export const Search = styled(SvgSearch)`
-  fill: #494949;
+  fill: ${({ theme }) => theme.colors.varAccent};
   height: 20px;
   margin: 0px 5px;
 `;
 
 export const Close = styled(({ isExtended, ...props }) => <SvgClose {...props} />)`
   display: inline-flex;
-  fill: #494949;
+  fill: ${({ theme }) => theme.colors.varAccent};
   margin: 0px 5px;
   height: 15px;
   transition: 0.5s;

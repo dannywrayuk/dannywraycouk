@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../utilities/AppConstants';
 import withText from '../../_atoms/Text';
+import Paragraph from '../../styled/Paragraph';
 import { Link } from './NavButtons.style';
 
 const { ROUTES } = AppConstants;
@@ -10,16 +11,24 @@ const { ROUTES } = AppConstants;
 const NavButtons = ({ Text }) => (
   <>
     <Link to={ROUTES.BLOG}>
-      <Text path="BlogLink" />
+      <Paragraph>
+        <Text path="BlogLink" />
+      </Paragraph>
     </Link>
     <Link to={ROUTES.PHYSICS}>
-      <Text path="PhysicsLink" />
+      <Paragraph>
+        <Text path="PhysicsLink" />
+      </Paragraph>
     </Link>
     <Link to={ROUTES.PROJECTS}>
-      <Text path="ProjectLink" />
+      <Paragraph>
+        <Text path="ProjectLink" />
+      </Paragraph>
     </Link>
     <Link to={ROUTES.MORE}>
-      <Text path="MoreLink" />
+      <Paragraph>
+        <Text path="MoreLink" />
+      </Paragraph>
     </Link>
   </>
 );

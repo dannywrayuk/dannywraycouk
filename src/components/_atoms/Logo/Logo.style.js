@@ -1,24 +1,21 @@
 import styled from 'styled-components';
 
-import AlignCenter from '../../styled/AlignCenter';
+import Paragraph from '../../styled/Paragraph';
 
 export const Container = styled.div`
-  height: 30px;
   display: inline-flex;
+  height: 30px;
 `;
 
-export const Icon = styled(AlignCenter).attrs({
-  as: 'img',
-})`
+export const Icon = styled.div`
+  fill: ${({ theme }) => theme.colors.mainYellow};
   height: 100%;
 `;
 
-export const NameText = styled(AlignCenter)`
-  height: 100%;
+export const NameText = styled(Paragraph)`
+  color: ${({ theme }) => theme.text.color.accent};
+  font-size: ${({ theme }) => theme.text.size.smallTitle};
   margin-left: 10px;
-  font-size: 1.35rem;
   letter-spacing: -1px;
-  color: #727272;
-  text-decoration: none;
   white-space: nowrap;
 `;

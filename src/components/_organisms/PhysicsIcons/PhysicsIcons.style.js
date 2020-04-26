@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Circle = styled(ShapeBlob)`
-  background-color: var(--MainYellow);
+  background-color: ${({ theme }) => theme.colors.mainYellow};
   width: 70px;
   min-width: 70px;
   height: 70px;
@@ -18,4 +18,5 @@ export const Circle = styled(ShapeBlob)`
 
 export const Icon = styled.div`
   height:25px;
+  fill: ${({ theme }) => theme.colors.icon}
 `;

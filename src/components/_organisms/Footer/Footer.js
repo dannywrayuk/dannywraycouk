@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../utilities/AppConstants';
 import withText from '../../_atoms/Text';
-import Paragraph from '../../styled/Paragraph';
-import { Container } from './Footer.style';
+import { Container, DarkParagraph } from './Footer.style';
 
 const Footer = ({ Text }) => (
   <Container>
-    <Paragraph>
+    <DarkParagraph>
       <Text path="copyright" />
-    </Paragraph>
-    <Paragraph>
+    </DarkParagraph>
+    <DarkParagraph>
       {AppConstants.version}
-    </Paragraph>
+    </DarkParagraph>
   </Container>
 );
 

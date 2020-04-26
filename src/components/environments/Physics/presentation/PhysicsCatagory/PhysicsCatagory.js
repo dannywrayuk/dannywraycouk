@@ -29,7 +29,7 @@ const PhysicsCatagory = ({ Text, catagory }) => (
           </ItalicSmallTitle>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Paragraph>
+              <Paragraph center>
                 <Text path={`${catagory}.Body`} />
               </Paragraph>
             </ResponsiveElement>

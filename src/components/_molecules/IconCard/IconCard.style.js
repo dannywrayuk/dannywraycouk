@@ -17,7 +17,3 @@ export const Content = styled(AlignCenter)`
   text-align: left;
   min-width: 170px;
 `;
-
-export const SubTitle = styled.div`
-  color: grey;
-`;

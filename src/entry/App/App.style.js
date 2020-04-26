@@ -15,18 +15,6 @@ code {
   monospace;
 }
 
-:root{
-  --MainYellow: #FFCA1E;
-
-  --ySpaceSmall: 25px;
-  --ySpaceMedium: 60px;
-  --ySpaceLarge: 100px;
-  --ySpaceHeader: 48px;
-
-  --mobileBreakpoint: 600px;
-  --desktopBreakpoint: 992;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -53,9 +41,6 @@ html, body, #root{
         transform: scale(0.8);
     }
   }
-
-
-
 `;
 
 

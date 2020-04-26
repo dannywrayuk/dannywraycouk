@@ -6,7 +6,7 @@ import AlignCenter from '../../../styled/AlignCenter';
 
 export const Box = styled.div`
   display: flex;
-  background-color: #d3d3d3;
+  background-color: ${({ theme }) => theme.colors.accent};
   height: 30px;
   border-radius: 5px;
 `;
@@ -20,13 +20,13 @@ export const ImageContainer = styled(AlignCenter).attrs({
 export const Search = styled(SvgSearch)`
   display: inline-flex;
   height: 20px;
-  fill: #494949;
+  fill: ${({ theme }) => theme.colors.varAccent};
 `;
 
 export const Input = styled(AlignCenter).attrs({
   as: 'input',
 })`
-  background-color: #d3d3d3;
+  background-color: ${({ theme }) => theme.colors.accent};
   border: none;
   border-radius: 5px;
 `;

@@ -6,25 +6,25 @@ import { ReactComponent as SvgLinkedIn } from '../../../images/svg/linkedin.svg'
 import { ReactComponent as SvgSpotify } from '../../../images/svg/spotify.svg';
 import { ReactComponent as SvgTwitter } from '../../../images/svg/twitter.svg';
 import AppConstants from '../../../utilities/AppConstants';
-import { FollowText, Icon } from './SocialIcons.style';
+import { Icon, Link } from './SocialIcons.style';
 
 const SocialIcons = () => (
   <>
-    <FollowText to={AppConstants.TwitterLink}>
+    <Link to={AppConstants.TwitterLink}>
       <Icon as={SvgTwitter} />
-    </FollowText>
-    <FollowText to={AppConstants.InstagramLink}>
+    </Link>
+    <Link to={AppConstants.InstagramLink}>
       <Icon as={SvgInstagram} />
-    </FollowText>
-    <FollowText to={AppConstants.LinkedInLink}>
+    </Link>
+    <Link to={AppConstants.LinkedInLink}>
       <Icon as={SvgLinkedIn} />
-    </FollowText>
-    <FollowText to={AppConstants.SpotifyLink}>
+    </Link>
+    <Link to={AppConstants.SpotifyLink}>
       <Icon as={SvgSpotify} />
-    </FollowText>
-    <FollowText to={AppConstants.GitHubLink}>
+    </Link>
+    <Link to={AppConstants.GitHubLink}>
       <Icon as={SvgGitHub} />
-    </FollowText>
+    </Link>
   </>
 );
 

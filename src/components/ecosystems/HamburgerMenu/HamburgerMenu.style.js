@@ -5,7 +5,7 @@ import AlignCenter from '../../styled/AlignCenter';
 
 export const Hamburger = styled(SvgHamburger)`
     height: 20px;
-    fill: #494949;
+    fill: ${({ theme }) => theme.colors.varAccent};
   `;
 
 export const Menu = styled.div`
@@ -29,7 +29,7 @@ export const ButtonWrapper = styled(AlignCenter)`
   padding-left: 10px;
   transition: 0.5s;
   ${({ isExtended }) => (isExtended && css`
-  padding-left:0px;
-  transform: rotate(90deg);
+    padding-left:0px;
+    transform: rotate(90deg);
   `)}
 `;

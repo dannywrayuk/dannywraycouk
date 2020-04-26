@@ -13,7 +13,6 @@ import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
 import PhysicsIcons from '../../_organisms/PhysicsIcons';
 import SocialIcons from '../../_organisms/SocialIcons';
-import AlignCenter from '../../styled/AlignCenter';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
 import SmallTitle from '../../styled/SmallTitle';
@@ -21,6 +20,7 @@ import Title from '../../styled/Title';
 import {
   BlogImage,
   CenterImage,
+  HeadingAlign,
   TitleImage,
 } from './Home.style';
 
@@ -32,14 +32,14 @@ const Home = ({ Text }) => (
     <ResponsiveWrapper>
       <ResponsiveDivider>
         <ResponsiveElement width={2}>
-          <AlignCenter>
+          <HeadingAlign>
             <BigTitle>
               <Text path="Title" />
             </BigTitle>
             <Title>
               <Text path="SubTitle" />
             </Title>
-          </AlignCenter>
+          </HeadingAlign>
         </ResponsiveElement>
         <CenterImage>
           <TitleImage src={Me} alt="" />
@@ -75,9 +75,9 @@ const Home = ({ Text }) => (
           </ResponsiveDivider>
         </CardContent>
         <CardFooter>
-          <AlignCenter>
+          <Paragraph inline>
             <Text path="IntroCard.FooterText" />
-          </AlignCenter>
+          </Paragraph>
           <SocialIcons />
         </CardFooter>
       </Card>
@@ -96,7 +96,9 @@ const Home = ({ Text }) => (
           <PhysicsIcons />
         </CardContent>
         <CardFooter>
-          <Text path="PhysicsCard.FooterText" />
+          <Paragraph>
+            <Text path="PhysicsCard.FooterText" />
+          </Paragraph>
         </CardFooter>
       </Card>
       <Card>

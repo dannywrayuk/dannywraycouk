@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import withText from '../../_atoms/Text';
-import { Content, SubTitle, Wrapper } from './IconCard.style';
+import Paragraph from '../../styled/Paragraph';
+import { Content, Wrapper } from './IconCard.style';
 
 const IconCard = ({ Text, children, strings }) => (
   <Wrapper>
     {children}
     <Content>
-      <div>
+      <Paragraph dark>
         <Text path={`${strings}.Heading`} />
-      </div>
-      <SubTitle>
+      </Paragraph>
+      <Paragraph>
         <Text path={`${strings}.SubHeading`} />
-      </SubTitle>
+      </Paragraph>
     </Content>
   </Wrapper>
 );

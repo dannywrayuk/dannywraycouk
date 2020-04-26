@@ -10,9 +10,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Spinner = styled(SvgAtom)`
-  width: 40px;
+  width: 50px;
   animation: spin 2s linear infinite;
-  fill: var(--MainYellow);
+  fill: ${({ theme }) => theme.colors.mainYellow};
 
   @keyframes spin {
   from {transform: rotate(0deg);}
