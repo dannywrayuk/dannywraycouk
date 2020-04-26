@@ -9,13 +9,13 @@ import { BreakpointProvider } from 'react-socks';
 
 import { ThemeProvider } from 'styled-components';
 
-import AppBase from '../../components/_atoms/AppBase';
-import Redirector from '../../components/_atoms/Redirector';
-import ErrorPage from '../../components/environments/Error';
-import HomePage from '../../components/environments/Home';
-import PhysicsPage from '../../components/environments/Physics';
-import Theme from '../../theme';
-import AppConstants from '../../utilities/AppConstants';
+import AppBase from '../components/_atoms/AppBase';
+import Redirector from '../components/_atoms/Redirector';
+import ErrorPage from '../components/environments/Error';
+import HomePage from '../components/environments/Home';
+import PhysicsPage from '../components/environments/Physics';
+import Theme from '../theme';
+import AppConstants from '../utilities/AppConstants';
 import GlobalStyle from './App.style';
 
 // import BlogPage from '../../ecosystems/Blog';
