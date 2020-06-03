@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
+import DarkModeButton from '../../../../_organisms/DarkModeButton';
 import NavButtons from '../../../../_organisms/NavButtons';
 import Search from '../../../../_organisms/Search';
 import { Bar } from '../../container/Header.style';
@@ -24,6 +25,7 @@ const HeaderDesktop = ({ Tablet }) => (
     </LogoWrapper>
     <Controls>
       <NavButtons />
+      <DarkModeButton />
       <SearchWrapper>
         <Search />
       </SearchWrapper>

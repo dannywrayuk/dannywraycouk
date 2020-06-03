@@ -14,6 +14,7 @@ import Ruler from '../../../../styled/Ruler';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 import {
+  ContentContainer,
   Date,
 } from './PhysicsPost.style';
 
@@ -36,14 +37,14 @@ const PhysicsPost = ({ catagory, section, post }) => {
                 <Ruler />
               </ResponsiveElement>
             </ResponsiveDivider>
-            <ResponsiveDivider>
+            <ContentContainer>
               <FetchMarkdown
                 containerName={postStyle.contentContainer}
                 location={Posts[post]}
                 auxData={Images}
                 styleData={postStyle}
               />
-            </ResponsiveDivider>
+            </ContentContainer>
           </CardContent>
         </Card>
       </ResponsiveWrapper>

@@ -18,5 +18,5 @@ export const Circle = styled(ShapeBlob)`
 
 export const Icon = styled.div`
   height:25px;
-  fill: ${({ theme }) => theme.colors.icon}
+  fill: ${({ theme }) => theme.colors.icon};
 `;

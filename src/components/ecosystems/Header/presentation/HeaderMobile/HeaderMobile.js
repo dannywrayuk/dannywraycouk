@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
 import withText from '../../../../_atoms/Text';
+import DarkModeButton from '../../../../_organisms/DarkModeButton';
 import Search from '../../../../_organisms/Search';
 import HamburgerMenu from '../../../HamburgerMenu';
 import { Bar } from '../../container/Header.style';
 import {
   AlignLogo,
+  DarkModeButtonContainer,
   Link,
   LogoContainer,
   MenuContainer,
@@ -49,6 +51,9 @@ const HeaderMobile = () => {
           </Link>
         </AlignLogo>
       </LogoContainer>
+      <DarkModeButtonContainer isHidden={searchExtended || menuExtended}>
+        <DarkModeButton />
+      </DarkModeButtonContainer>
       <SearchContainer isExtended={searchExtended}>
         <Search
           onSearchClick={searchClick}

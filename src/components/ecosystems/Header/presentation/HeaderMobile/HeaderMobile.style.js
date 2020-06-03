@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import LinkButton from '../../../../_molecules/LinkButton';
+import AlignCenter from '../../../../styled/AlignCenter';
 
 export const MenuContainer = styled.div`
   display: inline-flex;
@@ -30,7 +31,7 @@ export const SearchContainer = styled.div`
   order: 2;
   transition: 0.5s;
   ${({ isExtended }) => isExtended && css`
-  flex-grow: 1;
+    flex-grow: 1;
   `}
 `;
 
@@ -42,4 +43,12 @@ export const AlignLogo = styled.div`
 
 export const Link = styled(LinkButton)`
     height: 30px;
+`;
+
+export const DarkModeButtonContainer = styled(AlignCenter)`
+  ${({ isHidden }) => isHidden && css`
+    width: 0px;
+    opacity: 0%;
+    visibility: hidden;
+  `}
 `;

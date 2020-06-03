@@ -14,7 +14,6 @@ export const Controls = styled.div`
 `;
 
 export const SearchWrapper = styled(AlignCenter)`
-  margin-left: auto;
   margin-right: 20px;
   order: 2;
 `;

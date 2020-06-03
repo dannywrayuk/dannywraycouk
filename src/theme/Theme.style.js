@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const LightTheme = {
+const lightTheme = {
   spacing: {
     header: '50px',
   },
@@ -28,7 +28,7 @@ const LightTheme = {
   shadow: '0 1px 2px 0 rgba(0,0,0,0.15),0 1px 3px 1px rgba(0,0,0,0.07)',
 };
 
-const DarkTheme = {
+const darkTheme = {
   spacing: {
     header: '50px',
   },
@@ -57,4 +57,4 @@ const DarkTheme = {
   },
   shadow: '0 1px 2px 0 rgba(0,0,0,.5),0 1px 3px 1px rgba(0,0,0,.15)',
 };
-export default LightTheme;
+export { lightTheme, darkTheme };
