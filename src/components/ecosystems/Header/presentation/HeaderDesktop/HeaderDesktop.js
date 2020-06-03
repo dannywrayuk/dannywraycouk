@@ -3,29 +3,34 @@ import PropTypes from 'prop-types';
 
 import AppConstants from '../../../../../utilities/AppConstants';
 import Logo from '../../../../_atoms/Logo';
-import LinkButton from '../../../../_molecules/LinkButton';
+import DarkModeButton from '../../../../_organisms/DarkModeButton';
 import NavButtons from '../../../../_organisms/NavButtons';
 import Search from '../../../../_organisms/Search';
-
-import sharedStyle from '../../container/Header.css';
-import style from './HeaderDesktop.css';
+import { Bar } from '../../container/Header.style';
+import {
+  Controls,
+  Link,
+  LogoWrapper,
+  SearchWrapper,
+} from './HeaderDesktop.style';
 
 const { ROUTES } = AppConstants;
 
 const HeaderDesktop = ({ Tablet }) => (
-  <div className={sharedStyle.bar}>
-    <div className={style.logo}>
-      <LinkButton className={style.linkfix} to={ROUTES.BASE}>
+  <Bar>
+    <LogoWrapper>
+      <Link to={ROUTES.BASE}>
         <Logo showText={!Tablet} />
-      </LinkButton>
-    </div>
-    <div className={style.controls}>
+      </Link>
+    </LogoWrapper>
+    <Controls>
       <NavButtons />
-      <div className={style.search}>
+      <DarkModeButton />
+      <SearchWrapper>
         <Search />
-      </div>
-    </div>
-  </div>
+      </SearchWrapper>
+    </Controls>
+  </Bar>
 );
 
 HeaderDesktop.propTypes = {

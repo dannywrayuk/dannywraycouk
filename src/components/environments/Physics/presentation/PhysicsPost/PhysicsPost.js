@@ -5,15 +5,20 @@ import backgroundimage from '../../../../../images/svg/background.svg';
 import contents from '../../../../../text/Physics/Contents.json';
 import Background from '../../../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../../../_atoms/Card';
-import Heading from '../../../../_atoms/Heading';
-import { ResponsiveDivider } from '../../../../_atoms/ResponsiveDividers';
+import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
 import FetchMarkdown from '../../../../_organisms/FetchMarkdown';
+import BigTitle from '../../../../styled/BigTitle';
+import Paragraph from '../../../../styled/Paragraph';
+import Ruler from '../../../../styled/Ruler';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
+import {
+  ContentContainer,
+  Date,
+} from './PhysicsPost.style';
 
 import postStyle from './content/styles.css';
-import style from './PhysicsPost.css';
 
 const PhysicsPost = ({ catagory, section, post }) => {
   const { title, date, description } = contents[catagory][section].posts[post];
@@ -23,23 +28,23 @@ const PhysicsPost = ({ catagory, section, post }) => {
         <Card topper>
           <CardContent>
             <ResponsiveDivider>
-              <div className={style.wrapper}>
-                <div className={style.wrapper}>
-                  <Heading className={style.center} level={2}>
-                    {title}
-                  </Heading>
-                  <p className={style.date}>{date || ''}</p>
-                  <p className={style.center}>{description || ''}</p>
-                  <hr className={style.ruler} />
-                </div>
-                <FetchMarkdown
-                  containerName={postStyle.contentContainer}
-                  location={Posts[post]}
-                  auxData={Images}
-                  styleData={postStyle}
-                />
-              </div>
+              <ResponsiveElement>
+                <BigTitle center>
+                  {title}
+                </BigTitle>
+                <Date center>{date || ''}</Date>
+                <Paragraph center>{description || ''}</Paragraph>
+                <Ruler />
+              </ResponsiveElement>
             </ResponsiveDivider>
+            <ContentContainer>
+              <FetchMarkdown
+                containerName={postStyle.contentContainer}
+                location={Posts[post]}
+                auxData={Images}
+                styleData={postStyle}
+              />
+            </ContentContainer>
           </CardContent>
         </Card>
       </ResponsiveWrapper>

@@ -5,10 +5,11 @@ import { Helmet } from 'react-helmet';
 import background from '../../../images/svg/background.svg';
 import Background from '../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../_atoms/Card';
-import Heading from '../../_atoms/Heading';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
+import BigTitle from '../../styled/BigTitle';
+import SmallTitle from '../../styled/SmallTitle';
 
 const Error = ({ Text }) => (
   <Background image={background}>
@@ -20,12 +21,12 @@ const Error = ({ Text }) => (
         <CardContent>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <Heading center>
+              <BigTitle center>
                 <Text path="Title" />
-              </Heading>
-              <Heading center level={3}>
+              </BigTitle>
+              <SmallTitle center>
                 <Text path="SubTitle" />
-              </Heading>
+              </SmallTitle>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
@@ -37,4 +38,5 @@ const Error = ({ Text }) => (
 Error.propTypes = {
   Text: PropTypes.func.isRequired,
 };
+
 export default withText('ComingSoon')(Error);

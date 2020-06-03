@@ -1,31 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import style from './ShapeBlob.css';
+import AlignCenter from '../../styled/AlignCenter';
+import { Container } from './ShapeBlob.style';
 
 const ShapeBlob = ({
-  className, children, shadow, square,
-}) => {
-  let mergeStyle = `${className} ${style.base}`;
-  if (shadow) { mergeStyle += ` ${style.shadow}`; }
-  if (!square) { mergeStyle += ` ${style.circle}`; }
-  return (
-    <div className={mergeStyle}>
-      <div className={style.align}>
-        {children}
-      </div>
-    </div>
-  );
-};
+  children, shadow, square, ...props
+}) => (
+  <Container shadow={shadow} square={square} {...props}>
+    <AlignCenter>
+      {children}
+    </AlignCenter>
+  </Container>
+);
 
 ShapeBlob.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node,
   shadow: PropTypes.bool,
   square: PropTypes.bool,
 };
 ShapeBlob.defaultProps = {
-  className: '',
   children: null,
   shadow: false,
   square: false,
