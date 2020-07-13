@@ -2,6 +2,8 @@ const AppConstants = {
   ROUTES: {
     BASE: '/',
     BLOG: '/blog',
+    POST: '/post/:post',
+    ARCHIVE: '/archive',
     PHYSICS: '/physics',
     PHYSICS_SECTION: '/physics/:catagory',
     PHYSICS_POST: '/physics/:catagory/:section/:post',

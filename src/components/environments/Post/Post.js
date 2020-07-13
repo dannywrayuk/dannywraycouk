@@ -11,7 +11,7 @@ import withText from '../../_atoms/Text';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
 
-const Blog = ({ Text }) => (
+const Post = ({ Text }) => (
   <Background image={backgroundimage}>
     <Helmet>
       <title>{`${Text.get('Title')}`}</title>
@@ -42,8 +42,8 @@ const Blog = ({ Text }) => (
   </Background>
 );
 
-Blog.propTypes = {
+Post.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('Blog')(Blog);
+export default withText('Post')(Post);

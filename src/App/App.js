@@ -9,14 +9,16 @@ import { BreakpointProvider } from 'react-socks';
 
 import AppBase from '../components/_atoms/AppBase';
 import Redirector from '../components/_atoms/Redirector';
-import ErrorPage from '../components/environments/Error';
-import HomePage from '../components/environments/Home';
-import PhysicsPage from '../components/environments/Physics';
+import Archive from '../components/environments/Archive';
+import Blog from '../components/environments/Blog';
+import Error from '../components/environments/Error';
+import Home from '../components/environments/Home';
+import Physics from '../components/environments/Physics';
+import Post from '../components/environments/Post';
 import AppConstants from '../utilities/AppConstants';
 import { ThemeProvider } from '../utilities/ThemeContext';
 import GlobalStyle from './App.style';
 
-// import BlogPage from '../../ecosystems/Blog';
 // import MorePage from '../../ecosystems/More';
 // import ProjectPage from '../../ecosystems/Project';
 // import SearchPage from '../../ecosystems/Search';
@@ -35,7 +37,7 @@ const App = () => (
             path={ROUTES.BASE}
             render={props => (
               <AppBase>
-                <HomePage {...props} />
+                <Home {...props} />
               </AppBase>
             )}
           />
@@ -44,7 +46,25 @@ const App = () => (
             path={ROUTES.BLOG}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Blog {...props} />
+              </AppBase>
+            )}
+          />
+          <Route
+            exact
+            path={ROUTES.POST}
+            render={props => (
+              <AppBase>
+                <Post {...props} />
+              </AppBase>
+            )}
+          />
+          <Route
+            exact
+            path={ROUTES.ARCHIVE}
+            render={props => (
+              <AppBase>
+                <Archive {...props} />
               </AppBase>
             )}
           />
@@ -52,7 +72,7 @@ const App = () => (
             path={ROUTES.PHYSICS_POST}
             render={props => (
               <AppBase>
-                <PhysicsPage {...props} />
+                <Physics {...props} />
               </AppBase>
             )}
           />
@@ -60,7 +80,7 @@ const App = () => (
             path={ROUTES.PHYSICS_SECTION}
             render={props => (
               <AppBase>
-                <PhysicsPage {...props} />
+                <Physics {...props} />
               </AppBase>
             )}
           />
@@ -69,7 +89,7 @@ const App = () => (
             path={ROUTES.PHYSICS}
             render={props => (
               <AppBase>
-                <PhysicsPage {...props} />
+                <Physics {...props} />
               </AppBase>
             )}
           />
@@ -78,7 +98,7 @@ const App = () => (
             path={ROUTES.PROJECTS}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Error {...props} />
               </AppBase>
             )}
           />
@@ -87,7 +107,7 @@ const App = () => (
             path={ROUTES.MORE}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Error {...props} />
               </AppBase>
             )}
           />
@@ -95,7 +115,7 @@ const App = () => (
             path={ROUTES.SEARCH_TERM}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Error {...props} />
               </AppBase>
             )}
           />
@@ -104,7 +124,7 @@ const App = () => (
             path={ROUTES.SEARCH_BLANK}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Error {...props} />
               </AppBase>
             )}
           />
@@ -113,7 +133,7 @@ const App = () => (
             path={ROUTES.ERROR}
             render={props => (
               <AppBase>
-                <ErrorPage {...props} />
+                <Error {...props} />
               </AppBase>
             )}
           />

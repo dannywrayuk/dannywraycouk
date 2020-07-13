@@ -11,7 +11,7 @@ import withText from '../../_atoms/Text';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
 
-const Blog = ({ Text }) => (
+const Archive = ({ Text }) => (
   <Background image={backgroundimage}>
     <Helmet>
       <title>{`${Text.get('Title')}`}</title>
@@ -29,21 +29,14 @@ const Blog = ({ Text }) => (
               </Paragraph>
             </ResponsiveElement>
           </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <Paragraph center>
-                <Text path="UnderCard" />
-              </Paragraph>
-            </ResponsiveElement>
-          </ResponsiveDivider>
         </CardContent>
       </Card>
     </ResponsiveWrapper>
   </Background>
 );
 
-Blog.propTypes = {
+Archive.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('Blog')(Blog);
+export default withText('Archive')(Archive);
