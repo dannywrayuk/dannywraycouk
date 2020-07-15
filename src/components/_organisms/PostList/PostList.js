@@ -15,15 +15,15 @@ const PostList = ({
   structure, filter, start, max,
 }) => (
   <div>
-    {Object.entries(structure).map((d) => {
-      if (start <= d[0] && d[0] < start + max) {
-        if ((filter === d[1].catagory || filter === '')) {
+    {Object.entries(structure).map(([id, data]) => {
+      if (start <= id && id < start + max) {
+        if ((filter === data.catagory || filter === '')) {
           return (
-            <Wrapper key={`${d[1].title}${d[0]}`} to={d[1].link}>
-              <Image src={Images[d[1].image] || Me} />
+            <Wrapper key={`${data.title}${id}`} to={data.link}>
+              <Image src={Images[data.image] || Me} />
               <TextRegion>
-                <Title>{d[1].title}</Title>
-                <Paragraph>{`${d[1].date} - ${d[1].description}`}</Paragraph>
+                <Title>{data.title}</Title>
+                <Paragraph>{`${data.date} - ${data.description}`}</Paragraph>
               </TextRegion>
             </Wrapper>
           );
