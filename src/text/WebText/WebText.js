@@ -62,6 +62,7 @@ const SharedContent = {
     Heading: 'Blog',
     Body: 'the blog',
     UnderCard: 'hi',
+    ArchiveLinkText: 'Archive',
   },
   Archive: {
     Title: 'Archive | Danny Wray',

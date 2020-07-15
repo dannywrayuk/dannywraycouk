@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-import InstagramImage1 from '../../../images/png/instagram_image1.jpg';
-import InstagramImage2 from '../../../images/png/instagram_image2.jpg';
+import InstagramImage1 from '../../../images/jpg/instagram_image1.jpg';
+import InstagramImage2 from '../../../images/jpg/instagram_image2.jpg';
 import Me from '../../../images/png/me.png';
 import backgroundimage from '../../../images/svg/background.svg';
 import Background from '../../_atoms/BackgroundContainer';

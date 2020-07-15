@@ -10,9 +10,7 @@ export const StyledElement = styled(AbstractElement)`
   cursor: pointer;
   text-decoration: inherit;
 
-  &:visited, &:hover, &:active {
-    border: none; 
-    background: inherit;
+  &:visited, &:hover, &:active { 
     outline: none;
     cursor: pointer;
     text-decoration: inherit;

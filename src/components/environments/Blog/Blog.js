@@ -3,13 +3,20 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../images/svg/background.svg';
+import Posts from '../../../text/Posts/Contents.json';
+import AppConstants from '../../../utilities/AppConstants';
 import Background from '../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../_atoms/Card';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
+import PostList from '../../_organisms/PostList';
+import AlignCenter from '../../styled/AlignCenter';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
+import { ArchiveLink, ArchiveText } from './Blog.style';
+
+const { ROUTES } = AppConstants;
 
 const Blog = ({ Text }) => (
   <Background image={backgroundimage}>
@@ -31,9 +38,21 @@ const Blog = ({ Text }) => (
           </ResponsiveDivider>
           <ResponsiveDivider>
             <ResponsiveElement>
+              <PostList structure={Posts} filter="blog" />
+            </ResponsiveElement>
+          </ResponsiveDivider>
+          <ResponsiveDivider>
+            <ResponsiveElement>
               <Paragraph center>
                 <Text path="UnderCard" />
               </Paragraph>
+              <AlignCenter>
+                <ArchiveLink to={ROUTES.ARCHIVE}>
+                  <ArchiveText>
+                    <Text path="ArchiveLinkText" />
+                  </ArchiveText>
+                </ArchiveLink>
+              </AlignCenter>
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
