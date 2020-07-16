@@ -9,7 +9,7 @@ const AppConstants = {
     MORE: '/more',
     SEARCH: '/search/:term?',
     ERROR: '/error',
-    REDIRECTOR: '/:link',
+    REDIRECTOR: '/:link+',
   },
   LINKS: {
     BASE: '/',

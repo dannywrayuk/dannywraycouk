@@ -7,6 +7,20 @@
         "catagory": "blog"
     },
     {
+        "title": "dannywray.co.uk",
+        "description": "The React App for this website.",
+        "date": "9th April 2020",
+        "link": "github/dannywraycouk",
+        "catagory": "project"
+    },
+    {
+        "title": "WinSnap",
+        "description": "Move windows with keyboard shortcuts.",
+        "date": "26th January 2020",
+        "link": "github/WinSnap",
+        "catagory": "project"
+    },
+    {
         "title": "N-Body Simulations Using the Particle-Mesh Method",
         "description": "Gravitational N-body software written for a university project.",
         "date": "14th December 2018",

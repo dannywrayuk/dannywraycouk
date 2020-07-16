@@ -64,7 +64,7 @@ const SharedContent = {
   Blog: {
     Title: 'Blog | Danny Wray',
     Heading: 'Not quite a Blog',
-    Body: "I enjoy stuff other than physics, surprisingly. Here are some other things I've written about recently. ",
+    Body: "I enjoy stuff other than physics, surprisingly. Here are some other things I've written about recently.",
     UnderCard: 'To view more like this from all catagories, head over to the archive..',
     ArchiveLinkText: 'Archive',
   },
@@ -118,6 +118,11 @@ const SharedContent = {
         Body: '',
       },
     },
+  },
+  Project: {
+    Title: 'Projects | Danny Wray',
+    Heading: 'Projects',
+    Body: "Quick links to bigger projects I've been working on - including this website itself.",
   },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',
