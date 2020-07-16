@@ -1,27 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import backgroundimage from '../../../../../images/svg/background.svg';
-import contents from '../../../../../text/Physics/Contents.json';
-import Background from '../../../../_atoms/BackgroundContainer';
-import { Card, CardContent } from '../../../../_atoms/Card';
-import { ResponsiveDivider, ResponsiveElement } from '../../../../_atoms/ResponsiveDividers';
-import ResponsiveWrapper from '../../../../_atoms/ResponsiveWrapper';
-import FetchMarkdown from '../../../../_organisms/FetchMarkdown';
-import BigTitle from '../../../../styled/BigTitle';
-import Paragraph from '../../../../styled/Paragraph';
-import Ruler from '../../../../styled/Ruler';
+import backgroundimage from '../../../images/svg/background.svg';
+import Contents from '../../../text/Posts/Contents.json';
+import Background from '../../_atoms/BackgroundContainer';
+import { Card, CardContent } from '../../_atoms/Card';
+import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
+import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
+import withText from '../../_atoms/Text';
+import FetchMarkdown from '../../_organisms/FetchMarkdown';
+import BigTitle from '../../styled/BigTitle';
+import Paragraph from '../../styled/Paragraph';
+import Ruler from '../../styled/Ruler';
+import Error from '../Error';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 import {
   ContentContainer,
   Date,
-} from './PhysicsPost.style';
+} from './Post.style';
 
 import postStyle from './content/styles.css';
 
-const PhysicsPost = ({ category, section, post }) => {
-  const { title, date, description } = contents[category][section].posts[post];
+const Post = (props) => {
+  const { match: { params: { post } } } = props;
+  const data = Contents.find(element => element.link === `post/${post}`);
+  if (data === undefined) return <Error />;
+  const { title, date, description } = data;
   return (
     <Background image={backgroundimage}>
       <ResponsiveWrapper>
@@ -52,17 +57,8 @@ const PhysicsPost = ({ category, section, post }) => {
   );
 };
 
-
-PhysicsPost.propTypes = {
-  category: PropTypes.string,
-  section: PropTypes.string,
-  post: PropTypes.string,
+Post.propTypes = {
+  match: PropTypes.object.isRequired,
 };
 
-PhysicsPost.defaultProps = {
-  category: '',
-  section: '',
-  post: '',
-};
-
-export default PhysicsPost;
+export default withText('Post')(Post);

@@ -6,26 +6,26 @@ import withText from '../../_atoms/Text';
 import Paragraph from '../../styled/Paragraph';
 import { Link } from './NavButtons.style';
 
-const { ROUTES } = AppConstants;
+const { LINKS } = AppConstants;
 
 const NavButtons = ({ Text }) => (
   <>
-    <Link to={ROUTES.BLOG}>
+    <Link to={LINKS.BLOG}>
       <Paragraph>
         <Text path="BlogLink" />
       </Paragraph>
     </Link>
-    <Link to={ROUTES.PHYSICS}>
+    <Link to={LINKS.PHYSICS}>
       <Paragraph>
         <Text path="PhysicsLink" />
       </Paragraph>
     </Link>
-    <Link to={ROUTES.PROJECTS}>
+    <Link to={LINKS.PROJECTS}>
       <Paragraph>
         <Text path="ProjectLink" />
       </Paragraph>
     </Link>
-    <Link to={ROUTES.MORE}>
+    <Link to={LINKS.MORE}>
       <Paragraph>
         <Text path="MoreLink" />
       </Paragraph>

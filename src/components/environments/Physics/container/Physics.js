@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 import Contents from '../../../../text/Physics/Contents.json';
 import Redirector from '../../../_atoms/Redirector';
-import PhysicsCatagory from '../presentation/PhysicsCatagory';
+import PhysicsCategory from '../presentation/PhysicsCategory';
 import PhysicsMain from '../presentation/PhysicsMain';
 import PhysicsPost from '../presentation/PhysicsPost';
 import * as Posts from '../presentation/PhysicsPost/content/Posts';
 
 const Physics = (props) => {
-  const { match: { params: { catagory, section, post } } } = props;
-  const catagoryExist = Contents[catagory] !== undefined;
+  const { match: { params: { category, section, post } } } = props;
+  const categoryExist = Contents[category] !== undefined;
 
   let page;
-  if (catagory === undefined) {
+  if (category === undefined) {
     page = <PhysicsMain {...props} />;
-  } else if (post === undefined && catagoryExist) {
-    page = <PhysicsCatagory {...props} catagory={catagory} />;
-  } else if (catagoryExist && Posts[post] !== undefined) {
-    page = <PhysicsPost {...props} catagory={catagory} section={section} post={post} />;
+  } else if (post === undefined && categoryExist) {
+    page = <PhysicsCategory {...props} category={category} />;
+  } else if (categoryExist && Posts[post] !== undefined) {
+    page = <PhysicsPost {...props} category={category} section={section} post={post} />;
   } else {
     page = <Redirector {...props} />;
   }

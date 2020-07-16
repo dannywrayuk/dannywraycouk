@@ -14,12 +14,12 @@ import {
   SearchWrapper,
 } from './HeaderDesktop.style';
 
-const { ROUTES } = AppConstants;
+const { LINKS } = AppConstants;
 
 const HeaderDesktop = ({ Tablet }) => (
   <Bar>
     <LogoWrapper>
-      <Link to={ROUTES.BASE}>
+      <Link to={LINKS.BASE}>
         <Logo showText={!Tablet} />
       </Link>
     </LogoWrapper>

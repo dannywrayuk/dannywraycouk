@@ -16,7 +16,7 @@ import {
   SearchContainer,
 } from './HeaderMobile.style';
 
-const { ROUTES } = AppConstants;
+const { LINKS } = AppConstants;
 
 const HeaderMobile = () => {
   const [searchExtended, setSearchExtended] = useState(false);
@@ -46,7 +46,7 @@ const HeaderMobile = () => {
       </MenuContainer>
       <LogoContainer isExtended={searchExtended || menuExtended}>
         <AlignLogo>
-          <Link to={ROUTES.BASE}>
+          <Link to={LINKS.BASE}>
             <Logo showText />
           </Link>
         </AlignLogo>

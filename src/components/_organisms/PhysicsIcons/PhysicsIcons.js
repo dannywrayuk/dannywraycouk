@@ -16,7 +16,7 @@ const PhysicsIcons = () => (
   <Container>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.QUANTUM}>
-        <IconCard strings="Physics.Catagories.quantum">
+        <IconCard strings="Physics.Categories.quantum">
           <Circle>
             <Icon as={SvgAtom} />
           </Circle>
@@ -25,7 +25,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.THERMAL}>
-        <IconCard strings="Physics.Catagories.thermal">
+        <IconCard strings="Physics.Categories.thermal">
           <Circle>
             <Icon as={SvgFlame} />
           </Circle>
@@ -34,7 +34,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.CLASSICAL}>
-        <IconCard strings="Physics.Catagories.classical">
+        <IconCard strings="Physics.Categories.classical">
           <Circle>
             <Icon as={SvgApple} />
           </Circle>
@@ -43,7 +43,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.ELECTROMAG}>
-        <IconCard strings="Physics.Catagories.electromag">
+        <IconCard strings="Physics.Categories.electromag">
           <Circle>
             <Icon as={SvgLightning} />
           </Circle>
@@ -52,7 +52,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.ASTRO}>
-        <IconCard strings="Physics.Catagories.astro">
+        <IconCard strings="Physics.Categories.astro">
           <Circle>
             <Icon as={SvgSun} />
           </Circle>
@@ -61,7 +61,7 @@ const PhysicsIcons = () => (
     </ResponsiveElement>
     <ResponsiveElement>
       <LinkButton to={AppConstants.Physics.CATAGORIES.MATHS}>
-        <IconCard strings="Physics.Catagories.maths">
+        <IconCard strings="Physics.Categories.maths">
           <Circle>
             <Icon as={SvgPi} />
           </Circle>

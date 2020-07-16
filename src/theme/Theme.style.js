@@ -17,6 +17,7 @@ const lightTheme = {
       title: '#000',
       paragraph: '#444',
       accent: '#777',
+      varAccent: '#111',
     },
     size: {
       bigTitle: '3rem',
@@ -47,6 +48,7 @@ const darkTheme = {
       title: '#fff',
       paragraph: '#eee',
       accent: '#ddd',
+      varAccent: '#111',
     },
     size: {
       bigTitle: '3rem',

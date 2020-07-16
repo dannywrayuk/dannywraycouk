@@ -54,13 +54,13 @@ const Accordion = ({ structure }) => {
       </div>
       <DropDown isOpen={isOpen} height={height}>
         <div ref={ref}>
-          {Object.entries(structure[1].posts).map((d) => (
-            <Link key={d[1].title} to={d[1].date ? `${window.location.pathname}/${structure[0]}/${d[0]}` : '#'}>
+          {Object.entries(structure[1].posts).map(([id, data]) => (
+            <Link key={data.title} to={data.date ? `${window.location.pathname}/${structure[0]}/${id}` : '#'}>
               <Circle />
               <div>
-                <Paragraph dark>{d[1].title}</Paragraph>
-                {d[1].description
-                 && (<ElementDescription>{d[1].description}</ElementDescription>)}
+                <Paragraph dark>{data.title}</Paragraph>
+                {data.description
+                 && (<ElementDescription>{data.description}</ElementDescription>)}
               </div>
             </Link>
           ))}

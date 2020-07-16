@@ -4,21 +4,16 @@ import { Helmet } from 'react-helmet';
 
 import backgroundimage from '../../../images/svg/background.svg';
 import Posts from '../../../text/Posts/Contents.json';
-import AppConstants from '../../../utilities/AppConstants';
 import Background from '../../_atoms/BackgroundContainer';
 import { Card, CardContent } from '../../_atoms/Card';
 import { ResponsiveDivider, ResponsiveElement } from '../../_atoms/ResponsiveDividers';
 import ResponsiveWrapper from '../../_atoms/ResponsiveWrapper';
 import withText from '../../_atoms/Text';
 import PostList from '../../_organisms/PostList';
-import AlignCenter from '../../styled/AlignCenter';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
-import { ArchiveLink, ArchiveText } from './Blog.style';
 
-const { LINKS } = AppConstants;
-
-const Blog = ({ Text }) => (
+const Project = ({ Text }) => (
   <Background image={backgroundimage}>
     <Helmet>
       <title>{`${Text.get('Title')}`}</title>
@@ -38,21 +33,7 @@ const Blog = ({ Text }) => (
           </ResponsiveDivider>
           <ResponsiveDivider>
             <ResponsiveElement>
-              <PostList structure={Posts} filter="blog" />
-            </ResponsiveElement>
-          </ResponsiveDivider>
-          <ResponsiveDivider>
-            <ResponsiveElement>
-              <Paragraph center>
-                <Text path="UnderCard" />
-              </Paragraph>
-              <AlignCenter>
-                <ArchiveLink to={LINKS.ARCHIVE}>
-                  <ArchiveText>
-                    <Text path="ArchiveLinkText" />
-                  </ArchiveText>
-                </ArchiveLink>
-              </AlignCenter>
+              <PostList structure={Posts} filter="project" />
             </ResponsiveElement>
           </ResponsiveDivider>
         </CardContent>
@@ -61,8 +42,8 @@ const Blog = ({ Text }) => (
   </Background>
 );
 
-Blog.propTypes = {
+Project.propTypes = {
   Text: PropTypes.func.isRequired,
 };
 
-export default withText('Blog')(Blog);
+export default withText('Project')(Project);

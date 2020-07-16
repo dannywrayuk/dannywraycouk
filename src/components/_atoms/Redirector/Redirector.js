@@ -6,8 +6,13 @@ import Redirections from '../../../utilities/Redirections';
 const { ROUTES } = AppConstants;
 
 const Redirector = ({ match }) => {
-  const { url } = match;
-  const redirect = Redirections[url.slice(1).toLowerCase()] || ROUTES.ERROR;
+  let redirect = ROUTES.ERROR;
+  if (match !== undefined) {
+    const { url } = match;
+    if (url !== undefined) {
+      redirect = Redirections[url.slice(1).toLowerCase()] || ROUTES.ERROR;
+    }
+  }
   window.location.replace(redirect);
   return null;
 };
