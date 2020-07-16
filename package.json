@@ -1,6 +1,6 @@
 {
   "name": "dannywraycouk",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "private": true,
   "scripts": {
     "deploy:major": "npm version major && npm run build && npm run upload && npm run invalidate-index",
