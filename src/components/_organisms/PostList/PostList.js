@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Me from '../../../images/png/me.png';
-import * as Images from '../../environments/Post/content/images';
+import DefaultImage from '../../../images/png/logoicon_square.png';
+import * as Images from '../../environments/Post/content/Images';
 import Paragraph from '../../styled/Paragraph';
-import Title from '../../styled/Title';
+import SmallTitle from '../../styled/SmallTitle';
 import {
   Image,
+  Stripe,
   TextRegion,
   Wrapper,
 } from './PostList.style';
@@ -19,20 +20,21 @@ const PostList = ({
       if (start <= id && id < start + max) {
         if ((filter === data.catagory || filter === '')) {
           return (
-            <Wrapper key={`${data.title}${id}`} to={data.link}>
-              <Image src={Images[data.image] || Me} />
+            <Wrapper key={`${data.title}${id}`} to={data.link || ''}>
+              <Stripe>
+                <Image src={Images[data.image] || DefaultImage} />
+              </Stripe>
               <TextRegion>
-                <Title>{data.title}</Title>
-                <Paragraph>{`${data.date} - ${data.description}`}</Paragraph>
+                <SmallTitle>{data.title}</SmallTitle>
+                <Paragraph>{data.date}</Paragraph>
+                <Paragraph>{data.description}</Paragraph>
               </TextRegion>
             </Wrapper>
           );
         }
       }
-
       return null;
     })}
-
   </div>
 );
 

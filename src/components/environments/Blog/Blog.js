@@ -16,7 +16,7 @@ import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
 import { ArchiveLink, ArchiveText } from './Blog.style';
 
-const { ROUTES } = AppConstants;
+const { LINKS } = AppConstants;
 
 const Blog = ({ Text }) => (
   <Background image={backgroundimage}>
@@ -47,7 +47,7 @@ const Blog = ({ Text }) => (
                 <Text path="UnderCard" />
               </Paragraph>
               <AlignCenter>
-                <ArchiveLink to={ROUTES.ARCHIVE}>
+                <ArchiveLink to={LINKS.ARCHIVE}>
                   <ArchiveText>
                     <Text path="ArchiveLinkText" />
                   </ArchiveText>

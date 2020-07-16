@@ -12,6 +12,10 @@ const SharedContent = {
     Logo: {
       name: 'Danny Wray',
     },
+    PageBar: {
+      Prev: '◄ Prev',
+      Next: 'Next ►',
+    },
   },
   Header: {
     HomeLink: 'Home',
@@ -59,15 +63,15 @@ const SharedContent = {
   },
   Blog: {
     Title: 'Blog | Danny Wray',
-    Heading: 'Blog',
-    Body: 'the blog',
-    UnderCard: 'hi',
+    Heading: 'Not quite a Blog',
+    Body: "I enjoy stuff other than physics, surprisingly. Here are some other things I've written about recently. ",
+    UnderCard: 'To view more like this from all catagories, head over to the archive..',
     ArchiveLinkText: 'Archive',
   },
   Archive: {
     Title: 'Archive | Danny Wray',
     Heading: 'Archive',
-    Body: 'the Archive',
+    Body: 'This page contains links to every post on this site not part of my physics notes project.',
   },
   Physics: {
     Main: {

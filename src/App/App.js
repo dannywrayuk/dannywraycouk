@@ -69,22 +69,6 @@ const App = () => (
             )}
           />
           <Route
-            path={ROUTES.PHYSICS_POST}
-            render={props => (
-              <AppBase>
-                <Physics {...props} />
-              </AppBase>
-            )}
-          />
-          <Route
-            path={ROUTES.PHYSICS_SECTION}
-            render={props => (
-              <AppBase>
-                <Physics {...props} />
-              </AppBase>
-            )}
-          />
-          <Route
             exact
             path={ROUTES.PHYSICS}
             render={props => (
@@ -112,16 +96,7 @@ const App = () => (
             )}
           />
           <Route
-            path={ROUTES.SEARCH_TERM}
-            render={props => (
-              <AppBase>
-                <Error {...props} />
-              </AppBase>
-            )}
-          />
-          <Route
-            exact
-            path={ROUTES.SEARCH_BLANK}
+            path={ROUTES.SEARCH}
             render={props => (
               <AppBase>
                 <Error {...props} />
