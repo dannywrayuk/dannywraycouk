@@ -124,6 +124,11 @@ const SharedContent = {
     Heading: 'Projects',
     Body: "Quick links to bigger projects I've been working on - including this website itself.",
   },
+  More: {
+    Title: 'More | Danny Wray',
+    Heading: 'More...',
+    Body: "Not everything has a catagory, and somethings are a bit rubbish. That's what you'll find here - junk I didn't have anywhere else to put. Oh, and some links to my social media.",
+  },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',
     Title: 'Coming Soon..',

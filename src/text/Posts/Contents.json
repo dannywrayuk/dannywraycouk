@@ -1,5 +1,12 @@
 [
     {
+        "title": "Very Important Business",
+        "description": "Top Secret.",
+        "date": "16th July 2020",
+        "link": "businesscard",
+        "catagory": "more"
+    },
+    {
         "title": "dannywray.co.uk",
         "description": "The React App for this website.",
         "date": "9th April 2020",
@@ -25,6 +32,6 @@
         "description": "Gravitational N-body software written for a university project.",
         "date": "14th December 2018",
         "link": "post/n_body_simulations_using_the_particle_mesh_method",
-        "catagory": "blog"
+        "catagory": "hidden"
     }
 ]

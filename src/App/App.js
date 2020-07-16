@@ -13,6 +13,7 @@ import Archive from '../components/environments/Archive';
 import Blog from '../components/environments/Blog';
 import Error from '../components/environments/Error';
 import Home from '../components/environments/Home';
+import More from '../components/environments/More';
 import Physics from '../components/environments/Physics';
 import Post from '../components/environments/Post';
 import Project from '../components/environments/Project';
@@ -20,7 +21,6 @@ import AppConstants from '../utilities/AppConstants';
 import { ThemeProvider } from '../utilities/ThemeContext';
 import GlobalStyle from './App.style';
 
-// import MorePage from '../../ecosystems/More';
 // import SearchPage from '../../ecosystems/Search';
 
 
@@ -91,7 +91,7 @@ const App = () => (
             path={ROUTES.MORE}
             render={props => (
               <AppBase>
-                <Error {...props} />
+                <More {...props} />
               </AppBase>
             )}
           />

@@ -12,6 +12,7 @@ import FetchMarkdown from '../../_organisms/FetchMarkdown';
 import BigTitle from '../../styled/BigTitle';
 import Paragraph from '../../styled/Paragraph';
 import Ruler from '../../styled/Ruler';
+import Error from '../Error';
 import * as Images from './content/Images';
 import * as Posts from './content/Posts';
 import {
@@ -21,9 +22,11 @@ import {
 
 import postStyle from './content/styles.css';
 
-const Post = ({ match }) => {
-  const { params: { post } } = match;
-  const { title, date, description } = Contents.find(element => element.link === `post/${post}`);
+const Post = (props) => {
+  const { match: { params: { post } } } = props;
+  const data = Contents.find(element => element.link === `post/${post}`);
+  if (data === undefined) return <Error />;
+  const { title, date, description } = data;
   return (
     <Background image={backgroundimage}>
       <ResponsiveWrapper>
