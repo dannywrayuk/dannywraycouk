@@ -58,7 +58,7 @@ const Accordion = ({ structure }) => {
             <Link key={data.title} to={data.date ? `${window.location.pathname}/${structure[0]}/${id}` : '#'}>
               <Circle />
               <div>
-                <Paragraph dark>{data.title}</Paragraph>
+                <Paragraph>{data.title}</Paragraph>
                 {data.description
                  && (<ElementDescription>{data.description}</ElementDescription>)}
               </div>
