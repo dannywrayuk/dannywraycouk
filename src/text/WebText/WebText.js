@@ -2,7 +2,7 @@ const SharedContent = {
   Meta: {
     defaultTitle: 'Danny Wray',
     defaultDescription: 'Hi, I\'m Danny. A Theoretical Physics Undergraduate at the University of Nottingham.',
-    defaultKeywords: 'Physics, Maths, Computing, Theoretical Physics, Quantum Mechanics, Astrophysics, Propgramming, C plus Plus, cpp, c++, javascript, React',
+    defaultKeywords: 'Physics, Maths, Computing, Theoretical Physics, Quantum Mechanics, Astrophysics, Programming, C plus Plus, cpp, c++, javascript, React',
     defaultAuthor: 'Danny Wray',
     Pangram: 'Pack my box with five dozen liquor jugs',
     Loading: 'Loading...',
@@ -58,14 +58,14 @@ const SharedContent = {
     },
     MoreCard: {
       Title: 'And everything else..',
-      SubTitle: "I'm always doing something, and it's not always physics (suprisingly), so all the random junk will probably end up over in the More section. If you can't find what you're looking for, use the search box in the top right (please use it, I spent ages getting that to work)",
+      SubTitle: "I'm always doing something, and it's not always physics (surprisingly), so all the random junk will probably end up over in the More section. If you can't find what you're looking for, use the search box in the top right (please use it, I spent ages getting that to work)",
     },
   },
   Blog: {
     Title: 'Blog | Danny Wray',
     Heading: 'Not quite a Blog',
     Body: "I enjoy stuff other than physics, surprisingly. Here are some other things I've written about recently.",
-    UnderCard: 'To view more like this from all catagories, head over to the archive..',
+    UnderCard: 'To view more like this from all categories, head over to the archive..',
     ArchiveLinkText: 'Archive',
   },
   Archive: {
@@ -78,9 +78,9 @@ const SharedContent = {
       Title: 'Physics | Danny Wray',
       Heading: 'A Whole Lotta Physics',
       Body: "Wanna learn some physics? You've come to the right place. These are my type-written notes for different areas of Physics and a little bit of maths. These are aimed to be quite detailed and hopefully shouldn't require much background knowledge to understand.",
-      UnderCard: "Not everything on here is finished and it's probably going to be a long process. Currently I'm working on the quantum mechanics seciton.",
+      UnderCard: "Not everything on here is finished and it's probably going to be a long process. Currently I'm working on the quantum mechanics section.",
     },
-    Catagories: {
+    Categories: {
       quantum: {
         Title: 'Quantum Mechanics | Danny Wray',
         Heading: 'Quantum Mechanics',
@@ -127,7 +127,7 @@ const SharedContent = {
   More: {
     Title: 'More | Danny Wray',
     Heading: 'More...',
-    Body: "Not everything has a catagory, and somethings are a bit rubbish. That's what you'll find here - junk I didn't have anywhere else to put. Oh, and some links to my social media.",
+    Body: "Not everything has a category, and somethings are a bit rubbish. That's what you'll find here - junk I didn't have anywhere else to put. Oh, and some links to my social media.",
   },
   ComingSoon: {
     HeadTitle: 'Coming Soon | Danny Wray',

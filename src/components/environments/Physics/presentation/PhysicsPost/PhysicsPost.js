@@ -20,8 +20,8 @@ import {
 
 import postStyle from './content/styles.css';
 
-const PhysicsPost = ({ catagory, section, post }) => {
-  const { title, date, description } = contents[catagory][section].posts[post];
+const PhysicsPost = ({ category, section, post }) => {
+  const { title, date, description } = contents[category][section].posts[post];
   return (
     <Background image={backgroundimage}>
       <ResponsiveWrapper>
@@ -54,13 +54,13 @@ const PhysicsPost = ({ catagory, section, post }) => {
 
 
 PhysicsPost.propTypes = {
-  catagory: PropTypes.string,
+  category: PropTypes.string,
   section: PropTypes.string,
   post: PropTypes.string,
 };
 
 PhysicsPost.defaultProps = {
-  catagory: '',
+  category: '',
   section: '',
   post: '',
 };

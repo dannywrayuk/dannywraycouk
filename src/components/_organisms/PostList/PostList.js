@@ -18,7 +18,7 @@ const PostList = ({
   <div>
     {Object.entries(structure).map(([id, data]) => {
       if (start <= id && id < start + max) {
-        if ((filter === data.catagory || filter === '')) {
+        if ((filter === data.category || filter === '')) {
           return (
             <Wrapper key={`${data.title}${id}`} to={data.link || ''}>
               <Stripe>

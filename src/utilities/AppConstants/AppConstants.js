@@ -4,7 +4,7 @@ const AppConstants = {
     BLOG: '/blog',
     POST: '/post/:post',
     ARCHIVE: '/archive/:page?',
-    PHYSICS: '/physics/:catagory?/:section?/:post?',
+    PHYSICS: '/physics/:category?/:section?/:post?',
     PROJECTS: '/projects',
     MORE: '/more',
     SEARCH: '/search/:term?',

@@ -4,34 +4,34 @@
         "description": "Top Secret.",
         "date": "16th July 2020",
         "link": "businesscard",
-        "catagory": "more"
+        "category": "more"
     },
     {
         "title": "dannywray.co.uk",
         "description": "The React App for this website.",
         "date": "9th April 2020",
         "link": "github/dannywraycouk",
-        "catagory": "project"
+        "category": "project"
     },
     {
         "title": "WinSnap",
         "description": "Move windows with keyboard shortcuts.",
         "date": "26th January 2020",
         "link": "github/WinSnap",
-        "catagory": "project"
+        "category": "project"
     },
     {
         "title": "Pictures with Primes",
         "description": "Representing images as large prime numbers.",
         "date": "21st January 2019",
         "link": "post/pictures_with_primes",
-        "catagory": "blog"
+        "category": "blog"
     },
     {
         "title": "N-Body Simulations Using the Particle-Mesh Method",
         "description": "Gravitational N-body software written for a university project.",
         "date": "14th December 2018",
         "link": "post/n_body_simulations_using_the_particle_mesh_method",
-        "catagory": "hidden"
+        "category": "hidden"
     }
 ]
