@@ -1,7 +1,7 @@
 So I remembered a Numberphile video from a while back. It was a showcase of a little framed picture full of numbers. From a distance the numbers looked like the Trinity Hall coat of arms. Up close, however, the numbers are part of a giant prime number. You can watch the video here
 
 <div style="max-width: 500px; margin: 0 auto; height: 30vh">
-<iframe width=100% height=360 src="https://www.youtube.com/embed/fQQ8IiTWHhg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/fQQ8IiTWHhg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 I loved this idea as soon as I saw it and I've been meaning to try it myself for a while, so I wrote a short program in C# that can take a Bitmap image and turn it into a prime. It does this in a few simple steps that I'll explain here.
