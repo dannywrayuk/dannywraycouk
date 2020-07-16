@@ -32,13 +32,13 @@ export const TitleButton = styled(Button)`
   transition: 0.1s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.accent};
+    background-color: ${({ theme }) => theme.colors.varAccent};
     padding-left: 25px;
     transform: scale(1.03);
   }
 
   ${({ isOpen }) => isOpen && css`
-    background-color: ${({ theme }) => theme.colors.varAccent};
+    background-color: ${({ theme }) => theme.colors.accent};
     padding-left: 25px;
   `}
 
