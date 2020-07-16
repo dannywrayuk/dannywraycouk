@@ -1,7 +1,7 @@
 const SharedContent = {
   Meta: {
     defaultTitle: 'Danny Wray',
-    defaultDescription: 'Hi, I\'m Danny. A Theoretical Physics Undergraduate at the University of Nottingham.',
+    defaultDescription: 'Hi, I\'m Danny. A Theoretical Physics Graduate from the University of Nottingham.',
     defaultKeywords: 'Physics, Maths, Computing, Theoretical Physics, Quantum Mechanics, Astrophysics, Programming, C plus Plus, cpp, c++, javascript, React',
     defaultAuthor: 'Danny Wray',
     Pangram: 'Pack my box with five dozen liquor jugs',
@@ -30,7 +30,7 @@ const SharedContent = {
   Home: {
     HeadTitle: 'Home | Danny Wray',
     Title: "Hi, I'm Danny.",
-    SubTitle: 'A Theoretical Physics Undergraduate at the University of Nottingham.',
+    SubTitle: 'A Theoretical Physics Graduate from the University of Nottingham.',
     Description: "I've always been interested in software and this website is the result of my endeavour into the world of web design. If we have similar interests you might find some useful stuff here, so I hope you stick around :)",
     IntroCard: {
       Programming: {
