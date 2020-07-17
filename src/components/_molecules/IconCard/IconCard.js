@@ -9,7 +9,7 @@ const IconCard = ({ Text, children, strings }) => (
   <Wrapper>
     {children}
     <Content>
-      <Paragraph dark>
+      <Paragraph>
         <Text path={`${strings}.Heading`} />
       </Paragraph>
       <Paragraph>
