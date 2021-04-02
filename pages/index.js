@@ -5,6 +5,7 @@ const Home = () => {
     <>
       <Head>
         <title>Hello rebrand</title>
+        <link rel="icon" type="image/png" href="favicon.png"></link>
       </Head>
       <div>
         hello rebrand
