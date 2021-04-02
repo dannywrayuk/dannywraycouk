@@ -1,13 +1,15 @@
 {
   "name": "dannywraycouk",
-  "author": "Danny Wray",
   "version": "2.0.0",
-  "description": "UI project for dannywray.co.uk",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build && next export",
+    "serve": "serve ./out"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dannywrayuk/dannywraycouk.git"
+  "dependencies": {
+    "next": "10.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "serve": "^11.3.2"
   }
 }
