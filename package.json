@@ -2,12 +2,15 @@
   "name": "dannywraycouk",
   "version": "2.0.0",
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build && next export",
-    "serve": "serve ./out"
+    "serve": "serve ./out",
+    "lint": "pretty-quick"
   },
   "dependencies": {
+    "lint-staged": "^10.5.4",
     "next": "10.1.2",
+    "pretty-quick": "^3.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "serve": "^11.3.2"
