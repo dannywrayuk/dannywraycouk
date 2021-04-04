@@ -5,11 +5,9 @@
     "start": "next dev",
     "build": "next build && next export",
     "serve": "serve ./out",
-    "lint": "pretty-quick",
-    "commit": "gitmoji -c"
+    "lint": "pretty-quick"
   },
   "dependencies": {
-    "gitmoji-cli": "^3.3.1",
     "next": "10.1.2",
     "pretty-quick": "^3.1.0",
     "react": "17.0.2",
