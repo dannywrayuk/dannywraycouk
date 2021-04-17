@@ -1,9 +1,14 @@
 export default {
+  Logo: {
+    Line1: "DANNY",
+    Line2: "WRAY",
+    Line3: ".CO.UK",
+  },
   Landing: {
-    Logo: {
-      Title1: "DANNY",
-      Title2: "WRAY",
-      Title3: ".CO.UK",
+    Greeting: {
+      Line1: "I’M DANNY,",
+      Line2: "A SOFTWARE DEVELOPER ",
+      Line3: "AND PHYSICS GRADUATE.",
     },
   },
 };

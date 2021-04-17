@@ -1,9 +1,11 @@
 import textStore from "../../textStore";
-import { TextContainer } from "./Logo.style";
+import { TextContainer } from "./Greeting.style";
 
-const { Logo: Text } = textStore;
+const {
+  Landing: { Greeting: Text },
+} = textStore;
 
-const Logo = () => (
+const Greeting = () => (
   <TextContainer>
     <p>{Text.Line1}</p>
     <p>{Text.Line2}</p>
@@ -11,4 +13,4 @@ const Logo = () => (
   </TextContainer>
 );
 
-export default Logo;
+export default Greeting;

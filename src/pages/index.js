@@ -2,6 +2,7 @@ import StandardHead from "../components/Heads/standard";
 import { MainContainer } from "./index.style";
 import textStore from "../textStore";
 import ShrinkingLogo from "../components/ShrinkingLogo";
+import Greeting from "../components/Greeting";
 
 const Text = textStore.Landing;
 
@@ -10,8 +11,7 @@ const Home = () => {
     <StandardHead>
       <ShrinkingLogo />
       <MainContainer>
-        {/* test div */}
-        <div style={{ color: "white", height: "900px" }}>hello</div>
+        <Greeting />
       </MainContainer>
     </StandardHead>
   );

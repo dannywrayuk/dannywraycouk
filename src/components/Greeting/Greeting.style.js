@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const TextContainer = styled.div`
-  font-size: 24px;
-  text-align: right;
   color: white;
+  text-align: center;
   font-weight: bold;
+  font-size: 24px;
+  margin-top: 40vh;
 `;
