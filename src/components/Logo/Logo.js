@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import { LogoSVG } from "./Logo.svg";
+import textStore from "../../textStore";
+import { Title } from "./Logo.style";
 
-const Container = styled.div`
-  fill: ${({ theme }) => theme.colours.PRIMARY1};
-  width: 100px;
-  height: 100px;
-`;
+const {
+  Landing: { Logo: Text },
+} = textStore;
 
 const Logo = () => (
-  <Container>
-    <LogoSVG />
-  </Container>
+  <>
+    <Title>{Text.Title1}</Title>
+    <Title>{Text.Title2}</Title>
+    <Title>{Text.Title3}</Title>
+  </>
 );
 
 export default Logo;
