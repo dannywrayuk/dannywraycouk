@@ -9,7 +9,6 @@ const ShrinkingLogo = () => {
   useEffect(() => {
     window.onscroll = () =>
       setShouldShrink(window.pageYOffset > shrinkThreshold);
-    console.log(window.pageYOffset);
   });
 
   return (
