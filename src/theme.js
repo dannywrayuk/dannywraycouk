@@ -2,8 +2,10 @@ import { createGlobalStyle } from "styled-components";
 export default {
   colours: {
     PRIMARY1: "#FFCA1E",
-    PRIMARY2: "#000",
+    PRIMARY2: "#0a0a0a",
     PRIMARY3: "#F2F2F2",
+    SECONDARY1: "#1D1D1D",
+    TERTIARY1: "#2a2a2a",
   },
 };
 

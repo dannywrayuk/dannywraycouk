@@ -1,0 +1,1 @@
+export { getFeaturedPost } from "./getFeaturedPost";

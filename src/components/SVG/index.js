@@ -3,4 +3,5 @@ import { LinkedinSVG } from "./Linkedin";
 import { LogoSVG } from "./Logo";
 import { SearchSVG } from "./Search";
 import { TwitterSVG } from "./Twitter";
-export { GithubSVG, LinkedinSVG, LogoSVG, SearchSVG, TwitterSVG };
+import { ArrowSVG } from "./Arrow";
+export { GithubSVG, LinkedinSVG, LogoSVG, SearchSVG, TwitterSVG, ArrowSVG };

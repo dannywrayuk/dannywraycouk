@@ -17,7 +17,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const StyledLogo = styled.div`
-  transition: 2s;
+  transition: 1s;
   transform-origin: top right;
   ${({ shouldShrink }) =>
     shouldShrink &&
