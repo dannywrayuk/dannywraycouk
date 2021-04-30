@@ -8,6 +8,9 @@
     "lint": "pretty-quick"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
+    "katex": "^0.13.3",
+    "marked": "^2.0.3",
     "next": "10.1.2",
     "pretty-quick": "^3.1.0",
     "react": "17.0.2",

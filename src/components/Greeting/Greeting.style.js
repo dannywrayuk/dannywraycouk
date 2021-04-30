@@ -5,5 +5,4 @@ export const TextContainer = styled.div`
   text-align: center;
   font-weight: bold;
   font-size: 24px;
-  margin-top: 40vh;
 `;

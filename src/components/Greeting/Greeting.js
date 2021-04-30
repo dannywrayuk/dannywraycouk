@@ -5,8 +5,8 @@ const {
   Landing: { Greeting: Text },
 } = textStore;
 
-const Greeting = () => (
-  <TextContainer>
+const Greeting = ({ className }) => (
+  <TextContainer className={className}>
     <p>{Text.Line1}</p>
     <p>{Text.Line2}</p>
     <p>{Text.Line3}</p>
