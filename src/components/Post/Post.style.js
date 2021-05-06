@@ -18,6 +18,7 @@ export const Date = styled.div`
 export const Content = styled.div`
   color: white;
   text-align: justify;
+  margin-top: 30px;
 
   p {
     margin-bottom: 20px;

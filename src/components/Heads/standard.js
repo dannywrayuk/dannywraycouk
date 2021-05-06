@@ -3,11 +3,11 @@ import constants from "../../constants";
 
 const { StandardTitle } = constants.Head;
 
-const StandardHead = ({ title, children }) => (
+export const StandardHead = ({ title, children }) => (
   <>
     <Head>
       <title>{title || StandardTitle}</title>
-      <link rel="icon" type="image/png" href="favicon.png" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css"
@@ -24,5 +24,3 @@ const StandardHead = ({ title, children }) => (
     {children}
   </>
 );
-
-export default StandardHead;

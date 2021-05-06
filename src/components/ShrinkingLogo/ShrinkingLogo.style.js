@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 
 export const Sticky = styled.div`
-  display: flex;
   position: fixed;
-  width: 100%;
+  top: 0;
+  right: 0;
 `;
 
 export const LogoContainer = styled.div`

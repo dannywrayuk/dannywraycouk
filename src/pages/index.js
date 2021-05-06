@@ -1,18 +1,17 @@
 import styled from "styled-components";
 import textStore from "../textStore";
-import StandardHead from "../components/Heads/standard";
+import { StandardHead } from "../components/Heads";
 import ShrinkingLogo from "../components/ShrinkingLogo";
 import Greeting from "../components/Greeting";
 import SocialLinks from "../components/SocialLinks";
 import NavigationButton from "../components/NavigationButton";
 import Post from "../components/Post";
-import { getPost } from "../scripts";
+import { getMarkdown } from "../utils";
 
 const { Landing: Text } = textStore;
 
 const MainContainer = styled.div`
-  overflow: auto;
-  height: 100vh;
+  height: 70vh;
 `;
 
 const PostContainer = styled.div`
@@ -54,7 +53,7 @@ const Home = ({ featuredPost }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const featuredPost = getPost("test");
+  const featuredPost = getMarkdown("test");
   return {
     props: {
       featuredPost,
