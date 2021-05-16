@@ -1,12 +1,9 @@
-import styled from "styled-components";
 import { StandardHead } from "../Heads";
 import ShrinkingLogo from "../ShrinkingLogo";
 import Post from "../Post";
-import PostBubble from "../PostBubble";
-
-const PostContainer = styled.div`
-  margin: 20px 15px 0px;
-`;
+import PostPreview from "../PostPreview";
+import Footer from "../Footer";
+import { PostContainer } from "./ContentsPage.style";
 
 const ContentsPage = ({ post }) => (
   <StandardHead>
@@ -14,7 +11,7 @@ const ContentsPage = ({ post }) => (
     <PostContainer>
       <Post meta={post.meta} content={post.content} />
       {post.contentsMetaList.map((data, id) => (
-        <PostBubble
+        <PostPreview
           key={id}
           title={data.title}
           date={data.date}
@@ -22,6 +19,7 @@ const ContentsPage = ({ post }) => (
         />
       ))}
     </PostContainer>
+    <Footer />
   </StandardHead>
 );
 
