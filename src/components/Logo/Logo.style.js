@@ -7,7 +7,6 @@ export const TextContainer = styled.div`
 
 export const Line = styled.div`
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
   font-size: 24px;
   color: white;
 `;

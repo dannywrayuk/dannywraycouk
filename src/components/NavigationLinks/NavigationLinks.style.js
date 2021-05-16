@@ -8,7 +8,6 @@ export const Container = styled.div`
 `;
 
 export const TextBubble = styled.div`
-  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   color: white;
   background-color: #222;

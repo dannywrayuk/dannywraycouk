@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: ${({ theme }) => theme.colours.PRIMARY2};
   }
 

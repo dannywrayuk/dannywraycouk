@@ -8,7 +8,6 @@ export const Container = styled.div`
 `;
 
 export const CopyrightText = styled.div`
-  font-family: "Montserrat", sans-serif;
   color: black;
   text-align: center;
   margin: 10px;

@@ -12,13 +12,14 @@ export const Title = styled.div`
   color: ${({ theme }) => theme.colours.PRIMARY1};
   font-weight: bold;
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
 `;
+
 export const Date = styled.div`
   display: inline;
   color: white;
   float: right;
 `;
+
 export const Description = styled.div`
   color: white;
   margin-top: 10px;

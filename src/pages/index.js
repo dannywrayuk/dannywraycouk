@@ -23,7 +23,6 @@ const StyledSocialLinks = styled(SocialLinks)`
 const SectionMarker = styled.div`
   color: ${({ theme }) => theme.colours.PRIMARY1};
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   margin-top: 50px;
 `;
