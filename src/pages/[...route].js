@@ -1,7 +1,7 @@
 import PostPage from "../components/PostPage";
 import ContentsPage from "../components/ContentsPage";
 
-import { getMarkdown, getDirectoryTree, getMetaList } from "../utils";
+import { getMarkdown, getDirectoryTree, getAllMeta } from "../utils";
 
 const RouteHandler = ({ post }) => {
   if (post.contentsMetaList) {
@@ -28,7 +28,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { route } }) => {
   const post = getMarkdown(route.join("/"));
   post.meta.indexTag &&
-    (post.contentsMetaList = getMetaList(post.meta.indexTag));
+    (post.contentsMetaList = getAllMeta(post.meta.indexTag));
   return {
     props: {
       post,

@@ -2,13 +2,10 @@ import styled from "styled-components";
 import { StandardHead } from "../Heads";
 import ShrinkingLogo from "../ShrinkingLogo";
 import Post from "../Post";
+import PostBubble from "../PostBubble";
 
 const PostContainer = styled.div`
   margin: 20px 15px 0px;
-`;
-
-const Test = styled.div`
-  color: white;
 `;
 
 const ContentsPage = ({ post }) => (
@@ -17,7 +14,12 @@ const ContentsPage = ({ post }) => (
     <PostContainer>
       <Post meta={post.meta} content={post.content} />
       {post.contentsMetaList.map((data, id) => (
-        <Test key={id}>{data.title}</Test>
+        <PostBubble
+          key={id}
+          title={data.title}
+          date={data.date}
+          description={data.description}
+        />
       ))}
     </PostContainer>
   </StandardHead>
