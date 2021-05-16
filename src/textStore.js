@@ -1,4 +1,3 @@
-import packageJson from "../package.json";
 export default {
   Logo: {
     Line1: "Danny",
@@ -20,6 +19,5 @@ export default {
   },
   Footer: {
     CopyrightText: `Danny Wray ${new Date().getFullYear()}`,
-    Version: `v${packageJson.version}`,
   },
 };
