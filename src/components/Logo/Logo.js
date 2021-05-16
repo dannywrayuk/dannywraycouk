@@ -1,13 +1,13 @@
 import textStore from "../../textStore";
-import { TextContainer } from "./Logo.style";
+import { TextContainer, Line } from "./Logo.style";
 
 const { Logo: Text } = textStore;
 
 const Logo = () => (
   <TextContainer>
-    <p>{Text.Line1}</p>
-    <p>{Text.Line2}</p>
-    <p>{Text.Line3}</p>
+    <Line>{Text.Line1}</Line>
+    <Line>{Text.Line2}</Line>
+    <Line>{Text.Line3}</Line>
   </TextContainer>
 );
 

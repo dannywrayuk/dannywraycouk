@@ -1,22 +1,25 @@
+import packageJson from "../package.json";
 export default {
   Logo: {
-    Line1: "DANNY",
-    Line2: "WRAY",
-    Line3: ".CO.UK",
+    Line1: "Danny",
+    Line2: "Wray",
+    Line3: ".co.uk",
   },
   Landing: {
     Greeting: {
-      Line1: "I’M DANNY,",
-      Line2: "A SOFTWARE DEVELOPER ",
-      Line3: "AND PHYSICS GRADUATE.",
+      Line1: "I’m Danny,",
+      Line2: "a software developer and physics graduate.",
     },
     Navigation: {
-      Line1: "THOUGHTS",
-      Line2: "PROJECTS",
-      Line3: "ABOUT ME",
-      Line4: "LINKS",
+      Option1: "Thoughts",
+      Option2: "Projects",
+      Option3: "About me",
+      Option4: "Links",
     },
-    FeaturedPost: "FEATURED POST",
-    QuickLinks: "QUICK LINKS",
+    FeaturedSection: "Featured",
+  },
+  Footer: {
+    CopyrightText: `Danny Wray ${new Date().getFullYear()}`,
+    Version: `v${packageJson.version}`,
   },
 };

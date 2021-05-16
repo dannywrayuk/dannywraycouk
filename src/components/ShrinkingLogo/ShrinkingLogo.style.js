@@ -3,11 +3,11 @@ import styled, { css } from "styled-components";
 export const Sticky = styled.div`
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
 `;
 
 export const LogoContainer = styled.div`
-  margin: 12px 12px 0 auto;
+  margin: 12px;
   height: 100px;
   ${({ shouldShrink }) =>
     shouldShrink &&
@@ -18,7 +18,7 @@ export const LogoContainer = styled.div`
 
 export const StyledLogo = styled.div`
   transition: 1s;
-  transform-origin: top right;
+  transform-origin: top left;
   ${({ shouldShrink }) =>
     shouldShrink &&
     css`

@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const TextContainer = styled.div`
-  font-size: 24px;
   text-align: right;
+  width: 80px;
+`;
+
+export const Line = styled.div`
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
   color: white;
-  font-weight: bold;
 `;

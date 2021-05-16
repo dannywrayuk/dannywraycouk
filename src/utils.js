@@ -43,10 +43,16 @@ export const getDirectoryTree = (root) => {
   return getAllFiles(root);
 };
 
-export const getMetaList = (root) => {
+export const getMeta = (file) => {
+  const data = fs.readFileSync(file).toString();
+  return matter(data).data;
+};
+
+export const getMetaList = (files) => {
+  return files.map((file) => getMeta(file));
+};
+
+export const getAllMeta = (root) => {
   const files = getDirectoryTree(`post/${root}`);
-  return files.map((file) => {
-    const data = fs.readFileSync(file).toString();
-    return matter(data).data;
-  });
+  return getMetaList(files);
 };

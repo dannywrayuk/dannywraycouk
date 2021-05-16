@@ -4,48 +4,49 @@ import { StandardHead } from "../components/Heads";
 import ShrinkingLogo from "../components/ShrinkingLogo";
 import Greeting from "../components/Greeting";
 import SocialLinks from "../components/SocialLinks";
-import NavigationButton from "../components/NavigationButton";
+import NavigationLinks from "../components/NavigationLinks";
 import Post from "../components/Post";
-import { getMarkdown } from "../utils";
+import PostPreview from "../components/PostPreview";
+import { getMetaList } from "../utils";
+import Footer from "../components/Footer";
 
 const { Landing: Text } = textStore;
 
 const MainContainer = styled.div`
-  height: 70vh;
-`;
-
-const PostContainer = styled.div`
-  margin: 0 15px;
-`;
-
-const StyledGreeting = styled(Greeting)`
-  margin-top: 30vh;
+  margin: 200px 15px 0;
 `;
 
 const StyledSocialLinks = styled(SocialLinks)`
-  margin: 100px auto 0 auto;
-  width: 70%;
+  margin: 50px auto 0 auto;
 `;
 
 const SectionMarker = styled.div`
   color: ${({ theme }) => theme.colours.PRIMARY1};
   font-weight: bold;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
 `;
 
-const Home = ({ featuredPost }) => {
+const Home = ({ featuredPostsMeta }) => {
   return (
     <StandardHead>
       <ShrinkingLogo />
-      <NavigationButton />
       <MainContainer>
-        <StyledGreeting />
+        <Greeting />
         <StyledSocialLinks />
+        <NavigationLinks />
+        <SectionMarker>{Text.FeaturedSection}</SectionMarker>
+        {featuredPostsMeta.map((data, id) => (
+          <PostPreview
+            key={id}
+            title={data.title}
+            date={data.date}
+            description={data.description}
+          />
+        ))}
       </MainContainer>
-      <PostContainer>
-        <SectionMarker>{Text.FeaturedPost}</SectionMarker>
-        <Post meta={featuredPost.meta} content={featuredPost.content} />
-      </PostContainer>
+      <Footer />
     </StandardHead>
   );
 };
@@ -53,10 +54,13 @@ const Home = ({ featuredPost }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const featuredPost = getMarkdown("test");
+  const featuredPosts = ["test", "thoughts/test2"];
+  const featuredPostsMeta = getMetaList(
+    featuredPosts.map((post) => `post/${post}.md`)
+  );
   return {
     props: {
-      featuredPost,
+      featuredPostsMeta,
     },
   };
 };
