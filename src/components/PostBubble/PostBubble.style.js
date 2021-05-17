@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Title = styled.div`
   display: inline;
   color: ${({ theme }) => theme.colours.PRIMARY1};
-  font-weight: bold;
   font-size: 24px;
 `;
 

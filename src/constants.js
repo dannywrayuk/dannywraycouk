@@ -8,5 +8,6 @@ export default {
     Linkedin: "https://www.linkedin.com/in/dannywrayuk/",
     Twitter: "https://twitter.com/dannywrayuk",
   },
+  MaxContentsItems: 2,
   Version: `v${packagejson.version}`,
 };

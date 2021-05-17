@@ -1,11 +1,13 @@
+import { useRouter } from "next/router";
 import PostPage from "../components/PostPage";
 import ContentsPage from "../components/ContentsPage";
 
 import { getMarkdown, getDirectoryTree, getAllMeta } from "../utils";
 
 const RouteHandler = ({ post }) => {
+  const router = useRouter();
   if (post.contentsMetaList) {
-    return <ContentsPage post={post} />;
+    return <ContentsPage post={post} query={router.query} />;
   } else {
     return <PostPage post={post} />;
   }

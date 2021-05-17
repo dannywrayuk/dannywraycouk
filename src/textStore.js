@@ -17,6 +17,10 @@ export default {
     },
     FeaturedSection: "Featured",
   },
+  Contents: {
+    SeeAll: "See all",
+    ReadMore: "Read More",
+  },
   Footer: {
     CopyrightText: `Danny Wray ${new Date().getFullYear()}`,
   },

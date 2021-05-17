@@ -4,11 +4,15 @@ import {
   Description,
   ReadMoreButton,
 } from "./PostPreview.style";
+import textStore from "../../textStore";
+
+const { Contents: Text } = textStore;
+
 const PostPreview = ({ title, date, description }) => (
   <Container>
     <Title>{title}</Title>
     <Description>{description}</Description>
-    <ReadMoreButton>Read More</ReadMoreButton>
+    <ReadMoreButton>{Text.ReadMore}</ReadMoreButton>
   </Container>
 );
 
