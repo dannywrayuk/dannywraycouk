@@ -1,6 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { Sticky, LogoContainer, StyledLogo } from "./ShrinkingLogo.style";
-import Logo from "../Logo";
+import { useEffect, useState } from "react";
+import textStore from "../../textStore";
+import {
+  StickyContainer,
+  Animation,
+  Line,
+  Transformer,
+} from "./ShrinkingLogo.style";
+
+const { Logo: Text } = textStore;
 
 const ShrinkingLogo = () => {
   const shrinkThreshold = 100;
@@ -12,13 +19,15 @@ const ShrinkingLogo = () => {
   });
 
   return (
-    <Sticky>
-      <LogoContainer shouldShrink={shouldShrink}>
-        <StyledLogo shouldShrink={shouldShrink}>
-          <Logo />
-        </StyledLogo>
-      </LogoContainer>
-    </Sticky>
+    <StickyContainer>
+      <Transformer shouldShrink={shouldShrink}>
+        <Animation shouldShrink={shouldShrink}>
+          <Line>{Text.Line1}</Line>
+          <Line>{Text.Line2}</Line>
+          <Line>{Text.Line3}</Line>
+        </Animation>
+      </Transformer>
+    </StickyContainer>
   );
 };
 
