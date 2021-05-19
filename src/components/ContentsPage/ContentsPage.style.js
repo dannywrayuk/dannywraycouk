@@ -4,7 +4,7 @@ export const PostContainer = styled.div`
   margin: 120px 15px 0px;
 `;
 
-export const SeeAllButton = styled.div`
+export const SeeMoreButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

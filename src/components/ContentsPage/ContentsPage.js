@@ -1,40 +1,36 @@
+import { useState } from "react";
 import { StandardHead } from "../Heads";
 import ShrinkingLogo from "../ShrinkingLogo";
 import Post from "../Post";
 import PostPreview from "../PostPreview";
-import PostBubble from "../PostBubble";
 import Footer from "../Footer";
-import { PostContainer, SeeAllButton } from "./ContentsPage.style";
+import { PostContainer, SeeMoreButton } from "./ContentsPage.style";
 import constants from "../../constants";
 import textStore from "../../textStore";
 
 const { Contents: Text } = textStore;
 
-const ContentsPage = ({ post, query }) => {
-  let postFilter = () => true;
-  let PostItem = PostPreview;
-  let maxItems = constants.MaxContentsItems;
-  if (query.view === "all") {
-    PostItem = PostBubble;
-    maxItems = 100;
-  } else {
-    postFilter = (x, id) => id < constants.MaxContentsItems;
-  }
+const ContentsPage = ({ post }) => {
+  const [postCount, setPostCount] = useState(constants.MaxContentsItems);
   return (
     <StandardHead>
       <ShrinkingLogo />
       <PostContainer>
         <Post meta={post.meta} content={post.content} />
-        {post.contentsMetaList.filter(postFilter).map((data, id) => (
-          <PostItem
-            key={id}
-            title={data.title}
-            date={data.date}
-            description={data.description}
-          />
-        ))}
-        {maxItems < post.contentsMetaList.length && (
-          <SeeAllButton>{Text.SeeAll}</SeeAllButton>
+        {post.contentsMetaList
+          .filter((x, id) => id < postCount)
+          .map((data, id) => (
+            <PostPreview
+              key={id}
+              title={data.title}
+              date={data.date}
+              description={data.description}
+            />
+          ))}
+        {postCount < post.contentsMetaList.length && (
+          <SeeMoreButton onClick={() => setPostCount(postCount + 5)}>
+            {Text.SeeMore}
+          </SeeMoreButton>
         )}
       </PostContainer>
       <Footer />

@@ -18,7 +18,7 @@ export default {
     FeaturedSection: "Featured",
   },
   Contents: {
-    SeeAll: "See all",
+    SeeMore: "See More",
     ReadMore: "Read More",
   },
   Footer: {
