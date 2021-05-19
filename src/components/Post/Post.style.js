@@ -9,7 +9,7 @@ export const Title = styled.div`
   font-size: 48px;
 `;
 
-export const Date = styled.div`
+export const RightJustify = styled.div`
   color: white;
   text-align: right;
   margin-bottom: 20px;

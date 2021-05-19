@@ -1,10 +1,10 @@
-import { Container, Title, Date, Content } from "./Post.style";
+import { Container, Title, RightJustify, Content } from "./Post.style";
 
 const Post = ({ meta = {}, content }) => (
   <Container>
     {meta.title && <Title>{meta.title}</Title>}
-    {meta.date && <Date>{meta.date}</Date>}
-    {meta.description && <Date>{meta.description}</Date>}
+    {meta.date && <RightJustify>{meta.date}</RightJustify>}
+    {meta.description && <RightJustify>{meta.description}</RightJustify>}
     <Content dangerouslySetInnerHTML={{ __html: content }} />
   </Container>
 );
