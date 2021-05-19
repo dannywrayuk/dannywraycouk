@@ -1,5 +1,5 @@
 import textStore from "../../textStore";
-import { TextContainer, Line } from "./Greeting.style";
+import { TextContainer } from "./Greeting.style";
 
 const {
   Landing: { Greeting: Text },
@@ -7,8 +7,8 @@ const {
 
 const Greeting = ({ className }) => (
   <TextContainer className={className}>
-    <Line>{Text.Line1}</Line>
-    <Line>{Text.Line2}</Line>
+    <div>{Text.Line1}</div>
+    <div>{Text.Line2}</div>
   </TextContainer>
 );
 

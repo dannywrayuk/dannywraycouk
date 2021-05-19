@@ -5,7 +5,6 @@ export const Container = styled.div`
   height: 100px;
   margin-top: 100px;
   padding: 20px;
-  width: 100%;
 `;
 
 export const CopyrightText = styled.div`
