@@ -22,7 +22,7 @@ const SectionMarker = styled.div`
 
 const Home = ({ featuredPostsMeta }) => {
   return (
-    <BlankPage showLogo showFooter showDropDownMenu applyMargin>
+    <BlankPage showLogo showFooter applyMargin>
       <Greeting />
       <StyledSocialLinks />
       <NavigationLinks />
