@@ -11,7 +11,7 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colours.PRIMARY3};
   font-size: 20px;
   margin-bottom: 10px;
 `;

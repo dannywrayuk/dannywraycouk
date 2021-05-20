@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const CopyrightText = styled.div`
-  color: black;
+  color: ${({ theme }) => theme.colours.PRIMARY2};
   text-align: center;
   margin: 10px;
 `;

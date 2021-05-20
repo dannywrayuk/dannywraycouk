@@ -9,8 +9,8 @@ export const Container = styled.div`
 
 export const TextBubble = styled.div`
   font-size: 20px;
-  color: white;
-  background-color: #222;
+  color: ${({ theme }) => theme.colours.PRIMARY3};
+  background-color: ${({ theme }) => theme.colours.SECONDARY1};
   border-radius: 15px;
   margin: 10px;
   padding: 10px 15px;

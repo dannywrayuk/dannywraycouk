@@ -10,13 +10,13 @@ export const Title = styled.div`
 `;
 
 export const RightJustify = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colours.PRIMARY3};
   text-align: right;
   margin-bottom: 20px;
 `;
 
 export const Content = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colours.PRIMARY3};
   text-align: justify;
   margin-top: 30px;
 

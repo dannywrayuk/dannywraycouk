@@ -10,6 +10,7 @@ export const StyledLink = styled.a`
   padding: 10px;
   border-radius: 100%;
   background-color: ${({ theme }) => theme.colours.PRIMARY1};
+  fill: ${({ theme }) => theme.colours.SECONDARY1};
 `;
 
 export const Icon = styled.div`

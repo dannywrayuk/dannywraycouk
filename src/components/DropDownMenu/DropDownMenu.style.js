@@ -61,7 +61,7 @@ export const MenuText = styled.div`
 export const Content = styled.div`
   transition: 0.5s;
   overflow: hidden;
-  color: white;
+  color: ${({ theme }) => theme.colours.PRIMARY3};
   max-height: 0px;
   max-width: 0px;
   opacity: 0;
