@@ -10,6 +10,7 @@ export default {
       Line2: "a software developer and physics graduate.",
     },
     Navigation: {
+      Menu: "Menu",
       Option1: "Thoughts",
       Option2: "Projects",
       Option3: "About me",
