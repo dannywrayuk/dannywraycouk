@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "../Link";
 import textStore from "../../textStore";
 import {
   StickyContainer,
@@ -21,11 +22,13 @@ const ShrinkingLogo = () => {
   return (
     <StickyContainer>
       <Transformer shouldShrink={shouldShrink}>
-        <Animation shouldShrink={shouldShrink}>
-          <Line>{Text.Line1}</Line>
-          <Line>{Text.Line2}</Line>
-          <Line>{Text.Line3}</Line>
-        </Animation>
+        <Link href="/">
+          <Animation shouldShrink={shouldShrink}>
+            <Line>{Text.Line1}</Line>
+            <Line>{Text.Line2}</Line>
+            <Line>{Text.Line3}</Line>
+          </Animation>
+        </Link>
       </Transformer>
     </StickyContainer>
   );

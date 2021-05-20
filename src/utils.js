@@ -44,8 +44,10 @@ export const getDirectoryTree = (root) => {
 };
 
 export const getMeta = (file) => {
-  const data = fs.readFileSync(file).toString();
-  return matter(data).data;
+  const fileData = fs.readFileSync(file).toString();
+  const metaData = matter(fileData).data;
+  metaData.route = file.slice(4, -3);
+  return metaData;
 };
 
 export const getMetaList = (files) => {

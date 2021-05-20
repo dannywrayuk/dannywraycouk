@@ -28,12 +28,7 @@ const Home = ({ featuredPostsMeta }) => {
       <NavigationLinks />
       <SectionMarker>{Text.FeaturedSection}</SectionMarker>
       {featuredPostsMeta.map((data, id) => (
-        <PostPreview
-          key={id}
-          title={data.title}
-          date={data.date}
-          description={data.description}
-        />
+        <PostPreview key={id} data={data} />
       ))}
     </BlankPage>
   );

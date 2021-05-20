@@ -17,12 +17,7 @@ const ContentsPage = ({ post }) => {
       {post.contentsMetaList
         .filter((x, id) => id < postCount)
         .map((data, id) => (
-          <PostPreview
-            key={id}
-            title={data.title}
-            date={data.date}
-            description={data.description}
-          />
+          <PostPreview key={id} data={data} />
         ))}
       {postCount < post.contentsMetaList.length && (
         <SeeMoreButton onClick={() => setPostCount(postCount + 5)}>

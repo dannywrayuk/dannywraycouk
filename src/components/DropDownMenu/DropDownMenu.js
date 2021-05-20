@@ -38,10 +38,10 @@ const NavigationButton = () => {
         </StyledButton>
       </Controls>
       <Content menuOpen={menuOpen} height={height} ref={buttonRef}>
-        <Option>{Text.Option1}</Option>
-        <Option>{Text.Option2}</Option>
-        <Option>{Text.Option3}</Option>
-        <Option>{Text.Option4}</Option>
+        <Option>{Text.Option1.Text}</Option>
+        <Option>{Text.Option2.Text}</Option>
+        <Option>{Text.Option3.Text}</Option>
+        <Option>{Text.Option4.Text}</Option>
       </Content>
     </Sticky>
   );
