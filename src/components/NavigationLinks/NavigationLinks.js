@@ -1,10 +1,10 @@
-import textStore from "../../textStore";
 import Link from "../Link";
+import Config from "../../config";
 import { Container, TextBubble } from "./NavigationLinks.style";
 
 const {
   Landing: { Navigation: Text },
-} = textStore;
+} = Config.Text;
 
 const NavigationLinks = () => (
   <Container>

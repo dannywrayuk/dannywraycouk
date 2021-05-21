@@ -1,9 +1,9 @@
 import { GithubSVG, LinkedinSVG, TwitterSVG } from "../SVG";
 import { LinkContainer, StyledLink, Icon } from "./SocialLinks.style";
 
-import constants from "../../constants";
+import Config from "../../config";
 
-const { Links: Links } = constants;
+const { Links: Links } = Config;
 
 const SocialLinks = ({ className }) => (
   <LinkContainer className={className}>

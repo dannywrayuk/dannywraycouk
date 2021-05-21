@@ -5,9 +5,9 @@ import SocialLinks from "../components/SocialLinks";
 import NavigationLinks from "../components/NavigationLinks";
 import PostPreview from "../components/PostPreview";
 import { getMetaList } from "../utils";
-import textStore from "../textStore";
+import Config from "../config";
 
-const { Landing: Text } = textStore;
+const { Landing: Text } = Config.Text;
 
 const StyledSocialLinks = styled(SocialLinks)`
   margin: 50px auto 0 auto;

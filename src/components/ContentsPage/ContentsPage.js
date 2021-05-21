@@ -2,15 +2,14 @@ import { useState } from "react";
 import BlankPage from "../BlankPage";
 import Post from "../Post";
 import PostPreview from "../PostPreview";
-import constants from "../../constants";
-import textStore from "../../textStore";
+import Config from "../../config";
 
 import { SeeMoreButton } from "./ContentsPage.style";
 
-const { Contents: Text } = textStore;
+const { Contents: Text } = Config.Text;
 
 const ContentsPage = ({ post }) => {
-  const [postCount, setPostCount] = useState(constants.MaxContentsItems);
+  const [postCount, setPostCount] = useState(Config.MaxContentsItems);
   return (
     <BlankPage showLogo showFooter applyMargin>
       <Post meta={post.meta} content={post.content} />

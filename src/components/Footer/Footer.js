@@ -1,13 +1,12 @@
 import { Container, CopyrightText } from "./Footer.style";
-import textStore from "../../textStore";
-import constants from "../../constants";
+import Config from "../../config";
 
-const { Footer: Text } = textStore;
+const { Footer: Text } = Config.Text;
 
 const Footer = () => (
   <Container>
     <CopyrightText>{Text.CopyrightText}</CopyrightText>
-    <CopyrightText>{constants.Version}</CopyrightText>
+    <CopyrightText>{Config.Version}</CopyrightText>
   </Container>
 );
 

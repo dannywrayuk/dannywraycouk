@@ -1,13 +1,13 @@
+import Link from "../Link";
+import Config from "../../config";
 import {
   Container,
   Title,
   Description,
   ReadMoreButton,
 } from "./PostPreview.style";
-import Link from "../Link";
-import textStore from "../../textStore";
 
-const { Contents: Text } = textStore;
+const { Contents: Text } = Config.Text;
 
 const PostPreview = ({ data }) => (
   <Container>

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import textStore from "../../textStore";
+import Config from "../../config";
 import { ArrowSVG } from "../SVG";
 import {
   Sticky,
@@ -13,7 +13,7 @@ import {
 
 const {
   Landing: { Navigation: Text },
-} = textStore;
+} = Config.Text;
 
 const NavigationButton = () => {
   const [menuOpen, setMenuOpen] = useState(false);

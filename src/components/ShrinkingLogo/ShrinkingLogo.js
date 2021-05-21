@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "../Link";
-import textStore from "../../textStore";
+import Config from "../../config";
 import {
   StickyContainer,
   Animation,
@@ -8,7 +8,7 @@ import {
   Transformer,
 } from "./ShrinkingLogo.style";
 
-const { Logo: Text } = textStore;
+const { Logo: Text } = Config.Text;
 
 const ShrinkingLogo = () => {
   const shrinkThreshold = 100;

@@ -1,9 +1,9 @@
-import textStore from "../../textStore";
+import Config from "../../config";
 import { TextContainer } from "./Greeting.style";
 
 const {
   Landing: { Greeting: Text },
-} = textStore;
+} = Config.Text;
 
 const Greeting = ({ className }) => (
   <TextContainer className={className}>

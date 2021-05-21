@@ -1,7 +1,7 @@
 import Head from "next/head";
-import constants from "../../constants";
+import Config from "../../config";
 
-const { StandardTitle } = constants.Head;
+const { StandardTitle } = Config.Head;
 
 export const StandardHead = ({ title, children }) => (
   <>
