@@ -29,17 +29,17 @@ jobs:
           --name clean-url-handler
           --function-code fileb://infrastructure/clean-url-handler.js
           --function-config Comment="Add file extensions when a clean URL is requested",Runtime=cloudfront-js-1.0
-          --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
+          --if-match ${{ secrets.AWS_CLOUDFRONT_ETAG_DEV }}
 
       - name: Test Cloudfront Function
         run: >
           aws cloudfront test-function
           --name clean-url-handler
-          --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
+          --if-match ${{ secrets.AWS_CLOUDFRONT_ETAG_DEV }}
           --event-object fileb://infrastructure/test-request.json
 
       - name: Publish Cloudfront Function
         run: >
           aws cloudfront publish-function
           --name clean-url-handler
-          --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
+          --if-match ${{ secrets.AWS_CLOUDFRONT_ETAG_DEV }}
