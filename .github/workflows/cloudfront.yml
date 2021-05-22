@@ -27,7 +27,7 @@ jobs:
         run: >
           aws cloudfront update-function
           --name clean-url-handler
-          --function-code ./infrastructure/clean-url-handler.js
+          --function-code fileb://infrastructure/clean-url-handler.js
           --function-config Runtime=cloudfront-js-1.0
           --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
 
@@ -36,7 +36,7 @@ jobs:
           aws cloudfront test-function
           --name clean-url-handler
           --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
-          --event-object ./infrastructure/test-request.json
+          --event-object fileb://infrastructure/test-request.json
 
       - name: Publish Cloudfront Function
         run: >
