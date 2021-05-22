@@ -3,7 +3,7 @@ on:
   push:
     branches: [rebrand]
     paths:
-      - 'infrastructure/**'
+      - "infrastructure/**"
 
   workflow_dispatch:
 
@@ -22,21 +22,21 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-west-2
 
-      - name: Update Cloudfront Function 
-        run: > 
-            aws cloudfront update-function 
-            --name clean-url-handler 
-            --function-code ./infrastructure/clean-url-handler.js
-            --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
+      - name: Update Cloudfront Function
+        run: >
+          aws cloudfront update-function
+          --name clean-url-handler
+          --function-code ./infrastructure/clean-url-handler.js
+          --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
 
       - name: Test Cloudfront Function
         run: >
-            aws cloudfront test-function
-            --name clean-url-handler
-            --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
-            --event-object ./infrastructure/test-request.json
+          aws cloudfront test-function
+          --name clean-url-handler
+          --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
+          --event-object ./infrastructure/test-request.json
 
-      -name: Publish Cloudfront Function
+      - name: Publish Cloudfront Function
         run: >
           aws cloudfront publish-function
           --name clean-url-handler
