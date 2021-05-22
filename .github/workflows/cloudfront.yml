@@ -24,18 +24,16 @@ jobs:
           aws-region: eu-west-2
 
       - name: Get Function ETag
-        run: echo "ETAG=$(aws cloudfront describe-function --name clean-url-handler | grep -P '^E[0-9A-Z]+$')" >> $GITHUB_ENV
+        run: echo "ETAG=$(aws cloudfront describe-function --name clean-url-handler --query ETag --output text)" >> $GITHUB_ENV
 
       - name: Update Cloudfront Function
-        run: >
-          aws cloudfront update-function
-          --name clean-url-handler
-          --function-code fileb://infrastructure/clean-url-handler.js
-          --function-config Comment="Add file extensions when a clean URL is requested",Runtime=cloudfront-js-1.0
-          --if-match ${{ env.ETAG }}
-
-      - name: Update Function ETag
-        run: echo "ETAG=$(aws cloudfront describe-function --name clean-url-handler | grep -P '^E[0-9A-Z]+$')" >> $GITHUB_ENV
+        - run: >
+            aws cloudfront update-function
+            --name clean-url-handler
+            --function-code fileb://infrastructure/clean-url-handler.js
+            --function-config Comment="Add file extensions when a clean URL is requested",Runtime=cloudfront-js-1.0
+            --if-match ${{ env.ETAG }}
+        - run: echo "ETAG=$(aws cloudfront describe-function --name clean-url-handler --query ETag --output text)" >> $GITHUB_ENV
 
       - name: Test Cloudfront Function
         run: >
