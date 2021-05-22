@@ -8,7 +8,7 @@ function handler(event) {
   }
   // Check whether the URI is missing a file extension.
   else if (!uri.includes(".")) {
-    request.uri += "/index.html";
+    request.uri += ".html";
   }
 
   return request;
