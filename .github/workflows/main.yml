@@ -6,7 +6,6 @@ on:
       - "!infrastructure/**"
       - "!README.md"
       - "!.gitignore"
-
   workflow_dispatch:
 
 jobs:
