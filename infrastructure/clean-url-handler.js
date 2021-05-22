@@ -1,12 +1,15 @@
 function handler(event) {
-  // NOTE: This example function is for a viewer request event trigger.
-  // Choose viewer request for event trigger when you associate this function with a distribution.
-  var response = {
-    statusCode: 200,
-    statusDescription: "OK",
-    headers: {
-      "cloudfront-functions": { value: "generated-by-CloudFront-Functions" },
-    },
-  };
-  return response;
+  var request = event.request;
+  var uri = request.uri;
+
+  // Check whether the URI is missing a file name.
+  if (uri.endsWith("/")) {
+    request.uri += "index.html";
+  }
+  // Check whether the URI is missing a file extension.
+  else if (!uri.includes(".")) {
+    request.uri += "/index.html";
+  }
+
+  return request;
 }

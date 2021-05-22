@@ -1,4 +1,4 @@
-name: CI
+name: Web Content
 on:
   push:
     branches: [rebrand]
