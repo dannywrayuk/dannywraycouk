@@ -4,6 +4,7 @@ on:
     branches: [rebrand]
     paths:
       - "infrastructure/**"
+      - ".github/workflows/cloudfront.yml"
 
   workflow_dispatch:
 

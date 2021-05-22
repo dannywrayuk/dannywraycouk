@@ -2,8 +2,10 @@ name: CI
 on:
   push:
     branches: [rebrand]
-  pull_request:
-    branches: [rebrand]
+    paths:
+      - "!infrastructure/**"
+      - "!README.md"
+      - "!.gitignore"
 
   workflow_dispatch:
 
