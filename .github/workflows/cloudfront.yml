@@ -28,7 +28,7 @@ jobs:
           aws cloudfront update-function
           --name clean-url-handler
           --function-code fileb://infrastructure/clean-url-handler.js
-          --function-config Runtime=cloudfront-js-1.0
+          --function-config Comment="Add file extensions when a clean URL is requested",Runtime=cloudfront-js-1.0
           --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
 
       - name: Test Cloudfront Function
