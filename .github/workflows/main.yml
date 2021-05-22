@@ -2,10 +2,10 @@ name: Web Content
 on:
   push:
     branches: [rebrand]
-    paths:
-      - "!infrastructure/**"
-      - "!README.md"
-      - "!.gitignore"
+    paths-ignore:
+      - "infrastructure/**"
+      - "README.md"
+      - ".gitignore"
   workflow_dispatch:
 
 jobs:
