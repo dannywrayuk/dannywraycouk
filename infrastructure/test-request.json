@@ -4,13 +4,31 @@
     "eventType": "viewer-request"
   },
   "viewer": {
-    "ip": ""
+    "ip": "0.0.0.0"
   },
   "request": {
     "method": "GET",
-    "uri": "/thoughts",
-    "querystring": {},
-    "headers": {},
-    "cookies": {}
+    "uri": "/",
+    "querystring": {
+      "test": { "value": "true" },
+      "arg": {
+        "value": "val1",
+        "multivalue": [{ "value": "val1" }, { "value": "val2" }]
+      }
+    },
+    "headers": {
+      "host": { "value": "www.example.com" },
+      "accept": {
+        "value": "text/html",
+        "multivalue": [
+          { "value": "text/html" },
+          { "value": "application/xhtml+xml" }
+        ]
+      }
+    },
+    "cookies": {
+      "id": { "value": "CookeIdValue" },
+      "loggedIn": { "value": "false" }
+    }
   }
 }
