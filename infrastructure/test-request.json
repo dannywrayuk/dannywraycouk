@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "context": {
+    "eventType": "viewer-request"
+  },
+  "viewer": {
+    "ip": ""
+  },
+  "request": {
+    "method": "GET",
+    "uri": "/thoughts",
+    "querystring": {},
+    "headers": {},
+    "cookies": {}
+  }
+}

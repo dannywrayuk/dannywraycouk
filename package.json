@@ -5,7 +5,7 @@
     "start": "next dev",
     "build": "next build && next export",
     "serve": "serve ./out",
-    "lint": "pretty-quick"
+    "lint": "pretty-quick --pattern \"./**/*.(js|json)\""
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
