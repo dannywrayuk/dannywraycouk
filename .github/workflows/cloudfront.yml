@@ -35,7 +35,7 @@ jobs:
           --if-match ${{ env.ETAG }}
 
       - name: Update Function ETag
-        run: echo "ETAG=$aws cloudfront describe-function --name clean-url-handler --query ETag --output text)" >> $GITHUB_ENV
+        run: echo "ETAG=$(aws cloudfront describe-function --name clean-url-handler --query ETag --output text)" >> $GITHUB_ENV
 
       - name: Test Cloudfront Function
         run: >
