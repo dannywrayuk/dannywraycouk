@@ -30,7 +30,7 @@ jobs:
             --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
 
       - name: Test Cloudfront Function
-         run: >
+        run: >
             aws cloudfront test-function
             --name clean-url-handler
             --if-match ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
