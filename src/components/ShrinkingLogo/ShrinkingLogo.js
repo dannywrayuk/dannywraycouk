@@ -13,13 +13,10 @@ const { Logo: Text } = Config.Text;
 const ShrinkingLogo = () => {
   const shrinkThreshold = 100;
   const [shouldShrink, setShouldShrink] = useState(false);
-  const [transitionSpeed, setTransitionSpeed] = useState("0s");
 
   useEffect(() => {
     let isFirstLoad = true;
-    setTransitionSpeed(window.pageYOffset > shrinkThreshold ? "0s" : "1s");
     window.onscroll = () => {
-      isFirstLoad && setTransitionSpeed("1s");
       isFirstLoad && setShouldShrink(window.pageYOffset > shrinkThreshold);
     };
     return () => {
@@ -31,10 +28,7 @@ const ShrinkingLogo = () => {
     <StickyContainer>
       <Transformer shouldShrink={shouldShrink}>
         <Link href="/">
-          <Animation
-            shouldShrink={shouldShrink}
-            transitionSpeed={transitionSpeed}
-          >
+          <Animation shouldShrink={shouldShrink}>
             <Line>{Text.Line1}</Line>
             <Line>{Text.Line2}</Line>
             <Line>{Text.Line3}</Line>

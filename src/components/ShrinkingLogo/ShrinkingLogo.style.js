@@ -19,7 +19,7 @@ export const Transformer = styled.div`
 `;
 
 export const Animation = styled.div`
-  transition: ${({ transitionSpeed }) => transitionSpeed};
+  transition: 1s;
   transform-origin: top left;
   ${({ shouldShrink }) =>
     shouldShrink &&
