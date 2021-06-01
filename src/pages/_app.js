@@ -1,5 +1,5 @@
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-import config from "../config";
+import Config from "../config";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const MyApp = ({ Component, pageProps }) => (
-  <ThemeProvider theme={config.Theme}>
+  <ThemeProvider theme={Config.Theme}>
     <GlobalStyle />
     <Component {...pageProps} />
   </ThemeProvider>
