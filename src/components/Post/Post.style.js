@@ -3,20 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div``;
 
 export const Title = styled.div`
-  color: ${({ theme }) => theme.colours.PRIMARY1};
+  color: ${({ theme }) => theme.Colours.PRIMARY1};
   text-transform: uppercase;
   font-weight: bold;
   font-size: 48px;
 `;
 
 export const RightJustify = styled.div`
-  color: ${({ theme }) => theme.colours.PRIMARY3};
+  color: ${({ theme }) => theme.Colours.PRIMARY3};
   text-align: right;
   margin-bottom: 20px;
 `;
 
 export const Content = styled.div`
-  color: ${({ theme }) => theme.colours.PRIMARY3};
+  color: ${({ theme }) => theme.Colours.PRIMARY3};
   text-align: justify;
   margin-top: 30px;
 

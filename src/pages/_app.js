@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
   html {
     font-family: "Montserrat", sans-serif;
-    background-color: ${({ theme }) => theme.colours.PRIMARY2};
+    background-color: ${({ theme }) => theme.Colours.PRIMARY2};
   }
 
   .katex-display>.katex>.katex-html>.base{

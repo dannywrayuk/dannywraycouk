@@ -31,5 +31,5 @@ export const Animation = styled.div`
 export const Line = styled.div`
   display: inline-block;
   font-size: 24px;
-  color: ${({ theme }) => theme.colours.PRIMARY3};
+  color: ${({ theme }) => theme.Colours.PRIMARY3};
 `;

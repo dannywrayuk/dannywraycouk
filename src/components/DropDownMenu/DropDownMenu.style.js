@@ -8,7 +8,7 @@ export const Sticky = styled.div`
   padding: 10px;
   border-radius: 5px;
   background-color: ${({ theme, menuOpen }) =>
-    menuOpen ? theme.colours.SECONDARY1 : ""};
+    menuOpen ? theme.Colours.SECONDARY1 : ""};
 `;
 
 export const StyledButton = styled.button`
@@ -27,7 +27,7 @@ export const Icon = styled.div`
   transition: 0.5s;
   width: 30px;
   height: 30px;
-  stroke: ${({ theme }) => theme.colours.PRIMARY1};
+  stroke: ${({ theme }) => theme.Colours.PRIMARY1};
   ${({ menuOpen }) =>
     menuOpen &&
     css`
@@ -40,12 +40,12 @@ export const Option = styled.p`
   padding: 10px;
   border-radius: 5px;
   :hover {
-    background-color: ${({ theme }) => theme.colours.TERTIARY1};
+    background-color: ${({ theme }) => theme.Colours.TERTIARY1};
   }
 `;
 
 export const MenuText = styled.div`
-  color: ${({ theme }) => theme.colours.PRIMARY1};
+  color: ${({ theme }) => theme.Colours.PRIMARY1};
   flex-grow: 1;
   text-align: center;
   overflow-x: hidden;
@@ -61,7 +61,7 @@ export const MenuText = styled.div`
 export const Content = styled.div`
   transition: 0.5s;
   overflow: hidden;
-  color: ${({ theme }) => theme.colours.PRIMARY3};
+  color: ${({ theme }) => theme.Colours.PRIMARY3};
   max-height: 0px;
   max-width: 0px;
   opacity: 0;

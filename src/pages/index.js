@@ -14,7 +14,7 @@ const StyledSocialLinks = styled(SocialLinks)`
 `;
 
 const SectionMarker = styled.div`
-  color: ${({ theme }) => theme.colours.PRIMARY1};
+  color: ${({ theme }) => theme.Colours.PRIMARY1};
   font-weight: bold;
   font-size: 20px;
   margin-top: 50px;

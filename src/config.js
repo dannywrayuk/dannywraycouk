@@ -29,12 +29,15 @@ export default {
     },
   },
   Theme: {
-    colours: {
+    Colours: {
       PRIMARY1: "#FFCA1E",
       PRIMARY2: "#0a0a0a",
       PRIMARY3: "#FFFFFF",
       SECONDARY1: "#1D1D1D",
       TERTIARY1: "#2a2a2a",
+    },
+    Breakpoints: {
+      OnDesktop: "(min-width: 1000px)",
     },
   },
   Head: {
