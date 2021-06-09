@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import Config from "../../config";
+
+const {
+  Theme: {
+    Breakpoints: { OnMediumUp },
+  },
+} = Config;
 
 export const Container = styled.div`
   display: flex;
@@ -14,4 +21,5 @@ export const TextBubble = styled.div`
   border-radius: 15px;
   margin: 10px;
   padding: 10px 15px;
+  cursor: default;
 `;

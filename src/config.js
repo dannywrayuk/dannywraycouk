@@ -37,7 +37,9 @@ export default {
       TERTIARY1: "#2a2a2a",
     },
     Breakpoints: {
-      OnDesktop: "(min-width: 1000px)",
+      OnMediumUp: "(min-width: 730px)",
+      OnLargeUp: "(min-width: 1100px)",
+      OnSmallDown: "(max-width: 330px)",
     },
   },
   Head: {
@@ -48,6 +50,11 @@ export default {
     Linkedin: "https://www.linkedin.com/in/dannywrayuk/",
     Twitter: "https://twitter.com/dannywrayuk",
   },
+  FeaturedPosts: ["test", "thoughts/test2"],
   MaxContentsItems: 2,
+  LogoShrinkThreshold: {
+    Distance: 100,
+    Width: 700,
+  },
   Version: `v${packagejson.version}`,
 };

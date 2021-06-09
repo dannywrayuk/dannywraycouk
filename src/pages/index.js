@@ -7,10 +7,26 @@ import PostPreview from "../components/PostPreview";
 import { getMetaList } from "../utils";
 import Config from "../config";
 
-const { Landing: Text } = Config.Text;
+const {
+  Text: { Landing: Text },
+  Theme: {
+    Breakpoints: { OnMediumUp },
+  },
+} = Config;
 
-const StyledSocialLinks = styled(SocialLinks)`
-  margin: 50px auto 0 auto;
+const DisplayBreakpoint = styled.div`
+  @media ${OnMediumUp} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+`;
+
+const FeaturedPostCollection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
 `;
 
 const SectionMarker = styled.div`
@@ -18,18 +34,26 @@ const SectionMarker = styled.div`
   font-weight: bold;
   font-size: 20px;
   margin-top: 50px;
+  @media ${OnMediumUp} {
+    margin-top: 100px;
+    font-size: 40px;
+  }
 `;
 
 const Home = ({ featuredPostsMeta }) => {
   return (
     <BlankPage showLogo showFooter applyMargin>
-      <Greeting />
-      <StyledSocialLinks />
+      <DisplayBreakpoint>
+        <Greeting />
+        <SocialLinks />
+      </DisplayBreakpoint>
       <NavigationLinks />
       <SectionMarker>{Text.FeaturedSection}</SectionMarker>
-      {featuredPostsMeta.map((data, id) => (
-        <PostPreview key={id} data={data} />
-      ))}
+      <FeaturedPostCollection>
+        {featuredPostsMeta.map((data, id) => (
+          <PostPreview key={id} data={data} />
+        ))}
+      </FeaturedPostCollection>
     </BlankPage>
   );
 };
@@ -37,9 +61,8 @@ const Home = ({ featuredPostsMeta }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const featuredPosts = ["test", "thoughts/test2"];
   const featuredPostsMeta = getMetaList(
-    featuredPosts.map((post) => `post/${post}.md`)
+    Config.FeaturedPosts.map((post) => `post/${post}.md`)
   );
   return {
     props: {

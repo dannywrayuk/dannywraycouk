@@ -7,6 +7,7 @@ export const StickyContainer = styled.div`
   top: 0;
   left: 0;
   width: 80px;
+  cursor: default;
 `;
 
 export const Transformer = styled.div`

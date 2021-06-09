@@ -1,7 +1,22 @@
 import styled from "styled-components";
+import Config from "../../config";
+
+const {
+  Theme: {
+    Breakpoints: { OnMediumUp },
+  },
+} = Config;
 
 export const LinkContainer = styled.div`
   display: flex;
+  margin: 50px auto 0 auto;
+  max-width: 400px;
+  @media ${OnMediumUp} {
+    display: inline-flex;
+    flex-direction: column;
+    height: 300px;
+    margin: 50px 0 0 0;
+  }
 `;
 
 export const StyledLink = styled.a`

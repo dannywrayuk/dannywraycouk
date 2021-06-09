@@ -11,13 +11,15 @@ import {
 const { Logo: Text } = Config.Text;
 
 const ShrinkingLogo = () => {
-  const shrinkThreshold = 100;
+  const shrinkThreshold = Config.LogoShrinkThreshold.Distance;
   const [shouldShrink, setShouldShrink] = useState(false);
 
   useEffect(() => {
     let isFirstLoad = true;
     window.onscroll = () => {
-      isFirstLoad && setShouldShrink(window.pageYOffset > shrinkThreshold);
+      isFirstLoad &&
+        window.innerWidth < Config.LogoShrinkThreshold.Width &&
+        setShouldShrink(window.pageYOffset > shrinkThreshold);
     };
     return () => {
       isFirstLoad = false;
