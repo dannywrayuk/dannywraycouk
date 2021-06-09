@@ -15,7 +15,8 @@ export const LinkContainer = styled.div`
     display: inline-flex;
     flex-direction: column;
     height: 300px;
-    margin: 50px 0 0 0;
+    margin: auto;
+    padding-left: 50px;
   }
 `;
 

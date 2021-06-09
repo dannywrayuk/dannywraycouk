@@ -17,9 +17,15 @@ const {
 const DisplayBreakpoint = styled.div`
   @media ${OnMediumUp} {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
   }
+`;
+
+const FullPage = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const FeaturedPostCollection = styled.div`
@@ -43,11 +49,13 @@ const SectionMarker = styled.div`
 const Home = ({ featuredPostsMeta }) => {
   return (
     <BlankPage showLogo showFooter applyMargin>
-      <DisplayBreakpoint>
-        <Greeting />
-        <SocialLinks />
-      </DisplayBreakpoint>
-      <NavigationLinks />
+      <FullPage>
+        <DisplayBreakpoint>
+          <Greeting />
+          <SocialLinks />
+        </DisplayBreakpoint>
+        <NavigationLinks />
+      </FullPage>
       <SectionMarker>{Text.FeaturedSection}</SectionMarker>
       <FeaturedPostCollection>
         {featuredPostsMeta.map((data, id) => (

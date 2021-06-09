@@ -12,6 +12,10 @@ export const Container = styled.div`
   margin: 50px auto 0 auto;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media ${OnMediumUp} {
+    margin: 15vh auto 0 auto;
+  }
 `;
 
 export const TextBubble = styled.div`

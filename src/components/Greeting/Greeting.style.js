@@ -12,7 +12,6 @@ export const TextContainer = styled.div`
   margin: 50px auto 0 auto;
   color: ${({ theme }) => theme.Colours.PRIMARY3};
   font-size: 28px;
-
   @media ${OnSmallDown} {
     width: 270px;
     font-size: 24px;
@@ -20,21 +19,13 @@ export const TextContainer = styled.div`
 
   @media ${OnMediumUp} {
     font-weight: bold;
+    font-size: 6vw;
+    min-width: 70vw;
     margin: auto 0;
-    width: clamp(
-      450px,
-      450px + (740 - 450) * (100vw - 730px) / (1100 - 730),
-      740px
-    );
-    font-size: clamp(
-      35px,
-      35px + (60 - 35) * (100vw - 730px) / (1100 - 730),
-      60px
-    );
   }
 
   @media ${OnLargeUp} {
-    min-width: 740px;
-    font-size: 64px;
+    font-size: 120px;
+    min-width: 1500px;
   }
 `;

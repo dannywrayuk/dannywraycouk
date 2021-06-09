@@ -12,12 +12,13 @@ export const ChildrenContainer = styled.div`
   ${({ applyMargin }) =>
     applyMargin &&
     css`
-      margin: 120px 15px 0px;
+      margin: 0px 15px 0px;
       @media ${OnMediumUp} {
-        margin: 120px 100px 0px;
+        margin: 0px 100px 0px;
       }
     `}
 `;
+
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;

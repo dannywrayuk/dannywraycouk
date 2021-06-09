@@ -37,8 +37,8 @@ export default {
       TERTIARY1: "#2a2a2a",
     },
     Breakpoints: {
-      OnMediumUp: "(min-width: 730px)",
-      OnLargeUp: "(min-width: 1100px)",
+      OnMediumUp: "(min-width: 900px)",
+      OnLargeUp: "(min-width: 2000px)",
       OnSmallDown: "(max-width: 330px)",
     },
   },
