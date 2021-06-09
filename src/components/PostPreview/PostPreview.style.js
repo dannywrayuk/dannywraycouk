@@ -24,4 +24,5 @@ export const ReadMoreButton = styled.div`
   padding: 10px;
   float: right;
   border: 1px solid ${({ theme }) => theme.Colours.PRIMARY1};
+  cursor: default;
 `;
