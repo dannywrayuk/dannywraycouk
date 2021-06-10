@@ -19,13 +19,13 @@ export const TextContainer = styled.div`
 
   @media ${OnMediumUp} {
     font-weight: bold;
-    font-size: 6vw;
-    min-width: 70vw;
+    font-size: 4vw;
+    min-width: 50vw;
     margin: auto 0;
   }
 
   @media ${OnLargeUp} {
-    font-size: 120px;
-    min-width: 1500px;
+    font-size: 80px;
+    min-width: 1000px;
   }
 `;

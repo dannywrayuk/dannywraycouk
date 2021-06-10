@@ -14,7 +14,7 @@ export const Container = styled.div`
   justify-content: center;
 
   @media ${OnMediumUp} {
-    margin: 15vh auto 0 auto;
+    margin: 5vh auto 0 auto;
   }
 `;
 
