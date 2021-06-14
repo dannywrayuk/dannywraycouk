@@ -3,12 +3,11 @@ import BlankPage from "../components/BlankPage";
 import Greeting from "../components/Greeting";
 import SocialLinks from "../components/SocialLinks";
 import NavigationLinks from "../components/NavigationLinks";
-import PostPreview from "../components/PostPreview";
-import { getMetaList } from "../utils";
+import { getMarkdown } from "../utils";
+import Post from "../components/Post";
 import Config from "../config";
 
 const {
-  Text: { Landing: Text },
   Theme: {
     Breakpoints: { OnMediumUp },
   },
@@ -28,13 +27,6 @@ const FullPage = styled.div`
   justify-content: center;
 `;
 
-const FeaturedPostCollection = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 50px;
-`;
-
 const SectionMarker = styled.div`
   color: ${({ theme }) => theme.Colours.PRIMARY1};
   font-weight: bold;
@@ -42,11 +34,11 @@ const SectionMarker = styled.div`
   margin-top: 50px;
   @media ${OnMediumUp} {
     margin-top: 100px;
-    font-size: 40px;
+    font-size: 6vw;
   }
 `;
 
-const Home = ({ featuredPostsMeta }) => {
+const Home = ({ post }) => {
   return (
     <BlankPage showLogo showFooter applyMargin>
       <FullPage>
@@ -56,12 +48,7 @@ const Home = ({ featuredPostsMeta }) => {
         </DisplayBreakpoint>
         <NavigationLinks />
       </FullPage>
-      <SectionMarker>{Text.FeaturedSection}</SectionMarker>
-      <FeaturedPostCollection>
-        {featuredPostsMeta.map((data, id) => (
-          <PostPreview key={id} data={data} />
-        ))}
-      </FeaturedPostCollection>
+      <Post content={post.content} />
     </BlankPage>
   );
 };
@@ -69,12 +56,10 @@ const Home = ({ featuredPostsMeta }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-  const featuredPostsMeta = getMetaList(
-    Config.FeaturedPosts.map((post) => `post/${post}.md`)
-  );
+  const post = getMarkdown("index");
   return {
     props: {
-      featuredPostsMeta,
+      post,
     },
   };
 };

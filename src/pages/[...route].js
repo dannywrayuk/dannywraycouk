@@ -21,8 +21,9 @@ export const getStaticPaths = async () => {
     const [_, route] = file.match(/post\/([\w\/]+).md/);
     return { params: { route: route.split("/") } };
   });
+  const filteredPaths = paths.filter((x) => x.params.route[0] !== "index");
   return {
-    paths,
+    paths: filteredPaths,
     fallback: false,
   };
 };
