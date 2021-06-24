@@ -25,5 +25,4 @@ export const TextBubble = styled.div`
   border-radius: 15px;
   margin: 10px;
   padding: 10px 15px;
-  cursor: default;
 `;
