@@ -1,29 +1,6 @@
 import fs from "fs";
-import matter from "gray-matter";
-import marked from "marked";
 import katex from "katex";
-
-export const parseMarkdown = (markdown) => {
-  const { data, content } = matter(markdown);
-  const withKatex = content
-    .replace(/(\\\\)/g, "\\\\$1")
-    .replace(/\$\$\n?((?:.|\n)*?)\n?\$\$/g, (_, g) =>
-      katex.renderToString(g, {
-        displayMode: true,
-        strict: false,
-      })
-    )
-    .replace(/\$(.*?)\$/g, (_, g) =>
-      katex.renderToString(g, { displayMode: false })
-    );
-  const html = marked(withKatex);
-  return { meta: data, content: html };
-};
-
-export const getMarkdown = (fileLocation) => {
-  const markdown = fs.readFileSync(`post/${fileLocation}.md`).toString();
-  return parseMarkdown(markdown);
-};
+import matter from "gray-matter";
 
 export const getDirectoryTree = (root) => {
   const getAllFiles = (dirPath = "post", arrayOfFiles = []) => {
@@ -43,18 +20,42 @@ export const getDirectoryTree = (root) => {
   return getAllFiles(root);
 };
 
-export const getMeta = (file) => {
-  const fileData = fs.readFileSync(file).toString();
-  const metaData = matter(fileData).data;
-  metaData.route = file.slice(4, -3);
-  return metaData;
-};
-
-export const getMetaList = (files) => {
-  return files.map((file) => getMeta(file));
+export const getMarkdownContent = (route) => {
+  return fs.readFileSync(`./post/${route}.md`);
 };
 
 export const getAllMeta = (root) => {
   const files = getDirectoryTree(`post/${root}`);
-  return getMetaList(files);
+  return files.map((file) => {
+    const fileData = fs.readFileSync(file).toString();
+    const metaData = matter(fileData).data;
+    metaData.route = file.slice(4, -3);
+    return metaData;
+  });
 };
+
+export const parseKatex = (content) =>
+  content
+    .replace(
+      /\$\$\n?((?:.|\n)*?)\n?\$\$/g,
+      (_, g) =>
+        `<EquationBlock dangerouslySetInnerHTML={{__html: \`${katex.renderToString(
+          g,
+          {
+            displayMode: true,
+            strict: false,
+            output: "html",
+          }
+        )}\`}}/>`
+    )
+    .replace(
+      /\$(.*?)\$/g,
+      (_, g) =>
+        `<EquationInline dangerouslySetInnerHTML={{__html: \`${katex.renderToString(
+          g,
+          {
+            displayMode: false,
+            output: "html",
+          }
+        )}\`}}/>`
+    );

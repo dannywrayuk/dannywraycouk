@@ -9,13 +9,20 @@ const {
 
 export const ChildrenContainer = styled.div`
   flex-grow: 1;
-  ${({ applyMargin }) =>
-    applyMargin &&
+  ${({ sideMargin }) =>
+    sideMargin &&
     css`
-      margin: 0px 15px 0px;
+      margin-left: 15px;
+      margin-right: 15px;
       @media ${OnMediumUp} {
-        margin: 0px 100px 0px;
+        margin-left: 100px;
+        margin-right: 100px;
       }
+    `}
+  ${({ topMargin }) =>
+    topMargin &&
+    css`
+      margin-top: 100px;
     `}
 `;
 

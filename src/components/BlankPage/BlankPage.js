@@ -8,7 +8,8 @@ const BlankPage = ({
   showLogo,
   showFooter,
   showDropDownMenu,
-  applyMargin,
+  sideMargin,
+  topMargin,
   children,
   Head = StandardHead,
 }) => {
@@ -17,7 +18,7 @@ const BlankPage = ({
       <MainContainer>
         {showLogo && <ShrinkingLogo />}
         {showDropDownMenu && <DropDownMenu />}
-        <ChildrenContainer applyMargin={applyMargin}>
+        <ChildrenContainer sideMargin={sideMargin} topMargin={topMargin}>
           {children}
         </ChildrenContainer>
         {showFooter && <Footer />}
