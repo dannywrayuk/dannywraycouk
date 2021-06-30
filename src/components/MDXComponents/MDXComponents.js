@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BlankPage from "../BlankPage";
+import StandardLayout from "../StandardLayout";
 import Greeting from "../Greeting";
 import SocialLinks from "../SocialLinks";
 import NavigationLinks from "../NavigationLinks";
@@ -51,13 +51,16 @@ const MDXComponents = {
   SectionMarker,
   SocialLinks,
   NavigationLinks,
-  BlankPage,
+  StandardLayout,
   Greeting,
   EquationBlock,
   EquationInline,
   ContentsSection,
   p: styled.p`
     color: ${({ theme }) => theme.Colours.PRIMARY3};
+  `,
+  h1: styled.h1`
+    color: ${({ theme }) => theme.Colours.PRIMARY1};
   `,
 };
 

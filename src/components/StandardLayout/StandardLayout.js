@@ -2,7 +2,7 @@ import ShrinkingLogo from "../ShrinkingLogo";
 import Footer from "../Footer";
 import DropDownMenu from "../DropDownMenu";
 import { StandardHead } from "../Heads";
-import { ChildrenContainer, MainContainer } from "./BlankPage.style";
+import { ChildrenContainer, MainContainer } from "./StandardLayout.style";
 
 const BlankPage = ({
   showLogo,
