@@ -3,10 +3,7 @@ title: THOUGHTS
 indexTag: thoughts
 ---
 
-<StandardLayout showLogo showFooter sideMargin topMargin>
+<StandardHead />
+<Layout useLogo useMenu usePadding useFooter>
 
-contents page with indexTag: thoughts
-
-<ContentsSection metaList={metaList}/>
-
-</StandardLayout>
+</Layout>

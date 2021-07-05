@@ -8,7 +8,12 @@
     "lint": "pretty-quick --pattern \"./**/*.(js|json)\""
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.13",
+    "@chakra-ui/react": "^1.6.4",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "babel-plugin-styled-components": "^1.12.0",
+    "framer-motion": "^4.1.17",
     "gray-matter": "^4.0.2",
     "katex": "^0.13.11",
     "next": "^10.2.1",
@@ -16,6 +21,7 @@
     "pretty-quick": "^3.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
     "serve": "^11.3.2",
     "styled-components": "^5.2.3"
   }

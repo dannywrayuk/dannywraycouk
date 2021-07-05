@@ -1,20 +1,11 @@
-<StandardLayout showLogo showFooter sideMargin>
-    <FullPage>
-        <DisplayBreakpoint>
-            <Greeting />
-            <SocialLinks />
-        </DisplayBreakpoint>
-        <NavigationLinks />
-    </FullPage>
-
----
-
-# Quantum Mechanics
-
-hello testing
-
-<LinkButton to='quantum'>
-    Read More
-</LinkButton>
-
-</StandardLayout>
+<StandardHead />
+<Greeting />
+<Layout
+    useLogo
+    logoFadeSettings={{ start: 0.3, initiallyVisible: false }}
+    useMenu
+    usePadding
+    useFooter
+>
+    <Flex h="100vh"/>
+</Layout>
