@@ -4,4 +4,6 @@ date: 9th Dec 1997
 description: Another post with a description
 ---
 
-yess
+<QuickStart>
+yess2
+</QuickStart>

@@ -16,7 +16,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-export const MenuDraw = ({ children }) => {
+export const Menu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   const drawerSize = useBreakpointValue({ base: "full", sm: "xs" });
@@ -56,7 +56,7 @@ export const MenuDraw = ({ children }) => {
             </Heading>
             {showCloseButton && <DrawerCloseButton />}
           </Flex>
-          <DrawerBody>{children}</DrawerBody>
+          <DrawerBody>{children || <MenuContent />}</DrawerBody>
           <DrawerFooter>
             <Text fontWeight={200} letterSpacing={2} textTransform="uppercase">
               {`v${Package.version}`}
@@ -68,4 +68,4 @@ export const MenuDraw = ({ children }) => {
   );
 };
 
-export const MenuDrawContent = () => <div>hello</div>;
+export const MenuContent = () => <div>hello</div>;

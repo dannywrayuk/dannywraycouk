@@ -1,11 +1,9 @@
 <StandardHead />
+<CornerLogo settings={{ start: 0.3, initiallyVisible: false }} />
+<Menu />
 <Greeting />
-<Layout
-    useLogo
-    logoFadeSettings={{ start: 0.3, initiallyVisible: false }}
-    useMenu
-    usePadding
-    useFooter
->
-    <Flex h="100vh"/>
-</Layout>
+<Footer>
+    <Padding>
+        <Flex h="100vh"/>
+    </Padding>
+</Footer>
