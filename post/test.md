@@ -6,6 +6,7 @@ indexTag: thoughts
 ---
 
 <QuickStart>
+<PostHeading title={title} date={date}/>
 
 This is the next simplest potential that the Schrödinger equation can be solved for after the free particle and builds upon the free particle solution. This solution is complete and unlike the free particle all the variables can be solved for rather than some having any arbitrary value. The first step in this solution is to construct the potential. The potential will have a box shape with the sides being infinitely tall. Our potential can be defined as a piecewise function
 

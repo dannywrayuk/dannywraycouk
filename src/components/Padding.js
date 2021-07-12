@@ -7,7 +7,7 @@ const Padding = ({ children }) => (
       minW={300}
       ml={{ base: 5, sm: 10, md: 120, xl: 0 }}
       mr={{ base: 5, sm: 10, md: 120, xl: 0 }}
-      mt="100px"
+      mt="70px"
       mb="100px"
       w="100%"
     >

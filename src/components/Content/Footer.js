@@ -1,11 +1,11 @@
 import { Flex, Text, Stack, Icon, useBreakpointValue } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
-import Link from "./Link";
-import config from "../config";
+import Link from "../Link";
+import constants from "../../constants";
 
-const { Links } = config;
+const { Links } = constants;
 
-const FooterContent = () => {
+export const Footer = () => {
   const responsiveDirection = useBreakpointValue({ base: "column", sm: "row" });
   return (
     <Flex
@@ -33,5 +33,3 @@ const FooterContent = () => {
     </Flex>
   );
 };
-
-export default FooterContent;

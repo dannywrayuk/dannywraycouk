@@ -9,8 +9,8 @@ import {
   getAllMeta,
 } from "../utils";
 
-const RouteHandler = ({ source }) => (
-  <MDXRemote {...source} components={MDXComponents} />
+const RouteHandler = ({ source, frontMatter }) => (
+  <MDXRemote {...source} {...frontMatter} components={MDXComponents} />
 );
 
 export default RouteHandler;

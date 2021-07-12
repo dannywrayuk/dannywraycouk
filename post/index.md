@@ -1,5 +1,5 @@
 <StandardHead />
-<CornerLogo settings={{ start: 0.3, initiallyVisible: false }} />
+<Logo settings={{ start: 0.3, initiallyVisible: false }} />
 <Menu />
 <Greeting />
 <Footer>

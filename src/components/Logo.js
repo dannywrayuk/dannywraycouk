@@ -1,28 +1,16 @@
-import { Flex, Text } from "@chakra-ui/react";
-import Link from "./Link";
+import { useBreakpointValue } from "@chakra-ui/react";
+import FadeOnScroll from "./FadeOnScroll";
+import { Logo as LogoContent } from "./Content/Logo";
 
-const Logo = () => (
-  <Link href="/">
-    <Flex
-      position="fixed"
-      direction="column"
-      justifyContent="space-evenly"
-      top={{ base: 3, md: 10 }}
-      left={{ base: 3, md: 10 }}
-      h={{ base: "50px", sm: "65px" }}
-      w={{ base: "50px", sm: "65px" }}
-      fontSize={{ base: 10, sm: 15 }}
-      fontWeight={300}
-      lineHeight={1}
-      letterSpacing={2}
-      textAlign="right"
-      textTransform="uppercase"
-    >
-      <Text w="100%">danny</Text>
-      <Text w="100%">wray</Text>
-      <Text w="100%">.co.uk</Text>
-    </Flex>
-  </Link>
-);
+const Logo = ({ settings = { start: 0, stop: 0.3, responsive: true } }) => {
+  const responsiveProps = settings.responsive
+    ? useBreakpointValue({ base: {}, md: { start: 0, stop: 0 } })
+    : {};
+  return (
+    <FadeOnScroll {...settings} {...responsiveProps}>
+      <LogoContent />
+    </FadeOnScroll>
+  );
+};
 
 export default Logo;

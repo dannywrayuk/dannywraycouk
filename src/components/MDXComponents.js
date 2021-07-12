@@ -1,10 +1,10 @@
 import Greeting from "./Greeting";
-import { Menu, MenuContent } from "./Menu";
+import Menu from "./Menu";
 import Logo from "./Logo";
-import CornerLogo from "./CornerLogo";
 import Padding from "./Padding";
 import Footer from "./Footer";
 import QuickStart from "./QuickStart";
+import PostHeading from "./PostHeading";
 import * as Heads from "./Heads";
 import * as chakra from "@chakra-ui/react";
 
@@ -18,12 +18,11 @@ const MDXComponents = {
   EquationInline,
   Greeting,
   Menu,
-  MenuContent,
   Logo,
-  CornerLogo,
   Padding,
   Footer,
   QuickStart,
+  PostHeading,
 };
 
 export default MDXComponents;

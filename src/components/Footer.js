@@ -1,5 +1,5 @@
 import { Flex } from "@chakra-ui/react";
-import FooterContent from "./FooterContent";
+import { Footer as FooterContent } from "./Content/Footer";
 
 const Footer = ({ children }) => (
   <Flex minH="100vh" flexDirection="column">

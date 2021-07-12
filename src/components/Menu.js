@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import Package from "../../package.json";
 import {
   Drawer,
   DrawerOverlay,
@@ -15,12 +14,14 @@ import {
   Flex,
   Text,
 } from "@chakra-ui/react";
+import Package from "../../package.json";
+import { Menu as MenuContent } from "./Content/Menu";
 
-export const Menu = ({ children }) => {
+const Menu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
   const drawerSize = useBreakpointValue({ base: "full", sm: "xs" });
-  const showCloseButton = useBreakpointValue({ base: true, md: false });
+  const showCloseButton = useBreakpointValue({ base: true, sm: false });
 
   return (
     <>
@@ -43,10 +44,10 @@ export const Menu = ({ children }) => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <Flex alignItems="center" p={{ base: 3, md: 10 }}>
+          <Flex alignItems="center" mt={10}>
             <Heading
               fontSize={18}
-              fontWeight={200}
+              fontWeight={300}
               letterSpacing={2}
               textTransform="uppercase"
               textAlign="center"
@@ -68,4 +69,4 @@ export const Menu = ({ children }) => {
   );
 };
 
-export const MenuContent = () => <div>hello</div>;
+export default Menu;
