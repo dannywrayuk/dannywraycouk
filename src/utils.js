@@ -36,6 +36,7 @@ export const getAllMeta = (root) => {
 
 export const parseKatex = (content) =>
   content
+    .replace(/\r/g, "")
     .replace(
       /\$\$\n?((?:.|\n)*?)\n?\$\$/g,
       (_, g) =>

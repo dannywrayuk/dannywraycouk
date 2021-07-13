@@ -1,7 +1,7 @@
 import { Flex, Stack, Heading, Text } from "@chakra-ui/react";
 
 const Greeting = () => (
-  <Flex h="100vh" w="100vw" justifyContent="center">
+  <Flex h="100vh" justifyContent="center">
     <Flex h="85vh" justifyContent="center" alignItems="center">
       <Flex w="70vw" minW={60} maxW={1000}>
         <Stack>
