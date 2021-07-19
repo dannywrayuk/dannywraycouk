@@ -3,13 +3,17 @@ import Link from "../Link";
 import SocialIcons from "../SocialIcons";
 
 const StyledLink = ({ href, children }) => (
-  <Box fontWeight={300} textTransform="uppercase" letterSpacing={2}>
-    <Link href={href}>
-      <Box transition="0.3s" _hover={{ color: "gray.400" }}>
-        {children}
-      </Box>
-    </Link>
-  </Box>
+  <Link
+    href={href}
+    as={Box}
+    fontWeight={300}
+    textTransform="uppercase"
+    letterSpacing={2}
+    transition="0.3s"
+    _hover={{ color: "gray.400" }}
+  >
+    {children}
+  </Link>
 );
 
 export const Menu = () => (

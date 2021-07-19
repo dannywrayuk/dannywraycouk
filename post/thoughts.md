@@ -1,6 +1,8 @@
 ---
-title: THOUGHTS
+title: Thoughts
 indexTag: thoughts
 ---
 
-<QuickStart />
+<QuickStart title={title}>
+    <Title>Hello</Title>
+</QuickStart>
