@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import Link from "../Link";
 
 export const Logo = () => (
-  <Link href="/">
+  <Link href="/" _focus={{ boxShadow: "none" }}>
     <Flex
       position="fixed"
       direction="column"
