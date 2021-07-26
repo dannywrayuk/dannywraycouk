@@ -9,6 +9,8 @@ import ImageCard from "./ImageCard";
 import Title from "./Text/Title";
 import SubTitle from "./Text/SubTitle";
 import VBar from "./VBar";
+import SeeAllTab from "./SeeAllTab";
+
 import * as Heads from "./Heads";
 import * as chakra from "@chakra-ui/react";
 
@@ -31,6 +33,7 @@ const MDXComponents = {
   SubTitle,
   VBar,
   IndexList,
+  SeeAllTab,
 };
 
 export default MDXComponents;

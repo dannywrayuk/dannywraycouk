@@ -1,12 +1,6 @@
 import { Flex, Box, Stack, Image, useBreakpointValue } from "@chakra-ui/react";
 
 const ImageCard = ({ children, image, reverse }) => {
-  const responsiveWidth = useBreakpointValue({
-    base: "100%",
-    lg: "40%",
-  });
-  const responsiveDirection = useBreakpointValue({ base: "column", lg: "row" });
-  const responsiveSpacing = useBreakpointValue({ base: "10%", lg: 0 });
   const responsiveReverse = useBreakpointValue({ base: false, lg: reverse });
 
   const ImageHalf = (props) => (
@@ -26,7 +20,10 @@ const ImageCard = ({ children, image, reverse }) => {
       justifyContent="center"
       alignItems="center"
       h="100%"
-      w={responsiveWidth}
+      w={{
+        base: "100%",
+        lg: "40%",
+      }}
       {...props}
     >
       {props.children}
@@ -35,12 +32,12 @@ const ImageCard = ({ children, image, reverse }) => {
 
   return (
     <Flex
-      direction={responsiveDirection}
+      direction={{ base: "column", lg: "row" }}
       justifyContent="space-evenly"
       alignItems="center"
       mb={140}
     >
-      <Section mb={responsiveSpacing}>
+      <Section mb={{ base: "10%", lg: 0 }}>
         {!responsiveReverse ? <ImageHalf /> : <TextHalf />}
       </Section>
       <Section>{responsiveReverse ? <ImageHalf /> : <TextHalf />}</Section>

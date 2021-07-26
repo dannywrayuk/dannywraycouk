@@ -4,5 +4,7 @@ indexTag: thoughts
 ---
 
 <QuickStart title={title}>
-    <Title>Hello</Title>
+    <SeeAllTab list={metaList}>
+        <Title>Hello</Title>
+    </SeeAllTab>
 </QuickStart>

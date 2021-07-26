@@ -5,7 +5,7 @@ description: Quantum Theories answer to the Structure of Atoms.
 indexTag: thoughts
 ---
 
-<QuickStart title={title}>
+<QuickStart title={title} date={date}>
 
 This is the next simplest potential that the Schrödinger equation can be solved for after the free particle and builds upon the free particle solution. This solution is complete and unlike the free particle all the variables can be solved for rather than some having any arbitrary value. The first step in this solution is to construct the potential. The potential will have a box shape with the sides being infinitely tall. Our potential can be defined as a piecewise function
 
@@ -21,7 +21,7 @@ $$
 
 Interestingly, we don't need to solve the Schrödinger equation for this potential. All this potential does is take the free particle solution $(2.2.5)$ and impose boundary conditions onto it. This is because inside the box the Schrödinger equation is just that of a free particle as the potential is zero. Outside the box the wavefunction must be zero as there is infinite potential energy, this would require infinite kinetic energy to overcome. Knowing this we can write down a none specific solution using the free particle solution $(2.2.5)$
 
-<div className="[style:largeEquation]">
+<div style={{ overflow: "hidden"}}>
 
 $$
 \psi(x)=
@@ -110,7 +110,7 @@ $$
 
 And we can write down the final form of the wavefunction
 
-<div className="[style:largeEquation]">
+<div style={{ overflow: "hidden"}}>
 
 $$
 \psi(x)=

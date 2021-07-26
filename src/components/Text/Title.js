@@ -1,10 +1,7 @@
-import { Heading, useBreakpointValue } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 
 const Title = ({ children, ...rest }) => (
-  <Heading
-    fontSize={useBreakpointValue({ base: 50, sm: 60, md: 90 })}
-    {...rest}
-  >
+  <Heading fontSize={{ base: 50, sm: 60, md: 90 }} {...rest}>
     {children}
   </Heading>
 );

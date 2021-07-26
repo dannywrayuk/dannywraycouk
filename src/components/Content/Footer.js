@@ -6,7 +6,6 @@ import constants from "../../constants";
 const { Links } = constants;
 
 export const Footer = () => {
-  const responsiveDirection = useBreakpointValue({ base: "column", sm: "row" });
   return (
     <Flex
       h={50}
@@ -16,7 +15,7 @@ export const Footer = () => {
       textTransform="uppercase"
       letterSpacing={2}
       fontWeight={300}
-      direction={responsiveDirection}
+      direction={{ base: "column", sm: "row" }}
     >
       <Text>Danny Wray {new Date().getFullYear()}</Text>
       <Stack direction="row" spacing={6}>
