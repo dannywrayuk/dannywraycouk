@@ -7,13 +7,13 @@ const { Links } = constants;
 
 const SocialIcons = () => (
   <Stack direction="row" spacing={6}>
-    <Link href={Links.Github}>
+    <Link href={Links.Github} _focus={{ boxShadow: "none" }}>
       <Icon as={AiFillGithub} />
     </Link>
-    <Link href={Links.Twitter}>
+    <Link href={Links.Twitter} _focus={{ boxShadow: "none" }}>
       <Icon as={AiOutlineTwitter} />
     </Link>
-    <Link href={Links.Linkedin}>
+    <Link href={Links.Linkedin} _focus={{ boxShadow: "none" }}>
       <Icon as={AiFillLinkedin} />
     </Link>
   </Stack>

@@ -1,6 +1,6 @@
 ---
 title: another
-date: 10th Jan 2001
+date: 10 Jan 2001
 description: nothing much
 ---
 

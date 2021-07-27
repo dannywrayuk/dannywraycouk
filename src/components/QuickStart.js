@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import Footer from "./Footer";
 import Padding from "./Padding";
-import VBar from "./VBar";
+import VBar from "./Text/VBar";
 import Title from "./Text/Title";
 import SubTitle from "./Text/SubTitle";
 

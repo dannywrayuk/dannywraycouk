@@ -1,38 +1,25 @@
+import { useState } from "react";
 import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
-  Td,
   TableCaption,
-  Box,
   Text,
   Button,
-  Flex,
 } from "@chakra-ui/react";
-import Link from "./Link";
-import { useState } from "react";
+import ListItem from "./ListItem";
 
-const ListItem = ({ itemData }) => (
-  <Link
-    href={itemData.route}
-    as={Tr}
-    transition="0.3s"
-    _hover={{ color: "gray.400" }}
-  >
-    <Td>{itemData.title}</Td>
-    <Td textAlign="right" fontWeight={300} letterSpacing={2}>
-      {itemData.date}
-    </Td>
-  </Link>
-);
-
-const IndexList = ({ list, itemIncrease = 10, initialSize = 10 }) => {
+const PostTable = ({ list, itemIncrease = 10, initialSize = 10 }) => {
   const [shownItems, setShownItems] = useState(
     list.length <= initialSize ? list.length : initialSize
   );
+  const filteredList = list
+    .filter((_, id) => id < shownItems)
+    .map((listItemData) => (
+      <ListItem key={listItemData.route} itemData={listItemData} />
+    ));
   return (
     <Table variant="striped">
       <Thead>
@@ -41,13 +28,7 @@ const IndexList = ({ list, itemIncrease = 10, initialSize = 10 }) => {
           <Th float="right">Date</Th>
         </Tr>
       </Thead>
-      <Tbody>
-        {list
-          .filter((_, id) => id < shownItems)
-          .map((listItemData) => (
-            <ListItem key={listItemData.route} itemData={listItemData} />
-          ))}
-      </Tbody>
+      <Tbody>{filteredList}</Tbody>
       <TableCaption>
         <Text mb={4}>
           Showing {shownItems} of {list.length}.
@@ -72,4 +53,4 @@ const IndexList = ({ list, itemIncrease = 10, initialSize = 10 }) => {
   );
 };
 
-export default IndexList;
+export default PostTable;

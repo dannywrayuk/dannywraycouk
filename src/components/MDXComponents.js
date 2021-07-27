@@ -8,7 +8,7 @@ import IndexList from "./IndexList";
 import ImageCard from "./ImageCard";
 import Title from "./Text/Title";
 import SubTitle from "./Text/SubTitle";
-import VBar from "./VBar";
+import VBar from "./Text/VBar";
 import SeeAllTab from "./SeeAllTab";
 
 import * as Heads from "./Heads";

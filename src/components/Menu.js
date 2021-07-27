@@ -30,7 +30,6 @@ const Menu = ({ children }) => {
         top={{ base: 3, md: 10 }}
         right={{ base: 3, md: 10 }}
         icon={<HamburgerIcon w={6} h={6} />}
-        ref={btnRef}
         variant="unstyled"
         borderRadius={10}
         onClick={onOpen}
