@@ -1,7 +1,8 @@
-import { Flex, Text, Stack, Icon, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Stack, Icon } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Link from "../Link";
 import constants from "../../constants";
+import SubTitle from "../Text/SubTitle";
 
 const { Links } = constants;
 
@@ -12,12 +13,9 @@ export const Footer = () => {
       justifyContent="space-evenly"
       alignItems="center"
       mb={5}
-      textTransform="uppercase"
-      letterSpacing={2}
-      fontWeight={300}
       direction={{ base: "column", sm: "row" }}
     >
-      <Text>Danny Wray {new Date().getFullYear()}</Text>
+      <SubTitle>Danny Wray {new Date().getFullYear()}</SubTitle>
       <Stack direction="row" spacing={6}>
         <Link href={Links.Github}>
           <Icon as={AiFillGithub} />

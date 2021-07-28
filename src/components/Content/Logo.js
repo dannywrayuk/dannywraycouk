@@ -9,10 +9,11 @@ export const Logo = () => (
       justifyContent="space-evenly"
       top={{ base: 3, md: 10 }}
       left={{ base: 3, md: 10 }}
-      h={{ base: "50px", sm: "65px" }}
-      w={{ base: "50px", sm: "65px" }}
+      h={{ base: "50px", sm: "70px" }}
+      w={{ base: "50px", sm: "70px" }}
+      fontFamily="Montserrat, serif"
       fontSize={{ base: 10, sm: 15 }}
-      fontWeight={300}
+      fontWeight={500}
       lineHeight={1}
       letterSpacing={2}
       textAlign="right"

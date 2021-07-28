@@ -10,6 +10,7 @@ import Title from "./Text/Title";
 import SubTitle from "./Text/SubTitle";
 import VBar from "./Text/VBar";
 import SeeAllTab from "./SeeAllTab";
+import LinkButton from "./LinkButton";
 
 import * as Heads from "./Heads";
 import * as chakra from "@chakra-ui/react";
@@ -34,6 +35,7 @@ const MDXComponents = {
   VBar,
   IndexList,
   SeeAllTab,
+  LinkButton,
 };
 
 export default MDXComponents;

@@ -5,8 +5,9 @@ export const StandardHead = ({ title }) => (
     <title>{title || "Danny Wray"}</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link

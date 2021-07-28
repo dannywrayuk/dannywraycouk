@@ -10,12 +10,12 @@ import {
   useDisclosure,
   useBreakpointValue,
   IconButton,
-  Heading,
   Flex,
   Text,
 } from "@chakra-ui/react";
 import Package from "../../package.json";
 import { Menu as MenuContent } from "./Content/Menu";
+import SubTitle from "./Text/SubTitle";
 
 const Menu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,16 +44,9 @@ const Menu = ({ children }) => {
         <DrawerOverlay />
         <DrawerContent>
           <Flex alignItems="center" mt={10}>
-            <Heading
-              fontSize={18}
-              fontWeight={300}
-              letterSpacing={2}
-              textTransform="uppercase"
-              textAlign="center"
-              flexGrow={1}
-            >
+            <SubTitle fontSize={18} textAlign="center" flexGrow={1}>
               dannywray.co.uk
-            </Heading>
+            </SubTitle>
             {showCloseButton && <DrawerCloseButton />}
           </Flex>
           <DrawerBody>{children || <MenuContent />}</DrawerBody>

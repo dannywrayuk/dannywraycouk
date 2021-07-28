@@ -8,6 +8,7 @@ import {
   parseKatex,
   getAllMeta,
 } from "../utils";
+import constants from "../constants";
 
 const RouteHandler = ({ source, frontMatter }) => (
   <MDXRemote {...source} {...frontMatter} components={MDXComponents} />
@@ -33,6 +34,7 @@ export const getStaticProps = async ({ params: { route = "index" } }) => {
   const source = getMarkdownContent(route);
   const { content, data } = matter(source);
   data.metaList = data.indexTag ? getAllMeta(data.indexTag) : null;
+  data.constants = constants;
   const withKatex = parseKatex(content);
   const mdxSource = await serialize(withKatex, {
     scope: data,

@@ -1,16 +1,15 @@
-import { Box, Center, Flex, Stack, Text } from "@chakra-ui/react";
+import { Center, Flex, Stack } from "@chakra-ui/react";
 import Link from "../Link";
 import SocialIcons from "../SocialIcons";
+import SubTitle from "../Text/SubTitle";
 
 const StyledLink = ({ href, children }) => (
   <Link
     href={href}
-    as={Box}
-    fontWeight={300}
-    textTransform="uppercase"
-    letterSpacing={2}
+    as={SubTitle}
     transition="0.3s"
     _hover={{ color: "gray.400" }}
+    _focus={{ borderBox: "none" }}
   >
     {children}
   </Link>
