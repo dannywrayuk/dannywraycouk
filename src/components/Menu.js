@@ -51,9 +51,13 @@ const Menu = ({ children }) => {
           </Flex>
           <DrawerBody>{children || <MenuContent />}</DrawerBody>
           <DrawerFooter>
-            <Text fontWeight={200} letterSpacing={2} textTransform="uppercase">
+            <SubTitle
+              fontWeight={200}
+              letterSpacing={2}
+              textTransform="uppercase"
+            >
               {`v${Package.version}`}
-            </Text>
+            </SubTitle>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
