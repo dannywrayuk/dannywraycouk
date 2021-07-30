@@ -1,9 +1,8 @@
 import { gsap } from "gsap";
 
-const getDefaultTimeline = (node) => {
-  const timeline = gsap.timeline({ paused: true });
+export const staggerTextOnLoad = (node) => {
   const elements = node.querySelectorAll("*");
-
+  const timeline = gsap.timeline({ paused: true });
   timeline
     .from(node, {
       duration: 0.5,
@@ -18,12 +17,5 @@ const getDefaultTimeline = (node) => {
       ease: "power1.easeOut",
       stagger: 0.5,
     });
-
-  return timeline;
-};
-
-export const play = (node) => {
-  const timeline = getDefaultTimeline(node);
-
   window.loadPromise.then(() => requestAnimationFrame(() => timeline.play()));
 };
