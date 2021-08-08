@@ -2,7 +2,7 @@ import { Flex, Stack, Icon } from "@chakra-ui/react";
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import Link from "../Link";
 import constants from "../../constants";
-import SubTitle from "../Text/SubTitle";
+import { SubTitle } from "../Text";
 
 const { Links } = constants;
 

@@ -1,12 +1,11 @@
 import { Heading } from "@chakra-ui/react";
 
-export const SubTitle = ({ children, ...rest }) => (
+export const Description = ({ children, ...rest }) => (
   <Heading
     fontSize={18}
-    fontWeight={300}
-    letterSpacing={2}
-    textTransform="uppercase"
+    fontWeight={500}
     fontFamily="sans-serif"
+    letterSpacing={1.5}
     {...rest}
   >
     {children}

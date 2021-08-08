@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SortMenu from "./SortMenu";
 import PostTable from "./PostTable";
+import { Box } from "@chakra-ui/react";
 
 const sortingFunctions = {
   newest: (a, b) =>
@@ -15,7 +16,7 @@ const IndexList = ({ list, itemIncrease, initialSize }) => {
   const sortedList = list.sort(sortingFunctions[sortingFunction]);
 
   return (
-    <>
+    <Box mt={20}>
       <SortMenu
         sortingFunction={sortingFunction}
         setSortingFunction={setSortingFunction}
@@ -26,7 +27,7 @@ const IndexList = ({ list, itemIncrease, initialSize }) => {
         itemIncrease={itemIncrease}
         initialSize={initialSize}
       />
-    </>
+    </Box>
   );
 };
 

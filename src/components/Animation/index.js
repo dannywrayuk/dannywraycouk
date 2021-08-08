@@ -1,2 +1,2 @@
-export { Animation } from "./Animation";
-export { staggerTextOnLoad } from "./staggerTextOnLoad";
+export { WithScroll } from "./WithScroll";
+export { StaggerText } from "./StaggerText";

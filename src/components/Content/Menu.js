@@ -1,7 +1,7 @@
 import { Center, Flex, Stack, Text } from "@chakra-ui/react";
 import Link from "../Link";
 import SocialIcons from "../SocialIcons";
-import SubTitle from "../Text/SubTitle";
+import { SubTitle } from "../Text";
 
 const StyledLink = ({ href, children }) => (
   <Link

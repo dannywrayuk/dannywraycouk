@@ -1,7 +1,10 @@
 <StandardHead />
-<Logo settings={{ start: 0.3, initiallyVisible: false }} />
+<Logo />
 <Menu />
-<Greeting />
+<PageTitle height="100vh">
+    <Title>DANNY WRAY</Title>
+    <SubTitle pl={1}>SOFTWARE DEVELOPER</SubTitle>
+</PageTitle>
 <Footer>
     <Padding>
             <Box mb={220}>
@@ -15,15 +18,6 @@
             </Box>
         <Box mb={220}>
             <VBar>
-                <Title>Physics Notes</Title>
-            </VBar>
-            <Text lineHeight={2} fontSize={20} fontFamily="Montserrat, sans serif" mb={10}>
-While at University I started typesetting my lecture notes as a revision tool. They're not great and they're not finished, but hopefully they'll be useful to someone somewhere. I've started off writing up my notes on quantum mechanics and once finished will start writing up on other areas of physics.
-            </Text>
-            <LinkButton href="/physics">Read More</LinkButton>
-            </Box>
-        <Box mb={100}>
-            <VBar>
                 <Title>Building a Blog</Title>
             </VBar>
             <Text lineHeight={2} fontSize={20} fontFamily="Montserrat, sans serif" mb={10}>
@@ -33,6 +27,16 @@ To read more about this site and how it works, checkout the code on github.
 </Text>
 
 <LinkButton href={constants.Links.GithubSiteRepo}>See the code</LinkButton>
+</Box>
+<Box mb={100}>
+<VBar>
+
+<Title>Physics Notes</Title>
+</VBar>
+<Text lineHeight={2} fontSize={20} fontFamily="Montserrat, sans serif" mb={10}>
+While at University I started typesetting my lecture notes as a revision tool. They're not great and they're not finished, but hopefully they'll be useful to someone somewhere. I've started off writing up my notes on quantum mechanics and once finished will start writing up on other areas of physics.
+</Text>
+<LinkButton href="/physics">Read More</LinkButton>
 </Box>
 </Padding>
 

@@ -11,11 +11,10 @@ import {
   useBreakpointValue,
   IconButton,
   Flex,
-  Text,
 } from "@chakra-ui/react";
 import Package from "../../package.json";
 import { Menu as MenuContent } from "./Content/Menu";
-import SubTitle from "./Text/SubTitle";
+import { SubTitle } from "./Text";
 
 const Menu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

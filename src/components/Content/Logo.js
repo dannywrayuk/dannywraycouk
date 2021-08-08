@@ -18,6 +18,7 @@ export const Logo = () => (
       letterSpacing={2}
       textAlign="right"
       textTransform="uppercase"
+      fontFamily="sans-serif"
     >
       <Text w="100%">danny</Text>
       <Text w="100%">wray</Text>
