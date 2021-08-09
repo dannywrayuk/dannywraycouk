@@ -1,13 +1,20 @@
-import { Box } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import Tags from "./Tags";
 import { Title } from "./Text";
 
 const TitledSection = ({ title, tags, children, ...rest }) => (
-  <Box mb={20} {...rest}>
-    <Title>{title}</Title>
-    {tags && <Tags tags={tags} />}
+  <Stack
+    mb={220}
+    display={{ base: "flex", sm: "block" }}
+    spacing={10}
+    {...rest}
+  >
+    <>
+      <Title>{title}</Title>
+      {tags && <Tags tags={tags} />}
+    </>
     {children}
-  </Box>
+  </Stack>
 );
 
 export default TitledSection;

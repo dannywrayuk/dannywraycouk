@@ -1,13 +1,12 @@
-import { Heading } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 export const Description = ({ children, ...rest }) => (
-  <Heading
-    fontSize={18}
-    fontWeight={500}
-    fontFamily="sans-serif"
-    letterSpacing={1.5}
+  <Text
+    lineHeight={2}
+    fontSize={20}
+    fontFamily="Montserrat, sans-serif"
     {...rest}
   >
     {children}
-  </Heading>
+  </Text>
 );

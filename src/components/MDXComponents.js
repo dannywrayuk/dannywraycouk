@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import QuickStart from "./QuickStart";
 import IndexList from "./IndexList";
 import ImageCard from "./ImageCard";
-import { Title, SubTitle, VBar } from "./Text";
+import { Title, SubTitle, Description } from "./Text";
 import LinkButton from "./LinkButton";
 import TitledSection from "./TitledSection";
 import Tags from "./Tags";
@@ -30,12 +30,12 @@ const MDXComponents = {
   ImageCard,
   Title,
   SubTitle,
-  VBar,
   IndexList,
   LinkButton,
   TitledSection,
   Tags,
   PageTitle,
+  Description,
 };
 
 export default MDXComponents;

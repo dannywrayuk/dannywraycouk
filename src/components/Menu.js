@@ -11,10 +11,24 @@ import {
   useBreakpointValue,
   IconButton,
   Flex,
+  Text,
 } from "@chakra-ui/react";
 import Package from "../../package.json";
 import { Menu as MenuContent } from "./Content/Menu";
 import { SubTitle } from "./Text";
+import Link from "./Link";
+
+const StyledLink = ({ href, children }) => (
+  <Link
+    href={href}
+    as={Text}
+    transition="0.3s"
+    _hover={{ color: "gray.400" }}
+    _focus={{ borderBox: "none" }}
+  >
+    {children}
+  </Link>
+);
 
 const Menu = ({ children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,7 +58,7 @@ const Menu = ({ children }) => {
         <DrawerContent>
           <Flex alignItems="center" mt={10}>
             <SubTitle fontSize={18} textAlign="center" flexGrow={1}>
-              dannywray.co.uk
+              <StyledLink href="/">dannywray.co.uk</StyledLink>
             </SubTitle>
             {showCloseButton && <DrawerCloseButton />}
           </Flex>
