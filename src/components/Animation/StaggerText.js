@@ -27,9 +27,14 @@ export const StaggerText = ({ children, as, ...rest }) => {
   const Parent = motion(as);
   return (
     <Parent initial="hidden" variants={variants} animate="shown" {...rest}>
-      {children.map((child) => (
-        <motion.div variants={item}>{child}</motion.div>
-      ))}
+      {children.map(
+        (child, id) =>
+          child && (
+            <motion.div key={id} variants={item}>
+              {child}
+            </motion.div>
+          )
+      )}
     </Parent>
   );
 };

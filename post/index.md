@@ -1,12 +1,4 @@
-<StandardHead />
-<Logo />
-<Menu />
-<PageTitle height="100vh">
-    <Title>DANNY WRAY</Title>
-    <SubTitle pl={1}>SOFTWARE DEVELOPER</SubTitle>
-</PageTitle>
-<Footer>
-    <Padding>
+<PostLayout title="DANNY WRAY" subTitle="software developer" logoAnimateOff={false} pageTitleHeight="100vh">
     <TitledSection title="Who am I?">
         <Description>
             I'm Danny, a physics graduate from the university of Nottingham. I currently work in front end web development and in general just love writing code.
@@ -27,5 +19,4 @@
         </Description>
         <LinkButton href="/physics">Read More</LinkButton>
     </TitledSection>
-    </Padding>
-</Footer>
+</PostLayout>
