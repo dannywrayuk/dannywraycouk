@@ -6,6 +6,7 @@ import Logo from "../Logo";
 import Menu from "../Menu";
 import Footer from "../Footer";
 import Padding from "../Padding";
+import Navigation from "../Navigation";
 
 export const PostLayout = ({
   children,
@@ -19,7 +20,7 @@ export const PostLayout = ({
   <>
     <StandardHead />
     <Logo animateOff={logoAnimateOff} />
-    <Menu />
+    <Navigation />
     {title && (
       <PageTitle height={pageTitleHeight}>
         <Title>{title}</Title>

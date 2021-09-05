@@ -40,7 +40,7 @@ const Menu = ({ children }) => {
       <IconButton
         position="fixed"
         top={{ base: 3, md: 10 }}
-        left={{ base: 3, md: 10 }}
+        right={{ base: 3, md: 10 }}
         icon={<HamburgerIcon w={6} h={6} />}
         variant="unstyled"
         borderRadius={10}
@@ -52,7 +52,7 @@ const Menu = ({ children }) => {
         onClose={onClose}
         finalFocusRef={btnRef}
         size={drawerSize}
-        placement="left"
+        placement="right"
       >
         <DrawerOverlay />
         <DrawerContent>
