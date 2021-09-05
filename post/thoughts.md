@@ -3,7 +3,7 @@ title: THOUGHTS
 indexTag: thoughts
 ---
 
-<PostLayout title={title} pageTitleHeight="100vh">
+<ContentLayout title={title} pageTitleHeight="100vh">
     <TitledSection title="Structure of the Atom" tags="physics">
         <Description>
             A short blog post looking at the structure of the atom. This is some placeholder text until the real thing replaces it.
@@ -12,4 +12,4 @@ indexTag: thoughts
     </TitledSection>
     <Title textAlign="center">All Thoughts</Title>
     <IndexList list={metaList} />
-</PostLayout>
+</ContentLayout>

@@ -8,7 +8,7 @@ export const Logo = () => (
       direction="column"
       justifyContent="space-evenly"
       top={{ base: 3, md: 10 }}
-      left={{ base: 3, md: 10 }}
+      right={{ base: 3, md: 10 }}
       h={{ base: "50px", sm: "70px" }}
       w={{ base: "50px", sm: "70px" }}
       fontFamily="Montserrat, serif"

@@ -9,7 +9,7 @@ import LinkButton from "./LinkButton";
 import TitledSection from "./TitledSection";
 import Tags from "./Tags";
 import PageTitle from "./PageTitle";
-import { PostLayout } from "./Layouts";
+import { PostLayout, ContentLayout } from "./Layouts";
 
 import * as Heads from "./Heads";
 import * as chakra from "@chakra-ui/react";
@@ -36,6 +36,7 @@ const MDXComponents = {
   PageTitle,
   Description,
   PostLayout,
+  ContentLayout,
 };
 
 export default MDXComponents;
