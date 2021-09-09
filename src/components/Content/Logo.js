@@ -4,11 +4,9 @@ import Link from "../Link";
 export const Logo = () => (
   <Link href="/" _focus={{ boxShadow: "none" }}>
     <Flex
-      position="fixed"
+      position="absolute"
       direction="column"
       justifyContent="space-evenly"
-      top={{ base: 3, md: 10 }}
-      left={{ base: 3, md: 10 }}
       h={{ base: "50px", sm: "70px" }}
       w={{ base: "50px", sm: "70px" }}
       fontFamily="Montserrat, serif"

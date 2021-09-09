@@ -1,4 +1,4 @@
-<PostLayout title="DANNY WRAY" subTitle="software developer" logoAnimateOff={false} pageTitleHeight="100vh">
+<PostLayout title="DANNY WRAY" subTitle="software developer"            pageTitleHeight="100vh">
     <TitledSection title="Who am I?">
         <Description>
             I'm Danny, a physics graduate from the university of Nottingham. I currently work in front end web development and in general just love writing code.

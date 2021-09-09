@@ -8,9 +8,9 @@ export const WithScroll = ({
   inactiveStyle = { opacity: 0, pointerEvents: "none" },
   start = 0.3,
   stop,
-  animateOff,
+  animated,
 }) => {
-  if (animateOff) return children;
+  if (!animated) return children;
   const { scrollY } = useViewportScroll();
   const [active, setActive] = useState(false);
   const variants = {

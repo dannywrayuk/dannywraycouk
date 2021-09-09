@@ -38,9 +38,8 @@ const Menu = ({ children }) => {
   return (
     <>
       <IconButton
-        position="fixed"
-        top={{ base: 3, md: 10 }}
-        right={{ base: 3, md: 10 }}
+        display="flex"
+        ml="auto"
         icon={<HamburgerIcon w={6} h={6} />}
         variant="unstyled"
         borderRadius={10}

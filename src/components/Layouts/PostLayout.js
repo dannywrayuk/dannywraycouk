@@ -3,7 +3,6 @@ import { Title, SubTitle, Description } from "../Text";
 import PageTitle from "../PageTitle";
 import { StandardHead } from "../Heads";
 import Logo from "../Logo";
-import Menu from "../Menu";
 import Footer from "../Footer";
 import Padding from "../Padding";
 import Navigation from "../Navigation";
@@ -14,13 +13,15 @@ export const PostLayout = ({
   subTitle,
   date,
   description,
-  logoAnimateOff = true,
+  animated = false,
   pageTitleHeight = "75vh",
 }) => (
   <>
     <StandardHead />
-    <Logo animateOff={logoAnimateOff} />
-    <Navigation />
+    <Box position="fixed" w="100%" h="100%" p={{ base: 3, md: 10 }}>
+      <Logo animated={animated} />
+      <Navigation />
+    </Box>
     {title && (
       <PageTitle height={pageTitleHeight}>
         <Title>{title}</Title>
