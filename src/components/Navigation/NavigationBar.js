@@ -17,7 +17,7 @@ const StyledLink = ({ href, children, ...rest }) => (
 
 const Navigation = ({ current }) => (
   <Flex justifyContent="space-between" alignItems="center" ml="auto" w={600}>
-    <StyledLink href="/">thoughts</StyledLink>
+    <StyledLink href="/thoughts">thoughts</StyledLink>
     <StyledLink href="/">projects</StyledLink>
     <StyledLink href="/">about</StyledLink>
     <SocialIcons />

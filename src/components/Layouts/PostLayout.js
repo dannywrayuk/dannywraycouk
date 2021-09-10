@@ -18,7 +18,7 @@ export const PostLayout = ({
 }) => (
   <>
     <StandardHead />
-    <Box position="fixed" w="100%" h="100%" p={{ base: 3, md: 10 }}>
+    <Box position="fixed" w="100%" p={{ base: 3, md: 10 }}>
       <Logo animated={animated} />
       <Navigation />
     </Box>
