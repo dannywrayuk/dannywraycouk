@@ -1,48 +1,36 @@
-import { Flex, Box, Stack, Image, useBreakpointValue } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import { Description, Title } from "./Text";
 
-const ImageCard = ({ children, image, reverse }) => {
-  const responsiveReverse = useBreakpointValue({ base: false, lg: reverse });
-
-  const ImageHalf = (props) => (
-    <Box w="100%" overflow="hidden" borderRadius={30} {...props}>
-      <Image src={image} w="100%" />
-    </Box>
-  );
-
-  const TextHalf = (props) => (
-    <Stack w="100%" spacing={10} {...props}>
+export const ImageCard = ({ children, image, reverse, ...rest }) => (
+  <Flex
+    direction={{ base: "column", lg: reverse ? "row-reverse" : "row" }}
+    justifyContent="space-evenly"
+    alignItems="center"
+    mb={40}
+    {...rest}
+  >
+    <Flex
+      direction="column"
+      px={{ base: 0, lg: 5 }}
+      minW={{ base: 0, lg: "480px" }}
+      maxW={{ base: "100%", lg: "50%" }}
+      mb={10}
+    >
       {children}
-    </Stack>
-  );
-
-  const Section = (props) => (
+    </Flex>
     <Flex
       justifyContent="center"
-      alignItems="center"
-      h="100%"
-      w={{
-        base: "100%",
-        lg: "40%",
-      }}
-      {...props}
+      minW={{ base: 0, lg: "480px" }}
+      maxW={{ base: "100%", lg: "50%" }}
+      px={{ base: 0, lg: 5 }}
     >
-      {props.children}
+      {image}
     </Flex>
-  );
+  </Flex>
+);
 
-  return (
-    <Flex
-      direction={{ base: "column", lg: "row" }}
-      justifyContent="space-evenly"
-      alignItems="center"
-      mb={140}
-    >
-      <Section mb={{ base: "10%", lg: 0 }}>
-        {!responsiveReverse ? <ImageHalf /> : <TextHalf />}
-      </Section>
-      <Section>{responsiveReverse ? <ImageHalf /> : <TextHalf />}</Section>
-    </Flex>
-  );
-};
+export const ImageCardTitle = (props) => (
+  <Title fontSize={40} mb={5} {...props} />
+);
 
-export default ImageCard;
+export const ImageCardText = (props) => <Description mb={3} {...props} />;

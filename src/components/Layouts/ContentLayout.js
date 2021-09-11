@@ -1,12 +1,11 @@
-import { Box, Center, Button } from "@chakra-ui/react";
+import { Box, Center, Button, Image } from "@chakra-ui/react";
 import { Title, SubTitle, Description } from "../Text";
-import PageTitle from "../PageTitle";
 import { StandardHead } from "../Heads";
 import Logo from "../Logo";
 import Footer from "../Footer";
 import Padding from "../Padding";
 import Navigation from "../Navigation";
-import ImageCard from "../ImageCard";
+import { ImageCard, ImageCardText, ImageCardTitle } from "../ImageCard";
 import PostList from "../PostList";
 
 export const ContentLayout = ({
@@ -29,17 +28,22 @@ export const ContentLayout = ({
       <Padding>
         <Title my={100}>{title}</Title>
         <ImageCard
-          reverse
-          image="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/is_my_cat_normal_slideshow/1800x1200_is_my_cat_normal_slideshow.jpg"
+          image={
+            <Image
+              maxH={600}
+              src="https://image.freepik.com/free-photo/cute-kitten-bed_1303-9321.jpg"
+            />
+          }
         >
-          <Description>1st Jan 2000</Description>
-          <Title>This is a featured post</Title>
-          <Description>
-            Learning about how i can display the content on the page in such a
-            way that the post look nice.
-          </Description>
+          <ImageCardText>1st Jan 2000</ImageCardText>
+          <ImageCardTitle>Test featured post: cat pics</ImageCardTitle>
+          <ImageCardText>
+            Here you can see a picture of a cat, its very cute. Trying to fill
+            this section with some placeholder text . Don't really know what to
+            write, really enjoyed the marvel film i saw recently.
+          </ImageCardText>
         </ImageCard>
-        <SubTitle mb={100}>Latest</SubTitle>
+        <SubTitle mb={70}>Latest</SubTitle>
         <PostList mb={100} posts={posts} />
         <Center flexDir="column">
           <Description mb={30}>Still looking for something?</Description>
