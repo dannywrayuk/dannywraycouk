@@ -1,2 +1,2 @@
 export { PostLayout } from "./PostLayout";
-export { ContentLayout } from "./ContentLayout";
+export { BasicLayout } from "./BasicLayout";

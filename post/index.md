@@ -1,4 +1,9 @@
-<PostLayout title="DANNY WRAY" subTitle="software developer"            pageTitleHeight="100vh">
+<PageTitle fullPage>
+        <Title>DANNY WRAY</Title>
+        <SubTitle pl={1}>software developer</SubTitle>
+</PageTitle>
+
+<BasicLayout>
     <TitledSection title="Who am I?">
         <Description>
             I'm Danny, a physics graduate from the university of Nottingham. I currently work in front end web development and in general just love writing code.
@@ -19,4 +24,4 @@
         </Description>
         <LinkButton href="/physics">Read More</LinkButton>
     </TitledSection>
-</PostLayout>
+</BasicLayout>

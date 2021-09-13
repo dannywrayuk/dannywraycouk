@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 
 const variants = {
   hidden: {},
@@ -27,7 +28,8 @@ export const StaggerText = ({ children, as, ...rest }) => {
   const Parent = motion(as);
   return (
     <Parent initial="hidden" variants={variants} animate="shown" {...rest}>
-      {children.map(
+      {React.Children.map(
+        children,
         (child, id) =>
           child && (
             <motion.div key={id} variants={item}>
