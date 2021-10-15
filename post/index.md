@@ -4,22 +4,24 @@
 </PageTitle>
 
 <BasicLayout>
-    <TitledSection title="Project 1: Craft Zone">
+    <TitledSection title="Who am I?">
         <Description>
-        My craft zone project was my first project. It looked at creating a loyalty app for a craft company.
+            I'm Danny, a physics graduate from the university of Nottingham. I currently work in front end web development and in general just love writing code.
         </Description>
-        <LinkButton href="https://docs.google.com/presentation/d/1AtutL8g9H_tw66190LEy7K8WVIflrnoYzS63VZaM5GA/edit?usp=sharing">See Case Study</LinkButton>
+        <LinkButton href="/about">More about me</LinkButton>
     </TitledSection>
-    <TitledSection title="Project 2: Developer Social Media">
+    <TitledSection title="Building a Blog">
         <Description>
-        A project in Adobe XD. I created a social media app for developers.
+            This site has been through many iterations. It started out as a custom webserver running on an old laptop under my bed, and slowly evolved into this site here. My original goal was to host a website for as cheap as possible, so an old laptop wasn't a bad idea, but today it runs on AWS.
+            <br/>
+            To read more about this site and how it works, checkout the code on github.
         </Description>
-        <LinkButton href="https://docs.google.com/presentation/d/1MB2sb1uWHiFDdryM1et7g5Pqtu06s0-T3IfOs6dsiQU/edit?usp=sharing">See Case Study</LinkButton>
+        <LinkButton href={constants.Links.GithubSiteRepo}>See the code</LinkButton>
     </TitledSection>
-    <TitledSection title="Project 3: Activ" mb={100}>
+    <TitledSection title="Physics Notes" mb={100}>
         <Description>
-        Social good project. This project is a design for a fitness app that has features for people with disabilities.
+            While at University I started typesetting my lecture notes as a revision tool. They're not great and they're not finished, but hopefully they'll be useful to someone somewhere. I've started off writing up my notes on quantum mechanics and once finished will start writing up on other areas of physics.
         </Description>
-        <LinkButton href="https://docs.google.com/presentation/d/1ZSUaySyokqqHdkCvDAgmnP7JSTp4cPO7336KB88AWPQ/edit?usp=sharing">See Case Study</LinkButton>
+        <LinkButton href="/physics">Read More</LinkButton>
     </TitledSection>
 </BasicLayout>
