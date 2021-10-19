@@ -3,7 +3,7 @@ import { WithScroll } from "./Animation";
 
 const Logo = (props) => (
   <WithScroll {...props}>
-    <LogoContent />
+    <LogoContent position="absolute" />
   </WithScroll>
 );
 

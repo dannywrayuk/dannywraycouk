@@ -7,9 +7,7 @@ import LinkButton from "./LinkButton";
 import TitledSection from "./TitledSection";
 import Tags from "./Tags";
 import PageTitle from "./PageTitle";
-import { PostLayout, BasicLayout } from "./Layouts";
-import { SplitCard, SplitCardText, SplitCardTitle } from "./SplitCard";
-import PostList from "./PostList";
+import { BasicLayout, TestLayout } from "./Layouts";
 
 import * as Heads from "./Heads";
 import * as chakra from "@chakra-ui/react";
@@ -33,12 +31,8 @@ const MDXComponents = {
   Tags,
   PageTitle,
   Description,
-  PostLayout,
   BasicLayout,
-  SplitCard,
-  SplitCardText,
-  SplitCardTitle,
-  PostList,
+  TestLayout,
 };
 
 export default MDXComponents;
