@@ -2,8 +2,7 @@
         <Title>DANNY WRAY</Title>
         <SubTitle pl={1}>software developer</SubTitle>
 </PageTitle>
-
-<BasicLayout>
+<TestLayout>
     <TitledSection title="Who am I?">
         <Description>
             I'm Danny, a physics graduate from the university of Nottingham. I currently work in front end web development and in general just love writing code.
@@ -18,10 +17,10 @@
         </Description>
         <LinkButton href={constants.Links.GithubSiteRepo}>See the code</LinkButton>
     </TitledSection>
-    <TitledSection title="Physics Notes" mb={100}>
+    <TitledSection title="Physics Notes">
         <Description>
             While at University I started typesetting my lecture notes as a revision tool. They're not great and they're not finished, but hopefully they'll be useful to someone somewhere. I've started off writing up my notes on quantum mechanics and once finished will start writing up on other areas of physics.
         </Description>
         <LinkButton href="/physics">Read More</LinkButton>
     </TitledSection>
-</BasicLayout>
+</TestLayout>

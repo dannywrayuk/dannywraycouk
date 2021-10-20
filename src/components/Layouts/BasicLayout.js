@@ -9,7 +9,6 @@ export const BasicLayout = ({ children, animated = false }) => (
   <>
     <StandardHead />
     <Box position="fixed" w="100%" top={0} p={{ base: 3, md: 10 }}>
-      <Logo animated={animated} />
       <Navigation />
     </Box>
     <Footer>
