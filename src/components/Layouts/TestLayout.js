@@ -5,23 +5,22 @@ import {
   ModalContent,
   useDisclosure,
 } from "@chakra-ui/react";
-import styled from "styled-components";
 import Footer from "../Footer";
 import { StandardHead } from "../Heads";
 import { Navigation } from "../Navigation";
 
-const CenterGrid = styled(Box)`
-  display: grid;
-  column-gap: 20px;
-  row-gap: 100px;
-  grid-template-rows: none;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr minmax(auto, 880px) 1fr;
-  padding-top: 120px;
-  > * {
-    grid-column: 2;
-  }
-`;
+const CenterGrid = (props) => (
+  <Box
+    display="grid"
+    gridColumnGap="20px"
+    gridRowGap="100px"
+    gridTemplateRows="none"
+    gridAutoFlow="row"
+    gridTemplateColumns="1fr minmax(auto, 880px) 1fr"
+    css=" > * {grid-column: 2;  }"
+    {...props}
+  />
+);
 
 const Menu = ({ isOpen, onClose }) => (
   <Modal isOpen={isOpen} onClose={onClose} isCentered>
