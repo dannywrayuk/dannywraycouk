@@ -1,23 +1,21 @@
 import {
-  Box,
+  Flex,
   Modal,
   ModalOverlay,
   ModalContent,
   useDisclosure,
 } from "@chakra-ui/react";
-import Footer from "../Footer";
+import { Footer } from "../Content/Footer";
 import { StandardHead } from "../Heads";
 import { Navigation } from "../Navigation";
 
 const CenterGrid = (props) => (
-  <Box
-    display="grid"
-    gridColumnGap="20px"
+  <Flex
+    direction="column"
+    maxW="920px"
     gridRowGap="100px"
-    gridTemplateRows="none"
-    gridAutoFlow="row"
-    gridTemplateColumns="1fr minmax(auto, 880px) 1fr"
-    css=" > * {grid-column: 2;  }"
+    px="20px"
+    mx="auto"
     {...props}
   />
 );
@@ -36,7 +34,10 @@ export const TestLayout = ({ children }) => {
       <StandardHead />
       <Menu isOpen={isOpen} onClose={onClose} />
       <Navigation menuOpen={onOpen} />
-      <CenterGrid>{children}</CenterGrid>
+      <CenterGrid>
+        {children}
+        <Footer />
+      </CenterGrid>
     </>
   );
 };
