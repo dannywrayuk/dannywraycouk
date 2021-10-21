@@ -35,10 +35,8 @@ export const TestLayout = ({ children }) => {
     <>
       <StandardHead />
       <Menu isOpen={isOpen} onClose={onClose} />
-      <Footer>
-        <Navigation menuOpen={onOpen} />
-        <CenterGrid>{children}</CenterGrid>
-      </Footer>
+      <Navigation menuOpen={onOpen} />
+      <CenterGrid>{children}</CenterGrid>
     </>
   );
 };

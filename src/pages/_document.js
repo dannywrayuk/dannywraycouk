@@ -11,11 +11,6 @@ export default class Document extends NextDocument {
             href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
             rel="stylesheet"
           />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.loadPromise = new Promise(resolve=>window.addEventListener('load', resolve));`,
-            }}
-          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
