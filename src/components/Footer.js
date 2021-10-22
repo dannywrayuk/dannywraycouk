@@ -1,13 +1,18 @@
 import { Flex } from "@chakra-ui/react";
-import { Footer as FooterContent } from "./Content/Footer";
+import { SubTitle } from "./Text";
+import SocialIcons from "./SocialIcons";
 
-const Footer = ({ children }) => (
-  <Flex minH="100vh" direction="column">
-    <Flex direction="column" flexGrow={1}>
-      {children}
+export const Footer = () => {
+  return (
+    <Flex
+      h="60px"
+      justifyContent={{ base: "space-between", sm: "space-evenly" }}
+      alignItems="center"
+      mb={5}
+      direction={{ base: "column", sm: "row" }}
+    >
+      <SubTitle>Danny Wray {new Date().getFullYear()}</SubTitle>
+      <SocialIcons />
     </Flex>
-    <FooterContent />
-  </Flex>
-);
-
-export default Footer;
+  );
+};

@@ -1,2 +1,2 @@
-export { TestLayout } from "./TestLayout";
+export { HomeLayout } from "./HomeLayout";
 export { BasicLayout } from "./BasicLayout";

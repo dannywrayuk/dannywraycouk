@@ -1,20 +1,28 @@
-import { Box } from "@chakra-ui/react";
+import { CenterContent } from "../CenterContent";
+import { Footer } from "../Footer";
 import { StandardHead } from "../Heads";
-import Logo from "../Logo";
-import Footer from "../Footer";
-import Padding from "../Padding";
-import Navigation from "../Navigation";
+import { Navigation } from "../Navigation";
+import { Stack } from "@chakra-ui/react";
+import { StaggerText } from "../Animation";
+import { Description, SubTitle, Title } from "../Text";
 
-export const BasicLayout = ({ children, animated = false }) => (
+export const BasicLayout = ({
+  children,
+  frontMatter: { footer = true, heading = true, title, date, description },
+}) => (
   <>
     <StandardHead />
-    <Box position="fixed" w="100%" top={0} p={{ base: 3, md: 10 }}>
-      <Navigation />
-    </Box>
-    <Footer>
-      <Padding>
-        <Box mb={10}>{children}</Box>
-      </Padding>
-    </Footer>
+    <Navigation />
+    <CenterContent pt={{ base: "150px", md: "250px" }}>
+      {heading && (
+        <StaggerText as={Stack} spacing={4}>
+          <Title>{title}</Title>
+          <SubTitle>{date}</SubTitle>
+          <Description>{description}</Description>
+        </StaggerText>
+      )}
+      {children}
+      {footer && <Footer />}
+    </CenterContent>
   </>
 );

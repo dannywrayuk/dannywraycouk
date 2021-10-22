@@ -37,7 +37,9 @@ export const Navigation = ({ current, menuOpen }) => {
       px={{ base: 5, md: 10 }}
       pb={{ base: 2, md: 10 }}
       pt={{ base: scrollProgress > 0 ? 2 : 5, md: 10 }}
-      backgroundColor={showBannerView ? "gray.800" : "none"}
+      backgroundColor={
+        showBannerView && scrollProgress > 0 ? "gray.800" : "none"
+      }
       opacity={0.9}
       boxShadow={
         showBannerView && scrollProgress > 0

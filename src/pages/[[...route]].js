@@ -1,6 +1,8 @@
+import { Fragment } from "react";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import { BasicLayout, HomeLayout } from "../components/Layouts";
 import MDXComponents from "../components/MDXComponents";
 import {
   getDirectoryTree,
@@ -10,9 +12,19 @@ import {
 } from "../utils";
 import constants from "../constants";
 
-const RouteHandler = ({ source, frontMatter }) => (
-  <MDXRemote {...source} {...frontMatter} components={MDXComponents} />
-);
+const layouts = {
+  home: HomeLayout,
+  basic: BasicLayout,
+};
+
+const RouteHandler = ({ source, frontMatter }) => {
+  const Layout = layouts[frontMatter.layout] || Fragment;
+  return (
+    <Layout frontMatter={frontMatter}>
+      <MDXRemote {...source} {...frontMatter} components={MDXComponents} />
+    </Layout>
+  );
+};
 
 export default RouteHandler;
 
