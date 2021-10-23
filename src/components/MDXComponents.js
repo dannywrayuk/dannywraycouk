@@ -1,9 +1,8 @@
-import Padding from "./Padding";
-import Footer from "./Footer";
 import { Title, SubTitle, Description } from "./Text";
 import LinkButton from "./LinkButton";
 import TitledSection from "./TitledSection";
 import Tags from "./Tags";
+import { PostList } from "./PostList";
 import { BasicLayout, HomeLayout } from "./Layouts";
 
 import * as Heads from "./Heads";
@@ -17,8 +16,6 @@ const MDXComponents = {
   ...Heads,
   EquationBlock,
   EquationInline,
-  Padding,
-  Footer,
   Title,
   SubTitle,
   LinkButton,
@@ -27,6 +24,7 @@ const MDXComponents = {
   Description,
   BasicLayout,
   HomeLayout,
+  PostList,
 };
 
 export default MDXComponents;
