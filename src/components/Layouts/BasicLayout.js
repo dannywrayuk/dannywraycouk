@@ -13,12 +13,12 @@ export const BasicLayout = ({
   <>
     <StandardHead />
     <Navigation />
-    <CenterContent pt={{ base: "150px", md: "250px" }}>
-      {heading && (
+    <CenterContent pt={{ base: "150px", md: "250px" }} minH="100vh">
+      {heading && (title || date || description) && (
         <StaggerText as={Stack} spacing={4}>
-          <Title>{title}</Title>
-          <SubTitle>{date}</SubTitle>
-          <Description>{description}</Description>
+          {title && <Title>{title}</Title>}
+          {date && <SubTitle>{date}</SubTitle>}
+          {description && <Description>{description}</Description>}
         </StaggerText>
       )}
       {children}

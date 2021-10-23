@@ -5,6 +5,7 @@ import SocialIcons from "./SocialIcons";
 export const Footer = () => {
   return (
     <Flex
+      mt="auto"
       h="60px"
       justifyContent={{ base: "space-between", sm: "space-evenly" }}
       alignItems="center"
