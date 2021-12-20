@@ -1,4 +1,4 @@
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "@emotion/react";
 import theme from "@utils/theme";
 
 const MyApp = ({ Component, pageProps }) => (

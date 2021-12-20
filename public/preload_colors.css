@@ -1,7 +1,0 @@
-html[colorMode="dark"] {
-  --redTest: #ff1111;
-}
-
-html[colorMode="light"] {
-  --redTest: #2dff11;
-}

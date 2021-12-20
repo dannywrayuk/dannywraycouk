@@ -1,0 +1,18 @@
+html[colorMode="dark"] {
+  --redTest: #ff1111;
+  --background: black;
+  --foreground: white;
+}
+
+html[colorMode="light"] {
+  --redTest: #2dff11;
+  --background: white;
+  --foreground: black;
+}
+
+html {
+  background-color: var(--background);
+}
+* {
+  transition: 0.3s;
+}
