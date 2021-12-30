@@ -5,7 +5,7 @@
     "start": "next dev",
     "build": "next build && next export",
     "serve": "serve ./out",
-    "lint": "pretty-quick --pattern \"./**/*.(js|json)\""
+    "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\""
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
@@ -14,10 +14,15 @@
     "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/styled-system": "^5.1.13",
+    "@types/styled-system__should-forward-prop": "^5.1.2",
     "pretty-quick": "^3.1.2",
-    "serve": "^13.0.2"
+    "serve": "^13.0.2",
+    "typescript": "^4.5.4"
   }
 }

@@ -1,18 +1,23 @@
 html[colorMode="dark"] {
   --redTest: #ff1111;
   --background: black;
-  --foreground: white;
+  --text: white;
 }
 
 html[colorMode="light"] {
   --redTest: #2dff11;
   --background: white;
-  --foreground: black;
+  --text: black;
 }
 
 html {
   background-color: var(--background);
 }
+
 * {
-  transition: 0.3s;
+  transition: 0.3s; /* delete this */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
 }

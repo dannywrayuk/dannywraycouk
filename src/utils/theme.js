@@ -2,7 +2,7 @@ export default {
   colors: {
     redTest: "var(--redTest)",
     background: "var(--background)",
-    foreground: "var(--foreground)",
+    text: "var(--text)",
   },
   fonts: {
     Sora: "Sora, -apple-system, sans-serif",
