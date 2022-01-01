@@ -1,17 +1,17 @@
-import { Heading, Text } from "@style-system";
+import { Layout } from "@components/Layout";
 import { Navigation } from "@components/Navigation";
+import { Heading, Label, SubHeading, SubSubHeading, Text } from "@style-system";
 
 const StickerSheet = () => {
   return (
-    <>
+    <Layout>
       <Navigation />
-      {["Heading", "SubHeading", "SubSubHeading", "Label"].map((variant) => (
-        <Heading key={variant} as="h2" variant={variant}>
-          {variant}
-        </Heading>
-      ))}
-      <Text color="redTest">i am text</Text>
-    </>
+      <Heading>Heading</Heading>
+      <SubHeading>SubHeading</SubHeading>
+      <SubSubHeading>SubSubHeading</SubSubHeading>
+      <Label>Label</Label>
+      <Text>i am text</Text>
+    </Layout>
   );
 };
 

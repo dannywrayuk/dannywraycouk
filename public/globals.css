@@ -21,3 +21,9 @@ html {
   padding: 0;
   min-width: 0;
 }
+
+:root {
+  --Sora: "Sora", -apple-system, sans-serif;
+  --Inter: "Inter", -apple-system, sans-serif;
+  --Montserrat: "Montserrat", -apple-system, sans-serif;
+}

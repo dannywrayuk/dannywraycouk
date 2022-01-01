@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@utils/*": ["utils/*"],
+      "@style-system": ["style-system"]
+    }
+  },
+  "include": ["./src/**/*", "next.config.js"],
+  "exclude": ["node_modules"]
+}
