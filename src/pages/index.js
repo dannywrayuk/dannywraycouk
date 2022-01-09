@@ -1,12 +1,2 @@
-import { Navigation } from "@components/Navigation";
-import { Layout } from "@components/Layout";
-
-const Home = () => {
-  return (
-    <Layout>
-      <Navigation />
-    </Layout>
-  );
-};
-
-export default Home;
+import { Home } from "@components/pages/Home";
+export default () => <Home />;

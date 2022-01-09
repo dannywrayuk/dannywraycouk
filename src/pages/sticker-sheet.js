@@ -1,6 +1,12 @@
 import { Layout } from "@components/Layout";
 import { Navigation } from "@components/Navigation";
-import { Heading, Label, SubHeading, SubSubHeading, Text } from "@style-system";
+import {
+  Heading,
+  Label,
+  SubHeading,
+  SubSubHeading,
+  Text,
+} from "@components/core";
 
 const StickerSheet = () => {
   return (

@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import { Button } from "@style-system";
-import { Link } from "@components/core/Link";
+import { Link, Button } from "@components/core";
 import { IoMenu } from "react-icons/io5";
 
 const Grid = styled.div({
