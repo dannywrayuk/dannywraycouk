@@ -5,24 +5,20 @@
     "start": "next dev",
     "build": "next build && next export",
     "serve": "serve ./out",
-    "lint": "pretty-quick --pattern \"./**/*.(js|json)\""
+    "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\""
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.13",
-    "@chakra-ui/react": "^1.6.4",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "babel-plugin-styled-components": "^1.12.0",
-    "framer-motion": "^4.1.17",
-    "gray-matter": "^4.0.2",
-    "katex": "^0.13.11",
-    "next": "^10.2.1",
-    "next-mdx-remote": "^3.0.2",
-    "pretty-quick": "^3.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.2.0",
-    "serve": "^11.3.2",
-    "styled-components": "^5.2.3"
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "pretty-quick": "^3.1.2",
+    "serve": "^13.0.2",
+    "typescript": "^4.5.4"
   }
 }

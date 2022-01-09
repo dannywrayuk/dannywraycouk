@@ -1,19 +1,25 @@
-import { ColorModeScript } from "@chakra-ui/react";
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
-import theme from "../theme";
+import GoogleFonts from "@utils/GoogleFonts";
 export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
-            rel="stylesheet"
+          <link href="globals.css" rel="stylesheet" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `document.documentElement.setAttribute('colorMode', 'light');`,
+            }}
+          />
+          <GoogleFonts
+            fonts={{
+              Sora: { weights: [400, 700] },
+              Montserrat: { weights: [400, 600, 700] },
+              Inter: { weights: [400, 600] },
+            }}
           />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>

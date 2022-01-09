@@ -1,0 +1,35 @@
+html[colorMode="dark"] {
+  --redTest: #ff1111;
+  --background: black;
+  --text: white;
+}
+
+html[colorMode="light"] {
+  --redTest: #2dff11;
+  --background: white;
+  --text: black;
+}
+
+html {
+  background-color: var(--background);
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+* {
+  transition: 0.3s; /* delete this */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+:root {
+  --Sora: "Sora", -apple-system, sans-serif;
+  --Inter: "Inter", -apple-system, sans-serif;
+  --Montserrat: "Montserrat", -apple-system, sans-serif;
+}

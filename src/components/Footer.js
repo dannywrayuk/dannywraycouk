@@ -1,19 +1,26 @@
-import { Flex } from "@chakra-ui/react";
-import { SubTitle } from "./Text";
-import SocialIcons from "./SocialIcons";
+import styled from "@emotion/styled";
+import { Label, AlignV, SpaceBetween } from "@components/core";
+import { SocialIcons } from "@components/SocialIcons";
 
-export const Footer = () => {
-  return (
-    <Flex
-      mt="auto"
-      h="60px"
-      justifyContent={{ base: "space-between", sm: "space-evenly" }}
-      alignItems="center"
-      mb={5}
-      direction={{ base: "column", sm: "row" }}
-    >
-      <SubTitle>Danny Wray {new Date().getFullYear()}</SubTitle>
-      <SocialIcons />
-    </Flex>
-  );
-};
+const ShapeBackground = styled.div({
+  backgroundImage: "url(/img/FooterShape.svg)",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
+  minHeight: "125px",
+  padding: "50px 50px 0",
+  display: "grid",
+  gridTemplateColumns: "1fr minmax(auto, 1296px) 1fr",
+});
+
+export const Footer = () => (
+  <ShapeBackground>
+    <AlignV _css={{ gridColumn: "2" }}>
+      <SpaceBetween>
+        <AlignV>
+          <SocialIcons />
+        </AlignV>
+        <Label>Danny wray 2022</Label>
+      </SpaceBetween>
+    </AlignV>
+  </ShapeBackground>
+);
