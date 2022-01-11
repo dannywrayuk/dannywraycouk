@@ -2,7 +2,7 @@ import { Heading, Text, LinkButton, RoundedImage } from "@components/core";
 import { ImageWithText } from "@components/presentation/ImageWithText";
 
 export const About = () => (
-  <ImageWithText image={<RoundedImage src="/img/boat_image.jpeg" />} hFlip>
+  <ImageWithText image={<RoundedImage src="/img/boat_image.jpeg" />} invert>
     <Heading>Hey, I'm Danny.</Heading>
     <Text justify>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel
