@@ -2,13 +2,14 @@ import styled from "@emotion/styled";
 import { useCSSProp } from "@utils/useCSSProp";
 import { FiFolder } from "react-icons/fi";
 import { MdOutlineArticle } from "react-icons/md";
-import { Label, AlignV } from "@components/core";
+import { Label } from "@components/core";
 
 const Align = styled.div(
   {
     display: "inline-flex",
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "center",
     width: "fit-content",
   },
   useCSSProp
@@ -17,18 +18,14 @@ const Align = styled.div(
 export const ProjectBadge = ({ _css }) => (
   <Align _css={_css}>
     <FiFolder size={35} />
-    <AlignV _css={{ marginLeft: "15px" }}>
-      <Label>Project</Label>
-    </AlignV>
+    <Label _css={{ marginLeft: "15px" }}>Project</Label>
   </Align>
 );
 
 export const ArticleBadge = ({ _css }) => (
   <Align _css={_css}>
     <MdOutlineArticle size={35} />
-    <AlignV _css={{ marginLeft: "15px" }}>
-      <Label>Article</Label>
-    </AlignV>
+    <Label _css={{ marginLeft: "15px" }}>Article</Label>
   </Align>
 );
 
@@ -38,9 +35,7 @@ export const WithBadge = ({ _css, badge, children }) => {
   return (
     <Align _css={_css}>
       <Icon size={35} />
-      <AlignV _css={{ marginLeft: "15px" }}>
-        <Label>{children}</Label>
-      </AlignV>
+      <Label _css={{ marginLeft: "15px" }}>{children}</Label>
     </Align>
   );
 };

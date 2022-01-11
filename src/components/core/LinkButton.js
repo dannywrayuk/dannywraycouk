@@ -2,19 +2,22 @@ import styled from "@emotion/styled";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "@components/core";
 
-const applyVariant =
+const useVariants =
   (styles) =>
   ({ variant }) =>
     styles[variant];
 
-const StyledAnchor = styled(Link)(
+const StyledLink = styled(Link)(
   {
     display: "inline-flex",
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
+    columnGap: "5px",
+    fontSize: "1.25rem",
     textDecoration: "none",
   },
-  applyVariant({
+  useVariants({
     primary: {
       backgroundColor: "var(--text)",
       color: "var(--background)",
@@ -31,21 +34,11 @@ const StyledAnchor = styled(Link)(
   })
 );
 
-const StyledArrow = styled(FiArrowRight)({
-  margin: "auto 0 auto 5px",
-  fontSize: "1.25rem",
-});
-const VerticalAlign = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-});
-
 export const LinkButton = ({ withArrow, href, variant, children }) => {
   return (
-    <StyledAnchor href={href} variant={variant}>
-      <VerticalAlign>{children}</VerticalAlign>
-      {withArrow && <StyledArrow />}
-    </StyledAnchor>
+    <StyledLink href={href} variant={variant}>
+      {children}
+      {withArrow && <FiArrowRight />}
+    </StyledLink>
   );
 };

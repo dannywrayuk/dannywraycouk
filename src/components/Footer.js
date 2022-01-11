@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Label, AlignV, SpaceBetween } from "@components/core";
+import { Label, Row } from "@components/core";
 import { SocialIcons } from "@components/SocialIcons";
 
 const ShapeBackground = styled.div({
@@ -14,13 +14,9 @@ const ShapeBackground = styled.div({
 
 export const Footer = () => (
   <ShapeBackground>
-    <AlignV _css={{ gridColumn: "2" }}>
-      <SpaceBetween>
-        <AlignV>
-          <SocialIcons />
-        </AlignV>
-        <Label>Danny wray 2022</Label>
-      </SpaceBetween>
-    </AlignV>
+    <Row _css={{ gridColumn: "2" }} jc="space-between">
+      <SocialIcons />
+      <Label>Danny wray 2022</Label>
+    </Row>
   </ShapeBackground>
 );

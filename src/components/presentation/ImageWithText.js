@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { AlignV } from "@components/core";
+import { Column, Row } from "@components/core";
 
 const Spacing = styled.div(
   {
@@ -8,20 +8,21 @@ const Spacing = styled.div(
     columnGap: "55px",
     margin: "0 55px",
   },
-  ({ hFlip }) => hFlip && { flexDirection: "row-reverse" }
+  ({ invert }) => invert && { flexDirection: "row-reverse" }
 );
 
-const TextWrapper = styled(AlignV)(
+const TextWrapper = styled(Column)(
   {
     maxWidth: "360px",
     rowGap: "25px",
+    alignItems: "flex-start",
   },
-  ({ flip }) => flip && { textAlign: "right", alignItems: "end" }
+  ({ invert }) => invert && { textAlign: "right", alignItems: "flex-end" }
 );
 
-export const ImageWithText = ({ image, hFlip, hFlipText, children }) => (
-  <Spacing hFlip={hFlip}>
-    <AlignV _css={{ maxWidth: "650px" }}>{image}</AlignV>
-    <TextWrapper flip={hFlipText}>{children}</TextWrapper>
+export const ImageWithText = ({ image, invert, children }) => (
+  <Spacing invert={invert}>
+    <Row _css={{ maxWidth: "650px" }}>{image}</Row>
+    <TextWrapper invert={invert}>{children}</TextWrapper>
   </Spacing>
 );

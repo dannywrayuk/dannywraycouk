@@ -5,18 +5,10 @@ import { IoMenu } from "react-icons/io5";
 const Grid = styled.div({
   display: "grid",
   padding: "45px 10px 0",
+  alignItems: "center",
+  justifyItems: "center",
   gridTemplateColumns: "85px 3fr 85px 1fr 85px 1fr 85px 3fr 85px",
 });
-
-const NavItem = styled.div(
-  {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    width: 85,
-  },
-  ({ gridColumn }) => ({ gridColumn })
-);
 
 const NavLink = styled(Link)({
   fontSize: "0.93rem",
@@ -25,12 +17,10 @@ const NavLink = styled(Link)({
   textDecoration: "none",
   color: "var(--text)",
   textAlign: "center",
-  margin: "0 auto 0",
   "&:hover": { color: "red" },
 });
 
 const Logo = styled(Link)({
-  gridColumn: 1,
   fontSize: "1.5rem",
   fontFamily: "Montserrat",
   fontWeight: "700",
@@ -54,19 +44,15 @@ const MenuIcon = styled(IoMenu)({
 export const Navigation = () => (
   <Grid>
     <Logo href="/">danny.</Logo>
-    <NavItem gridColumn={3}>
-      <NavLink href="/sticker-sheet">Thoughts</NavLink>
-    </NavItem>
-    <NavItem gridColumn={5}>
-      <NavLink href="/sticker-sheet">Projects</NavLink>
-    </NavItem>
-    <NavItem gridColumn={7}>
-      <NavLink href="/sticker-sheet">About</NavLink>
-    </NavItem>
-    <NavItem gridColumn={9}>
-      <Menu onClick={() => alert("hey")}>
-        <MenuIcon />
-      </Menu>
-    </NavItem>
+    <div />
+    <NavLink href="/sticker-sheet">Thoughts</NavLink>
+    <div />
+    <NavLink href="/sticker-sheet">Projects</NavLink>
+    <div />
+    <NavLink href="/sticker-sheet">About</NavLink>
+    <div />
+    <Menu onClick={() => alert("hey")}>
+      <MenuIcon />
+    </Menu>
   </Grid>
 );

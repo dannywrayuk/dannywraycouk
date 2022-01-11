@@ -5,8 +5,7 @@ import {
   Text,
   Label,
   RoundedImage,
-  AlignH,
-  AlignV,
+  Column,
 } from "@components/core";
 import { ProjectBadge, WithBadge } from "@components/Badges";
 import { ImageWithText } from "@components/presentation/ImageWithText";
@@ -17,17 +16,13 @@ const VerticalLine = styled.div({
   backgroundColor: "var(--text)",
   height: "135px",
   width: 1,
-  margin: "45px auto",
+  margin: "45px 0",
 });
 
 export const Featured = () => (
-  <AlignV _css={{ margin: "0 50px" }}>
-    <AlignH _css={{ marginBottom: "20px" }}>
-      <Label>The best of the best</Label>
-    </AlignH>
-    <AlignH>
-      <Heading>Featured projects and articles</Heading>
-    </AlignH>
+  <Column>
+    <Label _css={{ marginBottom: "20px" }}>The best of the best</Label>
+    <Heading>Featured projects and articles</Heading>
     <VerticalLine />
     <ImageWithText image={<RoundedImage src="/img/project_1.jpeg" />}>
       <ProjectBadge />
@@ -38,11 +33,7 @@ export const Featured = () => (
       </Text>
     </ImageWithText>
     <VerticalLine />
-    <ImageWithText
-      image={<RoundedImage src="/img/project_2.jpeg" />}
-      hFlip
-      hFlipText
-    >
+    <ImageWithText image={<RoundedImage src="/img/project_2.jpeg" />} invert>
       <ProjectBadge />
       <SubHeading>A project title goes here.</SubHeading>
       <Text>
@@ -51,15 +42,11 @@ export const Featured = () => (
       </Text>
     </ImageWithText>
     <VerticalLine />
-    <AlignH _css={{ margin: "45px 0 85px" }}>
-      <SubHeading>Also see</SubHeading>
-    </AlignH>
-    <AlignH>
-      <AlignV _css={{ rowGap: "50px" }}>
-        <WithBadge badge="project">A project title goes here</WithBadge>
-        <WithBadge badge="project">A project title goes here</WithBadge>
-        <WithBadge badge="article">An article title goes here</WithBadge>
-      </AlignV>
-    </AlignH>
-  </AlignV>
+    <SubHeading _css={{ marginBottom: "85px" }}>Also see</SubHeading>
+    <Column _css={{ rowGap: "50px" }} ai="flex-start">
+      <WithBadge badge="project">A project title goes here</WithBadge>
+      <WithBadge badge="project">A project title goes here</WithBadge>
+      <WithBadge badge="article">An article title goes here</WithBadge>
+    </Column>
+  </Column>
 );

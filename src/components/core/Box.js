@@ -3,23 +3,38 @@ import { useCSSProp } from "@utils/useCSSProp";
 
 export const Box = styled.div(useCSSProp);
 
-export const Flex = styled.div({ display: "flex" }, useCSSProp);
+const flexProps = ({
+  flexDirection,
+  dir,
+  justifyContent,
+  jc,
+  alignItems,
+  ai,
+}) => ({
+  flexDirection: flexDirection || dir,
+  justifyContent: justifyContent || jc,
+  alignItems: alignItems || ai,
+});
+export const Flex = styled.div({ display: "flex" }, flexProps, useCSSProp);
 
-export const AlignV = styled.div(
-  { display: "flex", flexDirection: "column", justifyContent: "center" },
+export const Row = styled.div(
+  {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  flexProps,
   useCSSProp
 );
 
-export const AlignH = styled.div(
-  { display: "flex", flexDirection: "row", justifyContent: "center" },
-  useCSSProp
-);
-
-export const SpaceBetween = styled.div(
-  { display: "flex", justifyContent: "space-between" },
-  useCSSProp
-);
-export const SpaceEvenly = styled.div(
-  { display: "flex", justifyContent: "space-evenly" },
+export const Column = styled.div(
+  {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  flexProps,
   useCSSProp
 );
