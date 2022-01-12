@@ -20,7 +20,7 @@ const VerticalLine = styled.div({
 });
 
 export const Featured = () => (
-  <Column>
+  <Column _css={{ color: "var(--text)" }}>
     <Label _css={{ marginBottom: "20px" }}>The best of the best</Label>
     <Heading>Featured projects and articles</Heading>
     <VerticalLine />
@@ -33,7 +33,11 @@ export const Featured = () => (
       </Text>
     </ImageWithText>
     <VerticalLine />
-    <ImageWithText image={<RoundedImage src="/img/project_2.jpeg" />} invert>
+    <ImageWithText
+      image={<RoundedImage src="/img/project_2.jpeg" />}
+      swap
+      invertText
+    >
       <ProjectBadge />
       <SubHeading>A project title goes here.</SubHeading>
       <Text>

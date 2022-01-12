@@ -1,2 +1,1 @@
-import { Home } from "@components/pages/Home";
-export default () => <Home />;
+export { Home as default } from "@components/pages/Home";

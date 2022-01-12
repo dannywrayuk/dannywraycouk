@@ -9,7 +9,11 @@ const Title = styled.h1({
   marginLeft: "-0.1em",
 });
 
-const Wrapper = styled.div({ marginTop: "125px", marginLeft: "70px" });
+const Wrapper = styled.div({
+  marginTop: "125px",
+  marginLeft: "70px",
+  color: "var(--text)",
+});
 const InfoContainer = styled.div({ width: "480px", marginTop: "60px" });
 const ButtonContainer = styled.div({
   display: "inline-flex",

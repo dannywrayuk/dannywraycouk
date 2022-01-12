@@ -11,6 +11,7 @@ const Align = styled.div(
     justifyContent: "space-between",
     alignItems: "center",
     width: "fit-content",
+    color: "var(--text)",
   },
   useCSSProp
 );

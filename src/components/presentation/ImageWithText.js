@@ -8,7 +8,7 @@ const Spacing = styled.div(
     columnGap: "55px",
     margin: "0 55px",
   },
-  ({ invert }) => invert && { flexDirection: "row-reverse" }
+  ({ swap }) => swap && { flexDirection: "row-reverse" }
 );
 
 const TextWrapper = styled(Column)(
@@ -16,13 +16,15 @@ const TextWrapper = styled(Column)(
     maxWidth: "360px",
     rowGap: "25px",
     alignItems: "flex-start",
+    color: "var(--text)",
   },
-  ({ invert }) => invert && { textAlign: "right", alignItems: "flex-end" }
+  ({ invertText }) =>
+    invertText && { textAlign: "right", alignItems: "flex-end" }
 );
 
-export const ImageWithText = ({ image, invert, children }) => (
-  <Spacing invert={invert}>
+export const ImageWithText = ({ image, swap, invertText, children }) => (
+  <Spacing swap={swap}>
     <Row _css={{ maxWidth: "650px" }}>{image}</Row>
-    <TextWrapper invert={invert}>{children}</TextWrapper>
+    <TextWrapper invertText={invertText}>{children}</TextWrapper>
   </Spacing>
 );

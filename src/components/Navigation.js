@@ -41,6 +41,15 @@ const MenuIcon = styled(IoMenu)({
   color: "var(--text)",
 });
 
+const tempToggleDarkMode = () => {
+  const html = document.documentElement;
+  if (html.getAttribute("colorMode") === "light") {
+    html.setAttribute("colorMode", "dark");
+  } else {
+    html.setAttribute("colorMode", "light");
+  }
+};
+
 export const Navigation = () => (
   <Grid>
     <Logo href="/">danny.</Logo>
@@ -51,7 +60,7 @@ export const Navigation = () => (
     <div />
     <NavLink href="/sticker-sheet">About</NavLink>
     <div />
-    <Menu onClick={() => alert("hey")}>
+    <Menu onClick={tempToggleDarkMode}>
       <MenuIcon />
     </Menu>
   </Grid>

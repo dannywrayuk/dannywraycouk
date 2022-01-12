@@ -21,7 +21,6 @@ body,
 }
 
 * {
-  transition: 0.3s; /* delete this */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
