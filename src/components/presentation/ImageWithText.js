@@ -1,30 +1,51 @@
 import styled from "@emotion/styled";
 import { Column, Row } from "@components/core";
+import { md } from "@utils/breakpoints";
 
 const Spacing = styled.div(
   {
     display: "flex",
     justifyContent: "space-evenly",
-    columnGap: "55px",
-    margin: "0 55px",
+    alignItems: "center",
+    flexDirection: "column",
+    rowGap: "55px",
+    width: "100%",
   },
-  ({ swap }) => swap && { flexDirection: "row-reverse" }
+  ({ swap }) => ({
+    [md]: {
+      flexDirection: swap ? "row-reverse" : "row",
+      columnGap: "55px",
+      margin: "0 55px",
+      width: "unset",
+    },
+  })
 );
 
 const TextWrapper = styled(Column)(
   {
-    maxWidth: "360px",
     rowGap: "25px",
     alignItems: "flex-start",
     color: "var(--text)",
   },
-  ({ invertText }) =>
-    invertText && { textAlign: "right", alignItems: "flex-end" }
+  ({ invertText }) => ({
+    [md]: {
+      maxWidth: "360px",
+      ...(invertText && {
+        textAlign: "right",
+        alignItems: "flex-end",
+      }),
+    },
+  })
 );
+
+const ImageWrapper = styled(Row)({
+  width: "100%",
+  [md]: { maxWidth: "650px" },
+});
 
 export const ImageWithText = ({ image, swap, invertText, children }) => (
   <Spacing swap={swap}>
-    <Row _css={{ maxWidth: "650px" }}>{image}</Row>
+    <ImageWrapper>{image}</ImageWrapper>
     <TextWrapper invertText={invertText}>{children}</TextWrapper>
   </Spacing>
 );

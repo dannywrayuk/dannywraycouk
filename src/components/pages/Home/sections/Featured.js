@@ -13,7 +13,7 @@ import { ImageWithText } from "@components/presentation/ImageWithText";
 const VerticalLine = styled.div({
   display: "flex",
   justifyContent: "center",
-  backgroundColor: "var(--text)",
+  backgroundColor: "var(--midGrey)",
   height: "135px",
   width: 1,
   margin: "45px 0",

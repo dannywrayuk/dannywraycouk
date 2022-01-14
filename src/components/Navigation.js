@@ -17,7 +17,7 @@ const NavLink = styled(Link)({
   textDecoration: "none",
   color: "var(--text)",
   textAlign: "center",
-  "&:hover": { color: "red" },
+  "&:hover": { color: "var(--primary)" },
 });
 
 const Logo = styled(Link)({
@@ -28,7 +28,7 @@ const Logo = styled(Link)({
   letterSpacing: "-0.05em",
   color: "var(--text)",
   textAlign: "center",
-  "&:hover": { color: "red" },
+  "&:hover": { color: "var(--primary)" },
 });
 
 const Menu = styled(Button)({

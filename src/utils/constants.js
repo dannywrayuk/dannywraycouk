@@ -1,9 +1,8 @@
 export default {
-  Links: {
-    Github: "https://github.com/dannywrayuk",
-    GithubSiteRepo: "https://github.com/dannywrayuk/dannywraycouk",
-    Linkedin: "https://www.linkedin.com/in/dannywrayuk/",
-    Twitter: "https://twitter.com/dannywrayuk",
-    SiteSource: "https://github.com/dannywrayuk/dannywraycouk",
+  links: {
+    github: "https://github.com/dannywrayuk",
+    githubSiteRepo: "https://github.com/dannywrayuk/dannywraycouk",
+    linkedin: "https://www.linkedin.com/in/dannywrayuk/",
+    twitter: "https://twitter.com/dannywrayuk",
   },
 };

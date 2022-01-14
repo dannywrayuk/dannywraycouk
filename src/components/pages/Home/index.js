@@ -5,7 +5,8 @@ import { Footer } from "@components/Footer";
 
 import { Landing } from "./sections/Landing";
 import { About } from "./sections/About";
-import { Featured } from "./sections/Featured";
+import { Featured2 } from "./sections/Featured2";
+import { Contact } from "./sections/Contact";
 
 const SectionSpacing = styled.div({
   display: "flex",
@@ -20,7 +21,8 @@ export const Home = () => {
       <SectionSpacing>
         <Landing />
         <About />
-        <Featured />
+        <Featured2 />
+        <Contact />
       </SectionSpacing>
     </Layout>
   );

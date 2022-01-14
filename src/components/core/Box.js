@@ -3,18 +3,14 @@ import { useCSSProp } from "@utils/useCSSProp";
 
 export const Box = styled.div(useCSSProp);
 
-const flexProps = ({
-  flexDirection,
-  dir,
-  justifyContent,
-  jc,
-  alignItems,
-  ai,
-}) => ({
-  flexDirection: flexDirection || dir,
-  justifyContent: justifyContent || jc,
-  alignItems: alignItems || ai,
+const flexProps = ({ dir, jc, ai, cg, rg }) => ({
+  flexDirection: dir,
+  justifyContent: jc,
+  alignItems: ai,
+  columnGap: cg,
+  rowGap: rg,
 });
+
 export const Flex = styled.div({ display: "flex" }, flexProps, useCSSProp);
 
 export const Row = styled.div(

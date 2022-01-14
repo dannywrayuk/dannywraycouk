@@ -11,7 +11,10 @@ html[colorMode="light"] {
 }
 
 html {
+  --primary: #ffca1e;
+  --midGrey: #888888;
   background-color: var(--background);
+  color: var(--text);
 }
 
 html,

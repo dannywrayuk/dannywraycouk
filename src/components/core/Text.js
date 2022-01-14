@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { useCSSProp } from "@utils/useCSSProp";
 
+const textProps = ({ color }) => ({ color });
+
 export const Heading = styled.h1(
   {
     fontSize: "3rem",
@@ -45,5 +47,16 @@ export const Text = styled.p(
     fontFamily: "var(--Inter)",
     lineHeight: "1.5em",
   },
+  textProps,
   useCSSProp
+);
+
+export const TimelineLabel = styled.p(
+  {
+    fontSize: "0.75rem",
+    fontWeight: "600",
+    fontFamily: "var(--Inter)",
+    lineHeight: "1.5rem",
+  },
+  textProps
 );

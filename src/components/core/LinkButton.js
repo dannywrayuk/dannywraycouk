@@ -23,13 +23,31 @@ const StyledLink = styled(Link)(
       color: "var(--background)",
       borderRadius: "100px",
       padding: "15px 30px",
+      transition: "0.3s",
+      "&:hover": {
+        backgroundColor: "var(--primary)",
+        color: "black",
+        columnGap: "7px",
+      },
     },
     secondary: {
       background: "none",
       color: "var(--text)",
       borderRadius: "100px",
       padding: "15px 30px",
-      border: "2px solid var(--text)",
+      transition: "0.3s",
+      "&:hover": {
+        backgroundColor: "#88888822",
+        columnGap: "7px",
+      },
+    },
+    icon: {
+      color: "var(--text)",
+      transition: "0.3s",
+      fontSize: "1.5rem",
+      "&:hover": {
+        color: "var(--primary)",
+      },
     },
   })
 );

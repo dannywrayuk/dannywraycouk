@@ -9,7 +9,7 @@ export const About = () => (
       metus eget odio euismod viverra vitae nec turpis. Nam non enim diam. Donec
       pharetra rutrum nulla, ut iaculis massa.
     </Text>
-    <LinkButton href="/test" variant="secondary">
+    <LinkButton href="/test" variant="primary">
       <Text>Learn more</Text>
     </LinkButton>
   </ImageWithText>
