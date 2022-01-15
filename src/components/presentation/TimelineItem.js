@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
-import { TimelineLabel } from "@components/core";
+import { TimelineLabel, Row } from "@components/core";
 import { MdAccessTimeFilled, MdOutlineArticle } from "react-icons/md";
 import { FiFolder } from "react-icons/fi";
 import { AiFillPushpin, AiFillHeart } from "react-icons/ai";
+import { lg } from "@utils/breakpoints";
 
 const Wrapper = styled.div({
   position: "relative",
@@ -31,6 +32,17 @@ const IconWrapper = styled.div({
   left: 0,
 });
 
+const TextWrapper = styled.div({
+  height: "1.5rem",
+  display: "flex",
+  alignItems: "center",
+  [lg]: {
+    position: "absolute",
+    left: "-1rem",
+    transform: "translateX(-100%)",
+  },
+});
+
 const Icons = {
   project: FiFolder,
   article: MdOutlineArticle,
@@ -57,7 +69,9 @@ export const TimelineItem = ({ children, label, icon, variant }) => {
         <IconWrapper>
           <IconElement />
         </IconWrapper>
-        <TimelineLabel color="var(--midGrey)">{labelText}</TimelineLabel>
+        <TextWrapper>
+          <TimelineLabel color="var(--midGrey)">{labelText}</TimelineLabel>
+        </TextWrapper>
         {children}
       </LeftBorder>
     </Wrapper>

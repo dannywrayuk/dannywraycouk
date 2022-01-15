@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Label, Text, LinkButton } from "@components/core";
+import { md } from "@utils/breakpoints";
 
 const Title = styled.h1({
   fontSize: "6.25rem",
@@ -13,8 +14,13 @@ const Wrapper = styled.div({
   marginTop: "125px",
   marginLeft: "70px",
   color: "var(--text)",
+  [md]: {
+    marginLeft: "35px",
+  },
 });
+
 const InfoContainer = styled.div({ width: "480px", marginTop: "60px" });
+
 const ButtonContainer = styled.div({
   display: "inline-flex",
   justifyContent: "space-between",

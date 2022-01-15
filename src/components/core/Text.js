@@ -56,7 +56,7 @@ export const TimelineLabel = styled.p(
     fontSize: "0.75rem",
     fontWeight: "600",
     fontFamily: "var(--Inter)",
-    lineHeight: "1.5rem",
+    lineHeight: "1em",
   },
   textProps
 );
