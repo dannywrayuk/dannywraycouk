@@ -11,8 +11,6 @@ html[colorMode="light"] {
 }
 
 html {
-  --primary: #ffca1e;
-  --midGrey: #888888;
   background-color: var(--background);
   color: var(--text);
 }
@@ -34,4 +32,6 @@ body,
   --Sora: "Sora", -apple-system, sans-serif;
   --Inter: "Inter", -apple-system, sans-serif;
   --Montserrat: "Montserrat", -apple-system, sans-serif;
+  --primary: #ffca1e;
+  --midGrey: #888888;
 }

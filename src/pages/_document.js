@@ -8,7 +8,7 @@ export default class Document extends NextDocument {
           <link href="globals.css" rel="stylesheet" />
           <script
             dangerouslySetInnerHTML={{
-              __html: `document.documentElement.setAttribute('colorMode', 'dark');`,
+              __html: `document.documentElement.setAttribute('colorMode', 'light');`,
             }}
           />
           <GoogleFonts

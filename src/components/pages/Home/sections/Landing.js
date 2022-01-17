@@ -11,7 +11,7 @@ const Title = styled.h1({
 });
 
 const Wrapper = styled.div({
-  marginTop: "125px",
+  marginTop: "25px",
   marginLeft: "70px",
   color: "var(--text)",
   [md]: {
