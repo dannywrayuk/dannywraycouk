@@ -1,13 +1,36 @@
+import { useMediaQuery } from "@utils/useMediaQuery";
+
 const breakpoints = {
-  xs: "@media (min-width: 320px)",
-  sm: "@media (min-width: 440px)",
-  md: "@media (min-width: 1000px)",
-  lg: "@media (min-width: 1340px)",
-  xl: "@media (min-width: 2000px)",
+  base: 0,
+  xs: 320,
+  sm: 440,
+  md: 700,
+  lg: 1340,
+  xl: 2000,
 };
+
 export default breakpoints;
-export const xs = breakpoints.xs;
-export const sm = breakpoints.sm;
-export const md = breakpoints.md;
-export const lg = breakpoints.lg;
-export const xl = breakpoints.xl;
+
+const toMediaString = (bp) => `@media (min-width: ${bp}px)`;
+
+export const xs = toMediaString(breakpoints.xs);
+export const sm = toMediaString(breakpoints.sm);
+export const md = toMediaString(breakpoints.md);
+export const lg = toMediaString(breakpoints.lg);
+export const xl = toMediaString(breakpoints.xl);
+
+export const useBreakpointValue = (values) => {
+  const currentBreakpoints = Object.entries(breakpoints).map(
+    ([key, value]) => ({
+      key,
+      status: useMediaQuery(`(min-width: ${value}px)`),
+    })
+  );
+  let dynamicValue = Object.values(values)[0];
+  currentBreakpoints.forEach((bp) => {
+    if (bp.status && values[bp.key] !== undefined) {
+      dynamicValue = values[bp.key];
+    }
+  });
+  return dynamicValue;
+};

@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
 import { Link, Button } from "@components/core";
 import { IoMenu } from "react-icons/io5";
+import { md } from "@utils/breakpoints";
 
 const Grid = styled.div({
   display: "grid",
   padding: "45px 10px 0",
   alignItems: "center",
   justifyItems: "center",
-  gridTemplateColumns: "85px 3fr 85px 1fr 85px 1fr 85px 3fr 85px",
+  gridTemplateColumns: "85px 1fr 85px",
 });
 
 const NavLink = styled(Link)({
@@ -33,12 +34,24 @@ const Logo = styled(Link)({
 
 const Menu = styled(Button)({
   margin: "0 auto 0",
+  gridColumn: 3,
 });
 
 const MenuIcon = styled(IoMenu)({
   width: "22px",
   height: "22px",
   color: "var(--text)",
+});
+
+const Nav = styled.nav({
+  gridTemplateColumns: "1fr 1fr 1fr",
+  width: "100%",
+  maxWidth: "700px",
+  justifyItems: "center",
+  display: "none",
+  [md]: {
+    display: "grid",
+  },
 });
 
 const tempToggleDarkMode = () => {
@@ -53,13 +66,11 @@ const tempToggleDarkMode = () => {
 export const Navigation = () => (
   <Grid>
     <Logo href="/">danny.</Logo>
-    <div />
-    <NavLink href="/sticker-sheet">Thoughts</NavLink>
-    <div />
-    <NavLink href="/sticker-sheet">Projects</NavLink>
-    <div />
-    <NavLink href="/sticker-sheet">About</NavLink>
-    <div />
+    <Nav>
+      <NavLink href="/sticker-sheet">Thoughts</NavLink>
+      <NavLink href="/sticker-sheet">Projects</NavLink>
+      <NavLink href="/sticker-sheet">About</NavLink>
+    </Nav>
     <Menu onClick={tempToggleDarkMode}>
       <MenuIcon />
     </Menu>
