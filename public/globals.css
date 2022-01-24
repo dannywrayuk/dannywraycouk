@@ -2,12 +2,14 @@ html[colorMode="dark"] {
   --redTest: #ff1111;
   --background: black;
   --text: white;
+  --feintGrey: #333;
 }
 
 html[colorMode="light"] {
   --redTest: #2dff11;
   --background: white;
   --text: black;
+  --feintGrey: #e4e8f1;
 }
 
 html {
@@ -18,6 +20,7 @@ html {
 html,
 body,
 #__next {
+  min-height: 100%;
   height: 100%;
 }
 

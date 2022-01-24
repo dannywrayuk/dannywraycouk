@@ -3,11 +3,11 @@ import { TimelineLabel, Row } from "@components/core";
 import { MdAccessTimeFilled, MdOutlineArticle } from "react-icons/md";
 import { FiFolder } from "react-icons/fi";
 import { AiFillPushpin, AiFillHeart } from "react-icons/ai";
-import { lg } from "@utils/breakpoints";
+import { md, lg } from "@utils/breakpoints";
 
 const Wrapper = styled.div({
   position: "relative",
-  borderLeftColor: "var(--midGrey)",
+  borderLeftColor: "var(--feintGrey)",
   "&:last-child": {
     borderLeftColor: "#00000000",
   },
@@ -19,16 +19,21 @@ const LeftBorder = styled.div({
   paddingLeft: "1.25rem",
   paddingBottom: "5rem",
   marginLeft: "0.75rem",
+  [md]: {
+    paddingLeft: "2.5rem",
+  },
 });
 
 const IconWrapper = styled.div({
   backgroundColor: "var(--background)",
-  color: "var(--midGrey)",
+  color: "#ccd4e3",
   position: "absolute",
   width: "1.5rem",
   height: "1.5rem",
-  fontSize: "1.1rem",
-  padding: "0.2rem",
+  fontSize: "1.15rem",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   left: 0,
 });
 

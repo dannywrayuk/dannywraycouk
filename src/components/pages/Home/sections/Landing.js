@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Label, Text, LinkButton } from "@components/core";
-import { md } from "@utils/breakpoints";
+import { lg, md } from "@utils/breakpoints";
+import { ReactComponent as Animated } from "../../../../../public/img/animated.svg";
 
 const Title = styled.h1({
   fontSize: "6.25rem",
@@ -12,24 +13,42 @@ const Title = styled.h1({
 
 const Wrapper = styled.div({
   marginTop: "25px",
-  marginLeft: "70px",
   color: "var(--text)",
   [md]: {
     marginLeft: "35px",
   },
 });
 
-const InfoContainer = styled.div({ width: "480px", marginTop: "60px" });
+const InfoContainer = styled.div({ marginTop: "60px", maxWidth: "480px" });
 
 const ButtonContainer = styled.div({
   display: "inline-flex",
-  justifyContent: "space-between",
+  justifyContent: "center",
+  flexWrap: "wrap",
   columnGap: "30px",
+  rowGap: "20px",
   marginTop: "40px",
+  [md]: {
+    justifyContent: "space-between",
+  },
+});
+
+const BG = styled.img({
+  position: "absolute",
+  right: "10%",
+  width: "200px",
+  zIndex: -1,
+  [md]: {
+    width: "300px",
+  },
+  [lg]: {
+    width: "400px",
+  },
 });
 
 export const Landing = () => (
   <Wrapper>
+    {/* <BG src="/img/gen.png" /> */}
     <Title>Danny Wray</Title>
     <Label>Software Developer</Label>
     <InfoContainer>

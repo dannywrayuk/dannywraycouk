@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 const Wrapper = styled(Column)({
   color: "var(--text)",
   rowGap: "45px",
-  margin: "100px 0",
+  marginBottom: "100px",
 });
 
 export const Contact = () => (
