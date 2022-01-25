@@ -36,5 +36,6 @@ body,
   --Inter: "Inter", -apple-system, sans-serif;
   --Montserrat: "Montserrat", -apple-system, sans-serif;
   --primary: #ffca1e;
+  --primary30: #ffca1e48;
   --midGrey: #888888;
 }

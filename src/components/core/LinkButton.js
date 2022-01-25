@@ -60,3 +60,14 @@ export const LinkButton = ({ withArrow, href, variant, children }) => {
     </StyledLink>
   );
 };
+
+export const ColoredLinkButton = styled(Link)(
+  {
+    textDecoration: "none",
+    fontFamily: "var(--Sora)",
+    borderRadius: "10px",
+    padding: "10px 15px",
+    margin: "3px",
+  },
+  ({ color = "#ffca1e" }) => ({ color, backgroundColor: color + "48" })
+);

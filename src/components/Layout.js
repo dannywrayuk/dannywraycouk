@@ -8,7 +8,6 @@ const FooterSpacing = styled.div({
   flexDirection: "column",
   justifyContent: "space-between",
   height: "100%",
-  rowGap: "100px",
 });
 
 const CenterContent = styled.div({

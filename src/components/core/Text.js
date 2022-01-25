@@ -25,7 +25,6 @@ export const SubSubHeading = styled.h1(
   {
     fontSize: "1.6rem",
     fontFamily: "var(--Sora)",
-    letterSpacing: "-0.035em",
   },
   useCSSProp
 );
