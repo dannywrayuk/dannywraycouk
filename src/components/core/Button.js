@@ -1,12 +1,16 @@
 import styled from "@emotion/styled";
+import { useCSSProp } from "@utils/useCSSProp";
 
-export const Button = styled.button({
-  background: "none",
-  border: "none",
-  color: "unset",
-  display: "block",
-  lineHeight: 0,
-});
+export const Button = styled.button(
+  {
+    background: "none",
+    border: "none",
+    color: "unset",
+    display: "block",
+    lineHeight: 0,
+  },
+  useCSSProp
+);
 
 export const PrimaryButton = styled.button({
   backgroundColor: "var(--text)",

@@ -21,7 +21,7 @@ const CenterContent = styled.div({
 const SectionSpacing = styled.div({
   display: "flex",
   flexDirection: "column",
-  rowGap: "300px",
+  rowGap: "50px",
 });
 
 export const Layout = ({ children }) => (

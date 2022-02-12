@@ -3,13 +3,13 @@ import { useCSSProp } from "@utils/useCSSProp";
 
 export const Box = styled.div(useCSSProp);
 
-const flexProps = ({ dir, jc, ai, cg, rg, fw }) => ({
+const flexProps = ({ dir, jc, ai, cg, rg, wrap }) => ({
   flexDirection: dir,
   justifyContent: jc,
   alignItems: ai,
   columnGap: cg,
   rowGap: rg,
-  flexWrap: fw,
+  flexWrap: wrap && "wrap",
 });
 
 export const Flex = styled.div({ display: "flex" }, flexProps, useCSSProp);

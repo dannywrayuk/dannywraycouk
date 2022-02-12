@@ -1,16 +1,13 @@
-import { Column, Label, Row, SubSubHeading, Text } from "@components/core";
+import { Column, Label, Row, SubSubHeading, Box } from "@components/core";
 import styled from "@emotion/styled";
-
-const Wrapper = styled.div({ marginTop: "30px" });
 
 const EmployerImage = styled.img({
   borderRadius: "30%",
-  width: "25%",
+  width: "65px",
 });
-
 export const JobHistory = ({ children }) => {
   return (
-    <Wrapper>
+    <Box>
       <Label _css={{ fontSize: "0.75rem", marginBottom: "10px" }}>
         Current Position
       </Label>
@@ -21,8 +18,9 @@ export const JobHistory = ({ children }) => {
             Software Development Engineer
           </SubSubHeading>
           <Label _css={{ fontSize: "0.75rem" }}>Capital One</Label>
+          <Label _css={{ fontSize: "0.75rem" }}>Since 2020</Label>
         </Column>
       </Row>
-    </Wrapper>
+    </Box>
   );
 };

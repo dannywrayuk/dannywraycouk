@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "@components/core";
+import { useCSSProp } from "@utils/useCSSProp";
 
 const useVariants =
   (styles) =>
@@ -15,7 +16,7 @@ const StyledLink = styled(Link)(
     alignItems: "center",
     columnGap: "5px",
     fontSize: "1.25rem",
-    textDecoration: "none",
+    fontFamily: "var(--Inter)",
   },
   useVariants({
     primary: {
@@ -49,12 +50,20 @@ const StyledLink = styled(Link)(
         color: "var(--primary)",
       },
     },
-  })
+  }),
+  useCSSProp
 );
 
-export const LinkButton = ({ withArrow, href, variant, children }) => {
+export const LinkButton = ({
+  withArrow,
+  href,
+  variant,
+  children,
+  className,
+  _css,
+}) => {
   return (
-    <StyledLink href={href} variant={variant}>
+    <StyledLink href={href} variant={variant} className={className} _css={_css}>
       {children}
       {withArrow && <FiArrowRight />}
     </StyledLink>
