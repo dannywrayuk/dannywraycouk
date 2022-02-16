@@ -31,7 +31,7 @@ export const SubSubHeading = styled.h1(
 
 export const Label = styled.h1(
   {
-    fontSize: "1.25rem",
+    fontSize: "0.9rem",
     fontFamily: "var(--Montserrat)",
     fontWeight: "normal",
     letterSpacing: "0.2em",
@@ -42,7 +42,7 @@ export const Label = styled.h1(
 
 export const Text = styled.p(
   {
-    fontSize: "1.125rem",
+    fontSize: "0.9rem",
     fontFamily: "var(--Inter)",
     lineHeight: "1.5em",
   },
@@ -59,3 +59,12 @@ export const TimelineLabel = styled.p(
   },
   textProps
 );
+
+export const BubbleHighlight = styled.span({
+  backgroundColor: "var(--primary)",
+  padding: 3,
+  borderRadius: 5,
+  fontWeight: 700,
+  whiteSpace: "nowrap",
+  lineHeight: "2rem",
+});

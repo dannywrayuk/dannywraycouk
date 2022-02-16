@@ -22,6 +22,7 @@ const SectionSpacing = styled.div({
   display: "flex",
   flexDirection: "column",
   rowGap: "50px",
+  marginBottom: "auto",
 });
 
 export const Layout = ({ children }) => (

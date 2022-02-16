@@ -2,18 +2,17 @@ import styled from "@emotion/styled";
 import {
   Label,
   Text,
-  LinkButton,
-  Column,
-  ColoredLinkButton,
   Flex,
-  Box,
-  SubSubHeading,
-  Row,
   Link,
+  BubbleHighlight,
+  Column,
 } from "@components/core";
-import { md, sm, useBreakpointValue } from "@utils/breakpoints";
-import { SocialIcons } from "@components/SocialIcons";
-import { JobHistory } from "./JobHistory";
+import { md, sm, xl } from "@utils/breakpoints";
+
+const Wrapper = styled.div({
+  marginTop: "25px",
+  color: "var(--text)",
+});
 
 const Title = styled.h1({
   fontSize: "2.5rem",
@@ -25,10 +24,9 @@ const Title = styled.h1({
     fontSize: "3.4rem",
   },
 });
-
-const Wrapper = styled.div({
-  marginTop: "25px",
-  color: "var(--text)",
+const TitleLabel = styled(Label)({
+  marginTop: 10,
+  fontSize: "0.75rem",
 });
 
 const MeImage = styled.img({
@@ -59,13 +57,21 @@ const TitleAndImage = styled.div({
   },
 });
 
-const TitleText = styled.div({});
+const LinksAndIntroduction = styled(Column)({
+  flexDirection: "column",
+  margin: "15px auto",
+  maxWidth: 680,
+  rowGap: 20,
+  columnGap: 60,
+  alignItems: "stretch",
+});
+
 const NavLink = styled(Link)({
   color: "var(--text)",
   opacity: 0.7,
 });
 
-const WithDot = styled.p({
+const ListWithWrap = styled.div({
   fontSize: "1rem",
   fontFamily: "var(--Sora)",
   textAlign: "center",
@@ -73,9 +79,18 @@ const WithDot = styled.p({
   flexWrap: "wrap",
   justifyContent: "center",
   columnGap: 15,
-
   [md]: {
     justifyContent: "start",
+  },
+});
+
+const IntroductionText = styled(Text)({
+  fontFamily: "var(--Sora)",
+  paddingLeft: "10px",
+  borderLeft: "solid 1px var(--text)",
+  [md]: {
+    paddingLeft: "0",
+    borderLeft: "none",
   },
 });
 
@@ -84,20 +99,13 @@ export const Landing = () => {
     <Wrapper>
       <TitleAndImage>
         <MeImage src="/img/me.jpeg" />
-        <TitleText>
+        <div>
           <Title>Danny Wray</Title>
-          <Label _css={{ fontSize: "0.75rem", marginTop: 10 }}>
-            Software Developer
-          </Label>
-        </TitleText>
+          <TitleLabel>Software Developer</TitleLabel>
+        </div>
       </TitleAndImage>
-      <Flex
-        _css={{ margin: "15px auto", maxWidth: 680 }}
-        rg={20}
-        cg={60}
-        dir="column"
-      >
-        <WithDot>
+      <LinksAndIntroduction>
+        <ListWithWrap>
           <NavLink href="/">thoughts</NavLink>
           <NavLink href="/">projects</NavLink>
           <NavLink href="/">about</NavLink>
@@ -105,34 +113,25 @@ export const Landing = () => {
           <NavLink href="/">linkedin</NavLink>
           <NavLink href="/">github</NavLink>
           <NavLink href="/">twitter</NavLink>
-        </WithDot>
-        <WithDot>
+        </ListWithWrap>
+        <ListWithWrap>
           <span>Software Engineer at Capital One.</span>
           <span>Nottingham, UK.</span>
           <span>Boba Tea Enthusiast.</span>
-        </WithDot>
-        <Text
-          _css={{
-            fontSize: "0.9rem",
-            fontFamily: "var(--Sora)",
-            opacity: 0.6,
-            paddingLeft: "10px",
-            borderLeft: "solid 1px var(--text)",
-            [md]: {
-              paddingLeft: "0",
-              borderLeft: "none",
-            },
-          }}
-        >
+        </ListWithWrap>
+        <IntroductionText>
           Hi, I'm Danny. A Theoretical Physics Graduate from the University of
           Nottingham. Sometimes the hardest part about learning physics is
           knowing where to look for information. I'm working through my
           university notes and uploading a typeset version of everything I
+        </IntroductionText>
+        <Text>
+          I'm open to <BubbleHighlight>Lorem impsum</BubbleHighlight>
+          {", "}
+          <BubbleHighlight>dolor sit amet</BubbleHighlight> and{" "}
+          <BubbleHighlight>yes</BubbleHighlight>.
         </Text>
-        <Text _css={{ fontSize: "0.9rem" }}>
-          I'm open to Lorem impsum, dolor sit amet and yes
-        </Text>
-      </Flex>
+      </LinksAndIntroduction>
     </Wrapper>
   );
 };

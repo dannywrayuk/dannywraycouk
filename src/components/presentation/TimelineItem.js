@@ -26,7 +26,7 @@ const LeftBorder = styled.div({
 
 const IconWrapper = styled.div({
   backgroundColor: "var(--background)",
-  color: "#ccd4e3",
+  color: "var(--iconColor)",
   position: "absolute",
   width: "1.5rem",
   height: "1.5rem",
@@ -41,6 +41,8 @@ const TextWrapper = styled.div({
   height: "1.5rem",
   display: "flex",
   alignItems: "center",
+  color: "var(--text)",
+  opacity: 0.7,
   [lg]: {
     position: "absolute",
     left: "-1rem",
@@ -75,7 +77,7 @@ export const TimelineItem = ({ children, label, icon, variant }) => {
           <IconElement />
         </IconWrapper>
         <TextWrapper>
-          <TimelineLabel color="var(--midGrey)">{labelText}</TimelineLabel>
+          <TimelineLabel>{labelText}</TimelineLabel>
         </TextWrapper>
         {children}
       </LeftBorder>
