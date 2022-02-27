@@ -30,7 +30,7 @@ const TitleLabel = styled(Label)({
 });
 
 const MeImage = styled.img({
-  borderRadius: "100%",
+  clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
   width: "200px",
   [sm]: {
     width: "250px",
@@ -86,8 +86,6 @@ const ListWithWrap = styled.div({
 
 const IntroductionText = styled(Text)({
   fontFamily: "var(--Sora)",
-  paddingLeft: "10px",
-  borderLeft: "solid 1px var(--text)",
   [md]: {
     paddingLeft: "0",
     borderLeft: "none",
@@ -106,7 +104,7 @@ export const Landing = () => {
       </TitleAndImage>
       <LinksAndIntroduction>
         <ListWithWrap>
-          <NavLink href="/">thoughts</NavLink>
+          <NavLink href="/thoughts">thoughts</NavLink>
           <NavLink href="/">projects</NavLink>
           <NavLink href="/">about</NavLink>
           <NavLink href="/">contact</NavLink>
@@ -124,13 +122,17 @@ export const Landing = () => {
           Nottingham. Sometimes the hardest part about learning physics is
           knowing where to look for information. I'm working through my
           university notes and uploading a typeset version of everything I
+          <p style={{ height: "10px" }} />
+          I'm open to{" "}
+          <BubbleHighlight>
+            <Link href="/">speaking</Link>
+          </BubbleHighlight>
+          {" and "}
+          <BubbleHighlight>
+            <Link href="/">freelance</Link>
+          </BubbleHighlight>
+          .
         </IntroductionText>
-        <Text>
-          I'm open to <BubbleHighlight>Lorem impsum</BubbleHighlight>
-          {", "}
-          <BubbleHighlight>dolor sit amet</BubbleHighlight> and{" "}
-          <BubbleHighlight>yes</BubbleHighlight>.
-        </Text>
       </LinksAndIntroduction>
     </Wrapper>
   );

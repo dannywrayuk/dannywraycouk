@@ -14,16 +14,6 @@ const Grid = styled.div({
   },
 });
 
-const NavLink = styled(Link)({
-  fontSize: "0.93rem",
-  fontFamily: "var(--Inter)",
-  fontWeight: "600",
-  textDecoration: "none",
-  color: "var(--text)",
-  textAlign: "center",
-  "&:hover": { color: "var(--primary)" },
-});
-
 const Logo = styled(Link)({
   fontSize: "1.5rem",
   fontFamily: "Montserrat",
@@ -49,17 +39,6 @@ const MenuIcon = styled(IoMenu)({
   color: "var(--text)",
 });
 
-const Nav = styled.nav({
-  gridTemplateColumns: "1fr 1fr 1fr",
-  width: "100%",
-  maxWidth: "700px",
-  justifyItems: "center",
-  display: "none",
-  [md]: {
-    display: "grid",
-  },
-});
-
 const tempToggleDarkMode = () => {
   const html = document.documentElement;
   if (html.getAttribute("colorMode") === "light") {
@@ -72,11 +51,6 @@ const tempToggleDarkMode = () => {
 export const Navigation = () => (
   <Grid>
     <Logo href="/">danny.</Logo>
-    <Nav>
-      <NavLink href="/sticker-sheet">Thoughts</NavLink>
-      <NavLink href="/sticker-sheet">Projects</NavLink>
-      <NavLink href="/sticker-sheet">About</NavLink>
-    </Nav>
     <Menu onClick={tempToggleDarkMode}>
       <MenuIcon />
     </Menu>

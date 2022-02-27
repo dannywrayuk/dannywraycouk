@@ -64,7 +64,7 @@ export const BubbleHighlight = styled.span({
   backgroundColor: "var(--primary)",
   padding: 3,
   borderRadius: 5,
-  fontWeight: 700,
+  fontWeight: 600,
   whiteSpace: "nowrap",
   lineHeight: "2rem",
 });

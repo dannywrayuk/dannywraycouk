@@ -13,9 +13,9 @@ export default class Document extends NextDocument {
           />
           <GoogleFonts
             fonts={{
-              Sora: { weights: [400, 700] },
+              Sora: { weights: [400, 600, 700] },
               Montserrat: { weights: [400, 600, 700] },
-              Inter: { weights: [400, 600] },
+              Inter: { weights: [400, 600, 700] },
             }}
           />
         </Head>
