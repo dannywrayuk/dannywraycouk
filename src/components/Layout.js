@@ -7,13 +7,12 @@ const FooterSpacing = styled.div({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
-  height: "100%",
+  minHeight: "100vh",
 });
 
 const CenterContent = styled.div({
   maxWidth: "1296px",
   margin: "0 auto",
-  height: "100%",
   padding: "0 10px 0",
   [lg]: { padding: 0 },
 });

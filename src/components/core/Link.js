@@ -3,6 +3,7 @@ import NextLink from "next/link";
 
 const BasicLink = styled.a({
   textDecoration: "underline",
+  cursor: "pointer",
 });
 
 export const Link = ({ children, href, ...rest }) => (

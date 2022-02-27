@@ -15,13 +15,7 @@ html[colorMode="light"] {
 html {
   background-color: var(--background);
   color: var(--text);
-}
-
-html,
-body,
-#__next {
-  min-height: 100%;
-  height: 100%;
+  padding-left: calc(100vw - 100%);
 }
 
 * {

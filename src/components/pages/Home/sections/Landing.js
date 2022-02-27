@@ -8,6 +8,7 @@ import {
   Column,
 } from "@components/core";
 import { md, sm, xl } from "@utils/breakpoints";
+import constants from "@utils/constants";
 
 const Wrapper = styled.div({
   marginTop: "25px",
@@ -71,6 +72,11 @@ const NavLink = styled(Link)({
   opacity: 0.7,
 });
 
+const NavA = styled.a({
+  color: "var(--text)",
+  opacity: 0.7,
+});
+
 const ListWithWrap = styled.div({
   fontSize: "1rem",
   fontFamily: "var(--Sora)",
@@ -105,12 +111,12 @@ export const Landing = () => {
       <LinksAndIntroduction>
         <ListWithWrap>
           <NavLink href="/thoughts">thoughts</NavLink>
-          <NavLink href="/">projects</NavLink>
+          <NavLink href="/projects">projects</NavLink>
           <NavLink href="/">about</NavLink>
           <NavLink href="/">contact</NavLink>
-          <NavLink href="/">linkedin</NavLink>
-          <NavLink href="/">github</NavLink>
-          <NavLink href="/">twitter</NavLink>
+          <NavA href={constants.links.linkedin}>linkedin</NavA>
+          <NavA href={constants.links.github}>github</NavA>
+          <NavA href={constants.links.twitter}>twitter</NavA>
         </ListWithWrap>
         <ListWithWrap>
           <span>Software Engineer at Capital One.</span>
