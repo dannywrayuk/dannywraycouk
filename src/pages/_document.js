@@ -5,7 +5,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <link href="globals.css" rel="stylesheet" />
+          <link href="/globals.css" rel="stylesheet" />
           <script
             dangerouslySetInnerHTML={{
               __html: `document.documentElement.setAttribute('colorMode', 'light');`,
