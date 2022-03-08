@@ -19,7 +19,6 @@ export default Test;
 
 export const meta = {
   id: "thoughts/test2",
-  hello: "there",
   date: "2000/01/03",
   title: "Hello dynamic posts again",
   blurb:

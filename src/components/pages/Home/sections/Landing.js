@@ -123,12 +123,12 @@ export const Landing = () => {
           <span>Nottingham, UK.</span>
           <span>Boba Tea Enthusiast.</span>
         </ListWithWrap>
-        <IntroductionText>
+        <IntroductionText as="div">
           Hi, I'm Danny. A Theoretical Physics Graduate from the University of
           Nottingham. Sometimes the hardest part about learning physics is
           knowing where to look for information. I'm working through my
           university notes and uploading a typeset version of everything I
-          <p style={{ height: "10px" }} />
+          <div style={{ height: "10px" }} />
           I'm open to{" "}
           <BubbleHighlight>
             <Link href="/">speaking</Link>
