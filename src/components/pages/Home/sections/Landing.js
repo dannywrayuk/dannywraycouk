@@ -92,7 +92,9 @@ const ListWithWrap = styled.div({
 
 const IntroductionText = styled(Text)({
   fontFamily: "var(--Sora)",
+  textAlign: "center",
   [md]: {
+    textAlign: "left",
     paddingLeft: "0",
     borderLeft: "none",
   },
