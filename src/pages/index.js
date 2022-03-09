@@ -16,13 +16,13 @@ const Home = ({ pinnedPosts, childPosts }) => {
       <Landing />
       <Wrapper>
         <SubHeading _css={{ margin: "60px 0" }}>Highlights</SubHeading>
-        {pinnedPosts.map((data) => (
-          <TimelineEntry data={data} type="pinned" />
+        {pinnedPosts.map((data, id) => (
+          <TimelineEntry key={data.id + id} data={data} type="pinned" />
         ))}
       </Wrapper>
       <Wrapper>
-        {childPosts.map((data) => (
-          <TimelineEntry data={data} />
+        {childPosts.map((data, id) => (
+          <TimelineEntry key={data.id + id} data={data} />
         ))}
       </Wrapper>
     </Layout>

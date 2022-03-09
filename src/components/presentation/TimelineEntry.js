@@ -9,7 +9,6 @@ export const TimelineEntry = ({ data, type }) => {
   });
   return (
     <TimelineItem
-      key={data.id}
       label={dateString}
       variant={type || data.timelineVariant}
       icon={data.timelineIcon}

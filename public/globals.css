@@ -12,10 +12,19 @@ html[colorMode="light"] {
   --feintGrey: #e4e8f1;
 }
 
+html[scrollOff] {
+  overflow: hidden;
+  scrollbar-gutter: auto;
+}
+
+html[scrollOff] body {
+  overflow: scroll;
+}
+
 html {
   background-color: var(--background);
   color: var(--text);
-  padding-left: calc(100vw - 100%);
+  scrollbar-gutter: stable;
 }
 
 * {

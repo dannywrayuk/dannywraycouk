@@ -1,6 +1,11 @@
 import fs from "fs";
 import path from "path";
 
+// comment out to turn off the annoying logs until they're needed
+const log = (str) => {
+  //console.log(str);
+};
+
 export const getMetadata = (filePath) => {
   if (fs.lstatSync(filePath).isFile()) {
     const fileData = fs.readFileSync(filePath).toString();
@@ -20,14 +25,14 @@ export const getMetadataArray = (inputPathArray) => {
 };
 
 export const getMetadataFromDirectory = (inputPath) => {
-  console.log(`Getting metadata for ${inputPath}`);
+  log(`Getting metadata for ${inputPath}`);
   const dir = fs.readdirSync(inputPath);
 
-  console.log(dir);
+  log(dir);
   const metadata = getMetadataArray(
     dir.map((file) => path.join(inputPath, file))
   );
-  console.log("Found:");
-  console.log(metadata);
+  log("Found:");
+  log(metadata);
   return metadata;
 };

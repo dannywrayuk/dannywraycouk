@@ -2,6 +2,9 @@ import styled from "@emotion/styled";
 import { Link, Button } from "@components/core";
 import { IoMenu } from "react-icons/io5";
 import { md, sm } from "@utils/breakpoints";
+import { useReveal } from "@utils/useReveal";
+import { CommandPalette } from "./CommandPalette";
+import { useEffect } from "react";
 
 const Grid = styled.div({
   display: "grid",
@@ -28,8 +31,14 @@ const Logo = styled(Link)({
 const Menu = styled(Button)({
   margin: "0 10px 0 auto",
   gridColumn: 3,
+  padding: "8px",
+  clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
+  transition: "0.5s",
   [sm]: {
     marginLeft: "auto",
+  },
+  ":hover": {
+    backgroundColor: "var(--primary)",
   },
 });
 
@@ -39,20 +48,22 @@ const MenuIcon = styled(IoMenu)({
   color: "var(--text)",
 });
 
-const tempToggleDarkMode = () => {
-  const html = document.documentElement;
-  if (html.getAttribute("colorMode") === "light") {
-    html.setAttribute("colorMode", "dark");
-  } else {
-    html.setAttribute("colorMode", "light");
-  }
+export const Navigation = () => {
+  const [isOpen, setOpen, setClose, toggleState] = useReveal(false);
+  useEffect(() => {
+    const html = document.documentElement;
+    if (isOpen) html.setAttribute("scrollOff", "");
+    else html.removeAttribute("scrollOff");
+  }, [isOpen]);
+  return (
+    <>
+      {isOpen && <CommandPalette close={setClose} />}
+      <Grid>
+        <Logo href="/">danny.</Logo>
+        <Menu onClick={setOpen}>
+          <MenuIcon />
+        </Menu>
+      </Grid>
+    </>
+  );
 };
-
-export const Navigation = () => (
-  <Grid>
-    <Logo href="/">danny.</Logo>
-    <Menu onClick={tempToggleDarkMode}>
-      <MenuIcon />
-    </Menu>
-  </Grid>
-);
