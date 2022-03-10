@@ -32,11 +32,14 @@ const TitleLabel = styled(Label)({
 
 const MeImage = styled.img({
   clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
+  height: "200px",
   width: "200px",
   [sm]: {
+    height: "250px",
     width: "250px",
   },
   [md]: {
+    height: "300px",
     width: "300px",
   },
 });
