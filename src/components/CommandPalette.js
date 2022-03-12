@@ -11,6 +11,7 @@ const Overlay = styled.div({
   height: "100%",
   backgroundColor: "#00000044",
   backdropFilter: "blur(2px)",
+  touchAction: "none",
 });
 
 const BodyWrapper = styled.div({
