@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { md, sm } from "@utils/breakpoints";
 import { useReveal } from "@utils/useReveal";
 import { CommandPalette } from "./CommandPalette";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 const Grid = styled.div({
   display: "grid",
@@ -34,6 +34,7 @@ const Menu = styled(Button)({
   padding: "8px",
   clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
   transition: "0.5s",
+  outline: "none",
   [sm]: {
     marginLeft: "auto",
   },
@@ -50,10 +51,20 @@ const MenuIcon = styled(IoMenu)({
 
 export const Navigation = () => {
   const [isOpen, setOpen, setClose, toggleState] = useReveal(false);
+
+  const closeOnEscape = useCallback((e) => {
+    if (e.code === "Escape") setClose();
+  });
+
   useEffect(() => {
     const html = document.documentElement;
-    if (isOpen) html.setAttribute("scrollOff", "");
-    else html.removeAttribute("scrollOff");
+    if (isOpen) {
+      html.setAttribute("scrollOff", "");
+      document.addEventListener("keyup", closeOnEscape, true);
+    } else {
+      html.removeAttribute("scrollOff");
+    }
+    return () => document.removeEventListener("keyup", closeOnEscape, true);
   }, [isOpen]);
   return (
     <>
