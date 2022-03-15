@@ -13,12 +13,16 @@ html[colorMode="light"] {
 }
 
 html[scrollOff] {
-  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
   scrollbar-gutter: auto;
 }
 
 html[scrollOff] body {
-  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
 }
 
 html {
