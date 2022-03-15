@@ -20,20 +20,20 @@ const Overlay = styled.div({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "#aaaaaa44",
+  backgroundColor: "var(--modalOverlay)",
   backdropFilter: "blur(2px)",
   touchAction: "none",
 });
 
 const BodyWrapper = styled.div({
-  backgroundColor: "white",
+  backgroundColor: "var(--background)",
   position: "fixed",
   left: "50%",
   transform: "translateX(-50%)",
   top: 0,
   width: "100%",
   overflow: "hidden",
-  border: "1px solid #ddd",
+  border: "1px solid var(--feintGrey)",
   [md]: {
     top: "20%",
     width: "600px",
@@ -42,6 +42,8 @@ const BodyWrapper = styled.div({
 });
 
 const SearchInput = styled.input({
+  backgroundColor: "var(--background)",
+  color: "var(--text)",
   width: "100%",
   height: "60px",
   outline: "none",
@@ -49,7 +51,7 @@ const SearchInput = styled.input({
   padding: "0 25px",
   fontFamily: "var(--Sora)",
   fontSize: "0.9rem",
-  borderBottom: "1px solid #eee",
+  borderBottom: "1px solid var(--feintGrey)",
 });
 
 const SuggestionsWrapper = styled.div({
@@ -62,7 +64,7 @@ const Section = styled.div({
   height: "30px",
   display: "flex",
   alignItems: "center",
-  backgroundColor: "#eee",
+  backgroundColor: "var(--feintGrey)",
   color: "var(--Text)",
   fontWeight: "600",
 });
@@ -73,10 +75,10 @@ const Item = styled.div({
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
-  color: "#888",
+  color: "var(--boldGrey)",
   cursor: "pointer",
   ":hover": {
-    backgroundColor: "#ffe",
+    backgroundColor: "var(--primary10)",
     color: "var(--primary)",
   },
 });
@@ -87,7 +89,7 @@ const ShortcutItem = styled.div({
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
-  color: "#888",
+  color: "var(--boldGrey)",
   cursor: "default",
   justifyContent: "space-between",
 });
@@ -139,10 +141,6 @@ const Suggestions = () => (
     <ShortcutItem>
       <Text>Open Command Palette</Text>
       <Shortcut keys={["ctrl", "k"]} />
-    </ShortcutItem>
-    <ShortcutItem>
-      <Text>Toggle Dark Mode</Text>
-      <Shortcut keys={["ctrl", "t"]} />
     </ShortcutItem>
     <ShortcutItem>
       <Text>Close Command Palette</Text>

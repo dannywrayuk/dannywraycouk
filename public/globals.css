@@ -1,17 +1,3 @@
-html[colorMode="dark"] {
-  --redTest: #ff1111;
-  --background: black;
-  --text: white;
-  --feintGrey: #333;
-}
-
-html[colorMode="light"] {
-  --redTest: #2dff11;
-  --background: white;
-  --text: black;
-  --feintGrey: #e4e8f1;
-}
-
 html[scrollOff] {
   overflow-y: scroll;
   height: 100%;
@@ -38,12 +24,31 @@ html {
   min-width: 0;
 }
 
+html[colorMode="dark"] {
+  --redTest: #ff1111;
+  --background: black;
+  --text: white;
+  --feintGrey: #333;
+  --boldGrey: #aaa;
+  --modalOverlay: #11111188;
+}
+
+html[colorMode="light"] {
+  --redTest: #2dff11;
+  --background: white;
+  --text: black;
+  --feintGrey: #eee;
+  --boldGrey: #888;
+  --modalOverlay: #aaaaaa44;
+}
+
 :root {
   --Sora: "Sora", -apple-system, sans-serif;
   --Inter: "Inter", -apple-system, sans-serif;
   --Montserrat: "Montserrat", -apple-system, sans-serif;
   --primary: #ffca1e;
   --primary30: #ffca1e48;
+  --primary10: #ffca1e0f;
   --midGrey: #888888;
   --iconColor: #ccd4e3;
 }
