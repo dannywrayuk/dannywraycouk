@@ -33,12 +33,11 @@ const BodyWrapper = styled.div({
   top: 0,
   width: "100%",
   overflow: "hidden",
-  borderBottom: "1px solid #eee",
+  border: "1px solid #ddd",
   [md]: {
     top: "20%",
     width: "600px",
     borderRadius: "15px",
-    border: "1px solid #eee",
   },
 });
 
