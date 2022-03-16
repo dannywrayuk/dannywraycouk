@@ -8,6 +8,7 @@ import { getMetadataArray, getMetadataFromDirectory } from "@utils/getMetadata";
 const Wrapper = styled(Column)({
   maxWidth: "700px",
   margin: "0 auto",
+  width: "100%",
 });
 
 const Home = ({ pinnedPosts, childPosts }) => {

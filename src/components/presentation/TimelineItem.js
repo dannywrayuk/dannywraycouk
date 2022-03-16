@@ -8,6 +8,7 @@ import { md, lg } from "@utils/breakpoints";
 const Wrapper = styled.div({
   position: "relative",
   borderLeftColor: "var(--feintGrey)",
+  width: "100%",
   "&:last-child": {
     borderLeftColor: "#00000000",
   },

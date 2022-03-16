@@ -62,6 +62,7 @@ export const TimelineLabel = styled.p(
 
 export const BubbleHighlight = styled.span({
   backgroundColor: "var(--primary)",
+  color: "black",
   padding: 3,
   borderRadius: 5,
   fontWeight: 600,
