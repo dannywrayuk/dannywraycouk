@@ -73,6 +73,7 @@ const LinksAndIntroduction = styled(Column)({
 const NavLink = styled(Link)({
   color: "var(--text)",
   opacity: 0.7,
+  textDecoration: "underline",
 });
 
 const NavA = styled.a({

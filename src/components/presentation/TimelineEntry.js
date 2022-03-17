@@ -4,19 +4,24 @@ import styled from "@emotion/styled";
 
 const CoverImage = styled.img({
   width: "100%",
-  borderBottom: "1px solid var(--boldGrey)",
 });
 
-const Wrapper = styled.div({ outline: "solid" });
+const Wrapper = styled.div({
+  // outline: "solid"
+});
 const WithBorder = styled.div({
   display: "flex",
   flexDirection: "column",
-  borderRadius: "20px",
   overflow: "hidden",
-  border: "1px solid var(--boldGrey)",
+  border: "1px solid var(--feintGrey)",
+  marginTop: "10px",
 });
 const TextBox = styled.div({
-  padding: "10px",
+  padding: "15px",
+  display: "flex",
+  flexDirection: "column",
+  rowGap: "8px",
+  alignItems: "flex-start",
 });
 
 export const TimelineEntry = ({ data, type }) => {
@@ -32,17 +37,19 @@ export const TimelineEntry = ({ data, type }) => {
         variant={type || data.timelineVariant}
         icon={data.timelineIcon}
       >
-        <Link href={data.id}>
-          <WithBorder>
+        <WithBorder>
+          <Link href={data.id}>
             <CoverImage src={`/img/${data.coverImage}`} />
-            <TextBox>
-              <Link href={data.id}>
-                <SubSubHeading>{data.title}</SubSubHeading>
-              </Link>
-              <Text>{data.blurb}</Text>
-            </TextBox>
-          </WithBorder>
-        </Link>
+          </Link>
+          <TextBox>
+            <Link href={data.id}>
+              <SubSubHeading _css={{ fontSize: "1rem" }}>
+                {data.title}
+              </SubSubHeading>
+            </Link>
+            <Text>{data.blurb}</Text>
+          </TextBox>
+        </WithBorder>
       </TimelineItem>
     );
   return (

@@ -37,7 +37,7 @@ html[colorMode="light"] {
   --redTest: #2dff11;
   --background: white;
   --text: black;
-  --feintGrey: #eee;
+  --feintGrey: #ddd;
   --boldGrey: #888;
   --modalOverlay: #aaaaaa44;
 }

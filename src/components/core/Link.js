@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import NextLink from "next/link";
 
 const BasicLink = styled.a({
-  textDecoration: "underline",
   cursor: "pointer",
 });
 
