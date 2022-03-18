@@ -156,12 +156,11 @@ const Body = () => (
   </BodyWrapper>
 );
 
-const WithOverlay = ({ close }) => (
-  <>
-    <Overlay onClick={close} />
-    <Body />
-  </>
-);
-
-export const CommandPalette = (props) =>
-  createPortal(<WithOverlay {...props} />, document.getElementById("portal"));
+export const CommandPalette = ({ close }) =>
+  createPortal(
+    <>
+      <Overlay onClick={close} />
+      <Body />
+    </>,
+    document.getElementById("portal")
+  );
