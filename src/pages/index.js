@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Column, SubHeading } from "@components/core";
 import { Layout } from "@components/Layout";
 import { Landing } from "@components/pages/Home/sections/Landing";
-import { TimelineEntry } from "@components/presentation/TimelineEntry";
+import { TimelineEntry } from "@components/presentation/Timeline";
 import { getMetadataArray, getMetadataFromDirectory } from "@utils/getMetadata";
 
 const Wrapper = styled(Column)({

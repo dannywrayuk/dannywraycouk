@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Layout } from "@components/Layout";
 import { SubHeading, Column } from "@components/core";
 import { getMetadataArray, getMetadataFromDirectory } from "@utils/getMetadata";
-import { TimelineEntry } from "@components/presentation/TimelineEntry";
+import { TimelineEntry } from "@components/presentation/Timeline";
 
 const Wrapper = styled(Column)({
   maxWidth: "700px",

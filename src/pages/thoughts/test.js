@@ -23,5 +23,9 @@ export const meta = {
   title: "Hello dynamic posts",
   blurb:
     "This is as test description for a dynamic post. This data should be loaded in by the getStaticProps method.",
-  coverImage: "cover_images/project_1.jpeg",
+
+  timeline: {
+    type: "withImage",
+    coverImage: "cover_images/project_1.jpeg",
+  },
 };

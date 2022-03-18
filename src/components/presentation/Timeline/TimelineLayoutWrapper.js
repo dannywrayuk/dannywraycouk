@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { TimelineLabel, Row } from "@components/core";
+import { TimelineLabel } from "@components/core";
 import { MdAccessTimeFilled, MdOutlineArticle } from "react-icons/md";
 import { FiFolder } from "react-icons/fi";
 import { AiFillPushpin, AiFillHeart } from "react-icons/ai";
@@ -63,7 +63,7 @@ const variants = {
   pinned: [Icons.pin, "Pinned."],
 };
 
-export const TimelineItem = ({ children, label, icon, variant }) => {
+export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {
   let IconElement, labelText;
   if (variant) {
     [IconElement, labelText] = variants[variant];
