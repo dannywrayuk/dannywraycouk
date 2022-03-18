@@ -25,6 +25,6 @@ const Wrapper = styled.div({
 export const Footer = () => (
   <Wrapper>
     <Label _css={{ fontSize: "1.25rem" }}>~</Label>
-    <Label>Danny wray 2022</Label>
+    <Label>Danny wray {process.env.year}</Label>
   </Wrapper>
 );
