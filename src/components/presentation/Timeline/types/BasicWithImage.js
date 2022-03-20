@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 
 const CoverImage = styled.img({
   width: "100%",
+  display: "block",
 });
 
 const WithBorder = styled.div({
@@ -12,6 +13,7 @@ const WithBorder = styled.div({
   border: "1px solid var(--feintGrey)",
   marginTop: "10px",
 });
+
 const TextBox = styled.div({
   padding: "15px",
   display: "flex",

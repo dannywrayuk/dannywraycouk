@@ -20,9 +20,11 @@ const LeftBorder = styled.div({
   borderLeftColor: "inherit",
   paddingLeft: "1.25rem",
   paddingBottom: "5rem",
+  paddingRight: "20px",
   marginLeft: "0.75rem",
   [md]: {
     paddingLeft: "2.5rem",
+    paddingRight: "0",
   },
 });
 
@@ -45,7 +47,9 @@ const TextWrapper = styled.div({
   alignItems: "center",
   color: "var(--text)",
   opacity: 0.7,
+  marginBottom: "10px",
   [lg]: {
+    marginBottom: "0",
     position: "absolute",
     left: "-1rem",
     transform: "translateX(-100%)",

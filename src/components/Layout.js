@@ -14,7 +14,6 @@ const CenterContent = styled.div({
   maxWidth: "1296px",
   margin: "0 auto",
   padding: "0 10px 0",
-  [lg]: { padding: 0 },
 });
 
 const SectionSpacing = styled.div({

@@ -1,13 +1,6 @@
 import styled from "@emotion/styled";
-import {
-  Label,
-  Text,
-  Flex,
-  Link,
-  BubbleHighlight,
-  Column,
-} from "@components/core";
-import { md, sm, xl } from "@utils/breakpoints";
+import { Label, Text, Link, BubbleHighlight, Column } from "@components/core";
+import { lg, md, sm, xl } from "@utils/breakpoints";
 import constants from "@utils/constants";
 
 const Wrapper = styled.div({
@@ -39,8 +32,8 @@ const MeImage = styled.img({
     width: "250px",
   },
   [md]: {
-    height: "300px",
-    width: "300px",
+    height: "280px",
+    width: "280px",
   },
 });
 
@@ -136,13 +129,13 @@ export const Landing = () => {
           university notes and uploading a typeset version of everything I
           <div style={{ height: "10px" }} />
           I'm open to{" "}
-          <BubbleHighlight>
-            <Link href="/">speaking</Link>
-          </BubbleHighlight>
+          <Link href="/">
+            <BubbleHighlight>speaking</BubbleHighlight>
+          </Link>
           {" and "}
-          <BubbleHighlight>
-            <Link href="/">freelance</Link>
-          </BubbleHighlight>
+          <Link href="/">
+            <BubbleHighlight>freelance</BubbleHighlight>
+          </Link>
           .
         </IntroductionText>
       </LinksAndIntroduction>
