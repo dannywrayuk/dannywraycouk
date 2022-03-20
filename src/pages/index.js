@@ -36,6 +36,7 @@ export const getStaticProps = async () => ({
   props: {
     pinnedPosts: getMetadataArray([
       "src/pages/thoughts/test.js",
+      "src/pages/thoughts/test2.js",
       "src/pages/thoughts/test.js",
     ]),
     childPosts: getMetadataFromDirectory("src/pages/thoughts"),

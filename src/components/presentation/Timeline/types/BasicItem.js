@@ -1,15 +1,14 @@
-import { Link, SubSubHeading, Text } from "@components/core";
-import styled from "@emotion/styled";
-
-const Wrapper = styled.div({
-  // outline: "solid"
-});
+import { Link, SubSubHeading, Text, Column } from "@components/core";
+import { Tags } from "@components/Tags";
 
 export const BasicItem = ({ data }) => (
-  <Wrapper>
+  <Column rg={10} ai="flex-start">
     <Link href={data.id}>
-      <SubSubHeading>{data.title}</SubSubHeading>
+      <Column rg={10} ai="flex-start">
+        <SubSubHeading>{data.title}</SubSubHeading>
+        <Text>{data.blurb}</Text>
+      </Column>
     </Link>
-    <Text>{data.blurb}</Text>
-  </Wrapper>
+    {data.timeline?.tags && <Tags tags={data.timeline.tags} />}
+  </Column>
 );

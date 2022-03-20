@@ -20,8 +20,11 @@ export const getMetadata = (filePath) => {
 export const getMetadataArray = (inputPathArray) => {
   return inputPathArray
     .map((file) => getMetadata(file))
-    .filter((x) => !!x && x.id !== undefined)
-    .sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
+    .filter((x) => !!x && x.id !== undefined);
+};
+
+export const sortMetadataArray = (inputArray) => {
+  return inputArray.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 };
 
 export const getMetadataFromDirectory = (inputPath) => {
@@ -29,9 +32,10 @@ export const getMetadataFromDirectory = (inputPath) => {
   const dir = fs.readdirSync(inputPath);
 
   log(dir);
-  const metadata = getMetadataArray(
-    dir.map((file) => path.join(inputPath, file))
+  const metadata = sortMetadataArray(
+    getMetadataArray(dir.map((file) => path.join(inputPath, file)))
   );
+
   log("Found:");
   log(metadata);
   return metadata;

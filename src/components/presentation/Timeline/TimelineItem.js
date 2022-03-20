@@ -1,13 +1,12 @@
-import { BasicItem } from "./types/BasicItem";
-import { BasicWithImage } from "./types/BasicWithImage";
 import { TimelineLayoutWrapper } from "./TimelineLayoutWrapper";
+import { BasicItem, BasicWithImage } from "./types";
 
 const timelineEntryTypes = {
   default: BasicItem,
   withImage: BasicWithImage,
 };
 
-export const TimelineEntry = ({ data }) => {
+export const TimelineEntry = ({ data, type }) => {
   data.formattedDate = new Date(data.date).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -19,7 +18,7 @@ export const TimelineEntry = ({ data }) => {
   return (
     <TimelineLayoutWrapper
       label={data.formattedDate}
-      variant={data.timeline?.variant}
+      variant={type || data.timeline?.variant}
       icon={data.timeline?.icon}
     >
       <Entry data={data} />

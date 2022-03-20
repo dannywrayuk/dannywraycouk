@@ -23,4 +23,7 @@ export const meta = {
   title: "Hello dynamic posts again",
   blurb:
     "This is as test description for a dynamic post. This data should be loaded in by the getStaticProps method.",
+  timeline: {
+    tags: ["physics", "sick"],
+  },
 };

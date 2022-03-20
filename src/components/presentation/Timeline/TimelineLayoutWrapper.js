@@ -15,6 +15,7 @@ const Wrapper = styled.div({
 });
 
 const LeftBorder = styled.div({
+  display: "inline-block",
   borderLeft: "solid 1px",
   borderLeftColor: "inherit",
   paddingLeft: "1.25rem",
