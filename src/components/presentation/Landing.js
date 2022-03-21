@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Label, Text, Link, BubbleHighlight, Column } from "@components/core";
+import { TitleAndImage } from "@components/presentation/TitleAndImage";
 import { lg, md, sm, xl } from "@utils/breakpoints";
 import constants from "@utils/constants";
 
@@ -8,55 +9,9 @@ const Wrapper = styled.div({
   color: "var(--text)",
 });
 
-const Title = styled.h1({
-  fontSize: "2.5rem",
-  fontFamily: "var(--Montserrat)",
-  fontWeight: "600",
-  color: "var(--text)",
-  marginLeft: "-0.1em",
-  [sm]: {
-    fontSize: "3.4rem",
-  },
-});
-const TitleLabel = styled(Label)({
-  marginTop: 10,
-  fontSize: "0.75rem",
-});
-
-const MeImage = styled.img({
-  clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
-  height: "200px",
-  width: "200px",
-  [sm]: {
-    height: "250px",
-    width: "250px",
-  },
-  [md]: {
-    height: "280px",
-    width: "280px",
-  },
-});
-
-const TitleAndImage = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  marginBottom: "30px",
-  marginTop: "30px",
-  rowGap: 5,
-  textAlign: "center",
-  [md]: {
-    flexDirection: "row-reverse",
-    justifyContent: "center",
-    columnGap: 40,
-    textAlign: "right",
-    margin: "75px 0",
-  },
-});
-
 const LinksAndIntroduction = styled(Column)({
   flexDirection: "column",
-  margin: "15px auto",
+  margin: "45px auto 0px",
   maxWidth: 680,
   rowGap: 20,
   columnGap: 60,
@@ -100,13 +55,7 @@ const IntroductionText = styled(Text)({
 export const Landing = () => {
   return (
     <Wrapper>
-      <TitleAndImage>
-        <MeImage src="/img/me.jpeg" />
-        <div>
-          <Title>Danny Wray</Title>
-          <TitleLabel>Software Developer</TitleLabel>
-        </div>
-      </TitleAndImage>
+      <TitleAndImage />
       <LinksAndIntroduction>
         <ListWithWrap>
           <NavLink href="/thoughts">thoughts</NavLink>
