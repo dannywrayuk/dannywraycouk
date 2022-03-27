@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Column, SubSubHeading, Text, Link, Row } from "@components/core";
+import { Column, Text, Row } from "@components/core";
 import { Layout } from "@components/Layout";
 import { TitleAndImage } from "@components/presentation/TitleAndImage";
 import {
@@ -25,7 +25,7 @@ const Icon = styled.div({
 
 const RoundedColorBubble = styled.div(
   {
-    padding: "20px",
+    padding: "12px",
     borderRadius: "10px",
     width: "100%",
     textDecoration: "none",
@@ -42,10 +42,10 @@ const Home = () => {
           bg="var(--primary30)"
           col="var(--text)"
           as="a"
-          href={constants.links.twitter}
+          href={constants.links.mail}
         >
           <Column cg={10} rg={10}>
-            <Text>I am open to doing things </Text>
+            <Text>I'm open to making things</Text>
             <RoundedColorBubble bg="var(--primary)" col="black" size="10px">
               <Column>
                 <Text>Contact</Text>

@@ -61,7 +61,7 @@ export const Landing = () => {
           <NavLink href="/thoughts">thoughts</NavLink>
           <NavLink href="/projects">projects</NavLink>
           <NavLink href="/">about</NavLink>
-          <NavLink href="/">contact</NavLink>
+          <NavA href={constants.links.mail}>contact</NavA>
           <NavA href={constants.links.linkedin}>linkedin</NavA>
           <NavA href={constants.links.github}>github</NavA>
           <NavA href={constants.links.twitter}>twitter</NavA>
