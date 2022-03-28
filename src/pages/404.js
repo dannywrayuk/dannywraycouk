@@ -1,21 +1,38 @@
-import { useEffect } from "react";
-import constants from "@utils/constants";
+import { Column, Heading } from "@components/core";
+import { Layout } from "@components/Layout";
+import styled from "@emotion/styled";
+import Head from "next/head";
+import Link from "next/link";
 
-const redirectList = constants.redirects;
+const Wrapper = styled(Column)({ marginTop: "80px", rowGap: "50px" });
 
-const NotFound = () => {
-  useEffect(() => {
-    const key = document.location.pathname.substring(1);
-    const redirect = redirectList[key];
-    if (redirect) {
-      document.location.replace(redirect);
-    }
-  }, []);
-  return (
-    <>
-      <div>hello</div>
-    </>
-  );
-};
+const BackLink = styled.a({
+  color: "var(--text)",
+  fontFamily: "var(--Sora)",
+  opacity: 0.7,
+  textDecoration: "underline",
+  cursor: "pointer",
+});
+
+const Image = styled.img({
+  maxWidth: "200px",
+});
+
+const NotFound = () => (
+  <>
+    <Head>
+      <script src="/redirect.js"></script>
+    </Head>
+    <Layout>
+      <Wrapper>
+        <Heading>There's nothing to see here..</Heading>
+        <Image src="/img/sadfrog.jpeg" />
+        <Link href="/">
+          <BackLink>back home</BackLink>
+        </Link>
+      </Wrapper>
+    </Layout>
+  </>
+);
 
 export default NotFound;
