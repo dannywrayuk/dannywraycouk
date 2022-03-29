@@ -16,6 +16,7 @@ export default class Document extends NextDocument {
               Sora: { weights: [400, 600, 700] },
               Montserrat: { weights: [400, 600, 700] },
               Inter: { weights: [400, 600, 700] },
+              Karla: { weights: [400, 600, 700] },
             }}
           />
         </Head>
