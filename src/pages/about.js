@@ -14,9 +14,6 @@ const Wrapper = styled(Column)({
 
 const ImageContainer = styled.div({
   width: "80%",
-  [md]: {
-    minWidth: "400px",
-  },
 });
 
 const Me = styled.img({ width: "100%" });
@@ -32,17 +29,30 @@ const TextWrapper = styled(Column)({
   alignItems: "flex-start",
   rowGap: "40px",
   padding: "0 20px",
+  maxWidth: "700px",
+  margin: "0 auto",
+});
+
+const TaglineOffset = styled.div({
+  alignItems: "flex-start",
+  rowGap: "40px",
+  padding: "0 20px",
   [md]: {
+    maxWidth: "300px",
     padding: "20px",
-    backgroundColor: "var(--background)",
-    transform: "translate(-20px,50px)",
+    backgroundColor: "var(--text)",
+    transform: "translate(-30px,70px)",
   },
 });
 
-const Tagline = styled.div({
+const Tagline = styled.h1({
   fontSize: "24px",
   fontFamily: "var(--Sora)",
+  fontWeight: "400",
   lineHeight: "32px",
+  [md]: {
+    color: "var(--background)",
+  },
 });
 
 const AboutText = styled.p({
@@ -59,11 +69,11 @@ const About = () => (
         <Me src="/img/me.jpeg" />
         <ImageText>Me doing something</ImageText>
       </ImageContainer>
-      <TextWrapper>
+      <TaglineOffset>
         <Tagline>
           My name is Danny and I'm currently a software engineer at Capital One
         </Tagline>
-      </TextWrapper>
+      </TaglineOffset>
     </Wrapper>
     <TextWrapper>
       <AboutText>
