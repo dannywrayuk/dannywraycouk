@@ -1,19 +1,17 @@
 import { Column, Text } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
-import { md } from "@utils/breakpoints";
+import { sm } from "@utils/breakpoints";
 
 const Wrapper = styled(Column)({
   maxWidth: "700px",
   margin: "40px auto 0",
   rowGap: "40px",
-  [md]: {
-    flexDirection: "row",
-  },
 });
 
 const ImageContainer = styled.div({
   width: "80%",
+  maxWidth: "400px",
 });
 
 const Me = styled.img({ width: "100%" });
@@ -28,31 +26,19 @@ const ImageText = styled.p({
 const TextWrapper = styled(Column)({
   alignItems: "flex-start",
   rowGap: "40px",
-  padding: "0 20px",
   maxWidth: "700px",
   margin: "0 auto",
-});
-
-const TaglineOffset = styled.div({
-  alignItems: "flex-start",
-  rowGap: "40px",
-  padding: "0 20px",
-  [md]: {
-    maxWidth: "300px",
-    padding: "20px",
-    backgroundColor: "var(--text)",
-    transform: "translate(-30px,70px)",
+  padding: "0 15px",
+  [sm]: {
+    padding: "0 30px",
   },
 });
 
 const Tagline = styled.h1({
-  fontSize: "24px",
+  fontSize: "22px",
   fontFamily: "var(--Sora)",
   fontWeight: "400",
   lineHeight: "32px",
-  [md]: {
-    color: "var(--background)",
-  },
 });
 
 const AboutText = styled.p({
@@ -66,14 +52,14 @@ const About = () => (
   <Layout>
     <Wrapper>
       <ImageContainer>
-        <Me src="/img/me.jpeg" />
-        <ImageText>Me doing something</ImageText>
+        <Me src="/img/hotdog.jpeg" />
+        <ImageText>Me and a hotdog</ImageText>
       </ImageContainer>
-      <TaglineOffset>
+      <TextWrapper>
         <Tagline>
           My name is Danny and I'm currently a software engineer at Capital One
         </Tagline>
-      </TaglineOffset>
+      </TextWrapper>
     </Wrapper>
     <TextWrapper>
       <AboutText>
