@@ -1,12 +1,17 @@
-import { Column, Text } from "@components/core";
+import { Column, Row, Text } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
-import { sm } from "@utils/breakpoints";
+import { md, sm } from "@utils/breakpoints";
 
-const Wrapper = styled(Column)({
-  maxWidth: "700px",
+const Wrapper = styled(Row)({
   margin: "40px auto 0",
   rowGap: "40px",
+  columnGap: "40px",
+  flexWrap: "wrap",
+  maxWidth: "700px",
+  [md]: {
+    maxWidth: "900px",
+  },
 });
 
 const ImageContainer = styled.div({
@@ -26,7 +31,6 @@ const ImageText = styled.p({
 const TextWrapper = styled(Column)({
   alignItems: "flex-start",
   rowGap: "40px",
-  maxWidth: "700px",
   margin: "0 auto",
   padding: "0 15px",
   [sm]: {
@@ -51,45 +55,43 @@ const AboutText = styled.p({
 const About = () => (
   <Layout>
     <Wrapper>
-      <ImageContainer>
-        <Me src="/img/hotdog.jpeg" />
-        <ImageText>Me and a hotdog</ImageText>
-      </ImageContainer>
       <TextWrapper>
         <Tagline>
           My name is Danny and I'm currently a software engineer at Capital One
         </Tagline>
+        <AboutText>
+          Maecenas tortor purus, pretium non quam id, ultricies varius tellus.
+          Praesent nec urna sapien. Mauris at nulla vitae lorem iaculis laoreet
+          id ut lacus.
+        </AboutText>
+        <AboutText>
+          Nulla ac ante nec mi aliquam aliquam. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae;
+        </AboutText>
+        <AboutText>
+          Quisque imperdiet facilisis blandit. Sed faucibus rhoncus elit a
+          sagittis. Integer id accumsan justo, a dapibus nisi. Phasellus
+          ullamcorper pharetra lectus pulvinar hendrerit. Fusce in risus in
+          turpis condimentum semper.
+        </AboutText>
+        <AboutText>
+          Suspendisse luctus venenatis lectus, sed cursus elit venenatis non.
+          Fusce elementum erat at viverra rhoncus. Proin iaculis, risus a
+          efficitur finibus, nisi augue porta augue, vel consectetur nisl magna
+          eget libero. In hac habitasse platea dictumst. Cras ullamcorper orci
+          in dignissim pellentesque. Integer euismod sollicitudin odio.
+        </AboutText>
+        <AboutText>
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Maecenas quam ipsum, congue a urna nec,
+          egestas lobortis lorem.
+        </AboutText>
       </TextWrapper>
+      <ImageContainer>
+        <Me src="/img/hotdog.jpeg" />
+        <ImageText>Me and a hotdog</ImageText>
+      </ImageContainer>
     </Wrapper>
-    <TextWrapper>
-      <AboutText>
-        Maecenas tortor purus, pretium non quam id, ultricies varius tellus.
-        Praesent nec urna sapien. Mauris at nulla vitae lorem iaculis laoreet id
-        ut lacus.
-      </AboutText>
-      <AboutText>
-        Nulla ac ante nec mi aliquam aliquam. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia curae;
-      </AboutText>
-      <AboutText>
-        Quisque imperdiet facilisis blandit. Sed faucibus rhoncus elit a
-        sagittis. Integer id accumsan justo, a dapibus nisi. Phasellus
-        ullamcorper pharetra lectus pulvinar hendrerit. Fusce in risus in turpis
-        condimentum semper.
-      </AboutText>
-      <AboutText>
-        Suspendisse luctus venenatis lectus, sed cursus elit venenatis non.
-        Fusce elementum erat at viverra rhoncus. Proin iaculis, risus a
-        efficitur finibus, nisi augue porta augue, vel consectetur nisl magna
-        eget libero. In hac habitasse platea dictumst. Cras ullamcorper orci in
-        dignissim pellentesque. Integer euismod sollicitudin odio.
-      </AboutText>
-      <AboutText>
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Maecenas quam ipsum, congue a urna nec, egestas lobortis
-        lorem.
-      </AboutText>
-    </TextWrapper>
   </Layout>
 );
 
