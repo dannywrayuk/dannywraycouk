@@ -1,22 +1,18 @@
-import { Column, Row, Text } from "@components/core";
+import { BubbleHighlight, Column, Row } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
-import { md, sm } from "@utils/breakpoints";
+import { md } from "@utils/breakpoints";
 
-const Wrapper = styled(Row)({
+const Wrapper = styled(Column)({
   margin: "40px auto 0",
   rowGap: "40px",
   columnGap: "40px",
-  flexWrap: "wrap",
   maxWidth: "700px",
-  [md]: {
-    maxWidth: "900px",
-  },
 });
 
 const ImageContainer = styled.div({
-  width: "80%",
-  maxWidth: "400px",
+  maxWidth: "500px",
+  padding: "0 15px",
 });
 
 const Me = styled.img({ width: "100%" });
@@ -26,6 +22,7 @@ const ImageText = styled.p({
   fontFamily: "var(--Karla)",
   opacity: 0.7,
   marginTop: "5px",
+  textAlign: "right",
 });
 
 const TextWrapper = styled(Column)({
@@ -33,16 +30,14 @@ const TextWrapper = styled(Column)({
   rowGap: "40px",
   margin: "0 auto",
   padding: "0 15px",
-  [sm]: {
-    padding: "0 30px",
-  },
 });
 
 const Tagline = styled.h1({
-  fontSize: "22px",
+  fontSize: "2rem",
   fontFamily: "var(--Sora)",
   fontWeight: "400",
-  lineHeight: "32px",
+  lineHeight: "1.3em",
+  padding: "0 15px",
 });
 
 const AboutText = styled.p({
@@ -52,13 +47,26 @@ const AboutText = styled.p({
   lineHeight: "30px",
 });
 
+const Swap = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  rowGap: "40px",
+  [md]: {
+    flexDirection: "column-reverse",
+  },
+});
+
 const About = () => (
   <Layout>
     <Wrapper>
+      <Swap>
+        <Tagline>I'm currently a software engineer at Capital One</Tagline>
+        <div>
+          <Me src="/img/boat_image.jpeg" />
+          <ImageText>Highfields Park</ImageText>
+        </div>
+      </Swap>
       <TextWrapper>
-        <Tagline>
-          My name is Danny and I'm currently a software engineer at Capital One
-        </Tagline>
         <AboutText>
           Maecenas tortor purus, pretium non quam id, ultricies varius tellus.
           Praesent nec urna sapien. Mauris at nulla vitae lorem iaculis laoreet
@@ -91,6 +99,35 @@ const About = () => (
         <Me src="/img/hotdog.jpeg" />
         <ImageText>Me and a hotdog</ImageText>
       </ImageContainer>
+      <TextWrapper>
+        <AboutText>
+          Maecenas tortor purus, pretium non quam id, ultricies varius tellus.
+          Praesent nec urna sapien. Mauris at nulla vitae lorem iaculis laoreet
+          id ut lacus.
+        </AboutText>
+        <AboutText>
+          Nulla ac ante nec mi aliquam aliquam. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae;
+        </AboutText>
+        <AboutText>
+          Quisque imperdiet facilisis blandit. Sed faucibus rhoncus elit a
+          sagittis. Integer id accumsan justo, a dapibus nisi. Phasellus
+          ullamcorper pharetra lectus pulvinar hendrerit. Fusce in risus in
+          turpis condimentum semper.
+        </AboutText>
+        <AboutText>
+          Suspendisse luctus venenatis lectus, sed cursus elit venenatis non.
+          Fusce elementum erat at viverra rhoncus. Proin iaculis, risus a
+          efficitur finibus, nisi augue porta augue, vel consectetur nisl magna
+          eget libero. In hac habitasse platea dictumst. Cras ullamcorper orci
+          in dignissim pellentesque. Integer euismod sollicitudin odio.
+        </AboutText>
+        <AboutText>
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Maecenas quam ipsum, congue a urna nec,
+          egestas lobortis lorem.
+        </AboutText>
+      </TextWrapper>
     </Wrapper>
   </Layout>
 );
