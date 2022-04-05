@@ -1,7 +1,6 @@
-import { BubbleHighlight, Column, Row } from "@components/core";
+import { Column } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
-import { md } from "@utils/breakpoints";
 
 const Wrapper = styled(Column)({
   margin: "40px auto 0",
@@ -47,25 +46,14 @@ const AboutText = styled.p({
   lineHeight: "30px",
 });
 
-const Swap = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  rowGap: "40px",
-  [md]: {
-    flexDirection: "column-reverse",
-  },
-});
-
 const About = () => (
   <Layout>
     <Wrapper>
-      <Swap>
-        <Tagline>I'm currently a software engineer at Capital One</Tagline>
-        <div>
-          <Me src="/img/boat_image.jpeg" />
-          <ImageText>Highfields Park</ImageText>
-        </div>
-      </Swap>
+      <div>
+        <Me src="/img/boat_image.jpeg" />
+        <ImageText>Highfields Park</ImageText>
+      </div>
+      <Tagline>I'm currently a software engineer at Capital One</Tagline>
       <TextWrapper>
         <AboutText>
           Maecenas tortor purus, pretium non quam id, ultricies varius tellus.
