@@ -1,4 +1,4 @@
-import { Column } from "@components/core";
+import { Column, SubHeading } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
 
@@ -49,6 +49,7 @@ const AboutText = styled.p({
 const About = () => (
   <Layout>
     <Wrapper>
+      <SubHeading>About</SubHeading>
       <div>
         <Me src="/img/boat_image.jpeg" />
         <ImageText>Highfields Park</ImageText>

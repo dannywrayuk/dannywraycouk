@@ -1,2 +1,2 @@
 export { TimelineLayoutWrapper } from "./TimelineLayoutWrapper";
-export { TimelineEntry } from "./TimelineItem";
+export { TimelineEntry } from "./TimelineEntry";
