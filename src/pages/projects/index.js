@@ -5,8 +5,9 @@ import { getMetadataArray, getMetadataFromDirectory } from "@utils/getMetadata";
 import { ProjectCard } from "@components/presentation/ProjectCard";
 
 const Wrapper = styled(Column)({
-  maxWidth: "700px",
+  maxWidth: "1200px",
   margin: "0 auto",
+  width: "100%",
 });
 
 const Projects = ({ pinnedPosts, childPosts }) => (

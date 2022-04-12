@@ -6,7 +6,7 @@ const BasicLink = styled.a({
 });
 
 export const Link = ({ children, href, ...rest }) => (
-  <NextLink href={href}>
+  <NextLink href={href} passHref>
     <BasicLink {...rest}>{children}</BasicLink>
   </NextLink>
 );

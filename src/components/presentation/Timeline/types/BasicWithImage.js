@@ -22,6 +22,14 @@ const TextBox = styled.div({
   alignItems: "flex-start",
 });
 
+const TitleLink = styled(Link)({
+  textDecoration: "none",
+  color: "var(--text)",
+  ":hover": {
+    textDecoration: "underline",
+  },
+});
+
 export const BasicWithImage = ({ data }) => {
   if (!data.timeline.coverImage)
     throw new Error(
@@ -33,11 +41,11 @@ export const BasicWithImage = ({ data }) => {
         <CoverImage src={`/img/${data.timeline.coverImage}`} />
       </Link>
       <TextBox>
-        <Link href={data.id}>
+        <TitleLink href={data.id}>
           <SubSubHeading _css={{ fontSize: "1rem" }}>
             {data.title}
           </SubSubHeading>
-        </Link>
+        </TitleLink>
         <Text>{data.blurb}</Text>
       </TextBox>
     </WithBorder>

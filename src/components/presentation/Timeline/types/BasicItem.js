@@ -1,14 +1,23 @@
 import { Link, SubSubHeading, Text, Column } from "@components/core";
 import { Tags } from "@components/Tags";
+import styled from "@emotion/styled";
+
+const TitleLink = styled(Link)({
+  textDecoration: "none",
+  color: "var(--text)",
+  ":hover": {
+    textDecoration: "underline",
+  },
+});
 
 export const BasicItem = ({ data }) => (
   <Column rg={10} ai="flex-start">
-    <Link href={data.id}>
-      <Column rg={10} ai="flex-start">
+    <Column rg={10} ai="flex-start">
+      <TitleLink href={data.id}>
         <SubSubHeading>{data.title}</SubSubHeading>
-        <Text>{data.blurb}</Text>
-      </Column>
-    </Link>
+      </TitleLink>
+      <Text>{data.blurb}</Text>
+    </Column>
     {data.timeline?.tags && <Tags tags={data.timeline.tags} />}
   </Column>
 );

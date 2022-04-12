@@ -18,7 +18,7 @@ const Test = () => (
 export default Test;
 
 export const meta = {
-  id: "thoughts/test",
+  id: "projects/test",
   date: "2000/01/02",
   title: "Hello dynamic posts",
   blurb:
