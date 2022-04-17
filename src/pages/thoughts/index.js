@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { Layout } from "@components/Layout";
 import { SubHeading, Column } from "@components/core";
-import { getMetadataArray, getMetadataFromDirectory } from "@utils/getMetadata";
+import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
 import { TimelineEntry } from "@components/presentation/Timeline";
 
 const Wrapper = styled(Column)({
@@ -14,12 +14,12 @@ const Thoughts = ({ pinnedPosts, childPosts }) => (
     <Wrapper>
       <SubHeading _css={{ margin: "60px 0" }}>thoughts</SubHeading>
       {pinnedPosts.map((data, id) => (
-        <TimelineEntry key={data.id + id} data={data} type="pinned" />
+        <TimelineEntry key={data.route + id} data={data} type="pinned" />
       ))}
     </Wrapper>
     <Wrapper>
       {childPosts.map((data, id) => (
-        <TimelineEntry key={data.id + id} data={data} />
+        <TimelineEntry key={data.route + id} data={data} />
       ))}
     </Wrapper>
   </Layout>
@@ -29,11 +29,7 @@ export default Thoughts;
 
 export const getStaticProps = async () => ({
   props: {
-    pinnedPosts: getMetadataArray([
-      "src/pages/thoughts/test.js",
-      "src/pages/thoughts/test2.js",
-      "src/pages/thoughts/test.js",
-    ]),
-    childPosts: getMetadataFromDirectory("src/pages/thoughts"),
+    pinnedPosts: getMetadataById(["test1", "test2"]),
+    childPosts: getMetadataByRoute("/thoughts/*"),
   },
 });

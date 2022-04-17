@@ -1,42 +1,52 @@
 import fs from "fs";
-import path from "path";
+import matter from "gray-matter";
+import minimatch from "minimatch";
+import { asRoute, getFilePaths } from "./getFilePaths";
 
-// comment out to turn off the annoying logs until they're needed
-const log = (str) => {
-  //console.log(str);
-};
+const metadata = [];
 
-export const getMetadata = (filePath) => {
-  if (fs.lstatSync(filePath).isFile()) {
-    const fileData = fs.readFileSync(filePath).toString();
-    const metaMatch = fileData.match(/export const meta = ({(?:.|\s)*});/);
-    if (metaMatch) {
-      const getObject = Function("return " + metaMatch[1]);
-      return getObject();
-    }
+export const getMetadata = () => {
+  if (metadata.length === 0) {
+    metadata.push(...calculateMetadata());
   }
-};
-
-export const getMetadataArray = (inputPathArray) => {
-  return inputPathArray
-    .map((file) => getMetadata(file))
-    .filter((x) => !!x && x.id !== undefined);
-};
-
-export const sortMetadataArray = (inputArray) => {
-  return inputArray.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
-};
-
-export const getMetadataFromDirectory = (inputPath) => {
-  log(`Getting metadata for ${inputPath}`);
-  const dir = fs.readdirSync(inputPath);
-
-  log(dir);
-  const metadata = sortMetadataArray(
-    getMetadataArray(dir.map((file) => path.join(inputPath, file)))
-  );
-
-  log("Found:");
-  log(metadata);
   return metadata;
+};
+
+export const getMetadataById = (ids) => {
+  const output = [];
+  ids.forEach((id) => {
+    output.push(...getMetadata().filter((x) => x.id === id));
+  });
+  return output;
+};
+
+export const getMetadataByRoute = (route) => {
+  return getMetadata().filter((x) => minimatch(x.route, route));
+};
+
+const calculateMetadata = () =>
+  getFilePaths()
+    .map((filePath) => {
+      const fileData = fs.readFileSync(filePath);
+      const frontMatter = matter(fileData).data;
+      return {
+        ...getGeneratedMeta(filePath, frontMatter),
+        ...frontMatter,
+      };
+    })
+    .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0));
+
+const getGeneratedMeta = (filePath, frontMatter) => {
+  const output = {};
+  output.route = asRoute(filePath);
+
+  if (!isNaN(Date.parse(frontMatter.date))) {
+    output.dateString = new Date(frontMatter.date).toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
+  }
+
+  return output;
 };

@@ -7,17 +7,10 @@ const timelineEntryTypes = {
 };
 
 export const TimelineEntry = ({ data, type }) => {
-  data.formattedDate = new Date(data.date).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-
   const Entry = timelineEntryTypes[data.timeline?.type || "default"];
-
   return (
     <TimelineLayoutWrapper
-      label={data.formattedDate}
+      label={data.dateString}
       variant={type || data.timeline?.variant}
       icon={data.timeline?.icon}
     >

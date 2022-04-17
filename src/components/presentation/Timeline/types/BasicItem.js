@@ -13,10 +13,10 @@ const TitleLink = styled(Link)({
 export const BasicItem = ({ data }) => (
   <Column rg={10} ai="flex-start">
     <Column rg={10} ai="flex-start">
-      <TitleLink href={data.id}>
+      <TitleLink href={data.route}>
         <SubSubHeading>{data.title}</SubSubHeading>
       </TitleLink>
-      <Text>{data.blurb}</Text>
+      <Text>{data.abstract}</Text>
     </Column>
     {data.timeline?.tags && <Tags tags={data.timeline.tags} />}
   </Column>

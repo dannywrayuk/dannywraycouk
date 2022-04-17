@@ -84,14 +84,14 @@ const Links = ({ links }) => {
 
 export const ProjectCard = ({ data }) => (
   <Wrapper>
-    <ImageLink href={data.id}>
+    <ImageLink href={data.route}>
       <Image src={data.project.coverImage} />
     </ImageLink>
     <TextWrapper>
-      <TextLink href={data.id}>
+      <TextLink href={data.route}>
         <SubSubHeading>{data.title}</SubSubHeading>
       </TextLink>
-      <Text>{data.blurb}</Text>
+      <Text>{data.abstract}</Text>
       <Links links={data.project.links} />
     </TextWrapper>
   </Wrapper>

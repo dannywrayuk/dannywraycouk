@@ -37,16 +37,16 @@ export const BasicWithImage = ({ data }) => {
     );
   return (
     <WithBorder>
-      <Link href={data.id}>
+      <Link href={data.route}>
         <CoverImage src={`/img/${data.timeline.coverImage}`} />
       </Link>
       <TextBox>
-        <TitleLink href={data.id}>
+        <TitleLink href={data.route}>
           <SubSubHeading _css={{ fontSize: "1rem" }}>
             {data.title}
           </SubSubHeading>
         </TitleLink>
-        <Text>{data.blurb}</Text>
+        <Text>{data.abstract}</Text>
       </TextBox>
     </WithBorder>
   );
