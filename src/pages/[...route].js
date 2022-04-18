@@ -1,5 +1,5 @@
 import { MDXRemote } from "next-mdx-remote";
-import { MdxThemeComponents } from "@components/MdxThemeComponents";
+import { MdxComponents } from "@components/MdxComponents";
 import { getRouteLayout } from "@components/RouteLayout";
 import { getMarkdownAsProps } from "@utils/getMarkdown";
 import { asRoute, getFilePaths } from "@utils/getFilePaths";
@@ -8,7 +8,7 @@ const RouteHandler = ({ source, frontMatter }) => {
   const Layout = getRouteLayout(frontMatter.layout);
   return (
     <Layout data={frontMatter}>
-      <MDXRemote {...source} {...frontMatter} components={MdxThemeComponents} />
+      <MDXRemote {...source} {...frontMatter} components={MdxComponents} />
     </Layout>
   );
 };

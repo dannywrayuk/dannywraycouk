@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { PlainLayout } from "./layouts/PlainLayout";
 import { PostLayout } from "./layouts/PostLayout";
 
 export const getRouteLayout = (layout) => {
@@ -7,7 +8,9 @@ export const getRouteLayout = (layout) => {
       return Fragment;
     case "post":
       return PostLayout;
+    case "plain":
+      return PlainLayout;
     default:
-      return PostLayout;
+      return PlainLayout;
   }
 };
