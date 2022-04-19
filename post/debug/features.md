@@ -1,3 +1,8 @@
+---
+id: features
+title: all current markdown features
+---
+
 # All current features
 
 # h1

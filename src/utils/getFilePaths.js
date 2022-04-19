@@ -16,9 +16,9 @@ export const getFilePaths = () => {
 };
 
 export const asRoute = (filePath) =>
-  filePath.slice(4, -3).replaceAll(path.sep, "/");
+  filePath.slice(rootFilePath.length, -3).replaceAll(path.sep, "/");
 
-export const asFilePath = (route) => path.join("post", route + ".md");
+export const asFilePath = (route) => path.join(rootFilePath, route + ".md");
 
 const calculateFilePaths = (filePath) => {
   const filePathContent = fs.readdirSync(filePath);

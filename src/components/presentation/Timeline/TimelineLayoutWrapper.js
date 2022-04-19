@@ -39,6 +39,7 @@ const IconWrapper = styled.div({
   justifyContent: "center",
   alignItems: "center",
   left: 0,
+  top: 0,
 });
 
 const TextWrapper = styled.div({
@@ -74,7 +75,7 @@ export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {
     [IconElement, labelText] = variants[variant];
   } else {
     IconElement = icon ? Icons[icon] : MdAccessTimeFilled;
-    labelText = label ? label : "";
+    labelText = label ? label : null;
   }
   return (
     <Wrapper>
@@ -82,9 +83,11 @@ export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {
         <IconWrapper>
           <IconElement />
         </IconWrapper>
-        <TextWrapper>
-          <TimelineLabel>{labelText}</TimelineLabel>
-        </TextWrapper>
+        {labelText && (
+          <TextWrapper>
+            <TimelineLabel>{labelText}</TimelineLabel>
+          </TextWrapper>
+        )}
         {children}
       </LeftBorder>
     </Wrapper>
