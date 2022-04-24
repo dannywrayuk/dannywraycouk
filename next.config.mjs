@@ -7,7 +7,7 @@ const withMDX = nextMdx({
   extension: /\.mdx|\.md?$/,
   options: {
     remarkPlugins: [mdxWrapperPlugin, remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [() => rehypeKatex({ strict: false })],
     providerImportSource: "@mdx-js/react",
   },
 });
