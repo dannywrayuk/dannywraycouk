@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const filePaths = [];
-const rootFilePath = "post";
+const rootFilePath = "src/pages";
 
 export const getFilePaths = () => {
   if (filePaths.length === 0) {
@@ -16,7 +16,10 @@ export const getFilePaths = () => {
 };
 
 export const asRoute = (filePath) =>
-  filePath.slice(rootFilePath.length, -3).replaceAll(path.sep, "/");
+  filePath
+    .slice(rootFilePath.length, -3)
+    .replaceAll(path.sep, "/")
+    .replace("/index", "");
 
 export const asFilePath = (route) => path.join(rootFilePath, route + ".md");
 

@@ -20,6 +20,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["./src/**/*", "next.config.js"],
+  "include": ["./src/**/*", "next.config.mjs"],
   "exclude": ["node_modules"]
 }
