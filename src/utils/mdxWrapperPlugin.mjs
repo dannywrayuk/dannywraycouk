@@ -16,7 +16,7 @@ export default () => (tree, file) => {
   }
 
   const test = fromMarkdown(
-    `import MDXParent from  "@components/../pages/_mdx.js";
+    `import MDXParent from  "@components/_mdx.js";
     export const meta = ${JSON.stringify(data)};
     export default ({children})=>(<MDXParent meta={meta}>{children}</MDXParent>);`,
     {
