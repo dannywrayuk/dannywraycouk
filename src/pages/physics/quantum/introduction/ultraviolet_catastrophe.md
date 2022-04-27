@@ -38,9 +38,9 @@ Normalizing the function requires
 $$
 \begin{aligned}
 \sum_n^\infty P(n\epsilon)&=1\\
-\sum_n^\infty \frac{1}{Z}e^{-\frac{n\epsilon}{kT}}&=1 \\
-Z&=\sum_n^\infty e^{-\frac{n\epsilon}{kT}}\\
-Z&=\frac{1}{1-e^{-\frac{\epsilon}{kT}}} \tag{1.1.4}
+\sum_n^\infty \frac{1}{Z}\exp(-\frac{n\epsilon}{kT})&=1 \\
+Z&=\sum_n^\infty \exp(-\frac{n\epsilon}{kT})\\
+Z&=\frac{1}{1-\exp(-\frac{\epsilon}{kT})} \tag{1.1.4}
 \end{aligned}
 $$
 
