@@ -5,7 +5,7 @@ import { mdxjs } from "micromark-extension-mdxjs";
 
 export default () => (tree, file) => {
   const { content, data } = matter(file.value);
-
+  if (!tree.children[0]) return tree;
   if (tree.children[0].type === "thematicBreak") {
     const firstHeadingIndex = tree.children.findIndex(
       (t) => t.type === "heading"

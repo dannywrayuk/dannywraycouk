@@ -20,8 +20,6 @@ $$
 
 And we can construct a generic wavefunction as
 
-<div class="[style:largeEquation]">
-
 $$
 \small{
  \psi(x)=
@@ -35,11 +33,7 @@ $$
 }
 $$
 
-</div>
-
 For the wavefunction to be normalisable we require that as $x \to \pm\infty$ then $\psi \to 0$ using this we can see the exponential terms in the outer pieces can be removed
-
-<div class="[style:largeEquation]">
 
 $$
  \psi(x)=
@@ -51,8 +45,6 @@ $$
 	\end{cases}
 	\end{aligned} \tag{2.5.3}
 $$
-
-</div>
 
 Again, as in the infinite potential well we can split the wavefunction up into odd and even values of $k(n)$. If we begin work on the even case, we have
 
@@ -91,8 +83,6 @@ $$
 
 Thanks to the symmetry of the potential and wavefunction we can also see that $C=-D$ and combine with $(2.5.8)$ to write the wavefunction as
 
-<div class="[style:largeEquation]">
-
 $$
  \psi(x)_{even}=
  \begin{aligned}
@@ -104,8 +94,6 @@ $$
 	\end{aligned}\tag{2.5.9}
 $$
 
-</div>
-
 We can solve for $A$ using the normalisation conditions $(1.5.8)$
 
 $$
@@ -114,58 +102,38 @@ $$
 
 Therefore
 
-<div class="[style:largeEquation]">
-
 $$
 \int_{-\infty}^{-\frac{L}{2}} \left(-A\sin{\left(\frac{Lk}{2}\right)}\exp{\left(\frac{L\kappa}{2}\right)}e^{\kappa x}\right)^2 dx+
 \int_{-\frac{L}{2}}^{\frac{L}{2}} \left(A\sin(kx)\right)^2dx+
 \int_{\frac{L}{2}}^{\infty} \left(A\sin{\left(\frac{Lk}{2}\right)}\exp{\left(\frac{L\kappa}{2}\right)}e^{-\kappa x}\right)^2 dx =1
 $$
 
-</div>
-
 We can again simplify this using the symmetry of the potential
-
-<div class="[style:largeEquation]">
 
 $$
 \int_{-\frac{L}{2}}^{\frac{L}{2}} \left(A\sin(kx)\right)^2dx+
 2\int_{\frac{L}{2}}^{\infty} \left(A\sin{\left(\frac{Lk}{2}\right)}\exp{\left(\frac{L\kappa}{2}\right)}e^{-\kappa x}\right)^2 dx =1
 $$
 
-</div>
-
 Taking all constant terms outside of the integral
-
-<div class="[style:largeEquation]">
 
 $$
 A^2\int_{-\frac{L}{2}}^{\frac{L}{2}} \sin^2(kx)dx+
 2A^2\sin^2{\left(\frac{Lk}{2}\right)}\exp{(L\kappa)}\int_{\frac{L}{2}}^{\infty} e^{-2\kappa x} dx =1
 $$
 
-</div>
-
 These integrals are now easy to evaluate, and we have
-
-<div class="[style:largeEquation]">
 
 $$
 A^2+\frac{1}{2}\left(L - \frac{\sin(k L)}{k}\right)+
 2A^2\sin^2{\left(\frac{Lk}{2}\right)}\exp{(L\kappa)}\frac{e^{-L\kappa}}{2\kappa}=1
 $$
 
-</div>
-
 Which has the messy solution
-
-<div class="[style:largeEquation]">
 
 $$
 A = \sqrt{\frac{2k\kappa}{ \kappa(L-\sin(Lk))+k(1-\cos(Lk))}} \tag{2.5.10}
 $$
-
-</div>
 
 We now know the entire even solution based upon $(2.5.7)$, $(2.5.9)$ and $(2.5.10)$. To find the odd solution the entire process must be done again. Doing so, we find an equivalent equation to $(2.5.7)$
 
@@ -188,13 +156,9 @@ $$
 
 And finally, the normalisation constant
 
-<div class="[style:largeEquation]">
-
 $$
 B= \sqrt{\frac{2k\kappa}{ \kappa\sin(Lk)+k(\cos(Lk))+L\kappa+1)}} \tag{2.5.13}
 $$
-
-</div>
 
 At this point you might think that we are done, that the wavefunction has been found. But, there is one final step. The quantisation of $k$. We have an equation that relates $\kappa$ and $k$ but there is no equivalent to $(2.3.3)$. We can, however, use that the total energy of the particle should be the same in whichever region it is in
 

@@ -20,8 +20,6 @@ $$
 
 Just like the finite box potential the solution will have bounded and unbounded states, the bounded leading to some cool quantum mechanical effects. To begin we will focus on the unbounded states. If we take the case where the particles start on the left and are traveling to the right, unless the particles are reflected off the barrier they should not be travelling to the left. With this in mind and defining $r$ and $t$ as reflection and transmission probability amplitudes we can write the generic wavefunction as
 
-<div class="[style:largeEquation]">
-
 $$
  \psi(x)=
  \begin{aligned}
@@ -32,8 +30,6 @@ $$
 	\end{cases}
 	\end{aligned}\tag{2.6.2}
 $$
-
-</div>
 
 Where the left moving term has been eliminated on the right side of the barrier. Using the physical requirements of a wavefunction we require that wavefunctions and their derivatives are continuous at the boundries between regions. This leads to the four equations
 
@@ -83,8 +79,6 @@ $$
 
 Finally with these two equations we can solve them for $r$ and $t$
 
-<div class="[style:largeEquation]">
-
 $$
 t=e^{-ikL}\frac{4kq}{4kq\cos(qL)-2i(q^2+k^2)\sin(qL)}
 $$
@@ -93,11 +87,7 @@ $$
 r=e^{-ikL}\frac{2i(q^2-k^2)\sin(qL)}{4kq\cos(qL)-2i(q^2+k^2)\sin(qL)}
 $$
 
-</div>
-
 The last step would be to find the relationship between $r$ and $t$. This can be done through either analysis of their experssion or using the probability current. Using the definition of the probability current it can be shown that
-
-<div class="[style:largeEquation]">
 
 $$
  J(x)=
@@ -109,8 +99,6 @@ $$
 	\end{cases}
 	\end{aligned}
 $$
-
-</div>
 
 Due to the conservation of current these two cases can be equated giving
 

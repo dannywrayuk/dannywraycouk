@@ -10,7 +10,11 @@ We have seen how the photon model was successful in describing the Photoelectric
 One way to investigate this problem would be model a photon as a small wave packet mathematically and then follow its path, we could then try and understand the dynamics.
 
 Thanks to the work done by Fourier we know that the form of a wave packet can be constructed using a sum of sine waves. Much more on this can be found in the Classical Mechanics section (at least, it will once I've written it). One fundamental property of sine waves is that
-$$ t = \frac{1}{f} \tag{1.3.1}$$
+
+$$
+t = \frac{1}{f} \tag{1.3.1}
+$$
+
 Since we have many more than one sine wave it's not very useful in its current form. However, the only modification required is to use the standard deviation of the frequencies and periods rather than the specific value corresponding to each wave. This modification leads to
 
 $$

@@ -20,8 +20,6 @@ $$
 
 Again, we start with the free particle solution inside the box and require that the wave function is zero in places that are unphysical
 
-<div class="[style:largeEquation]">
-
 $$
 \psi(x)=
 \begin{aligned}
@@ -31,8 +29,6 @@ $$
 	\end{cases}
 	\end{aligned}
 $$
-
-</div>
 
 Only this time we are going to notice that the wavefunction inside the box can be written as a product of a sine and a cosine
 
