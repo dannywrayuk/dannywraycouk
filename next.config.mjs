@@ -2,12 +2,17 @@ import nextMdx from "@next/mdx";
 import mdxWrapperPlugin from "./src/utils/mdxWrapperPlugin.mjs";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
 
 const withMDX = nextMdx({
   extension: /\.mdx|\.md?$/,
   options: {
-    remarkPlugins: [mdxWrapperPlugin, remarkMath],
-    rehypePlugins: [() => rehypeKatex({ strict: false })],
+    remarkPlugins: [mdxWrapperPlugin, remarkMath, remarkGfm],
+    rehypePlugins: [
+      () => rehypeKatex({ strict: false }),
+      () => rehypeHighlight({ subset: false }),
+    ],
     providerImportSource: "@mdx-js/react",
   },
 });

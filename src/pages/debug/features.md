@@ -39,3 +39,38 @@ It should work most of the time.
 this is a [link](http://www.google.com), so is [this](http://www.youtube.com).
 
 ---
+
+# GFM
+
+## Autolink literals
+
+www.example.com, https://example.com, and contact@example.com.
+example.com
+
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
+## Strikethrough
+
+~one~ or ~~two~~ tildes.
+
+## Table
+
+| a   | b     |   c |  d  |
+| --- | :---- | --: | :-: |
+| hey | there | its | me  |
+
+## Tasklist
+
+- [ ] to do
+- [x] done
+
+code highlight
+
+```js
+const obj = { yes: "hello" };
+Object.entries(obj).map((o) => console.log(o));
+```

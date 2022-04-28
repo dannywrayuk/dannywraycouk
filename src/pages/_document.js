@@ -1,5 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 import GoogleFonts from "@utils/GoogleFonts";
+
 export default class Document extends NextDocument {
   render() {
     return (
