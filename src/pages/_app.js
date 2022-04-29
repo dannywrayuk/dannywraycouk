@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "highlight.js/styles/vs2015.css";
+
 const App = ({ Component, pageProps }) => {
   return (
     <>

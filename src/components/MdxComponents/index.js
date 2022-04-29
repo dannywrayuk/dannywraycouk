@@ -15,7 +15,8 @@ export const MdxComponents = {
   ol,
   li,
   code: styled.code({
-    backgroundColor: "var(--feintGrey)",
+    backgroundColor: "#1e1e1e",
+    color: "#d1d1d1",
     padding: "2px 3px",
     borderRadius: "5px",
   }),
@@ -23,7 +24,7 @@ export const MdxComponents = {
     display: "flex",
     flexDirection: "column",
     padding: "10px",
-    backgroundColor: "var(--feintGrey)",
+    backgroundColor: "#1e1e1e",
     borderRadius: "5px",
     fontSize: "0.9rem",
     lineHeight: "1.5em",
