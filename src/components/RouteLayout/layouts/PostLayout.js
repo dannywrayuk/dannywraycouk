@@ -10,12 +10,18 @@ const Wrapper = styled(Column)({
   padding: "0 20px",
 });
 
-export const PostLayout = ({ children, data: { title, abstract } }) => (
+export const PostLayout = ({
+  children,
+  data: { title, abstract },
+  className,
+}) => (
   <Layout>
     <Wrapper>
       <SubHeading _css={{ marginTop: "60px" }}>{title}</SubHeading>
       <Text>{abstract}</Text>
     </Wrapper>
-    <Wrapper ai="stretch">{children}</Wrapper>
+    <Wrapper ai="stretch" className={className}>
+      {children}
+    </Wrapper>
   </Layout>
 );

@@ -53,7 +53,7 @@ A note[^1]
 
 [^1]: Big note.
 
-## Strikethrough
+## ~Strikethrough~
 
 ~one~ or ~~two~~ tildes.
 
@@ -63,10 +63,17 @@ A note[^1]
 | --- | :---- | --: | :-: |
 | hey | there | its | me  |
 
+### Long Table
+
+| a   | b                                                                                                  | c   | d   |
+| --- | -------------------------------------------------------------------------------------------------- | --- | --- |
+| hey | hello there its me i am a long table entry how do i look. I'm trying to make this as long as i can | its | me  |
+
 ## Tasklist
 
-- [ ] to do
-- [x] done
+- [ ] To do
+- [x] Done
+  - [ ] Another
 
 code highlight
 

@@ -1,12 +1,12 @@
 import { MDXProvider } from "@mdx-js/react";
 import { getRouteLayout } from "@components/RouteLayout";
-import { MdxComponents } from "@components/MdxComponents";
+import { MDXComponents, withMDXStyles } from "@components/MDXComponents";
 
 const Mdx = ({ meta, children }) => {
-  const Layout = getRouteLayout(meta.layout);
+  const Layout = withMDXStyles(getRouteLayout(meta.layout));
   return (
     <Layout data={meta}>
-      <MDXProvider components={MdxComponents}>{children}</MDXProvider>
+      <MDXProvider components={MDXComponents}>{children}</MDXProvider>
     </Layout>
   );
 };

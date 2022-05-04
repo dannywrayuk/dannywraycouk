@@ -10,8 +10,10 @@ const Wrapper = styled(Column)({
   padding: "0 20px",
 });
 
-export const PlainLayout = ({ children }) => (
+export const PlainLayout = ({ children, className }) => (
   <Layout>
-    <Wrapper ai="stretch">{children}</Wrapper>
+    <Wrapper ai="stretch" className={className}>
+      {children}
+    </Wrapper>
   </Layout>
 );
