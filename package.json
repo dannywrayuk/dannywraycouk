@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "scripts": {
     "start": "next dev",
+    "generate": "node ./src/script/generateMeta.js",
+    "prebuild": "npm run generate",
     "build": "next build && next export",
     "serve": "serve ./out",
     "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\""
@@ -14,7 +16,9 @@
     "@mdx-js/react": "^2.1.1",
     "@next/mdx": "^12.1.5",
     "@stefanprobst/rehype-shiki": "^2.2.0",
+    "fuse.js": "^6.6.0",
     "gray-matter": "^4.0.3",
+    "keyword-extractor": "^0.0.21",
     "mdast-util-from-markdown": "^1.2.0",
     "mdast-util-mdx": "^2.0.0",
     "micromark-extension-mdxjs": "^1.0.0",

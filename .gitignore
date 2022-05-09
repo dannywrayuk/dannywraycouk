@@ -4,10 +4,11 @@
 # next.js
 /.next/
 /out/
+/generated/
 
 # misc
 .DS_Store
 
-# IDE 
+# IDE
 .vscode
 .husky

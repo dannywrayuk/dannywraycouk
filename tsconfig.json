@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
+      "@gen/*": ["../generated/*"],
       "@components/*": ["components/*"],
       "@utils/*": ["utils/*"]
     },

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { md } from "@utils/breakpoints";
 import { createPortal } from "react-dom";
-import { Text } from "./core";
+import { Link, Text } from "./core";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -13,6 +13,9 @@ import { BsPerson } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
 import { Shortcut } from "./Shortcut";
 import { toggleColourMode } from "@utils/toggleColourMode";
+import { useState } from "react";
+import { MdOutlineArticle } from "react-icons/md";
+import { useSearch } from "@utils/useSearch";
 
 const Overlay = styled.div({
   position: "fixed",
@@ -77,6 +80,7 @@ const Item = styled.div({
   columnGap: "15px",
   color: "var(--boldGrey)",
   cursor: "pointer",
+  textDecoration: "none",
   ":hover": {
     backgroundColor: "var(--primary10)",
     color: "var(--primary)",
@@ -149,12 +153,39 @@ const Suggestions = () => (
   </SuggestionsWrapper>
 );
 
-const Body = () => (
-  <BodyWrapper>
-    <SearchInput placeholder="Type here to find things" />
-    <Suggestions />
-  </BodyWrapper>
+const Results = ({ searchResults }) => (
+  <SuggestionsWrapper>
+    <Section>
+      <Text>Results: {searchResults.length}</Text>
+    </Section>
+    {searchResults.map((r, id) => (
+      <Item key={id + "searchResult"} as={Link} href={r.item.route}>
+        <Icon as={MdOutlineArticle} />
+        <Text>{r.item.title}</Text>
+      </Item>
+    ))}
+  </SuggestionsWrapper>
 );
+
+const Body = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const searchFunction = useSearch();
+  return (
+    <BodyWrapper>
+      <SearchInput
+        placeholder="Type here to find things"
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+        }}
+      />
+      {searchTerm.length > 2 ? (
+        <Results searchResults={searchFunction(searchTerm)} />
+      ) : (
+        <Suggestions />
+      )}
+    </BodyWrapper>
+  );
+};
 
 export const CommandPalette = ({ close }) =>
   createPortal(
