@@ -6,4 +6,12 @@ export default {
     twitter: "https://twitter.com/dannywrayuk",
     mail: "mailto:dannywray97@gmail.com?subject=Let's%20Connect&body=Hey%20Danny%20%F0%9F%91%8B%0D%0A%0D%0ALet's%20chat%20about...",
   },
+  commonSearches: [
+    { name: "Thoughts", link: "/thoughts" },
+    { name: "Projects", link: "/projects" },
+    { name: "About", link: "/about" },
+    { name: "Twitter", link: "/twitter" },
+    { name: "LinkedIn", link: "/linkedin" },
+    { name: "Github", link: "/github" },
+  ],
 };
