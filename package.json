@@ -2,6 +2,7 @@
   "name": "dannywraycouk",
   "version": "2.0.0",
   "scripts": {
+    "prestart": "npm run generate",
     "start": "next dev",
     "generate": "node ./src/script/generateMeta.js",
     "prebuild": "npm run generate",
