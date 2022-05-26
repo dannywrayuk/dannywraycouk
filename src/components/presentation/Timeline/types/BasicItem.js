@@ -1,23 +1,14 @@
-import { Link, SubSubHeading, Text, Column } from "@components/core";
+import { Link, Heading, Text, Flex } from "@components/core";
 import { Tags } from "@components/Tags";
-import styled from "@emotion/styled";
-
-const TitleLink = styled(Link)({
-  textDecoration: "none",
-  color: "var(--text)",
-  ":hover": {
-    textDecoration: "underline",
-  },
-});
 
 export const BasicItem = ({ data }) => (
-  <Column rg={10} ai="flex-start">
-    <Column rg={10} ai="flex-start">
-      <TitleLink href={data.route}>
-        <SubSubHeading>{data.title}</SubSubHeading>
-      </TitleLink>
+  <Flex column rg={10} ai="flex-start">
+    <Flex column rg={10} ai="flex-start">
+      <Link href={data.route}>
+        <Heading>{data.title}</Heading>
+      </Link>
       <Text>{data.abstract}</Text>
-    </Column>
+    </Flex>
     {data.timeline?.tags && <Tags tags={data.timeline.tags} />}
-  </Column>
+  </Flex>
 );

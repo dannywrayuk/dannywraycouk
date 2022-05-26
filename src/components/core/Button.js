@@ -13,11 +13,11 @@ export const Button = styled.button(
 );
 
 export const PrimaryButton = styled.button({
-  backgroundColor: "var(--text)",
+  backgroundColor: "var(--color-fg-default)",
   border: "none",
   borderRadius: "100px",
   padding: "20px 30px",
-  color: "var(--background)",
+  color: "var(--color-bg-default)",
   display: "inline-flex",
   justifyContent: "center",
   flexDirection: "row",
@@ -25,10 +25,10 @@ export const PrimaryButton = styled.button({
 
 export const SecondaryButton = styled.button({
   background: "none",
-  border: "2px solid var(--text)",
+  border: "2px solid var(--color-fg-default)",
   borderRadius: "100px",
   padding: "20px 30px",
-  color: "var(--text)",
+  color: "var(--color-fg-default)",
   display: "inline-flex",
   justifyContent: "center",
   flexDirection: "row",

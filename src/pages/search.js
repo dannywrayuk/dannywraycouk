@@ -2,33 +2,23 @@ import styled from "@emotion/styled";
 import { Layout } from "@components/Layout";
 import {
   BubbleHighlight,
-  Column,
   Flex,
   Link,
-  SubHeading,
-  SubSubHeading,
+  Heading,
   Text,
+  Icon,
 } from "@components/core";
 import { useSearch } from "@utils/useSearch";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { lg, sm } from "@utils/breakpoints";
+import { mq } from "@utils/breakpoints";
 import { AiFillInfoCircle } from "react-icons/ai";
-import constants from "@utils/constants";
+import { commonSearches } from "@utils/constants";
 
-const { commonSearches } = constants;
-
-const Wrapper = styled(Column)({
+const Wrapper = styled(Flex)({
   maxWidth: "700px",
   margin: "0 auto",
   width: "100%",
-});
-
-const Icon = styled.div({
-  width: "1.25rem",
-  height: "1.25rem",
-  color: "var(--midGrey)",
-  paddingRight: "5px",
 });
 
 const SearchBar = styled.input({
@@ -40,10 +30,10 @@ const SearchBar = styled.input({
   backgroundColor: "var(--feintGrey)",
   borderRadius: "40px",
   fontSize: "1rem",
-  [sm]: {
+  [mq.sm]: {
     width: "80%",
   },
-  [lg]: {
+  [mq.lg]: {
     width: "100%",
   },
 });
@@ -51,10 +41,10 @@ const SearchBar = styled.input({
 const ResultsWrapper = styled(Flex)({
   paddingTop: "40px",
   width: "100%",
-  [sm]: {
+  [mq.sm]: {
     width: "80%",
   },
-  [lg]: {
+  [mq.lg]: {
     width: "100%",
   },
 });
@@ -69,7 +59,7 @@ const Results = ({ results }) => (
     <Text _css={{ margin: "20px 0" }}>{results.length} Results</Text>
     {results.map(({ item }, id) => (
       <ResultWrapper key={id}>
-        <SubSubHeading>{item.title}</SubSubHeading>
+        <Heading>{item.title}</Heading>
         <Text color="var(--midGrey)">{item.dateString}</Text>
         <Text>{item.abstract}</Text>
       </ResultWrapper>
@@ -79,7 +69,7 @@ const Results = ({ results }) => (
 
 const NoResults = () => (
   <Flex ai="center" jc="center" _css={{ marginBottom: "40px" }}>
-    <Icon as={AiFillInfoCircle} />
+    <Icon as={AiFillInfoCircle} size="1.25rem" />
     <Text>No Results</Text>
   </Flex>
 );
@@ -90,7 +80,7 @@ const SearchSuggestions = ({ searchTerm }) => (
     <Text _css={{ textAlign: "center", marginBottom: "10px" }}>
       Looking for any of these?
     </Text>
-    <Flex wrap rg={10} cg={10} jc="center" _css={{ maxWidth: "400px" }}>
+    <Flex flexWrap rg={10} cg={10} jc="center" _css={{ maxWidth: "400px" }}>
       {commonSearches.map((s, id) => (
         <Link href={s.link} key={id}>
           <Text>
@@ -112,8 +102,8 @@ const Search = () => {
   }, [router.query]);
   return (
     <Layout>
-      <Wrapper>
-        <SubHeading _css={{ margin: "30px 0" }}>Search</SubHeading>
+      <Wrapper column>
+        <Heading _css={{ margin: "30px 0" }}>Search</Heading>
         <SearchBar
           placeholder="Type here to find things"
           defaultValue={router.query.q}

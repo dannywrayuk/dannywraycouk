@@ -1,3 +1,5 @@
+/* Misc */
+
 html[scrollOff] {
   overflow-y: scroll;
   height: 100%;
@@ -12,8 +14,6 @@ html[scrollOff] body {
 }
 
 html {
-  background-color: var(--background);
-  color: var(--text);
   scrollbar-gutter: stable;
 }
 
@@ -26,12 +26,12 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-  .katex-display > .katex > .katex-html >.tag {
-      position: relative !important;
-      float: right;
+  .katex-display > .katex > .katex-html > .tag {
+    position: relative !important;
+    float: right;
   }
   .katex-display > .katex > .katex-html {
-      transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 
@@ -42,35 +42,77 @@ html {
   min-width: 0;
 }
 
-html[colorMode="dark"] {
-  --redTest: #ff1111;
-  --background: black;
-  --text: white;
-  --feintGrey: #333;
-  --boldGrey: #aaa;
-  --modalOverlay: #11111188;
-}
+/* Theme Changing Colours */
 
 html[colorMode="light"] {
-  --redTest: #2dff11;
-  --background: white;
-  --text: black;
-  --feintGrey: #ddd;
-  --boldGrey: #888;
-  --modalOverlay: #aaaaaa44;
+  --color-bg-default: #ffffff;
+  --color-bg-muted: #e7ebee;
+  --color-bg-subtle: #f5f8fa;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-border-default: #d0d7de;
+  --color-overlay-default: #aaaaaa44;
 }
 
+html[colorMode="dark"] {
+  --color-bg-default: #0e1117;
+  --color-bg-muted: #343941;
+  --color-bg-subtle: #161b22;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #6e7681;
+  --color-border-default: #30363d;
+  --color-overlay-default: #24242488;
+}
+
+/* Constants */
+
 :root {
+  /* Font Families */
   --Sora: "Sora", -apple-system, sans-serif;
   --Inter: "Inter", -apple-system, sans-serif;
   --Montserrat: "Montserrat", -apple-system, sans-serif;
   --Karla: "Karla", -apple-system, sans-serif;
-  --primary: #ffca1e;
-  --primary30: #ffca1e48;
-  --primary10: #ffca1e0f;
-  --midGrey: #888888;
-  --iconColor: #ccd4e3;
-  --twitter: #1da1f2;
-  --linkedin: #0077b5;
-  --github: #2f2f2f;
+
+  /* Colours */
+  --color-brand-primary: #ffca1e;
+  --color-twitter: #1da1f2;
+  --color-linkedin: #0077b5;
+  --color-github: #2f2f2f;
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.75rem;
+  --fs-7xl: 4.5rem;
+  --fs-8xl: 6rem;
+  --fs-9xl: 8rem;
+}
+
+@media screen and (min-width: 48em) {
+  :root {
+    --fs-lg: 1.875rem;
+    --fs-xl: 2.25rem;
+    --fs-2xl: 3rem;
+    --fs-3xl: 3.75rem;
+    --fs-4xl: 4.5rem;
+    --fs-5xl: 6rem;
+    --fs-6xl: 8rem;
+  }
+}
+
+/* Defaults */
+
+html {
+  font-size: 16px;
+  color: var(--color-fg-default);
+  background-color: var(--color-bg-default);
 }

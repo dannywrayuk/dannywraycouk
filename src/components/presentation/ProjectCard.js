@@ -1,98 +1,31 @@
-import { Link, SubSubHeading, Text } from "@components/core";
+import { Link, Heading, Text, Flex } from "@components/core";
 import styled from "@emotion/styled";
-import { FiExternalLink } from "react-icons/fi";
-import { AiOutlineGithub } from "react-icons/ai";
-import { lg } from "@utils/breakpoints";
 
-const Wrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  textAlign: "center",
-  margin: "50px 0",
-  rowGap: "30px",
+const Wrapper = styled.div({ marginBottom: "20px" });
+
+const ImageWrapper = styled.div({
+  borderRadius: "1em",
   width: "100%",
-  [lg]: {
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    margin: "140px 0",
-    padding: "0 40px",
-  },
+  overflow: "hidden",
+  aspectRatio: "16 / 9",
 });
 
 const Image = styled.img({
-  borderRadius: "1em",
-  width: "80%",
-  [lg]: {
-    width: "50%",
-  },
-});
-
-const TextWrapper = styled.div({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  rowGap: "20px",
-  maxWidth: "400px",
-  [lg]: {
-    margin: "0 40px",
-  },
-});
-
-const IconWrapper = styled.div({});
-
-const Icon = styled.div({
-  margin: "0 10px",
-  width: "25px",
+  width: "100%",
   height: "100%",
-  color: "var(--text)",
-  ":hover": {
-    color: "var(--primary)",
-  },
+  objectFit: "cover",
 });
-
-const ImageLink = styled(Link)({ display: "contents" });
-
-const TextLink = styled(Link)({
-  textDecoration: "none",
-  color: "inherit",
-  ":hover": { textDecoration: "underline" },
-});
-
-const Links = ({ links }) => {
-  if (!links) return null;
-  if (links?.external || links?.github) {
-    return (
-      <IconWrapper>
-        {links.github && (
-          <a href={links.github}>
-            <Icon as={AiOutlineGithub} />
-          </a>
-        )}
-        {links.external && (
-          <a href={links.external}>
-            <Icon as={FiExternalLink} />
-          </a>
-        )}
-      </IconWrapper>
-    );
-  } else {
-    return null;
-  }
-};
 
 export const ProjectCard = ({ data }) => (
   <Wrapper>
-    <ImageLink href={data.route}>
+    <ImageWrapper>
       <Image src={data.project.coverImage} />
-    </ImageLink>
-    <TextWrapper>
-      <TextLink href={data.route}>
-        <SubSubHeading>{data.title}</SubSubHeading>
-      </TextLink>
+    </ImageWrapper>
+    <Flex center column mt={10}>
+      <Link href={data.route}>
+        <Heading size="sm">{data.title}</Heading>
+      </Link>
       <Text>{data.abstract}</Text>
-      <Links links={data.project.links} />
-    </TextWrapper>
+    </Flex>
   </Wrapper>
 );

@@ -1,4 +1,4 @@
-import { Link, SubSubHeading, Text } from "@components/core";
+import { Link, Heading, Text } from "@components/core";
 import styled from "@emotion/styled";
 
 const CoverImage = styled.img({
@@ -22,14 +22,6 @@ const TextBox = styled.div({
   alignItems: "flex-start",
 });
 
-const TitleLink = styled(Link)({
-  textDecoration: "none",
-  color: "var(--text)",
-  ":hover": {
-    textDecoration: "underline",
-  },
-});
-
 export const BasicWithImage = ({ data }) => {
   if (!data.timeline.coverImage)
     throw new Error(
@@ -41,11 +33,9 @@ export const BasicWithImage = ({ data }) => {
         <CoverImage src={`/img/${data.timeline.coverImage}`} />
       </Link>
       <TextBox>
-        <TitleLink href={data.route}>
-          <SubSubHeading _css={{ fontSize: "1rem" }}>
-            {data.title}
-          </SubSubHeading>
-        </TitleLink>
+        <Link href={data.route}>
+          <Heading _css={{ fontSize: "1rem" }}>{data.title}</Heading>
+        </Link>
         <Text>{data.abstract}</Text>
       </TextBox>
     </WithBorder>

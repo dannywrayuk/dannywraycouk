@@ -1,13 +1,13 @@
-import { Column, Heading } from "@components/core";
+import { Flex, Heading } from "@components/core";
 import { Layout } from "@components/Layout";
 import styled from "@emotion/styled";
 import Head from "next/head";
 import Link from "next/link";
 
-const Wrapper = styled(Column)({ marginTop: "80px", rowGap: "50px" });
+const Wrapper = styled(Flex)({ marginTop: "80px", rowGap: "50px" });
 
 const BackLink = styled.a({
-  color: "var(--text)",
+  color: "var(--color-fg-default)",
   fontFamily: "var(--Sora)",
   opacity: 0.7,
   textDecoration: "underline",
@@ -24,7 +24,7 @@ const NotFound = () => (
       <script src="/redirect.js"></script>
     </Head>
     <Layout>
-      <Wrapper>
+      <Wrapper column>
         <Heading>There's nothing to see here..</Heading>
         <Image src="/img/sadfrog.jpeg" />
         <Link href="/">

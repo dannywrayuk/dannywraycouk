@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
-import { md } from "@utils/breakpoints";
+import { mq } from "@utils/breakpoints";
 import { createPortal } from "react-dom";
-import { Link, Text } from "./core";
+import { Icon, Link, Text } from "./core";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -23,21 +23,21 @@ const Overlay = styled.div({
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "var(--modalOverlay)",
+  backgroundColor: "var(--color-overlay-default)",
   backdropFilter: "blur(2px)",
   touchAction: "none",
 });
 
 const BodyWrapper = styled.div({
-  backgroundColor: "var(--background)",
+  backgroundColor: "var(--color-bg-default)",
   position: "fixed",
   left: "50%",
   transform: "translateX(-50%)",
   top: 0,
   width: "100%",
   overflow: "hidden",
-  border: "1px solid var(--feintGrey)",
-  [md]: {
+  border: "1px solid var(--color-border-default)",
+  [mq.md]: {
     top: "20%",
     width: "600px",
     borderRadius: "15px",
@@ -45,16 +45,16 @@ const BodyWrapper = styled.div({
 });
 
 const SearchInput = styled.input({
-  backgroundColor: "var(--background)",
-  color: "var(--text)",
+  backgroundColor: "var(--color-bg-default)",
+  color: "var(--color-fg-default)",
   width: "100%",
   height: "60px",
-  outline: "none",
   border: "none",
+  outline: "none",
   padding: "0 25px",
   fontFamily: "var(--Sora)",
   fontSize: "0.9rem",
-  borderBottom: "1px solid var(--feintGrey)",
+  borderBottom: "1px solid var(--color-border-default)",
 });
 
 const SuggestionsWrapper = styled.div({
@@ -67,8 +67,7 @@ const Section = styled.div({
   height: "30px",
   display: "flex",
   alignItems: "center",
-  backgroundColor: "var(--feintGrey)",
-  color: "var(--Text)",
+  backgroundColor: "var(--color-bg-subtle)",
   fontWeight: "600",
 });
 
@@ -78,12 +77,11 @@ const Item = styled.div({
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
-  color: "var(--boldGrey)",
   cursor: "pointer",
   textDecoration: "none",
+  color: "var(--color-fg-subtle)",
   ":hover": {
-    backgroundColor: "var(--primary10)",
-    color: "var(--primary)",
+    color: "var(--color-brand-primary)",
   },
 });
 
@@ -93,12 +91,10 @@ const ShortcutItem = styled.div({
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
-  color: "var(--boldGrey)",
   cursor: "default",
+  color: "var(--color-fg-subtle)",
   justifyContent: "space-between",
 });
-
-const Icon = styled.div({ width: "22px", height: "22px" });
 
 const Suggestions = () => (
   <SuggestionsWrapper>

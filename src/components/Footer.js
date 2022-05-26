@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { Label } from "@components/core";
-import { md, sm } from "@utils/breakpoints";
+import { CapsText } from "@components/core";
+import { mq } from "@utils/breakpoints";
 
 const Wrapper = styled.div({
   display: "flex",
@@ -8,15 +8,15 @@ const Wrapper = styled.div({
   flexDirection: "column",
   alignItems: "center",
   textAlign: "center",
-  color: "var(--text)",
+  color: "var(--color-fg-default)",
   padding: "10px 0",
   rowGap: "30px",
-  [sm]: {
+  [mq.sm]: {
     flexDirection: "row",
     minHeight: "60px",
     padding: "0 15px",
   },
-  [md]: {
+  [mq.md]: {
     padding: "0 50px",
     margin: "0 50px",
   },
@@ -24,7 +24,7 @@ const Wrapper = styled.div({
 
 export const Footer = () => (
   <Wrapper>
-    <Label _css={{ fontSize: "1.25rem" }}>~</Label>
-    <Label>Danny wray {process.env.year}</Label>
+    <CapsText _css={{ fontSize: "1.25rem" }}>~</CapsText>
+    <CapsText>Danny wray {process.env.year}</CapsText>
   </Wrapper>
 );

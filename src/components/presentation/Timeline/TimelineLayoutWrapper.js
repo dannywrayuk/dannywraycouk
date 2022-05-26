@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
-import { TimelineLabel } from "@components/core";
+import { Box, Icon, Text } from "@components/core";
 import { MdAccessTimeFilled, MdOutlineArticle } from "react-icons/md";
 import { FiFolder } from "react-icons/fi";
 import { AiFillPushpin, AiFillHeart } from "react-icons/ai";
-import { md, lg } from "@utils/breakpoints";
+import { mq } from "@utils/breakpoints";
 
 const Wrapper = styled.div({
   position: "relative",
-  borderLeftColor: "var(--feintGrey)",
+  borderLeftColor: "var(--color-border-default)",
   width: "100%",
   "&:last-child": {
     borderLeftColor: "#00000000",
@@ -15,41 +15,33 @@ const Wrapper = styled.div({
 });
 
 const LeftBorder = styled.div({
-  display: "inline-block",
   borderLeft: "solid 1px",
   borderLeftColor: "inherit",
-  paddingLeft: "1.25rem",
-  paddingBottom: "5rem",
-  paddingRight: "20px",
-  marginLeft: "0.75rem",
-  [md]: {
+  padding: "0 1.25rem 5rem",
+  [mq.md]: {
     paddingLeft: "2.5rem",
     paddingRight: "0",
   },
 });
 
 const IconWrapper = styled.div({
-  backgroundColor: "var(--background)",
-  color: "var(--iconColor)",
-  position: "absolute",
-  width: "1.5rem",
-  height: "1.5rem",
-  fontSize: "1.15rem",
   display: "flex",
-  justifyContent: "center",
   alignItems: "center",
+  position: "absolute",
+  height: "1.5rem",
   left: 0,
-  top: 0,
+  transform: "translateX(-50%)",
+  color: "var(--color-fg-subtle)",
+  backgroundColor: "var(--color-bg-default)",
 });
 
 const TextWrapper = styled.div({
-  height: "1.5rem",
   display: "flex",
   alignItems: "center",
-  color: "var(--text)",
-  opacity: 0.7,
+  height: "1.5rem",
+  color: "var(--color-fg-subtle)",
   marginBottom: "10px",
-  [lg]: {
+  [mq.lg]: {
     marginBottom: "0",
     position: "absolute",
     left: "-1rem",
@@ -81,11 +73,13 @@ export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {
     <Wrapper>
       <LeftBorder>
         <IconWrapper>
-          <IconElement />
+          <Icon as={IconElement} size="1.125rem" />
         </IconWrapper>
         {labelText && (
           <TextWrapper>
-            <TimelineLabel>{labelText}</TimelineLabel>
+            <Text size="sm" weight="bold">
+              {labelText}
+            </Text>
           </TextWrapper>
         )}
         {children}

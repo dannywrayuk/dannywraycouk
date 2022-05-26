@@ -1,18 +1,16 @@
 import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
 import { Row, LinkButton } from "@components/core";
-import constants from "@utils/constants";
-
-const { github, twitter, linkedin } = constants.links;
+import { links } from "@utils/constants";
 
 export const SocialIcons = () => (
   <Row _css={{ columnGap: "25px" }}>
-    <LinkButton variant="icon" href={github}>
+    <LinkButton variant="icon" href={links.github}>
       <AiFillGithub />
     </LinkButton>
-    <LinkButton variant="icon" href={twitter}>
+    <LinkButton variant="icon" href={links.twitter}>
       <AiOutlineTwitter />
     </LinkButton>
-    <LinkButton variant="icon" href={linkedin}>
+    <LinkButton variant="icon" href={links.linkedin}>
       <AiFillLinkedin />
     </LinkButton>
   </Row>

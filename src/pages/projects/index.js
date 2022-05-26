@@ -1,30 +1,45 @@
-import styled from "@emotion/styled";
 import { Layout } from "@components/Layout";
-import { SubHeading, Column, SubSubHeading } from "@components/core";
-import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
+import { Heading, Flex, Text, Box, CapsText } from "@components/core";
+import { getMetadataById } from "@utils/getMetadata";
+import { Mapper } from "@components/Mapper";
 import { ProjectCard } from "@components/presentation/ProjectCard";
+import styled from "@emotion/styled";
+import { mq } from "@utils/breakpoints";
 
-const Wrapper = styled(Column)({
-  maxWidth: "1200px",
-  margin: "0 auto",
-  width: "100%",
+const Grid = styled.div({
+  display: "grid",
+  gridTemplateColumns: "repeat(1, minmax(0px, 1fr))",
+  gridGap: "20px",
+  [mq.md]: {
+    gridTemplateColumns: "repeat(2, minmax(0px, 1fr))",
+  },
 });
 
-const Projects = ({ pinnedPosts, childPosts }) => (
+const Bubble = styled.div({
+  display: "inline-block",
+  backgroundColor: "var(--color-bg-muted)",
+  padding: 10,
+  borderRadius: "1em",
+  transform: "translate(-10px, 50%)",
+  [mq.md]: {
+    transform: "translate(-20%, 50%)",
+  },
+});
+
+const Projects = ({ pinnedPosts, featuredProject }) => (
   <Layout>
-    <Wrapper>
-      <SubHeading _css={{ margin: "60px 0" }}>Projects</SubHeading>
-      <SubSubHeading _css={{ margin: "20px 0" }}>Pinned</SubSubHeading>
-      {pinnedPosts.map((data, id) => (
-        <ProjectCard key={data.route + id} data={data} />
-      ))}
-    </Wrapper>
-    <Wrapper>
-      <SubSubHeading _css={{ margin: "20px 0" }}>Latest</SubSubHeading>
-      {childPosts.map((data, id) => (
-        <ProjectCard key={data.route + id} data={data} />
-      ))}
-    </Wrapper>
+    <Box>
+      <Bubble>
+        <CapsText>Featured</CapsText>
+      </Bubble>
+      <ProjectCard data={featuredProject[0]} />
+    </Box>
+    <Flex column>
+      <Heading my={20}>Pinned</Heading>
+      <Grid>
+        <Mapper Component={ProjectCard} data={pinnedPosts} />
+      </Grid>
+    </Flex>
   </Layout>
 );
 
@@ -32,7 +47,14 @@ export default Projects;
 
 export const getStaticProps = async () => ({
   props: {
-    pinnedPosts: getMetadataById(["test1p", "test2p"]),
-    childPosts: getMetadataByRoute("/projects/*"),
+    pinnedPosts: getMetadataById([
+      "example-project-1",
+      "example-project-1",
+      "notExist",
+      "example-project-2",
+      "example-project-3",
+      "example-project-3",
+    ]),
+    featuredProject: getMetadataById(["example-project-1"]),
   },
 });

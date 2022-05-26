@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Column, Text, Row } from "@components/core";
+import { Flex, Icon, Text } from "@components/core";
 import { Layout } from "@components/Layout";
 import { TitleAndImage } from "@components/presentation/TitleAndImage";
 import {
@@ -7,20 +7,15 @@ import {
   AiFillLinkedin,
   AiOutlineGithub,
 } from "react-icons/ai";
-import constants from "@utils/constants";
+import { links } from "@utils/constants";
 
-const Wrapper = styled(Column)({
+const Wrapper = styled(Flex)({
   maxWidth: "300px",
   margin: "0 auto",
   width: "100%",
   display: "flex",
   flexDirection: "column",
   rowGap: "20px",
-});
-
-const Icon = styled.div({
-  width: "22px",
-  height: "22px",
 });
 
 const RoundedColorBubble = styled.div(
@@ -37,54 +32,58 @@ const Home = () => {
   return (
     <Layout>
       <TitleAndImage />
-      <Wrapper>
+      <Wrapper column>
         <RoundedColorBubble
           bg="var(--primary30)"
-          col="var(--text)"
+          col="var(--color-fg-default)"
           as="a"
-          href={constants.links.mail}
+          href={links.mail}
         >
-          <Column cg={10} rg={10}>
+          <Flex column cg={10} rg={10}>
             <Text>I'm open to making things</Text>
-            <RoundedColorBubble bg="var(--primary)" col="black" size="10px">
-              <Column>
+            <RoundedColorBubble
+              bg="var(--color-brand-primary)"
+              col="black"
+              size="10px"
+            >
+              <Flex column>
                 <Text>Contact</Text>
-              </Column>
+              </Flex>
             </RoundedColorBubble>
-          </Column>
+          </Flex>
         </RoundedColorBubble>
         <RoundedColorBubble
-          bg="var(--twitter)"
+          bg="var(--color-twitter)"
           col="white"
           as="a"
-          href={constants.links.twitter}
+          href={links.twitter}
         >
-          <Row cg={10} _css={{ paddingRight: "16px" }}>
+          <Flex cg={10} _css={{ paddingRight: "16px" }}>
             <Icon as={AiOutlineTwitter} />
             <Text>Twitter</Text>
-          </Row>
+          </Flex>
         </RoundedColorBubble>
         <RoundedColorBubble
-          bg="var(--linkedin)"
+          bg="var(--color-linkedin)"
           col="white"
           as="a"
-          href={constants.links.linkedin}
+          href={links.linkedin}
         >
-          <Row cg={10} _css={{ paddingRight: "16px" }}>
+          <Flex cg={10} _css={{ paddingRight: "16px" }}>
             <Icon as={AiFillLinkedin} />
             <Text>LinkedIn</Text>
-          </Row>
+          </Flex>
         </RoundedColorBubble>
         <RoundedColorBubble
-          bg="var(--github)"
+          bg="var(--color-github)"
           col="white"
           as="a"
-          href={constants.links.github}
+          href={links.github}
         >
-          <Row cg={10} _css={{ paddingRight: "16px" }}>
+          <Flex cg={10} _css={{ paddingRight: "16px" }}>
             <Icon as={AiOutlineGithub} />
             <Text>Github</Text>
-          </Row>
+          </Flex>
         </RoundedColorBubble>
       </Wrapper>
     </Layout>

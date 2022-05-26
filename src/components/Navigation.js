@@ -1,52 +1,44 @@
 import styled from "@emotion/styled";
-import { Link, Button } from "@components/core";
+import { Link, Button, Text, Icon } from "@components/core";
 import { IoMenu } from "react-icons/io5";
-import { md, sm } from "@utils/breakpoints";
+import { mq } from "@utils/breakpoints";
 import { useReveal } from "@utils/useReveal";
 import { CommandPalette } from "./CommandPalette";
 import { useCallback, useEffect } from "react";
 
 const Grid = styled.div({
   display: "grid",
-  padding: "25px 0px 0",
+  paddingTop: "25px",
   alignItems: "center",
   justifyItems: "center",
   gridTemplateColumns: "85px 1fr 85px",
-  [sm]: {
-    padding: "45px 10px 0",
+  [mq.sm]: {
+    paddingTop: "45px",
   },
 });
 
-const Logo = styled(Link)({
+const LogoText = styled(Text)({
   fontSize: "1.5rem",
-  fontFamily: "Montserrat",
+  fontFamily: "var(--Montserrat)",
   fontWeight: "700",
-  textDecoration: "none",
   letterSpacing: "-0.05em",
-  color: "var(--text)",
   textAlign: "center",
-  "&:hover": { color: "var(--primary)" },
+  justifySelf: "left",
+  ":hover": { color: "var(--color-brand-primary)" },
 });
 
 const Menu = styled(Button)({
   margin: "0 10px 0 auto",
   gridColumn: 3,
   padding: "8px",
-  clipPath: "polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%)",
-  transition: "0.5s",
-  outline: "none",
-  [sm]: {
+  transition: "0.1s",
+  borderRadius: "0.5em",
+  [mq.sm]: {
     marginLeft: "auto",
   },
   ":hover": {
-    backgroundColor: "var(--primary)",
+    backgroundColor: "var(--color-bg-muted)",
   },
-});
-
-const MenuIcon = styled(IoMenu)({
-  width: "22px",
-  height: "22px",
-  color: "var(--text)",
 });
 
 export const Navigation = () => {
@@ -70,9 +62,11 @@ export const Navigation = () => {
     <>
       {isOpen && <CommandPalette close={setClose} />}
       <Grid>
-        <Logo href="/">danny.</Logo>
+        <Link href="/" underline="none">
+          <LogoText>danny.</LogoText>
+        </Link>
         <Menu onClick={setOpen}>
-          <MenuIcon />
+          <Icon as={IoMenu} />
         </Menu>
       </Grid>
     </>

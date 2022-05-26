@@ -1,12 +1,17 @@
 import styled from "@emotion/styled";
 import NextLink from "next/link";
+import { linkProps } from "./styleProps";
 
-const BasicLink = styled.a({
-  cursor: "pointer",
-});
+const LinkInternal = styled.a(
+  {
+    cursor: "pointer",
+    color: "inherit",
+  },
+  linkProps
+);
 
 export const Link = ({ children, href, ...rest }) => (
   <NextLink href={href} passHref>
-    <BasicLink {...rest}>{children}</BasicLink>
+    <LinkInternal {...rest}>{children}</LinkInternal>
   </NextLink>
 );

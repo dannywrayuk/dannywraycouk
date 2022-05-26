@@ -1,14 +1,5 @@
-import { Column, SubHeading, Text } from "@components/core";
-import { Layout } from "@components/Layout";
-import styled from "@emotion/styled";
-
-const Wrapper = styled(Column)({
-  maxWidth: "700px",
-  margin: "0 auto",
-  rowGap: "20px",
-  width: "100%",
-  padding: "0 20px",
-});
+import { Flex, Heading, Hr, Text } from "@components/core";
+import { Layout, LayoutCore, SectionSpacing } from "@components/Layout";
 
 export const PostLayout = ({
   children,
@@ -16,12 +7,13 @@ export const PostLayout = ({
   className,
 }) => (
   <Layout>
-    <Wrapper>
-      <SubHeading _css={{ marginTop: "60px" }}>{title}</SubHeading>
+    <Flex column>
+      <Heading mt={60}>{title}</Heading>
       <Text>{abstract}</Text>
-    </Wrapper>
-    <Wrapper ai="stretch" className={className}>
+      <Hr />
+    </Flex>
+    <Flex column rg="10px" className={className}>
       {children}
-    </Wrapper>
+    </Flex>
   </Layout>
 );

@@ -13,7 +13,7 @@ const Key = styled.div({
   backgroundColor: "var(--primary30)",
   borderRadius: "10px",
   fontFamily: "var(--Sora)",
-  color: "var(--text)",
+  color: "var(--color-fg-default)",
   fontSize: "0.9rem",
 });
 

@@ -7,7 +7,9 @@ export default () => (
       <link href="/globals.css" rel="stylesheet" />
       <script
         dangerouslySetInnerHTML={{
-          __html: `document.documentElement.setAttribute('colorMode', 'light');`,
+          __html: `
+          const mode = localStorage.getItem('colorMode');
+          document.documentElement.setAttribute('colorMode', mode ? mode : "light");`,
         }}
       />
       <GoogleFonts
