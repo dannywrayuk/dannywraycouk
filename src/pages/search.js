@@ -1,13 +1,6 @@
 import styled from "@emotion/styled";
 import { Layout } from "@components/Layout";
-import {
-  BubbleHighlight,
-  Flex,
-  Link,
-  Heading,
-  Text,
-  Icon,
-} from "@components/core";
+import { TextBubble, Flex, Link, Heading, Text, Icon } from "@components/core";
 import { useSearch } from "@utils/useSearch";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -84,7 +77,7 @@ const SearchSuggestions = ({ searchTerm }) => (
       {commonSearches.map((s, id) => (
         <Link href={s.link} key={id}>
           <Text>
-            <BubbleHighlight>{s.name}</BubbleHighlight>
+            <TextBubble>{s.name}</TextBubble>
           </Text>
         </Link>
       ))}
