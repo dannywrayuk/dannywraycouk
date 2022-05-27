@@ -23,7 +23,9 @@ export const ProjectCard = ({ data }) => (
     </ImageWrapper>
     <Flex center column mt={10}>
       <Link href={data.route}>
-        <Heading size="sm">{data.title}</Heading>
+        <Heading as="h2" size="sm">
+          {data.title}
+        </Heading>
       </Link>
       <Text>{data.abstract}</Text>
     </Flex>

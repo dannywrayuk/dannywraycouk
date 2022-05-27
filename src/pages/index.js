@@ -10,7 +10,9 @@ const Home = ({ pinnedPosts, childPosts }) => {
     <Layout>
       <Landing />
       <Flex center>
-        <Heading mt={60}>Highlights</Heading>
+        <Heading mt={60} as="h2">
+          Highlights
+        </Heading>
       </Flex>
       <Flex column>
         <Mapper Component={TimelineEntry} data={pinnedPosts} type="pinned" />

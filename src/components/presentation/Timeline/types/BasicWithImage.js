@@ -34,7 +34,7 @@ export const BasicWithImage = ({ data }) => {
       </Link>
       <TextBox>
         <Link href={data.route}>
-          <Heading _css={{ fontSize: "1rem" }}>{data.title}</Heading>
+          <Heading as="h2">{data.title}</Heading>
         </Link>
         <Text>{data.abstract}</Text>
       </TextBox>
