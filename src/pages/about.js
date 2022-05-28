@@ -1,5 +1,6 @@
 import { Flex, Heading, Text } from "@components/core";
 import { Layout } from "@components/Layout";
+import { MetaTags } from "@components/MetaTags";
 import styled from "@emotion/styled";
 
 const ImageContainer = styled.div({
@@ -17,8 +18,14 @@ const ImageText = styled.p({
   textAlign: "right",
 });
 
+const meta = {
+  title: "About",
+  abstract: "A little about me.",
+};
+
 const About = () => (
   <Layout>
+    <MetaTags meta={meta} />
     <div>
       <Image src="/img/boat_image.jpeg" />
       <ImageText>Highfields Park</ImageText>

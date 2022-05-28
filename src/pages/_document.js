@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import GoogleFonts from "@utils/GoogleFonts";
+import { CommonMetaTags } from "@components/MetaTags";
 
 export default () => (
   <Html lang="en">
@@ -33,6 +34,7 @@ export default () => (
           Karla: { weights: [400, 600, 700] },
         }}
       />
+      <CommonMetaTags />
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/katex@0.13.3/dist/katex.min.css"

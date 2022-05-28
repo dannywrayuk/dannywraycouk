@@ -3,9 +3,16 @@ import { Heading, Flex } from "@components/core";
 import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
 import { Mapper } from "@components/Mapper";
 import { TimelineEntry } from "@components/presentation/Timeline";
+import { MetaTags } from "@components/MetaTags";
+
+const meta = {
+  title: "Thoughts",
+  abstract: "Kinda like a blog.",
+};
 
 const Thoughts = ({ pinnedPosts, childPosts }) => (
   <Layout>
+    <MetaTags meta={meta} />
     <Flex center>
       <Heading mt={60}>thoughts</Heading>
     </Flex>

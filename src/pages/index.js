@@ -1,6 +1,7 @@
 import { Flex, Heading } from "@components/core";
 import { Layout } from "@components/Layout";
 import { Mapper } from "@components/Mapper";
+import { MetaTags } from "@components/MetaTags";
 import { Landing } from "@components/presentation/Landing";
 import { TimelineEntry } from "@components/presentation/Timeline";
 import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
@@ -8,6 +9,7 @@ import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
 const Home = ({ pinnedPosts, childPosts }) => {
   return (
     <Layout>
+      <MetaTags />
       <Landing />
       <Flex center>
         <Heading mt={60} as="h2">

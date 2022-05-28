@@ -1,10 +1,11 @@
 import { Layout } from "@components/Layout";
-import { Heading, Flex, Text, Box, CapsText } from "@components/core";
+import { Heading, Flex, Box, CapsText } from "@components/core";
 import { getMetadataById } from "@utils/getMetadata";
 import { Mapper } from "@components/Mapper";
 import { ProjectCard } from "@components/presentation/ProjectCard";
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
+import { MetaTags } from "@components/MetaTags";
 
 const Grid = styled.div({
   display: "grid",
@@ -26,8 +27,14 @@ const Bubble = styled.div({
   },
 });
 
+const meta = {
+  title: "Projects",
+  abstract: "Projects that I've made, some might be WIP.",
+};
+
 const Projects = ({ pinnedPosts, featuredProject }) => (
   <Layout>
+    <MetaTags meta={meta} />
     <Box>
       <Bubble>
         <CapsText>Featured</CapsText>
