@@ -12,6 +12,19 @@ export default () => (
           document.documentElement.setAttribute('colorMode', mode ? mode : "light");`,
         }}
       />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-TC3WVHZ3S7"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TC3WVHZ3S7');`,
+        }}
+      />
       <GoogleFonts
         fonts={{
           Sora: { weights: [400, 600, 700] },
