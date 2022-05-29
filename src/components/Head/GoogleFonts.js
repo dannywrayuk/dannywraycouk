@@ -1,4 +1,4 @@
-const GoogleFonts = ({ fonts }) => {
+export const GoogleFonts = ({ fonts }) => {
   if (!fonts) return null;
   const fontString = Object.keys(fonts)
     .map((font, id) => {
@@ -24,5 +24,3 @@ const GoogleFonts = ({ fonts }) => {
     </>
   );
 };
-
-export default GoogleFonts;

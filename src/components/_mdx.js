@@ -1,7 +1,7 @@
 import { MDXProvider } from "@mdx-js/react";
 import { getRouteLayout } from "@components/RouteLayout";
 import { MDXComponents, withMDXStyles } from "@components/MDXComponents";
-import { MetaTags } from "./MetaTags";
+import { MetaTags } from "./Head";
 
 const Mdx = ({ meta, children }) => {
   const Layout = withMDXStyles(getRouteLayout(meta.layout));

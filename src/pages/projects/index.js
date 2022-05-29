@@ -5,7 +5,7 @@ import { Mapper } from "@components/Mapper";
 import { ProjectCard } from "@components/presentation/ProjectCard";
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
-import { MetaTags } from "@components/MetaTags";
+import { MetaTags } from "@components/Head";
 
 const Grid = styled.div({
   display: "grid",

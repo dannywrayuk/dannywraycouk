@@ -1,6 +1,6 @@
 import { Flex, Heading, Text } from "@components/core";
 import { Layout } from "@components/Layout";
-import { MetaTags } from "@components/MetaTags";
+import { MetaTags } from "@components/Head";
 import styled from "@emotion/styled";
 
 const ImageContainer = styled.div({

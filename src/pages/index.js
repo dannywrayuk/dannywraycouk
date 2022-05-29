@@ -1,7 +1,7 @@
 import { Flex, Heading } from "@components/core";
 import { Layout } from "@components/Layout";
 import { Mapper } from "@components/Mapper";
-import { MetaTags } from "@components/MetaTags";
+import { MetaTags } from "@components/Head";
 import { Landing } from "@components/presentation/Landing";
 import { TimelineEntry } from "@components/presentation/Timeline";
 import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";

@@ -3,7 +3,7 @@ import { Heading, Flex } from "@components/core";
 import { getMetadataById, getMetadataByRoute } from "@utils/getMetadata";
 import { Mapper } from "@components/Mapper";
 import { TimelineEntry } from "@components/presentation/Timeline";
-import { MetaTags } from "@components/MetaTags";
+import { MetaTags } from "@components/Head";
 
 const meta = {
   title: "Thoughts",
