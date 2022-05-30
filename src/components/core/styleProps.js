@@ -48,11 +48,12 @@ export const flexProps = ({
   flexWrap: flexWrap === "reverse" ? "wrap-reverse" : flexWrap && "wrap",
 });
 
-export const textProps = ({ color, size, weight, inline }) => ({
+export const textProps = ({ color, size, weight, inline, center, align }) => ({
   color,
   fontSize: size && `var(--fs-${size})`,
   fontWeight: weight,
   display: inline && "inline",
+  textAlign: align || (center && "center"),
 });
 
 export const iconProps = ({ size = 22 }) => ({

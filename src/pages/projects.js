@@ -32,19 +32,25 @@ const meta = {
   abstract: "Projects that I've made, some might be WIP.",
 };
 
-const Projects = ({ pinnedPosts, featuredProject }) => (
+const Projects = ({ projects, featured, university }) => (
   <Layout>
     <MetaTags meta={meta} />
     <Box>
       <Bubble>
         <CapsText>Featured</CapsText>
       </Bubble>
-      <ProjectCard data={featuredProject[0]} />
+      <ProjectCard data={featured[0]} />
     </Box>
     <Flex column>
-      <Heading my={20}>Pinned</Heading>
+      <Heading my={20}>Projects</Heading>
       <Grid>
-        <Mapper Component={ProjectCard} data={pinnedPosts} />
+        <Mapper Component={ProjectCard} data={projects} />
+      </Grid>
+    </Flex>
+    <Flex column>
+      <Heading my={20}>University Works</Heading>
+      <Grid>
+        <Mapper Component={ProjectCard} data={university} />
       </Grid>
     </Flex>
   </Layout>
@@ -54,14 +60,12 @@ export default Projects;
 
 export const getStaticProps = async () => ({
   props: {
-    pinnedPosts: getMetadataById([
-      "example-project-1",
-      "example-project-1",
-      "notExist",
-      "example-project-2",
-      "example-project-3",
-      "example-project-3",
+    featured: getMetadataById(["this_site"]),
+    projects: getMetadataById(["this_site", "physics"]),
+    university: getMetadataById([
+      "scalar_fields_in_cosmology",
+      "computer_simulations_of_dimer_models",
+      "n_body_simulations_using_the_particle_mesh_method",
     ]),
-    featuredProject: getMetadataById(["example-project-1"]),
   },
 });

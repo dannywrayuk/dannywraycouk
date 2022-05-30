@@ -19,15 +19,15 @@ const Image = styled.img({
 export const ProjectCard = ({ data }) => (
   <Wrapper>
     <ImageWrapper>
-      <Image src={data.project.coverImage} />
+      <Image src={data.image} />
     </ImageWrapper>
     <Flex center column mt={10}>
       <Link href={data.route}>
-        <Heading as="h2" size="sm">
+        <Heading as="h2" size="sm" center>
           {data.title}
         </Heading>
       </Link>
-      <Text>{data.abstract}</Text>
+      <Text center>{data.abstract}</Text>
     </Flex>
   </Wrapper>
 );

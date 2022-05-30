@@ -77,8 +77,6 @@ const Item = styled.div({
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
-  cursor: "pointer",
-  textDecoration: "none",
   color: "var(--color-fg-subtle)",
   ":hover": {
     color: "var(--color-brand-primary)",
@@ -108,33 +106,46 @@ const Suggestions = () => (
     <Section>
       <Text>Navigation</Text>
     </Section>
-    <Item>
-      <Icon as={AiOutlineCloud} />
-      <Text>Thoughts</Text>
-    </Item>
-    <Item>
-      <Icon as={HiOutlineFolder} />
-      <Text>Projects</Text>
-    </Item>
-    <Item>
-      <Icon as={BsPerson} />
-      <Text>About</Text>
-    </Item>
+    <Link href="/thoughts" underline="none">
+      <Item>
+        <Icon as={AiOutlineCloud} />
+        <Text>Thoughts</Text>
+      </Item>
+    </Link>
+    <Link href="/projects" underline="none">
+      <Item>
+        <Icon as={HiOutlineFolder} />
+        <Text>Projects</Text>
+      </Item>
+    </Link>
+    <Link href="/about" underline="none">
+      <Item>
+        <Icon as={BsPerson} />
+        <Text>About</Text>
+      </Item>
+    </Link>
+
     <Section>
       <Text>Links</Text>
     </Section>
-    <Item>
-      <Icon as={AiOutlineGithub} />
-      <Text>Github</Text>
-    </Item>
-    <Item>
-      <Icon as={AiFillLinkedin} />
-      <Text>LinkedIn</Text>
-    </Item>
-    <Item>
-      <Icon as={AiOutlineTwitter} />
-      <Text>Twitter</Text>
-    </Item>
+    <Link href="/github" underline="none">
+      <Item>
+        <Icon as={AiOutlineGithub} />
+        <Text>Github</Text>
+      </Item>
+    </Link>
+    <Link href="/linkedin" underline="none">
+      <Item>
+        <Icon as={AiFillLinkedin} />
+        <Text>LinkedIn</Text>
+      </Item>
+    </Link>
+    <Link href="/twitter" underline="none">
+      <Item>
+        <Icon as={AiOutlineTwitter} />
+        <Text>Twitter</Text>
+      </Item>
+    </Link>
     <Section>
       <Text>Shortcuts</Text>
     </Section>

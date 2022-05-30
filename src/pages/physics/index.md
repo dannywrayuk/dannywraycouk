@@ -1,7 +1,8 @@
 ---
 id: physics
 title: Physics
-abstract: all my physics posts
+abstract: Introductory articles to university level physics.
+image: /img/cover_images/project_1.jpeg
 ---
 
 # Physics
