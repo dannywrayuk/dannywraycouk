@@ -6,6 +6,7 @@ const Wrapper = styled.div({ marginBottom: "20px" });
 const ImageWrapper = styled.div({
   borderRadius: "1em",
   width: "100%",
+  height: "fit-content",
   overflow: "hidden",
   aspectRatio: "16 / 9",
 });
