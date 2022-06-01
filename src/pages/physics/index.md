@@ -2,7 +2,7 @@
 id: physics
 title: Physics
 abstract: Introductory articles to university level physics.
-image: /img/cover_images/project_1.jpeg
+image: /img/cover_images/physics.jpeg
 ---
 
 # Physics
