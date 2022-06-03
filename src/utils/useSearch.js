@@ -7,7 +7,12 @@ const fuse = new Fuse(allMeta, {
   ignoreLocation: true,
   ignoreFieldNorm: true,
   threshold: 0.3,
-  keys: ["title", "abstract", { name: "generatedKeywords", weight: 0.2 }],
+  keys: [
+    "title",
+    "abstract",
+    { name: "generatedKeywords", weight: 0.2 },
+    { name: "tags", weight: 0.2 },
+  ],
 });
 
 export const useSearch = () => (term) => fuse.search(term);

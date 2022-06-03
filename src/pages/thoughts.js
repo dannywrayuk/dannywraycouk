@@ -13,12 +13,15 @@ const meta = {
 const Thoughts = ({ pinnedPosts, childPosts }) => (
   <Layout>
     <MetaTags meta={meta} />
-    <Flex center>
-      <Heading mt={60}>thoughts</Heading>
-    </Flex>
+    <Heading mt={60} center>
+      Featured
+    </Heading>
     <Flex column>
       <Mapper Component={TimelineEntry} data={pinnedPosts} type="pinned" />{" "}
     </Flex>
+    <Heading mt={60} center>
+      Most Recent
+    </Heading>
     <Flex column>
       <Mapper Component={TimelineEntry} data={childPosts} />
     </Flex>
@@ -29,7 +32,7 @@ export default Thoughts;
 
 export const getStaticProps = async () => ({
   props: {
-    pinnedPosts: getMetadataById(["design-system", "features"]),
-    childPosts: getMetadataByRoute("**/*"),
+    pinnedPosts: getMetadataById(["welcome"]),
+    childPosts: getMetadataByRoute("/thoughts/*"),
   },
 });

@@ -17,7 +17,7 @@ const Wrapper = styled.div({
 const LeftBorder = styled.div({
   borderLeft: "solid 1px",
   borderLeftColor: "inherit",
-  padding: "0 1.25rem 5rem",
+  padding: "0  0  5rem 1.25rem",
   [mq.md]: {
     paddingLeft: "2.5rem",
     paddingRight: "0",
@@ -28,7 +28,7 @@ const IconWrapper = styled.div({
   display: "flex",
   alignItems: "center",
   position: "absolute",
-  height: "1.5rem",
+  height: "2rem",
   left: 0,
   transform: "translateX(-50%)",
   color: "var(--color-fg-subtle)",
@@ -38,14 +38,14 @@ const IconWrapper = styled.div({
 const TextWrapper = styled.div({
   display: "flex",
   alignItems: "center",
-  height: "1.5rem",
+  height: "2rem",
   color: "var(--color-fg-subtle)",
   marginBottom: "10px",
   [mq.lg]: {
     marginBottom: "0",
     position: "absolute",
     left: "-1rem",
-    transform: "translateX(-100%)",
+    transform: "translateX(-120%)",
   },
 });
 
@@ -59,6 +59,7 @@ const Icons = {
 const variants = {
   like: [Icons.heart, "I like this."],
   pinned: [Icons.pin, "Pinned."],
+  project: [Icons.project, "Project"],
 };
 
 export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {

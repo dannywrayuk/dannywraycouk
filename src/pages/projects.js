@@ -36,19 +36,23 @@ const Projects = ({ projects, featured, university }) => (
   <Layout>
     <MetaTags meta={meta} />
     <Box>
-      <Bubble>
-        <CapsText>Featured</CapsText>
-      </Bubble>
+      <Heading my={60} center>
+        Featured
+      </Heading>
       <ProjectCard data={featured[0]} />
     </Box>
     <Flex column>
-      <Heading my={20}>Projects</Heading>
+      <Heading my={60} center>
+        Ongoing
+      </Heading>
       <Grid>
         <Mapper Component={ProjectCard} data={projects} />
       </Grid>
     </Flex>
     <Flex column>
-      <Heading my={20}>University Works</Heading>
+      <Heading my={60} center>
+        University Works
+      </Heading>
       <Grid>
         <Mapper Component={ProjectCard} data={university} />
       </Grid>

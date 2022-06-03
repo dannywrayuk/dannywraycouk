@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
 import { createPortal } from "react-dom";
-import { Icon, Link, Text } from "./core";
+import { Icon, Link, Text, Button } from "./core";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
@@ -74,6 +74,7 @@ const Section = styled.div({
 const Item = styled.div({
   padding: "0 30px",
   height: "50px",
+  width: "100%",
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
@@ -99,7 +100,7 @@ const Suggestions = () => (
     <Section>
       <Text>Quick Actions</Text>
     </Section>
-    <Item onClick={toggleColourMode}>
+    <Item as={Button} onClick={toggleColourMode}>
       <Icon as={BiMoon} />
       <Text>Toggle Colour Theme</Text>
     </Item>

@@ -64,4 +64,4 @@ const meta = getTree("./src/pages/")
 if (!fs.existsSync("./generated")) {
   fs.mkdirSync("./generated");
 }
-fs.writeFileSync("./generated/siteMeta.json", JSON.stringify(meta));
+fs.writeFileSync("./generated/siteMeta.json", JSON.stringify(meta, null, 2));

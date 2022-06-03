@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useCSSProp } from "@utils/useCSSProp";
+import { boxProps } from "./styleProps";
 
 export const Button = styled.button(
   {
@@ -8,7 +9,9 @@ export const Button = styled.button(
     color: "unset",
     display: "block",
     lineHeight: 0,
+    cursor: "pointer",
   },
+  boxProps,
   useCSSProp
 );
 
