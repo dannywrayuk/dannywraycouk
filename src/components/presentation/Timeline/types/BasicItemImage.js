@@ -1,3 +1,4 @@
+import { Link } from "@components/core";
 import { BasicBottom, BasicItem, Image, ImageWrapper } from "./common";
 
 export const BasicItemImage = ({ data }) => {
@@ -5,9 +6,11 @@ export const BasicItemImage = ({ data }) => {
     throw new Error("'image' timeline type requires image property");
   return (
     <BasicItem>
-      <ImageWrapper>
-        <Image src={data.image} />
-      </ImageWrapper>
+      <Link href={data.route} underline="none">
+        <ImageWrapper>
+          <Image src={data.image} />
+        </ImageWrapper>
+      </Link>
       <BasicBottom data={data} />
     </BasicItem>
   );
