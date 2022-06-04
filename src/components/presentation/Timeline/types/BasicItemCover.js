@@ -1,4 +1,4 @@
-import { Heading } from "@components/core";
+import { Heading, Link } from "@components/core";
 import styled from "@emotion/styled";
 import { BasicItem, BasicBottom, Image, ImageWrapper } from "./common";
 
@@ -18,11 +18,13 @@ const CoverText = styled(Heading)({
 });
 
 export const BasicItemCover = ({ data }) => (
-  <BasicItem>
-    <Cover center>
-      <CoverText size="xl">{data.title}</CoverText>
-      <CoverImage src="/img/cover_images/default.jpeg" />
-    </Cover>
-    <BasicBottom data={data} />
-  </BasicItem>
+  <Link href={data.route} underline="none">
+    <BasicItem>
+      <Cover center>
+        <CoverText size="xl">{data.title}</CoverText>
+        <CoverImage src="/img/cover_images/default.jpeg" />
+      </Cover>
+      <BasicBottom data={data} />
+    </BasicItem>
+  </Link>
 );

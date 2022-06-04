@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@components/core";
+import { Box, Flex, Heading, Link, Text } from "@components/core";
 import { Mapper } from "@components/Mapper";
 import styled from "@emotion/styled";
 
@@ -15,7 +15,7 @@ const Tag = ({ data }) => <span>#{data} </span>;
 export const BasicBottom = ({ data }) => (
   <Box p="15px">
     <Heading size="lg" mb="10px">
-      {data.title}
+      <Link href={data.route}>{data.title}</Link>
     </Heading>
     <Text>{data.abstract}</Text>
     {data.tags && (
