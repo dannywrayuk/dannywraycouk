@@ -46,14 +46,23 @@ const generateRoute = (filePath) =>
     .replaceAll(path.sep, "/")
     .replace("/index", "");
 
+const generateId = (filePath) => {
+  const name = path.parse(filePath).name;
+  if (name === "index") {
+    return path.parse(filePath.split(name)[0]).name;
+  }
+  return name;
+};
+
 const getMetadata = (filePath) => {
   const fileContent = fs.readFileSync(filePath);
   const { data, content } = matter(fileContent);
   return {
-    ...data,
-    generatedKeywords: generateKeywords(content),
-    dateString: generateDateString(data),
+    id: generateId(filePath),
     route: generateRoute(filePath),
+    ...data,
+    dateString: generateDateString(data),
+    generatedKeywords: generateKeywords(content),
   };
 };
 

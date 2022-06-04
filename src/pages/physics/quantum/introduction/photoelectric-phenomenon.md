@@ -1,5 +1,4 @@
 ---
-id: photoelectric_phenomenon
 title: Photoelectric Phenomenon
 date: 2018/07/08
 abstract: Einstein's experiment that showcased the particle nature of light.

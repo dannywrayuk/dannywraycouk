@@ -1,5 +1,4 @@
 ---
-id: free_particle
 title: A Free Particle
 date: 2018/08/17
 abstract: A solution to the Schrodinger equation for a Free Particle.

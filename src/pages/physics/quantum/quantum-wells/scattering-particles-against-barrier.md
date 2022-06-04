@@ -1,5 +1,4 @@
 ---
-id: scattering_particles_against_barrier
 title: Scattering Particles Against a Barrier
 date: 2018/09/03
 abstract: The Behaviour of Particles Against a Barrier Potential.

@@ -1,5 +1,4 @@
 ---
-id: computer_simulations_of_dimer_models
 title: Computer Simulations of Dimer Models
 abstract: My 3rd Year university project.
 date: 2019/01/16

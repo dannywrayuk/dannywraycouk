@@ -1,5 +1,4 @@
 ---
-id: dirac_notation_and_operators
 title: Dirac Notation and Operators
 date: 2018/09/26
 abstract: An Introduction to Dirac Notation.

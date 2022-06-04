@@ -1,5 +1,4 @@
 ---
-id: position
 title: Position
 date: 2018/09/30
 abstract: Deriving the expressions for the position operator and exploring it's properties.

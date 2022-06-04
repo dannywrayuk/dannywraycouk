@@ -1,5 +1,4 @@
 ---
-id: schrodingers_equation
 title: Schrodinger's Equation
 date: 2018/08/15
 abstract: The wave formulation of quantum mechanics.

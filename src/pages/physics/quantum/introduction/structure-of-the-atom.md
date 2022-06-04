@@ -1,5 +1,4 @@
 ---
-id: structure_of_the_atom
 title: Structure of the Atom
 date: 2018/08/09
 abstract: Quantum Theory's answer to the Structure of Atoms.

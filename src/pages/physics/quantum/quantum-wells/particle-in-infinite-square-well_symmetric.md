@@ -1,5 +1,4 @@
 ---
-id: particle_in_infinite_square_well_symmetric
 title: Particle in a Symmetric Infinite Square Well
 date: 2018/08/20
 abstract: Solving the Schrodinger Equation for a Symmetric Infinite Square Well Potential.

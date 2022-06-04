@@ -1,5 +1,4 @@
 ---
-id: uncertainty_principle
 title: The Uncertainty Principle
 date: 2018/07/20
 abstract: How analysis of the Photon Model lead Heisenberg to the Uncertainty Principle.

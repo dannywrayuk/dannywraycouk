@@ -1,5 +1,4 @@
 ---
-id: particle_in_infinite_square_well_asymmetric
 title: Particle in an Asymmetric Infinite Square Well.
 date: 2018/08/19
 abstract: Solving the Schrodinger Equation for an Asymmetric Infinite Square Well Potential.

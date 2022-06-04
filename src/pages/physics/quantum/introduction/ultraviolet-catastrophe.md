@@ -1,5 +1,4 @@
 ---
-id: ultraviolet_catastrophe
 title: The Ultraviolet Catastrophe
 date: 2018/06/06
 abstract: Max Planck's accidental discovery of the quantisation of energy.

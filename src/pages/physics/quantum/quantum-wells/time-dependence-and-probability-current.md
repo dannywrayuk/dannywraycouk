@@ -1,5 +1,4 @@
 ---
-id: time_dependence_and_probability_current
 title: Time Dependence and Probability Current
 date: 2018/08/17
 abstract: How Stationary States can evolve with time and the idea of Probability Current.

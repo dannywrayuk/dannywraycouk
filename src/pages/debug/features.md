@@ -1,5 +1,4 @@
 ---
-id: features
 title: all current markdown features
 ---
 

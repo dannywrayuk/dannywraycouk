@@ -1,5 +1,4 @@
 ---
-id: momentum
 title: Momentum
 date: 2018/10/06
 abstract: Deriving the expressions for the momentum operator and exploring it's properties.

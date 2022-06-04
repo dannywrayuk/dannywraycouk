@@ -1,5 +1,4 @@
 ---
-id: particle_in_finite_square_well
 title: Particle in a Finite Square Well
 date: 2018/09/01
 abstract: Solving the Schrodinger Equation for a Finite Square Well Potential.
