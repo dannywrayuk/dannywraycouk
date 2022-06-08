@@ -15,8 +15,12 @@ html[scrollOff] body {
 
 html {
   scrollbar-gutter: stable;
-  scroll-behavior: smooth;
   scroll-padding-top: 50px;
+}
+
+.math,
+.math-display {
+  overflow-x: auto;
 }
 
 .katex-display > .katex > .katex-html {

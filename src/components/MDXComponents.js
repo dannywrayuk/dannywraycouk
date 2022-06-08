@@ -100,6 +100,7 @@ const ParentStyles = styled.div(
       maxWidth: "450px",
       margin: "0 auto",
       display: "block",
+      width: "100%",
     },
     li: {
       paddingLeft: "1.5em",
