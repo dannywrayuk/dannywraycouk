@@ -64,12 +64,12 @@ export default Projects;
 
 export const getStaticProps = async () => ({
   props: {
-    featured: getMetadataById(["this_site"]),
-    projects: getMetadataById(["this_site", "physics"]),
+    featured: getMetadataById(["building-this-site"]),
+    projects: getMetadataById(["building-this-site", "physics"]),
     university: getMetadataById([
-      "scalar_fields_in_cosmology",
-      "computer_simulations_of_dimer_models",
-      "n_body_simulations_using_the_particle_mesh_method",
+      "scalar-fields-in-cosmology",
+      "computer-simulations-of-dimer-models",
+      "n-body-simulations-using-the-particle-mesh-method",
     ]),
   },
 });
