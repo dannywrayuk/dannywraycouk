@@ -1,6 +1,8 @@
 import nextMdx from "@next/mdx";
 import mdxWrapperPlugin from "./src/utils/mdxWrapperPlugin.mjs";
+import mdxCitationPlugin from "./src/utils/mdxCitationPlugin.mjs";
 import rehypeKatex from "rehype-katex";
+import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
 import withShiki from "@stefanprobst/rehype-shiki";
@@ -13,8 +15,10 @@ const withMDX = nextMdx({
   options: {
     remarkPlugins: [mdxWrapperPlugin, remarkMath, remarkGfm],
     rehypePlugins: [
+      rehypeSlug,
       () => withShiki({ highlighter }),
       () => rehypeKatex({ strict: false }),
+      mdxCitationPlugin,
     ],
     providerImportSource: "@mdx-js/react",
   },

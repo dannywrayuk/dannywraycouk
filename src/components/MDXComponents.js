@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Heading, Text, CapsText, Flex, Link } from "@components/core";
+import { Heading, Text, CapsText, Flex, LinkInternal } from "@components/core";
 
 const Square = styled.div(
   {
@@ -18,6 +18,34 @@ const Swatch = ({ col }) => (
   </Flex>
 );
 
+const FigureStyle = styled.figure({
+  margin: "60px 0",
+});
+
+const FigureImage = styled.img({
+  maxWidth: "400px",
+  margin: "0 auto",
+  display: "block",
+  borderRadius: "0.5em",
+  border: "1px solid var(--color-border-default)",
+});
+
+const FigureCaption = styled.figcaption({
+  textAlign: "center",
+});
+
+const Figure = ({ id, cite, src = "/img/sadfrog.jpeg", children }) => (
+  <FigureStyle id={id}>
+    <FigureImage src={src} />
+    <FigureCaption>
+      <Heading as="h2" size="sm" center>
+        Figure {cite}
+      </Heading>
+      {children}
+    </FigureCaption>
+  </FigureStyle>
+);
+
 const As = (Component, addProps, css) => (props) => {
   const Styled = styled(Component)(css);
   return <Styled {...addProps} {...props} />;
@@ -28,7 +56,7 @@ export const MDXComponents = {
   h2: As(Heading, { as: "h2", size: "lg" }),
   h3: As(Heading, { as: "h3", size: "md" }),
   p: Text,
-  a: Link,
+  a: LinkInternal,
   ul: As(Text, { as: "ul" }),
   ol: As(Text, { as: "ol" }),
   li: As(Text, { as: "li" }),
@@ -37,76 +65,98 @@ export const MDXComponents = {
   Heading,
   Text,
   CapsText,
+  Figure,
 };
 
-const ParentStyles = styled.div({
-  ".contains-task-list": {
-    listStyleType: "none",
-  },
-  ".task-list-item input[type=checkbox]": {
-    verticalAlign: "middle",
-    margin: "0 0.2em 0.25em -1.2em",
-  },
-  a: {
-    textDecoration: "none",
-    ":hover": {
-      textDecoration: "underline",
+const ParentStyles = styled.div(
+  {
+    ".contains-task-list": {
+      listStyleType: "none",
+    },
+    ".task-list-item input[type=checkbox]": {
+      verticalAlign: "middle",
+      margin: "0 0.2em 0.25em -1.2em",
+    },
+    a: {
+      textDecoration: "none",
+      ":hover": {
+        textDecoration: "underline",
+      },
+    },
+    blockquote: {
+      borderLeft: "0.25em solid var(--feintGrey)",
+      padding: "0 1em",
+      color: "var(--midGrey)",
+    },
+    code: {
+      padding: "2px 3px",
+      borderRadius: "5px",
+    },
+    hr: {
+      borderColor: "var(--feintGrey)",
+      borderStyle: "solid",
+    },
+    img: {
+      maxWidth: "450px",
+      margin: "0 auto",
+      display: "block",
+    },
+    li: {
+      paddingLeft: "1.5em",
+      margin: "5px 0",
+    },
+    ol: {
+      listStylePosition: "inside",
+      marginBottom: "20px",
+    },
+    pre: {
+      display: "flex",
+      flexDirection: "column",
+      padding: "20px 30px",
+      borderRadius: "5px",
+      fontSize: "0.9rem",
+      lineHeight: "1.5em",
+      overflowX: "auto",
+    },
+    p: {
+      marginBottom: "20px",
+    },
+    table: {
+      display: "block",
+      width: "max-content",
+      overflow: "auto",
+      borderCollapse: "collapse",
+      maxWidth: "100%",
+      margin: "20px auto",
+    },
+    th: {
+      padding: "5px 15px",
+      backgroundColor: "var(--color-bg-subtle)",
+      border: "solid 1px var(--color-border-default)",
+    },
+    td: {
+      padding: "5px 15px",
+      border: "solid 1px var(--color-border-default)",
+    },
+    ul: {
+      listStylePosition: "inside",
+      listStyleType: "disc",
+      marginBottom: "20px",
+    },
+    "h1,h2,h3,h4": {
+      margin: "60px 0 20px",
+    },
+    "[id^='figure']": {
+      margin: "60px 0",
+    },
+    "[id^='figure'] img": {
+      marginBottom: "20px",
     },
   },
-  blockquote: {
-    borderLeft: "0.25em solid var(--feintGrey)",
-    padding: "0 1em",
-    color: "var(--midGrey)",
-  },
-  code: {
-    padding: "2px 3px",
-    borderRadius: "5px",
-  },
-  hr: {
-    borderColor: "var(--feintGrey)",
-    borderStyle: "solid",
-  },
-  li: {
-    paddingLeft: "1.5em",
-    margin: "5px 0",
-  },
-  ol: {
-    listStylePosition: "inside",
-  },
-  pre: {
-    display: "flex",
-    flexDirection: "column",
-    padding: "20px 30px",
-    borderRadius: "5px",
-    fontSize: "0.9rem",
-    lineHeight: "1.5em",
-    overflowX: "auto",
-  },
-  table: {
-    display: "block",
-    width: "max-content",
-    overflow: "auto",
-    borderCollapse: "collapse",
-    maxWidth: "100%",
-    marginBottom: "20px",
-  },
-  th: {
-    padding: "5px 15px",
-    backgroundColor: "var(--color-bg-subtle)",
-    border: "solid 1px var(--color-border-default)",
-  },
-  td: {
-    padding: "5px 15px",
-    border: "solid 1px var(--color-border-default)",
-  },
-  ul: {
-    listStylePosition: "inside",
-    listStyleType: "disc",
-  },
-  "h1,h2,h3,h4": {
-    marginTop: "20px",
-  },
-});
+  ({ data }) => ({
+    textAlign: data?.textAlign || undefined,
+  })
+);
 
 export const withMDXStyles = (Layout) => (props) =>
   <ParentStyles as={Layout} {...props} />;
