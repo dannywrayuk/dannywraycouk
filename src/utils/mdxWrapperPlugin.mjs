@@ -30,6 +30,10 @@ export default () => (tree, file) => {
   };
   const fileId = getId(file.history[0]);
   const meta = readMetadata().find((x) => x.id === fileId);
+  if (!meta) {
+    console.log(fileId);
+    console.log(file.history);
+  }
   const test = fromMarkdown(
     `import MDXParent from  "@components/_mdx.js";
     export const meta = ${JSON.stringify(meta)};

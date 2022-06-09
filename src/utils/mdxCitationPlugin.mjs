@@ -26,10 +26,10 @@ const addCitationBuilder =
             );
             if (parents[parents.length - 1 - idOffset]?.properties?.id) {
               parents[parents.length - 1 - idOffset].properties.id +=
-                idPrefix + "-" + citations.length;
+                idPrefix + "-" + citeName;
             } else {
               parents[parents.length - 1 - idOffset].properties.id =
-                idPrefix + "-" + citations.length;
+                idPrefix + "-" + citeName;
             }
           }
         });
@@ -40,14 +40,13 @@ const linkCitationsBuilder =
   ({ identifier, displayText, idPrefix }, citations) =>
   (node, parents) => {
     if (node?.value?.includes(identifier)) {
-      const linkId =
-        1 +
-        citations.findIndex(
-          (x) => "#" + x === parents[parents.length - 1]?.properties?.href
-        );
-      node.value = displayText.replaceAll("*", linkId);
+      const link = parents[parents.length - 1]?.properties?.href;
+      node.value = displayText.replaceAll(
+        "*",
+        1 + citations.findIndex((x) => "#" + x === link)
+      );
       parents[parents.length - 1].properties.href =
-        "#" + idPrefix + "-" + linkId;
+        "#" + idPrefix + "-" + link.substring(1);
     }
   };
 
@@ -94,10 +93,6 @@ export default () => (tree, file) => {
     { identifier: "@eqn", displayText: "Equation (*)", idPrefix: "equation" },
     equationCitations
   );
-  const linkReferenceTextCitations = linkCitationsBuilder(
-    { identifier: "@Ref", displayText: "Ref. [*]", idPrefix: "reference" },
-    referenceCitations
-  );
   const linkReferenceCitations = linkCitationsBuilder(
     { identifier: "@ref", displayText: "[*]", idPrefix: "reference" },
     referenceCitations
@@ -106,6 +101,5 @@ export default () => (tree, file) => {
     linkFigureCitations(node, parents);
     linkEquationCitations(node, parents);
     linkReferenceCitations(node, parents);
-    linkReferenceTextCitations(node, parents);
   });
 };

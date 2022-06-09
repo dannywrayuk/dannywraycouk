@@ -2,7 +2,7 @@
 title: N-Body Simulations using the Particle-Mesh Method
 abstract: A scientific computing project.
 date: 2018/12/14
-image: /img/cover_images/nbody.jpeg
+image: /img/cover-images/nbody.jpeg
 textAlign: justify
 timeline:
   variant: project
@@ -189,7 +189,7 @@ My implementation of the PM method successfully produced physical simulations of
 To reflect, I would have made two changes I would have made to my program. The first being the implementation of a CIC scheme. I underestimated the effect that the mass assignment scheme would have on the simulation accuracy. If had more time, I would have updated the program to use a scheme with more smoothing than NGP. The second would be to investigate the initial conditions of my simulations in more depth. From reading papers such as Refs. [@ref](#jenkins_1998) [@ref](#klypin_1997) I noticed the large amount of effort put into the initial conditions of the simulations. This, of course, makes perfect sense as the universe is not a random distribution of particles, as my simulations assumes. These subtle changes in the initial conditions would affect the overall evolution of the structures formed.
 
 [^cdm]: In actuality a slightly modified method, $P^3M$, that has increased accuracy at short length scales and close encounter interactions were used.
-[^3body]: There exists solutions for $N=3$ but these are edge cases that require very specific initial conditions, see [@Ref](#teyssier_2009).
+[^3body]: There exists solutions for $N=3$ but these are edge cases that require very specific initial conditions, see Ref. [@ref](#teyssier_2009).
 [^units]: All the simulations that produced the figures in this section used 'computer units'[@ref](#bosch_2013). I chose to do this as the structure was the focus not a numerical output.
 [^sinc]: This is sometimes defined as $ K = k \mathrm{sinc}{(\pi k \Delta x)} $, however I found in my implementation that the sinc function was more computationally expensive than a well optimised sin function with a lookup-table. Therefore, I preferred the definition in [@eqn](#sinc) for efficiency.
 

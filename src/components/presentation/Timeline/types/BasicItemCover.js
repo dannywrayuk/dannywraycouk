@@ -22,7 +22,7 @@ export const BasicItemCover = ({ data }) => (
     <Link href={data.route} underline="none">
       <Cover center>
         <CoverText size="xl">{data.title}</CoverText>
-        <CoverImage src="/img/cover_images/default.jpeg" />
+        <CoverImage src="/img/cover-images/default.jpeg" />
       </Cover>
     </Link>
     <BasicBottom data={data} />

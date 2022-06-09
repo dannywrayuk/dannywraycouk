@@ -1,7 +1,7 @@
 ---
 title: Physics
 abstract: Introductory articles to university level physics.
-image: /img/cover_images/physics.jpeg
+image: /img/cover-images/physics.jpeg
 ---
 
 # Physics
