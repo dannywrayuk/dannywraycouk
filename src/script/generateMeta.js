@@ -41,10 +41,10 @@ const generateDateString = (data) => {
 
 const generateRoute = (filePath) =>
   filePath
-    .replace("src/pages", "")
+    .replace("src" + path.sep + "pages", "")
     .replace(/\.[a-zA-Z]+$/, "")
-    .replaceAll(path.sep, "/")
-    .replace("/index", "");
+    .replace(path.sep + "index", "")
+    .replaceAll(path.sep, "/");
 
 const generateId = (filePath) => {
   const name = path.parse(filePath).name;
