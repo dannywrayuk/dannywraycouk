@@ -3,7 +3,10 @@ import { visitParents } from "unist-util-visit-parents";
 // /\\tag{@cite-([a-zA-Z\d\-\_]+)}/g
 
 const addCitationBuilder =
-  ({ citePrefix, displayText, idPrefix, idOffset = 0 }, citations) =>
+  (
+    { citePrefix, displayText, idPrefix, idOffset = 0, parentClass },
+    citations
+  ) =>
   (node, parents) => {
     if (node.value?.includes(citePrefix)) {
       node.value
@@ -24,12 +27,18 @@ const addCitationBuilder =
               cite,
               displayText.replaceAll("*", citations.length)
             );
-            if (parents[parents.length - 1 - idOffset]?.properties?.id) {
-              parents[parents.length - 1 - idOffset].properties.id +=
-                idPrefix + "-" + citeName;
+            let i;
+            if (parentClass) {
+              i = parents.findIndex(
+                (x) => x.properties?.className?.join() === parentClass
+              );
             } else {
-              parents[parents.length - 1 - idOffset].properties.id =
-                idPrefix + "-" + citeName;
+              i = parents.length - 1 - idOffset;
+            }
+            if (parents[i]?.properties?.id) {
+              parents[i].properties.id += idPrefix + "-" + citeName;
+            } else {
+              parents[i].properties.id = idPrefix + "-" + citeName;
             }
           }
         });
@@ -67,7 +76,7 @@ export default () => (tree, file) => {
       citePrefix: "@cite-eqn",
       displayText: "*",
       idPrefix: "equation",
-      idOffset: 9,
+      parentClass: "math,math-display",
     },
     equationCitations
   );
