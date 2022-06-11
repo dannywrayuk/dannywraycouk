@@ -145,7 +145,7 @@ $$
 
 Here, we have defined the critical density $\rho_c = \sfrac{3H^2}{\kappa^2}$ and since $\rho$ is the sum of density contributions from each fluid, likewise $\Omega$ is the sum of the density parameter contributions. We can see from these equations since $\Omega$ is related to $k$, that the geometry of the universe is determined by the total density of the fluids within it. Adjusting the density parameter of each fluid in the universe then allows us to predict the distance of the supernova given its redshift. Comparing the luminosity distance to the predicted distances, both research groups found that supernovae were approximately $12.5\%$ further than would be predicted by a universe with no cosmological constant. Some of the supernovae measurements from Ref. [@ref](#Riess_1998) can be seen in [@fig](#supernovae). This data lead both research groups to the conclusion that in order to account for the extra distance observed, the cosmological constant must be causing the expansion of the universe to accelerate.
 
-![test](/img/project/scalar/supernovae.jpeg)
+![test - invertible](/img/project/scalar/supernovae.jpeg)
 **@cite-fig-supernovae:** Data points represent observed values of redshift $z$ as a function of a distance $m-M$ for type Ia supernovae. Lines represent theoretical cosmologies with different density parameters for both dark energy $\Omega_\Lambda$ and matter $\Omega_m$. The lower panel shows the difference from the $\Omega_m = 0.20$, $\Omega_\Lambda=0.00$ model. From Ref. [@ref](#Riess_1998).
 
 Since this discovery the energy associated with the cosmological constant has been named 'Dark Energy', after its ability to evade detection whilst also making reference (though unrelated) to dark matter - another seemingly undetectable cosmic medium. Though dark energy has not been detected directly, its influence on the universe can be observed indirectly as we have just seen with the redshift in supernovae. Other methods such as analysis of galaxy clusters, cosmic microwave background (CMB) anisotropies, baryon acoustic oscillations (BAO) and the 'age problem' all lead to the same conclusion - there exists some form of dark energy driving acceleration of the universe.
@@ -190,7 +190,7 @@ $$
 
 where $\rho_r$ is the energy density of radiation and $\rho_m$ is the energy density of matter respectively. These can be seen plotted alongside one and other in [@fig](#flrw), where we have defined the number of e-foldings as $N = \log{(a)}$. The values of $\rho_{m,0}$ and $\rho_{r,0}$ can be calculated using the observed values of the respective density parameters from the Planck results, alongside a calculation of the critical density defined in [@eqn](#critical-dens-def) and thus $H_0$, which is also observed by Planck and included in [@tab](#params).
 
-![test](/img/project/scalar/flrw.jpeg)
+![test - invertible](/img/project/scalar/flrw.jpeg)
 **@cite-fig-flrw:** A comparison of density contributions predicted by the Friedman equation as a function of $N$, the number of e-foldings. Axes have been left intentionally blank as this figure is for illustrative purposes, highlighting how the universe can evolve from an initially radiation dominated epoch, into matter domination, then finally into a dark energy dominated epoch.
 
 We can continue to solve for our universe by considering what happens when one fluid dominates the majority of the energy density of the universe. When this is the case, such as for matter and radiation at early times seen in [@fig](#flrw), the contribution from the other fluids in the Friedman equations becomes negligible. This simplification compounded with the observation that $k=0$ allows us to substitute [@eqn](#friedmann-dens-sol) into the Friedman equations and solve to find,
@@ -425,10 +425,10 @@ In Ref. [@ref](#Copeland_1998) they present fixed point analysis of the system. 
 
 Analysis of fixed, or critical, points show that the system evolves in several different ways depending on the values of $\gamma$, $\lambda$ and the initial conditions of $x$ and $y$. In each case, however, there is a late-time attractor which the energy density of the scalar field will naturally tend towards and remove any fine tuning in the initial conditions. [@fig](#1fluid1) and [@fig](#1fluid2) highlight this behaviour by overlaying multiple simulations, each with different initial conditions, and showing how they all tend to the same fixed point.
 
-![test](/img/project/scalar/1fluid1.jpeg)
+![test - invertible](/img/project/scalar/1fluid1.jpeg)
 **@cite-fig-1fluid1:** The phase plane for $\gamma=1$ and $\lambda=1$. The fixed points are represented with a cross. The late time attractor is Point (c) in [@tab](#criticalpoints-1fluid-general) and corresponds to the scalar field dominated solution at $x=\sfrac{\sqrt{6}}{6}$, $y=\sfrac{\sqrt{30}}{6}$.
 
-![test](/img/project/scalar/1fluid2.jpeg)
+![test - invertible](/img/project/scalar/1fluid2.jpeg)
 **@cite-fig-1fluid2:** The phase plane for $\gamma=1$ and $\lambda=3$. The fixed points are represented with a cross. The late time attractor is Point (d) in [@tab](#criticalpoints-1fluid-general) and corresponds to the scaling solution at $x=y=\sfrac{\sqrt{6}}{6}$.
 
 While the analysis of fixed points allows us to see their location in the phase plane, it does not allow us to analyse their stability and therefore if they will be a late time attractor of the system. To do so the system is perturbed around each fixed point and the behaviour expressed in matrix form. The sign of the eigenvalues will then determine whether the fixed point is stable, the case when all eigenvalues are negative. It is common for the stability of the fixed points to depend on both $\gamma$ and $\lambda$, however for some of the trivial solutions this is not the case. The eigenvalues for each fixed point in this system are included in [@tab](#eigenvalues-1fluid-general). Three of the fixed point solutions do not provide useful properties and correspond to unstable nodes or saddle points. It is worth noting that Point (a), the background fluid dominated solution, shows us that for any $\gamma > 0$, the solution is unstable and the energy density of the scalar field can never vanish with respect to the fluid. The final two remaining points offer stable nodes with varying properties.
@@ -512,7 +512,7 @@ Points (a) and (c) existed in the previous system, being two of the more trivial
 
 While the other points in this system were also found in the single fluid case, their properties do not necessarily remain unchanged. Point (d) in [@tab](#criticalpoints-2fluid-rad) appears to have the same stability criteria as the corresponding point in the single fluid case, [@tab](#criticalpoints-1fluid-general). However, upon closer inspection of the general solutions mentioned in [@tab](#criticalpoints-2fluid-general), we can see this is only because matter has an equation of state parameter that is less than that of radiation. Had we introduced a fluid with an equation of state parameter less than for matter, the stability criteria would have changed. This will become more significant when discussing domain walls.
 
-![test](/img/project/scalar/2fluid1.jpeg)
+![test - invertible](/img/project/scalar/2fluid1.jpeg)
 **@cite-fig-2fluid1:** The phase plane for $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda=3$. The fixed points are represented with a cross. The late time attractor is Point (e) in [@tab](#criticalpoints-2fluid-rad) and corresponds to the scaling solution at $x=y=\sfrac{\sqrt{6}}{6}$, $z=0$. The dashed curve represents a simulation where the initial conditions were fine tuned so that it would interact with the saddle point, Point (f) in [@tab](#criticalpoints-2fluid-rad). Note that this figure is only displaying the 2d projection of the xy plane of what is a 3d system.
 
 Since both new Points (b) and (f) are unstable, the evolution of the phase plane remains very similar to the behaviour seen in the single fluid case. [@fig](#2fluid1) demonstrates this similarity by overlaying simulations with the same initial conditions of that in [@fig](#1fluid2), and we can see they trace almost identical paths ending at the same late time attractor. This figure also demonstrates how by fine tuning the initial conditions we can force the path to interact with the saddle point caused by the second fluid. In general, though, while the introduction of a second fluid has increased the accuracy of the model, it has not provided any solutions to the problems highlighted in the previous section and we still cannot have our system in the scaling solution at early times and then transfer to the accelerating solution at late times without fine tuning of initial conditions.
@@ -585,12 +585,12 @@ $$
 
 By integrating this we have an expression for $\phi$, which we can substitute into [@eqn](#acceleration-with-potential). From $H$ it is then trivial to then calculate $\sfrac{H'}{H}$. Doing this analytically will yield the same result as found previously, however doing this numerically does not require the assumption of constant $x$ or $y$ and we can therefore see exactly when the acceleration begins. [@fig](#acceleration1) shows an example simulation of this, where we can see as the system approaches the a late time attractor, the value of $\sfrac{H'}{H}$ crosses the boundary of [@eqn](#acceleration-condition) and therefore causes an acceleration, but more importantly we can now see it does this before reaching the fixed point exactly.
 
-![test](/img/project/scalar/acceleration1.jpeg)
+![test - invertible](/img/project/scalar/acceleration1.jpeg)
 **@cite-fig-acceleration1:** $\sfrac{H'}{H}$ as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda=1$, starting with initial conditions $x=-1$, $y=0$, $z=0$. We would expect this system to have a late time acceleration and that is predicted, however note that we can see the acceleration begins before the system reaches the fix point exactly. Acceleration conditions are first met at $N \approx 2.78$. The small oscillations in the curve can be attributed to the spiral nature of the fixed points and thus the $x$ position has small periodic changes as the field orbits the point in phase space.
 
 A second method to achieve this is to calculate the value of $\gamma_\phi$ at each point in time using [@eqn](#gamma-effective), again numerically, and compared with the criteria for acceleration given in [@eqn](#eqn-state-acceleration). This method, however, breaks down when $x$ and $y$ approach zero simultaneously. [@fig](#acceleration-gamma) successfully performs this method using the same simulation as [@fig](#acceleration1) and can therefore be cross-referenced to see that they both predict acceleration to occur at the same time.
 
-![test](/img/project/scalar/accelerationgamma.jpeg)
+![test - invertible](/img/project/scalar/accelerationgamma.jpeg)
 **@cite-fig-acceleration-gamma:** $\gamma_\phi$ as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda=1$, starting with initial conditions $x=-1$, $y=0$, $z=0$. This methods successfully predicted acceleration, however this is because the system never approached $x=y=0$. Acceleration conditions are first met at $N \approx 2.78$.
 
 ## A modified potential
@@ -642,7 +642,7 @@ Calculating the fixed points of this system requires we set $x=y_1=y_2=z=0$, the
 
 An exception to this is the new solution, Point (j). This point only exists for $\lambda_1\lambda_2 < 0$ which means they must have opposing signs. While this case does not produce the effect we are trying to achieve, it does produce interesting dynamics. A simulation for this case can be seen in [@fig](#2fluid_mod1). The motion in this regime is a result of the potential having a minima at a finite value and the system oscillating around this minima. This point has $\gamma*\phi=0$ and will therefore act like a cosmological constant, however the earlier oscillations are not observed in redshifts nor as an artifact in the CMB [@ref](#planck_2018) and this case can be discounted.
 
-![test](/img/project/scalar/2fluid_mod1.jpeg)
+![test - invertible](/img/project/scalar/2fluid_mod1.jpeg)
 **@cite-fig-2fluid_mod1:** The phase plane for $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=-\lambda_2=3$. The fixed points are represented with a cross. Since there is no definition for $y$ in this system, the axis displays $y = \sqrt{y_1^2+y_2^2}$. This demonstrates the harmonic oscillation around the minima of the potential. While it is still possible for the system to interact with fixed points other than Point (j), unless they become very close it Point (j) is the late time attractor for many paths. The $z$ axis is not represented in this figure.
 
 The most significant improvement of this model is that it now has the ability to have both scaling and accelerating solutions present at the same time. Previously in the models with a single exponential potential, the system would have a scaling solution when $\lambda$ was in one region, and the accelerating solution when $\lambda$ was in a separate non-overlapping region. We can now see from [@tab](#criticalpoints-2fluid-mod-rad) there are two scaling solutions and two accelerating solutions, each of which has an existence only depending on either $\lambda_1$ or $\lambda_2$ exclusively. Setting $\lambda_1$ to be in the accelerating regime and $\lambda_2$ to be in the scaling regime we will have both points in existence at the same time, making it possible for the system to visit both. This is how the modified potential will facilitate a transition between regimes.
@@ -659,10 +659,10 @@ Having both of these fixed points in existence means at early times we could hav
 
 From this we can confirm that using two exponential potentials we can successfully provide a mechanism causing transition from the scaling regime into an accelerating regime at late times.
 
-![test](/img/project/scalar/2fluid_mod2.jpeg)
+![test - invertible](/img/project/scalar/2fluid_mod2.jpeg)
 **@cite-fig-2fluid_mod2:** $\sfrac{H'}{H}$ as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2 = 4$. The dashed line represents the minimum point at which acceleration can occur. We can see there is a long period where the curve is constant around $\sfrac{H'}{H}=-\sfrac{3}{2}$. From [@eqn](#acceleration-condition-x) this corresponds to the scaling solution. The system then transitions from the scaling solution into an accelerating regime, hence crossing the boundary.
 
-![test](/img/project/scalar/2fluid_mod3.jpeg)
+![test - invertible](/img/project/scalar/2fluid_mod3.jpeg)
 **@cite-fig-2fluid_mod3:** $\gamma_\phi$ as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2 = 4$. The dashed line represents the equation of state parameter for a fluid which produces an acceleration, the dotted like is the equation of state parameter for matter.
 
 # Cosmological Consequences
@@ -691,15 +691,15 @@ $$
 
 and that the redshift of matter-radiation equality is $z_{eq}\approx 3000$ [@ref](#modcosmo_2019). we can further fine tune the initial conditions until this occurs at the correct time, the result of which is seen in [@fig](#constraint2).
 
-![test](/img/project/scalar/constraint1.jpeg)
+![test - invertible](/img/project/scalar/constraint1.jpeg)
 **@cite-fig-constraint1:** Density parameters as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2=7$, starting with initial conditions in the region of the radiation scaling solution. We can see the individual contributions to the overall density of the universe. First radiation dominates (dotted), then matter (dashed), and finally the scalar field (solid).
 
-![test](/img/project/scalar/constraint2.jpeg)
+![test - invertible](/img/project/scalar/constraint2.jpeg)
 **@cite-fig-constraint2:** Density parameters as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2=7$, the initial conditions have been tuned as to match the time of matter-radiation equality to observation. Note that time has been shifted so that the density parameters at present $N=0$ also match observation, where we find $\Omega_\phi = 0.70$, $\Omega_m = 0.29$ and $\Omega_r = 3.7 \times 10^{-5}$. First radiation dominates (dotted), then matter (dashed), and finally the scalar field (solid).
 
 With the corrected timing we can test the predictive capabilities of this model by taking a measurement of when acceleration is expected to begin. The value for the redshift at which the universe first started to accelerate is expected to be roughly $z_{a} = 0.6 \pm 0.1$ [@ref](#Komatsu_2009). To probe the time the simulations expect acceleration we can use the method we derived in the previous chapter, seen in [@fig](#constraint3). The value of $\sfrac{H'}{H}$ crosses the threshold for acceleration at $z_a = 0.61 \pm 0.22$ which is within the margin of error for the observed value. [@fig](#constraint3) also allows us to further appreciate the mechanism by which the scalar field model is producing the dynamics seen in these simulations. The dotted and dashed lines are calculated using [@eqn](#acceleration-condition-x) and substituting the $x$ position of the fixed points for both scaling solutions. The field can be clearly seen to spend time close to each of these fixed points before acceleration begins. The small oscillations in the curve can be attributed to the spiral nature of the fixed points and thus the $x$ position has small periodic changes as the field orbits the point in phase space, this can be seen again in [@fig](#acceleration1).
 
-![test](/img/project/scalar/constraint3.jpeg)
+![test - invertible](/img/project/scalar/constraint3.jpeg)
 **@cite-fig-constraint3:** $\sfrac{H'}{H}$ as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2=7$, the initial conditions have been tuned as to match the time of matter-radiation equality to observation. Note that time has been shifted so that at present $N=0$. Acceleration conditions are first met at $z_a = 0.61 \pm 0.22$. The small oscillations in the curve can be attributed to the spiral nature of the fixed points and thus the $x$ position has small periodic changes as the field orbits the point in phase space. The fixed points for radiation and matter scaling are dotted and dashed respectively and the threshold for acceleration is a dashed line as $\sfrac{H'}{H} = -1$.
 
 We may also constrain the free parameters $V_{1,0}$ and $V_{2,0}$ in the potential. From the definition of the density parameter and definition of scalar field density we can write,
@@ -774,10 +774,10 @@ We can use this model to make a measurement of an important value in the domain 
 
 Running multiple simulations whilst interpolating the value of $\Omega_d$, it was possible to calculate the point at which the domain walls first dominate. This was found to be $\Omega_d \approx 0.18$, slightly higher than the accepted value. The increase in this result could be attributed to the way the threshold was defined in the simulation, the evolution of the universe is likely to be effected by the domain wall even if it does not fully dominate but rather even if it comes close to dominating, which it does in this system before the measured threshold.
 
-![test](/img/project/scalar/domainwall1.jpeg)
+![test - invertible](/img/project/scalar/domainwall1.jpeg)
 **@cite-fig-domainwall1:** Density parameters as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{1}{3}$ and $\lambda_1=1$, $\lambda_2=7$, starting with initial conditions in the region of the matter scaling solution, with $\Omega_d=0.02$. We can see the domain wall does not dominate and and allows the system directly into dark energy epoch.
 
-![test](/img/project/scalar/domainwall2.jpeg)
+![test - invertible](/img/project/scalar/domainwall2.jpeg)
 **@cite-fig-domainwall2:** Density parameters as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{1}{3}$ and $\lambda_1=1$, $\lambda_2=7$, starting with initial conditions in the region of the matter scaling solution, with $\Omega_d = 0.2$. In this case the domain walls start with a sufficiently large density parameter such that they dominate and change the evolution of the universe by providing an accelerated expansion too early.
 
 The behaviour we observe in the simulations could due to the domain wall scaling solution being stable, if the field gets too close initially then the attractor will amplify the motion and cause it to increase and dominate. This is not the explanation for the threshold requirement theoretically and raises many questions regarding the theoretical side of the simulations. To fully test this idea and to gain a more accurate result, the scalar field model would need to be extended to include a third background fluid. This would allow for the presence of matter, radiation and domain wall, all alongside a scalar field, removing uncertainty in the effectiveness of the chosen $\lambda_1$ and $\lambda_2$. This was not conducted in this report and hence could form the basis for future research.
@@ -788,7 +788,7 @@ In this report we have seen how the cosmological constant problem motivated alte
 
 [@fig](#conclusion) can be compared with [@fig](#flrw) to see the core difference between the scalar field model and the cosmological constant. Scalar fields track the background fluids and then break away at later times to dominate. This dynamical ability gives the scalar field model a large amount of capability. This is quite apparent since we were able to produce complex behaviour from a very simple potential. Our model was even able to make prediction of the time of acceleration and naive approximation of the domain wall threshold value at early times. The domain wall discussion, however, concluded with the suggestion that the model could be extended even further. This, and the Hubble tension are interesting applications of the model and show that research into scalar fields has a positive future. The dynamical evolution of the field makes it an incredibly versatile tool that could have applications in many other areas of cosmology and while we were unable to produce the desired results without fine tuning, it certainly does not undermine the importance of having scalar fields in the cosmologist toolbox.
 
-![test](/img/project/scalar/conclusion.jpeg)
+![test - invertible](/img/project/scalar/conclusion.jpeg)
 **@cite-fig-conclusion:** Log of density parameters as a function of time $N$ for a system with $\gamma_1=1$, $\gamma_2=\sfrac{4}{3}$ and $\lambda_1=1$, $\lambda_2=7$, initial conditions are tuned to have accurate timings, the density values have not been adjusted, however, and are in arbitrary units. This figure can be contrasted with the illustration in [@fig](#flrw), to see that the model does produce the behaviour required. First radiation dominates (dotted), then matter (dashed), and finally the scalar field (solid).
 
 ### Acknowledgements
