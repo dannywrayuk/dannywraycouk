@@ -1,6 +1,5 @@
 import nextMdx from "@next/mdx";
 import mdxWrapperPlugin from "./src/utils/mdxWrapperPlugin.mjs";
-import mdxCitationPlugin from "./src/utils/mdxCitationPlugin.mjs";
 import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
@@ -18,7 +17,6 @@ const withMDX = nextMdx({
       rehypeSlug,
       () => withShiki({ highlighter }),
       () => rehypeKatex({ strict: false }),
-      mdxCitationPlugin,
     ],
     providerImportSource: "@mdx-js/react",
   },

@@ -16,6 +16,7 @@ html[scrollOff] body {
 html {
   scrollbar-gutter: stable;
   scroll-padding-top: 50px;
+  overflow-x: hidden;
 }
 
 .math,
@@ -25,6 +26,11 @@ html {
 
 .katex-display > .katex > .katex-html {
   white-space: normal;
+}
+
+td .math-inline > .katex > .katex-html {
+  display: block;
+  white-space: nowrap;
 }
 
 .katex-display > .katex > .katex-html > .base {
@@ -70,6 +76,11 @@ html[colorMode="dark"] {
   --color-fg-subtle: #6e7681;
   --color-border-default: #30363d;
   --color-overlay-default: #24242488;
+}
+
+html[colorMode="dark"] img[alt~="invertible"] {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: lighten;
 }
 
 /* Constants */
