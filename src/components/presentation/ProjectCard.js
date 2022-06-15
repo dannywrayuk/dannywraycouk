@@ -19,9 +19,11 @@ const Image = styled.img({
 
 export const ProjectCard = ({ data }) => (
   <Wrapper>
-    <ImageWrapper>
-      <Image src={data.image} />
-    </ImageWrapper>
+    <Link href={data.route}>
+      <ImageWrapper>
+        <Image src={data.image} />
+      </ImageWrapper>
+    </Link>
     <Flex center column mt={10}>
       <Link href={data.route}>
         <Heading as="h2" size="md" center>

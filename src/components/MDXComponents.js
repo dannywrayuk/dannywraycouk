@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
-import { Heading, Text, CapsText, Flex, LinkInternal } from "@components/core";
+import {
+  Heading,
+  Text,
+  CapsText,
+  Flex,
+  LinkInternal,
+  LinkButton,
+} from "@components/core";
 
 const Square = styled.div(
   {
@@ -18,33 +25,11 @@ const Swatch = ({ col }) => (
   </Flex>
 );
 
-const FigureStyle = styled.figure({
-  margin: "60px 0",
+const SideNote = styled.div({
+  backgroundColor: "var(--color-bg-subtle)",
+  borderLeft: "3px solid var(--color-brand-primary)",
+  padding: "20px 20px 0",
 });
-
-const FigureImage = styled.img({
-  maxWidth: "400px",
-  margin: "0 auto",
-  display: "block",
-  borderRadius: "0.5em",
-  border: "1px solid var(--color-border-default)",
-});
-
-const FigureCaption = styled.figcaption({
-  textAlign: "center",
-});
-
-const Figure = ({ id, cite, src = "/img/sadfrog.jpeg", children }) => (
-  <FigureStyle id={id}>
-    <FigureImage src={src} />
-    <FigureCaption>
-      <Heading as="h2" size="sm" center>
-        Figure {cite}
-      </Heading>
-      {children}
-    </FigureCaption>
-  </FigureStyle>
-);
 
 const As = (Component, addProps, css) => (props) => {
   const Styled = styled(Component)(css);
@@ -65,7 +50,8 @@ export const MDXComponents = {
   Heading,
   Text,
   CapsText,
-  Figure,
+  SideNote,
+  LinkButton,
 };
 
 const ParentStyles = styled.div(
