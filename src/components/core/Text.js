@@ -28,8 +28,8 @@ export const TextBubble = styled.span(
   {
     backgroundColor: "var(--color-brand-primary)",
     color: "black",
-    padding: "5px 8px",
-    borderRadius: 5,
+    padding: "5px 15px",
+    borderRadius: "1em",
     fontWeight: 600,
     whiteSpace: "nowrap",
   },

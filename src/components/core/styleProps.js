@@ -77,4 +77,4 @@ const underlineTypes = {
 };
 
 export const linkProps = ({ underline }) =>
-  underlineTypes[underline] || underlineTypes.hover;
+  underlineTypes[underline] || underlineTypes.always;

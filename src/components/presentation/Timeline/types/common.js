@@ -15,7 +15,9 @@ const Tag = ({ data }) => <span>#{data} </span>;
 export const BasicBottom = ({ data }) => (
   <Box p="15px">
     <Heading size="lg" mb="10px">
-      <Link href={data.route}>{data.title}</Link>
+      <Link href={data.route} underline="hover">
+        {data.title}
+      </Link>
     </Heading>
     <Text>{data.abstract}</Text>
     {data.tags && (
