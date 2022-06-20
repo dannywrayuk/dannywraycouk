@@ -76,5 +76,7 @@ const underlineTypes = {
   },
 };
 
-export const linkProps = ({ underline }) =>
-  underlineTypes[underline] || underlineTypes.always;
+export const linkProps = ({ underline, noWrap }) => ({
+  ...(underlineTypes[underline] || underlineTypes.always),
+  whiteSpace: noWrap && "nowrap",
+});

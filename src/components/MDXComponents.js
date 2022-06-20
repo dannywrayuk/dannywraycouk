@@ -63,12 +63,6 @@ const ParentStyles = styled.div(
       verticalAlign: "middle",
       margin: "0 0.2em 0.25em -1.2em",
     },
-    a: {
-      textDecoration: "none",
-      ":hover": {
-        textDecoration: "underline",
-      },
-    },
     blockquote: {
       borderLeft: "0.25em solid var(--feintGrey)",
       padding: "0 1em",

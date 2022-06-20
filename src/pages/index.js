@@ -11,16 +11,8 @@ const Home = ({ pinnedPosts, childPosts }) => {
     <Layout>
       <MetaTags />
       <Landing />
-      <Heading mt={60} as="h2" center>
-        Highlights
-      </Heading>
       <Flex column>
         <Mapper Component={TimelineEntry} data={pinnedPosts} type="pinned" />
-      </Flex>
-      <Heading mt={60} as="h2" center>
-        Most Recent
-      </Heading>
-      <Flex column>
         <Mapper Component={TimelineEntry} data={childPosts} />
       </Flex>
     </Layout>

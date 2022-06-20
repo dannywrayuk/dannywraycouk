@@ -6,7 +6,6 @@ import {
   AiOutlineTwitter,
   AiFillLinkedin,
   AiOutlineGithub,
-  AiOutlineCloud,
 } from "react-icons/ai";
 import { HiOutlineFolder } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
@@ -107,22 +106,16 @@ const Suggestions = () => (
     <Section>
       <Text>Navigation</Text>
     </Section>
-    <Link href="/thoughts" underline="none">
+    <Link href="/about" underline="none">
       <Item>
-        <Icon as={AiOutlineCloud} />
-        <Text>Thoughts</Text>
+        <Icon as={BsPerson} />
+        <Text>About</Text>
       </Item>
     </Link>
     <Link href="/projects" underline="none">
       <Item>
         <Icon as={HiOutlineFolder} />
         <Text>Projects</Text>
-      </Item>
-    </Link>
-    <Link href="/about" underline="none">
-      <Item>
-        <Icon as={BsPerson} />
-        <Text>About</Text>
       </Item>
     </Link>
 
