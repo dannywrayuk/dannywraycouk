@@ -1,6 +1,6 @@
 import { Heading, Link } from "@components/core";
 import styled from "@emotion/styled";
-import { BasicItem, BasicBottom, Image, ImageWrapper } from "./common";
+import { BasicItemWrapper, BasicBottom, Image, ImageWrapper } from "./common";
 
 const Cover = styled(ImageWrapper)({
   position: "relative",
@@ -8,23 +8,23 @@ const Cover = styled(ImageWrapper)({
 
 const CoverImage = styled(Image)({
   position: "absolute",
-  zIndex: "-1",
 });
 
 const CoverText = styled(Heading)({
   textAlign: "center",
   color: "black",
   margin: "0 10%",
+  zIndex: "1",
 });
 
 export const BasicItemCover = ({ data }) => (
-  <BasicItem>
+  <BasicItemWrapper>
     <Link href={data.route} underline="none">
       <Cover center>
-        <CoverText size="xl">{data.title}</CoverText>
         <CoverImage src="/img/cover-images/default.jpeg" />
+        <CoverText size="xl">{data.title}</CoverText>
       </Cover>
     </Link>
     <BasicBottom data={data} />
-  </BasicItem>
+  </BasicItemWrapper>
 );

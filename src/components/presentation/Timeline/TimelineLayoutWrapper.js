@@ -7,20 +7,28 @@ import { mq } from "@utils/breakpoints";
 
 const Wrapper = styled.div({
   position: "relative",
-  borderLeftColor: "var(--color-border-default)",
   width: "100%",
-  "&:last-child": {
-    borderLeftColor: "#00000000",
+  paddingBottom: "5rem",
+  ":before": {
+    content: "''",
+    position: "absolute",
+    width: "1px",
+    top: 0,
+    bottom: 0,
+    backgroundColor: "var(--color-border-default)",
+    left: "1rem",
+    zIndex: "-1",
+    [mq.lg]: {
+      left: "-2.5rem",
+    },
   },
-});
-
-const LeftBorder = styled.div({
-  borderLeft: "solid 1px",
-  borderLeftColor: "inherit",
-  padding: "0  0  5rem 1.25rem",
-  [mq.md]: {
-    paddingLeft: "2.5rem",
-    paddingRight: "0",
+  ":last-child": {
+    ":before": {
+      bottom: "50%",
+      [mq.lg]: {
+        display: "none",
+      },
+    },
   },
 });
 
@@ -29,10 +37,14 @@ const IconWrapper = styled.div({
   alignItems: "center",
   position: "absolute",
   height: "2rem",
-  left: 0,
   transform: "translateX(-50%)",
   color: "var(--color-fg-subtle)",
   backgroundColor: "var(--color-bg-default)",
+  left: "1rem",
+  [mq.lg]: {
+    left: "-2.5rem",
+    transform: "translate(-50%,-50%)",
+  },
 });
 
 const TextWrapper = styled.div({
@@ -41,11 +53,12 @@ const TextWrapper = styled.div({
   height: "2rem",
   color: "var(--color-fg-subtle)",
   marginBottom: "10px",
+  marginLeft: "2rem",
   [mq.lg]: {
-    marginBottom: "0",
+    margin: "0",
     position: "absolute",
-    left: "-1rem",
-    transform: "translateX(-120%)",
+    left: "-4rem",
+    transform: "translate(-100%,-50%)",
   },
 });
 
@@ -72,19 +85,17 @@ export const TimelineLayoutWrapper = ({ children, label, icon, variant }) => {
   }
   return (
     <Wrapper>
-      <LeftBorder>
-        <IconWrapper>
-          <Icon as={IconElement} size="1.125rem" />
-        </IconWrapper>
-        {labelText && (
-          <TextWrapper>
-            <Text size="sm" weight="bold">
-              {labelText}
-            </Text>
-          </TextWrapper>
-        )}
-        {children}
-      </LeftBorder>
+      <IconWrapper>
+        <Icon as={IconElement} size="1.125rem" />
+      </IconWrapper>
+      {labelText && (
+        <TextWrapper>
+          <Text size="sm" weight="bold">
+            {labelText}
+          </Text>
+        </TextWrapper>
+      )}
+      {children}
     </Wrapper>
   );
 };

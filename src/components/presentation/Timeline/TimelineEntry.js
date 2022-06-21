@@ -1,15 +1,15 @@
 import { TimelineLayoutWrapper } from "./TimelineLayoutWrapper";
-import { BasicItemImage, BasicItemCover } from "./types";
+import { BasicItemImage, BasicItemCover, BasicItem } from "./types";
 
 const timelineEntryTypes = {
-  default: BasicItemImage,
+  default: BasicItem,
   image: BasicItemImage,
   cover: BasicItemCover,
 };
 
 const inferType = (data) => {
   if (data.image) return "image";
-  return "cover";
+  return "default";
 };
 
 export const TimelineEntry = ({ data, type }) => {

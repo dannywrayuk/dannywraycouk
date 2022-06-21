@@ -15,7 +15,7 @@ const CenterContent = styled.div({
   margin: "0 auto",
 });
 
-export const SectionSpacing = styled.div({
+const SectionSpacing = styled.div({
   display: "flex",
   flexDirection: "column",
   rowGap: "50px",
@@ -24,18 +24,12 @@ export const SectionSpacing = styled.div({
   width: "100%",
 });
 
-export const LayoutCore = ({ children }) => (
+export const Layout = ({ children }) => (
   <CenterContent>
     <FooterSpacing>
       <Navigation />
-      {children}
+      <SectionSpacing>{children}</SectionSpacing>
       <Footer />
     </FooterSpacing>
   </CenterContent>
-);
-
-export const Layout = ({ children }) => (
-  <LayoutCore>
-    <SectionSpacing>{children}</SectionSpacing>
-  </LayoutCore>
 );

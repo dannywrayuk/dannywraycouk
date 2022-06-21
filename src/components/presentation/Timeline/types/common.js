@@ -2,19 +2,20 @@ import { Box, Flex, Heading, Link, Text } from "@components/core";
 import { Mapper } from "@components/Mapper";
 import styled from "@emotion/styled";
 
-export const BasicItem = styled.div({
+export const BasicItemWrapper = styled.div({
   position: "relative",
   width: "100%",
   border: "1px solid var(--color-border-default)",
   borderRadius: "0.5em",
   overflow: "hidden",
+  backgroundColor: "var(--color-bg-default)",
 });
 
 const Tag = ({ data }) => <span>#{data} </span>;
 
 export const BasicBottom = ({ data }) => (
   <Box p="15px">
-    <Heading size="lg" mb="10px">
+    <Heading size="xl" mb="10px">
       <Link href={data.route} underline="hover">
         {data.title}
       </Link>
