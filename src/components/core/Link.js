@@ -24,6 +24,7 @@ export const LinkButton = styled(Link)({
   display: "block",
   textAlign: "center",
   textDecoration: "none",
+  color: "inherit",
   ":hover": {
     backgroundColor: "var(--color-bg-muted)",
   },

@@ -51,7 +51,7 @@ export const Landing = () => {
           devtools. Currently, I work on the customer acquisition platform at
           Capital One.
         </Text>
-        <FloatingBubble href="/about" underline="none" noWrap>
+        <FloatingBubble href="/about" underline="none" noWrap noCol>
           <Text>
             Read more
             {" ✨"}

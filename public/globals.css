@@ -63,6 +63,7 @@ html[colorMode="light"] {
   --color-fg-default: #24292f;
   --color-fg-muted: #57606a;
   --color-fg-subtle: #6e7781;
+  --color-fg-link: #ff6100;
   --color-border-default: #d0d7de;
   --color-overlay-default: #aaaaaa44;
 }
@@ -74,13 +75,9 @@ html[colorMode="dark"] {
   --color-fg-default: #c9d1d9;
   --color-fg-muted: #8b949e;
   --color-fg-subtle: #6e7681;
+  --color-fg-link: #ffca1e;
   --color-border-default: #30363d;
   --color-overlay-default: #24242488;
-}
-
-html[colorMode="dark"] img[alt~="invertible"] {
-  filter: invert(1) hue-rotate(180deg);
-  mix-blend-mode: lighten;
 }
 
 /* Constants */

@@ -79,7 +79,7 @@ const Item = styled.div({
   columnGap: "15px",
   color: "var(--color-fg-subtle)",
   ":hover": {
-    color: "var(--color-brand-primary)",
+    color: "var(--color-fg-link)",
   },
 });
 

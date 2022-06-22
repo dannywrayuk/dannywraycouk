@@ -38,7 +38,7 @@ const IconWrapper = styled.div({
   position: "absolute",
   height: "2rem",
   transform: "translateX(-50%)",
-  color: "var(--color-fg-subtle)",
+  color: "var(--color-fg-muted)",
   backgroundColor: "var(--color-bg-default)",
   left: "1rem",
   [mq.lg]: {
@@ -51,7 +51,7 @@ const TextWrapper = styled.div({
   display: "flex",
   alignItems: "center",
   height: "2rem",
-  color: "var(--color-fg-subtle)",
+  color: "var(--color-fg-muted)",
   marginBottom: "10px",
   marginLeft: "2rem",
   [mq.lg]: {

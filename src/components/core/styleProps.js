@@ -48,9 +48,17 @@ export const flexProps = ({
   flexWrap: flexWrap === "reverse" ? "wrap-reverse" : flexWrap && "wrap",
 });
 
-export const textProps = ({ color, size, weight, inline, center, align }) => ({
+export const textProps = ({
   color,
-  fontSize: size && `var(--fs-${size})`,
+  size,
+  fontSize,
+  weight,
+  inline,
+  center,
+  align,
+}) => ({
+  color,
+  fontSize: fontSize || (size && `var(--fs-${size})`),
   fontWeight: weight,
   display: inline && "inline",
   textAlign: align || (center && "center"),
@@ -76,7 +84,8 @@ const underlineTypes = {
   },
 };
 
-export const linkProps = ({ underline, noWrap }) => ({
+export const linkProps = ({ underline, noWrap, noCol }) => ({
   ...(underlineTypes[underline] || underlineTypes.always),
   whiteSpace: noWrap && "nowrap",
+  color: noCol || "var(--color-fg-link)",
 });
