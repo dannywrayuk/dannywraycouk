@@ -5,9 +5,4 @@ date: 2022/06/01
 image: /img/cover-images/building-this-site.jpeg
 timeline:
   variant: project
-tags:
-  - blog
-  - nextjs
-  - upgrade
-  - v2
 ---
