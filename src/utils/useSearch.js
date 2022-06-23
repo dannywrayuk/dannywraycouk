@@ -11,7 +11,7 @@ const fuse = new Fuse(allMeta, {
     "title",
     "abstract",
     { name: "generatedKeywords", weight: 0.2 },
-    { name: "tags", weight: 0.2 },
+    { name: "keywords", weight: 0.2 },
   ],
 });
 
