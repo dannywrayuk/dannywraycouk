@@ -4,6 +4,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeSlug from "rehype-slug";
 import remarkMath from "remark-math";
 import remarkGfm from "remark-gfm";
+import remarkFrontMatter from "remark-frontmatter";
 import withShiki from "@stefanprobst/rehype-shiki";
 import shiki from "shiki";
 
@@ -12,7 +13,7 @@ const highlighter = await shiki.getHighlighter({ theme: "dark-plus" });
 const withMDX = nextMdx({
   extension: /\.mdx|\.md?$/,
   options: {
-    remarkPlugins: [mdxWrapperPlugin, remarkMath, remarkGfm],
+    remarkPlugins: [mdxWrapperPlugin, remarkMath, remarkGfm, remarkFrontMatter],
     rehypePlugins: [
       rehypeSlug,
       () => withShiki({ highlighter }),

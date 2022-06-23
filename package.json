@@ -29,6 +29,7 @@
     "react-icons": "^4.3.1",
     "rehype-katex": "^6.0.2",
     "rehype-slug": "^5.0.1",
+    "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "shiki": "^0.10.1",
