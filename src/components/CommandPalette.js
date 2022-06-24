@@ -10,7 +10,6 @@ import {
 import { HiOutlineFolder } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
-import { Shortcut } from "./Shortcut";
 import { toggleColourMode } from "@utils/toggleColourMode";
 import { useState } from "react";
 import { MdOutlineArticle } from "react-icons/md";
@@ -83,17 +82,6 @@ const Item = styled.div({
   },
 });
 
-const ShortcutItem = styled.div({
-  padding: "0 30px",
-  height: "50px",
-  display: "flex",
-  alignItems: "center",
-  columnGap: "15px",
-  cursor: "default",
-  color: "var(--color-fg-subtle)",
-  justifyContent: "space-between",
-});
-
 const Suggestions = () => (
   <SuggestionsWrapper>
     <Section>
@@ -118,9 +106,8 @@ const Suggestions = () => (
         <Text>Projects</Text>
       </Item>
     </Link>
-
     <Section>
-      <Text>Links</Text>
+      <Text>Social</Text>
     </Section>
     <Link href="/github" underline="none">
       <Item>
@@ -140,17 +127,6 @@ const Suggestions = () => (
         <Text>Twitter</Text>
       </Item>
     </Link>
-    <Section>
-      <Text>Shortcuts</Text>
-    </Section>
-    <ShortcutItem>
-      <Text>Open Command Palette</Text>
-      <Shortcut keys={["ctrl", "k"]} />
-    </ShortcutItem>
-    <ShortcutItem>
-      <Text>Close Command Palette</Text>
-      <Shortcut keys={["esc"]} />
-    </ShortcutItem>
   </SuggestionsWrapper>
 );
 
