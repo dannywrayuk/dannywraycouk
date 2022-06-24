@@ -10,3 +10,11 @@ export const Flex = styled.div(
   flexProps,
   useCSSProp
 );
+
+export const BorderBox = styled(Box)(({ bg }) => ({
+  border: "1px solid var(--color-border-default)",
+  borderRadius: "0.5em",
+  padding: "15px",
+  backgroundColor: `var(--color-${bg})`,
+  position: "relative",
+}));

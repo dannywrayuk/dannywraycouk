@@ -21,6 +21,7 @@ const ImageText = styled.p({
 const meta = {
   title: "About",
   abstract: "A little about me.",
+  route: "/about",
 };
 
 const About = () => (

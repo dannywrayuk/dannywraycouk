@@ -30,6 +30,7 @@ const Bubble = styled.div({
 const meta = {
   title: "Projects",
   abstract: "Projects that I've made, some might be WIP.",
+  route: "/projects",
 };
 
 const Projects = ({ projects, featured, university }) => (

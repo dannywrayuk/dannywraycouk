@@ -10,6 +10,7 @@ const Wrapper = styled.div({
   textAlign: "center",
   color: "var(--color-fg-default)",
   padding: "10px 0",
+  marginTop: "50px",
   rowGap: "30px",
   [mq.sm]: {
     flexDirection: "row",
@@ -18,7 +19,7 @@ const Wrapper = styled.div({
   },
   [mq.md]: {
     padding: "0 50px",
-    margin: "0 50px",
+    margin: "50px 50px 0",
   },
 });
 

@@ -1,93 +1,106 @@
 import styled from "@emotion/styled";
-import { Flex, Icon, Text } from "@components/core";
+import {
+  BorderBox,
+  Flex,
+  Heading,
+  Icon,
+  LinkButton,
+  Text,
+} from "@components/core";
 import { Layout } from "@components/Layout";
 import { TitleAndImage } from "@components/presentation/TitleAndImage";
 import {
   AiOutlineTwitter,
   AiFillLinkedin,
   AiOutlineGithub,
+  AiOutlineMail,
 } from "react-icons/ai";
-import { links } from "@utils/constants";
+import { hexagonClipPath, links } from "@utils/constants";
+import { mq } from "@utils/breakpoints";
+import { MetaTags } from "@components/Head";
 
-const Wrapper = styled(Flex)({
-  maxWidth: "300px",
-  margin: "0 auto",
-  width: "100%",
-  display: "flex",
-  flexDirection: "column",
-  rowGap: "20px",
+const StyledLink = styled(LinkButton)(({ bg, black }) => ({
+  padding: "12px",
+  border: "none",
+  backgroundColor: `var(--color-${bg})`,
+  color: black ? "black" : "white",
+  minWidth: "100%",
+  ":hover": {
+    backgroundColor: `var(--color-${bg})`,
+  },
+  [mq.sm]: {
+    minWidth: 300,
+  },
+}));
+
+const MeImage = styled.img({
+  clipPath: hexagonClipPath,
+  height: "200px",
+  width: "200px",
+  [mq.sm]: {
+    height: "250px",
+    width: "250px",
+  },
+  [mq.md]: {
+    height: "280px",
+    width: "280px",
+  },
 });
 
-const RoundedColorBubble = styled.div(
-  {
-    padding: "12px",
-    borderRadius: "10px",
-    width: "100%",
-    textDecoration: "none",
+const DirectionFlip = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  rowGap: "40px",
+  columnGap: "100px",
+  [mq.md]: {
+    flexDirection: "row",
   },
-  ({ bg, col, size }) => ({ backgroundColor: bg, color: col, padding: size })
-);
+});
 
-const Home = () => {
+const meta = {
+  title: "Links",
+  abstract: "All the links you might need if you want to contact me.",
+  route: "/links",
+};
+
+const Links = () => {
   return (
     <Layout>
-      <TitleAndImage />
-      <Wrapper column>
-        <RoundedColorBubble
-          bg="var(--primary30)"
-          col="var(--color-fg-default)"
-          as="a"
-          href={links.mail}
-        >
-          <Flex column cg={10} rg={10}>
-            <Text>I'm open to making things</Text>
-            <RoundedColorBubble
-              bg="var(--color-brand-primary)"
-              col="black"
-              size="10px"
-            >
-              <Flex column>
-                <Text>Contact</Text>
-              </Flex>
-            </RoundedColorBubble>
-          </Flex>
-        </RoundedColorBubble>
-        <RoundedColorBubble
-          bg="var(--color-twitter)"
-          col="white"
-          as="a"
-          href={links.twitter}
-        >
-          <Flex cg={10} _css={{ paddingRight: "16px" }}>
-            <Icon as={AiOutlineTwitter} />
-            <Text>Twitter</Text>
-          </Flex>
-        </RoundedColorBubble>
-        <RoundedColorBubble
-          bg="var(--color-linkedin)"
-          col="white"
-          as="a"
-          href={links.linkedin}
-        >
-          <Flex cg={10} _css={{ paddingRight: "16px" }}>
-            <Icon as={AiFillLinkedin} />
-            <Text>LinkedIn</Text>
-          </Flex>
-        </RoundedColorBubble>
-        <RoundedColorBubble
-          bg="var(--color-github)"
-          col="white"
-          as="a"
-          href={links.github}
-        >
-          <Flex cg={10} _css={{ paddingRight: "16px" }}>
-            <Icon as={AiOutlineGithub} />
-            <Text>Github</Text>
-          </Flex>
-        </RoundedColorBubble>
-      </Wrapper>
+      <MetaTags meta={meta} />
+      <DirectionFlip>
+        <Flex center column>
+          <MeImage src="/img/me.jpeg" />
+          <Heading>@dannywrayuk</Heading>
+        </Flex>
+        <Flex center rg="30px" column>
+          <StyledLink bg="brand-primary" href={links.mail} black>
+            <Flex cg={10} _css={{ paddingRight: "16px" }} center>
+              <Icon as={AiOutlineMail} />
+              <Text>Email</Text>
+            </Flex>
+          </StyledLink>
+          <StyledLink bg="twitter" href="/">
+            <Flex cg={10} _css={{ paddingRight: "16px" }} center>
+              <Icon as={AiOutlineTwitter} />
+              <Text>Twitter</Text>
+            </Flex>
+          </StyledLink>
+          <StyledLink bg="github" href={links.github}>
+            <Flex cg={10} _css={{ paddingRight: "16px" }} center>
+              <Icon as={AiOutlineGithub} />
+              <Text>Github</Text>
+            </Flex>
+          </StyledLink>
+          <StyledLink bg="linkedin" href={links.linkedin}>
+            <Flex cg={10} _css={{ paddingRight: "16px" }} center>
+              <Icon as={AiFillLinkedin} />
+              <Text>LinkedIn</Text>
+            </Flex>
+          </StyledLink>
+        </Flex>
+      </DirectionFlip>
     </Layout>
   );
 };
 
-export default Home;
+export default Links;

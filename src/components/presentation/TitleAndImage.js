@@ -36,7 +36,6 @@ const Wrapper = styled(Flex)({
     flexDirection: "row-reverse",
     justifyContent: "center",
     textAlign: "right",
-    margin: "75px 0 0",
   },
 });
 
