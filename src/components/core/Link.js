@@ -1,7 +1,29 @@
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
 import NextLink from "next/link";
-import { linkProps } from "./styleProps";
+
+const linkVariants = {
+  noStyle: {
+    textDecoration: "none",
+  },
+  default: {
+    textDecoration: "none",
+    color: "var(--color-fg-link)",
+    fontWeight: 600,
+    ":hover": {
+      textDecoration: "underline",
+    },
+  },
+  underlineAlways: {
+    textDecoration: "underline",
+  },
+};
+
+export const linkProps = ({ variant, noWrap, noCol }) => ({
+  ...(linkVariants[variant] || linkVariants.default),
+  whiteSpace: noWrap && "nowrap",
+  color: noCol ? "unset" : "var(--color-fg-link)",
+});
 
 export const LinkInternal = styled.a(
   {
@@ -26,6 +48,7 @@ export const LinkButton = styled(Link)({
   textDecoration: "none",
   color: "inherit",
   ":hover": {
+    textDecoration: "none",
     backgroundColor: "var(--color-bg-muted)",
   },
   [mq.sm]: {

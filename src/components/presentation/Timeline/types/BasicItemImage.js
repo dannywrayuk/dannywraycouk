@@ -6,7 +6,7 @@ export const BasicItemImage = ({ data }) => {
     throw new Error("'image' timeline type requires image property");
   return (
     <BasicItemWrapper>
-      <Link href={data.route} underline="none">
+      <Link href={data.route} variant="noStyle">
         <ImageWrapper>
           <Image src={data.image} />
         </ImageWrapper>

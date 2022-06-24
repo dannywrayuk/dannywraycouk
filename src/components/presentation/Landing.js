@@ -40,7 +40,7 @@ const IntroBanner = () => (
       devtools. Currently, I work on the customer acquisition platform at
       Capital One.
     </Text>
-    <FloatingBubble href="/about" underline="none" noWrap noCol>
+    <FloatingBubble href="/about" variant="noStyle" noWrap noCol>
       <Text>
         Read more
         {" ✨"}

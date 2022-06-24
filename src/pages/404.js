@@ -16,7 +16,7 @@ const NotFound = () => (
       <Flex column center rg={50}>
         <Heading>There's nothing to see here..</Heading>
         <Image src="/img/sadfrog.jpeg" />
-        <Link href="/" underline>
+        <Link href="/" variant="underlineAlways">
           <Text>back home</Text>
         </Link>
       </Flex>

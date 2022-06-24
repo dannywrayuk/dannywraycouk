@@ -19,7 +19,7 @@ const CoverText = styled(Heading)({
 
 export const BasicItemCover = ({ data }) => (
   <BasicItemWrapper>
-    <Link href={data.route} underline="none">
+    <Link href={data.route} variant="noStyle">
       <Cover center>
         <CoverImage src="/img/cover-images/default.jpeg" />
         <CoverText size="xl">{data.title}</CoverText>

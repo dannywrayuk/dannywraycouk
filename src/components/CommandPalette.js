@@ -94,13 +94,13 @@ const Suggestions = () => (
     <Section>
       <Text>Navigation</Text>
     </Section>
-    <Link href="/about" underline="none">
+    <Link href="/about" variant="noStyle">
       <Item>
         <Icon as={BsPerson} />
         <Text>About</Text>
       </Item>
     </Link>
-    <Link href="/projects" underline="none">
+    <Link href="/projects" variant="noStyle">
       <Item>
         <Icon as={HiOutlineFolder} />
         <Text>Projects</Text>
@@ -109,19 +109,19 @@ const Suggestions = () => (
     <Section>
       <Text>Social</Text>
     </Section>
-    <Link href="/github" underline="none">
+    <Link href="/github" variant="noStyle">
       <Item>
         <Icon as={AiOutlineGithub} />
         <Text>Github</Text>
       </Item>
     </Link>
-    <Link href="/linkedin" underline="none">
+    <Link href="/linkedin" variant="noStyle">
       <Item>
         <Icon as={AiFillLinkedin} />
         <Text>LinkedIn</Text>
       </Item>
     </Link>
-    <Link href="/twitter" underline="none">
+    <Link href="/twitter" variant="noStyle">
       <Item>
         <Icon as={AiOutlineTwitter} />
         <Text>Twitter</Text>

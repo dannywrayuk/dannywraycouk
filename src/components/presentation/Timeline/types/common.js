@@ -16,13 +16,13 @@ const Tag = ({ data }) => <span>#{data} </span>;
 export const BasicBottom = ({ data }) => (
   <Box p="15px">
     <Heading size="xl" mb="10px">
-      <Link href={data.route} underline="hover" noCol>
+      <Link href={data.route} noCol>
         {data.title}
       </Link>
     </Heading>
     <Text>{data.abstract}</Text>
     {data.tags && (
-      <Text>
+      <Text color="var(--color-fg-subtle)">
         <Mapper data={data.tags} Component={Tag} />
       </Text>
     )}

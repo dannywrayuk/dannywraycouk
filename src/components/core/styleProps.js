@@ -68,24 +68,3 @@ export const iconProps = ({ size = 22 }) => ({
   width: size,
   height: size,
 });
-
-const underlineTypes = {
-  none: {
-    textDecoration: "none",
-  },
-  always: {
-    textDecoration: "underline",
-  },
-  hover: {
-    textDecoration: "none",
-    ":hover": {
-      textDecoration: "underline",
-    },
-  },
-};
-
-export const linkProps = ({ underline, noWrap, noCol }) => ({
-  ...(underlineTypes[underline] || underlineTypes.always),
-  whiteSpace: noWrap && "nowrap",
-  color: noCol || "var(--color-fg-link)",
-});
