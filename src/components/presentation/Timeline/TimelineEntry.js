@@ -12,20 +12,27 @@ const inferType = (data) => {
   return "default";
 };
 
-export const TimelineEntry = ({ data, type }) => {
+const getEntry = (data) => {
   let Entry;
   if (data.timeline?.displayType) {
-    Entry = timelineEntryTypes[data.timeline.displayType || "default"];
+    Entry =
+      timelineEntryTypes[data.timeline.displayType] ||
+      timelineEntryTypes.default;
   } else {
-    Entry = timelineEntryTypes[inferType(data) || "default"];
+    Entry = timelineEntryTypes[inferType(data)];
   }
+  return <Entry data={data} />;
+};
+
+export const TimelineEntry = ({ data, type }) => {
+  const Entry = getEntry(data);
   return (
     <TimelineLayoutWrapper
       label={data.dateString}
       variant={type || data.timeline?.variant}
       icon={data.timeline?.icon}
     >
-      <Entry data={data} />
+      {Entry}
     </TimelineLayoutWrapper>
   );
 };
