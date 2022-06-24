@@ -4,8 +4,10 @@ import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
 
 const TitleWrapper = styled(Flex)({
+  marginTop: "60px",
   [mq.sm]: {
     textAlign: "center",
+    marginBottom: "60px",
   },
 });
 
@@ -15,7 +17,7 @@ export const PostLayout = ({
   className,
 }) => (
   <Layout>
-    <TitleWrapper my={60} column rg={30}>
+    <TitleWrapper column rg={30}>
       {!hideDate && dateString && (
         <Text color="var(--color-fg-link)">{dateString}</Text>
       )}
