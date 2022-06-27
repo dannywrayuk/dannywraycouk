@@ -8,34 +8,34 @@ image: /img/cover-images/physics.jpeg
 
 ### Introduction
 
-[The Ultraviolet Catastrophe](physics/quantum/introduction/ultraviolet_catastrophe)
+[The Ultraviolet Catastrophe](physics/quantum/introduction/ultraviolet-catastrophe)
 
-[The Uncertainty Principle](physics/quantum/introduction/photoelectric_phenomenon)
+[The Uncertainty Principle](physics/quantum/introduction/photoelectric-phenomenon)
 
-[Photoelectric Phenomenon](physics/quantum/introduction/uncertainty_principle)
+[Photoelectric Phenomenon](physics/quantum/introduction/uncertainty-principle)
 
-[Structure of the Atom](physics/quantum/introduction/structure_of_the_atom)
+[Structure of the Atom](physics/quantum/introduction/structure-of-the-atom)
 
-[Schrodinger's Equation](physics/quantum/introduction/schrodingers_equation)
+[Schrodinger's Equation](physics/quantum/introduction/schrodingers-equation)
 
 ### Quantum wells
 
-[Time Dependence and Probability Current](physics/quantum/quantum_wells/time_dependence_and_probability_current)
+[Time Dependence and Probability Current](physics/quantum/quantum-wells/time-dependence-and-probability-current)
 
-[A Free Particle](physics/quantum/quantum_wells/free_particle)
+[A Free Particle](physics/quantum/quantum-wells/free-particle)
 
-[Particle in an Asymmetric Infinite Square Well.](physics/quantum/quantum_wells/particle_in_infinite_square_well_asymmetric)
+[Particle in an Asymmetric Infinite Square Well.](physics/quantum/quantum-wells/particle-in-infinite-square-well-asymmetric)
 
-[Particle in a Symmetric Infinite Square Well](physics/quantum/quantum_wells/particle_in_infinite_square_well_symmetric)
+[Particle in a Symmetric Infinite Square Well](physics/quantum/quantum-wells/particle-in-infinite-square-well-symmetric)
 
-[Particle in a Finite Square Well](physics/quantum/quantum_wells/particle_in_finite_square_well)
+[Particle in a Finite Square Well](physics/quantum/quantum-wells/particle-in-finite-square-well)
 
-[Scattering Particles Against a Barrier](physics/quantum/quantum_wells/scattering_particles_against_barrier)
+[Scattering Particles Against a Barrier](physics/quantum/quantum-wells/scattering-particles-against-barrier)
 
 ### Dirac notation
 
-[Dirac Notation and Operators](physics/quantum/dirac_notation_formalism/dirac_notation_and_operators)
+[Dirac Notation and Operators](physics/quantum/dirac-notation-formalism/dirac-notation-and-operators)
 
-[Position](physics/quantum/dirac_notation_formalism/position)
+[Position](physics/quantum/dirac-notation-formalism/position)
 
-[Momentum](physics/quantum/dirac_notation_formalism/momentum)
+[Momentum](physics/quantum/dirac-notation-formalism/momentum)

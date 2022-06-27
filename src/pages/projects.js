@@ -16,17 +16,6 @@ const Grid = styled.div({
   },
 });
 
-const Bubble = styled.div({
-  display: "inline-block",
-  backgroundColor: "var(--color-bg-muted)",
-  padding: 10,
-  borderRadius: "1em",
-  transform: "translate(-10px, 50%)",
-  [mq.md]: {
-    transform: "translate(-20%, 50%)",
-  },
-});
-
 const meta = {
   title: "Projects",
   abstract: "Projects that I've made, some might be WIP.",
@@ -65,7 +54,7 @@ export default Projects;
 
 export const getStaticProps = async () => ({
   props: {
-    featured: getMetadataById(["building-this-site"]),
+    featured: getMetadataById(["scalar-fields-in-cosmology"]),
     projects: getMetadataById(["building-this-site", "physics"]),
     university: getMetadataById([
       "scalar-fields-in-cosmology",

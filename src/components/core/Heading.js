@@ -6,7 +6,6 @@ export const Heading = styled.h1(
   {
     fontSize: "var(--fs-xl)",
     fontFamily: "var(--Sora)",
-    fontWeight: 400,
   },
   boxProps,
   textProps,

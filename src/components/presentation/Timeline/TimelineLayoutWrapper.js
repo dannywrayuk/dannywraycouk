@@ -19,7 +19,7 @@ const Wrapper = styled.div({
     left: "1rem",
     zIndex: "-1",
     [mq.lg]: {
-      left: "-2.5rem",
+      left: "-2rem",
     },
   },
   ":last-child": {
@@ -42,7 +42,7 @@ const IconWrapper = styled.div({
   backgroundColor: "var(--color-bg-default)",
   left: "1rem",
   [mq.lg]: {
-    left: "-2.5rem",
+    left: "-2rem",
     transform: "translate(-50%,-50%)",
   },
 });
@@ -57,7 +57,7 @@ const TextWrapper = styled.div({
   [mq.lg]: {
     margin: "0",
     position: "absolute",
-    left: "-4rem",
+    left: "-3.25rem",
     transform: "translate(-100%,-50%)",
   },
 });

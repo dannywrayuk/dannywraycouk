@@ -9,10 +9,12 @@ const sortFn = (a, b) => {
 
 export const getMetadataById = (ids) =>
   ids
-    .map((x) => allMeta.find((y) => y.id === x))
+    .map((x) => allMeta.find((y) => y.id === x && !y.hidden))
     .filter(Boolean)
     .sort(sortFn);
 
 export const getMetadataByRoute = (route) => {
-  return allMeta.filter((x) => minimatch(x.route, route)).sort(sortFn);
+  return allMeta
+    .filter((x) => minimatch(x.route, route) && !x.hidden)
+    .sort(sortFn);
 };
