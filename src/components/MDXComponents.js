@@ -7,6 +7,7 @@ import {
   LinkInternal,
   LinkButton,
 } from "@components/core";
+import { mq } from "@utils/breakpoints";
 
 const Square = styled.div(
   {
@@ -76,7 +77,7 @@ const ParentStyles = styled.div(
       borderColor: "var(--feintGrey)",
       borderStyle: "solid",
     },
-    img: {
+    "img:not([class])": {
       maxWidth: "450px",
       margin: "0 auto",
       display: "block",
@@ -127,11 +128,10 @@ const ParentStyles = styled.div(
     "h1,h2,h3,h4": {
       margin: "60px 0 20px",
     },
-    "[id^='figure']": {
-      margin: "60px 0",
-    },
-    "[id^='figure'] img": {
-      marginBottom: "20px",
+    "p img + em": {
+      display: "block",
+      textAlign: "center",
+      color: "var(--color-fg-subtle)",
     },
   },
   ({ data }) => ({

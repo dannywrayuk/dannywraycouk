@@ -6,6 +6,12 @@ const linkVariants = {
   noStyle: {
     textDecoration: "none",
   },
+  noStyleHover: {
+    textDecoration: "none",
+    ":hover": {
+      textDecoration: "underline",
+    },
+  },
   default: {
     textDecoration: "none",
     color: "var(--color-fg-link)",
@@ -19,10 +25,9 @@ const linkVariants = {
   },
 };
 
-export const linkProps = ({ variant, noWrap, noCol }) => ({
+export const linkProps = ({ variant, noWrap }) => ({
   ...(linkVariants[variant] || linkVariants.default),
   whiteSpace: noWrap && "nowrap",
-  color: noCol ? "unset" : "var(--color-fg-link)",
 });
 
 export const LinkInternal = styled.a(

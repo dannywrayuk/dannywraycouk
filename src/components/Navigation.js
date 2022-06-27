@@ -62,7 +62,7 @@ export const Navigation = () => {
     <>
       {isOpen && <CommandPalette close={setClose} />}
       <Grid>
-        <Link href="/" variant="noStyle" noCol>
+        <Link href="/" variant="noStyle">
           <LogoText>danny.</LogoText>
         </Link>
         <Menu onClick={setOpen}>

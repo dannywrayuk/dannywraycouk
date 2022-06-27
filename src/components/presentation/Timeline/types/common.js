@@ -16,7 +16,7 @@ const Tag = ({ data }) => <span>#{data} </span>;
 export const BasicBottom = ({ data }) => (
   <Box p="15px">
     <Heading size="xl" mb="10px">
-      <Link href={data.route} noCol>
+      <Link href={data.route} variant="noStyleHover">
         {data.title}
       </Link>
     </Heading>

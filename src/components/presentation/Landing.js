@@ -36,11 +36,10 @@ const EmojiBanner = () => (
 const IntroBanner = () => (
   <BorderBox>
     <Text>
-      I'm in love with <b>building websites</b>, everything from design to
-      devtools. Currently, I work on the customer acquisition platform at
-      Capital One.
+      I'm in love with building websites, everything from design to devtools.
+      Currently, I work on the customer acquisition platform at Capital One.
     </Text>
-    <FloatingBubble href="/about" variant="noStyle" noWrap noCol>
+    <FloatingBubble href="/about" variant="noStyle" noWrap>
       <Text>
         Read more
         {" ✨"}
