@@ -34,7 +34,7 @@ const EmojiBanner = () => (
 );
 
 const IntroBanner = () => (
-  <BorderBox>
+  <BorderBox bg="bg-default">
     <Text>
       I'm in love with building websites, everything from design to devtools.
       Currently, I work on the customer acquisition platform at Capital One.

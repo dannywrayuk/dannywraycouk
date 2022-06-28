@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
+import { ApplyBackground } from "./ApplyBackground";
 
 const FooterSpacing = styled.div({
   display: "flex",
@@ -25,11 +26,13 @@ const SectionSpacing = styled.div({
 });
 
 export const Layout = ({ children }) => (
-  <CenterContent>
-    <FooterSpacing>
-      <Navigation />
-      <SectionSpacing>{children}</SectionSpacing>
-      <Footer />
-    </FooterSpacing>
-  </CenterContent>
+  <ApplyBackground>
+    <CenterContent>
+      <FooterSpacing>
+        <Navigation />
+        <SectionSpacing>{children}</SectionSpacing>
+        <Footer />
+      </FooterSpacing>
+    </CenterContent>
+  </ApplyBackground>
 );

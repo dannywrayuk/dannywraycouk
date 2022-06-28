@@ -14,7 +14,7 @@ const CoverText = styled(Heading)({
   textAlign: "center",
   color: "black",
   margin: "0 10%",
-  zIndex: "1",
+  zIndex: "0",
 });
 
 export const BasicItemCover = ({ data }) => (
