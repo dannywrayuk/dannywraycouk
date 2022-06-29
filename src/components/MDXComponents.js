@@ -7,7 +7,6 @@ import {
   LinkInternal,
   LinkButton,
 } from "@components/core";
-import { mq } from "@utils/breakpoints";
 
 const Square = styled.div(
   {
@@ -103,6 +102,10 @@ const ParentStyles = styled.div(
     p: {
       marginBottom: "20px",
     },
+    "> p": {
+      backgroundColor: "var(--color-bg-default)",
+      borderRadius: "1em",
+    },
     table: {
       display: "block",
       width: "max-content",
@@ -119,6 +122,7 @@ const ParentStyles = styled.div(
     td: {
       padding: "5px 15px",
       border: "solid 1px var(--color-border-default)",
+      backgroundColor: "var(--color-bg-default)",
     },
     ul: {
       listStylePosition: "inside",

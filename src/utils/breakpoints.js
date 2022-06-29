@@ -1,18 +1,18 @@
-export const breakpoints = {
-  base: "0px",
-  sm: "30em",
-  md: "48em",
-  lg: "62em",
-  xl: "80em",
-  "2xl": "96em",
+export const bp = {
+  base: 0,
+  sm: 30,
+  md: 48,
+  lg: 62,
+  xl: 80,
+  "2xl": 96,
 };
 
-const toMediaString = (bp) => `@media (min-width: ${bp})`;
+const toMediaString = (x) => `@media (min-width: ${x}em)`;
 
 export const mq = {
-  xs: toMediaString(breakpoints.xs),
-  sm: toMediaString(breakpoints.sm),
-  md: toMediaString(breakpoints.md),
-  lg: toMediaString(breakpoints.lg),
-  xl: toMediaString(breakpoints.xl),
+  xs: toMediaString(bp.xs),
+  sm: toMediaString(bp.sm),
+  md: toMediaString(bp.md),
+  lg: toMediaString(bp.lg),
+  xl: toMediaString(bp.xl),
 };

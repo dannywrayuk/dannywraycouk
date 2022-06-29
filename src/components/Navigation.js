@@ -36,6 +36,7 @@ const Menu = styled(Button)({
   [mq.sm]: {
     marginLeft: "auto",
   },
+  backgroundColor: "var(--color-bg-subtle)",
   ":hover": {
     backgroundColor: "var(--color-bg-muted)",
   },
