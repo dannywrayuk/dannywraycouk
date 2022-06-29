@@ -40,6 +40,7 @@ const IconWrapper = styled.div({
   transform: "translateX(-50%)",
   color: "var(--color-fg-muted)",
   backgroundColor: "var(--color-bg-default)",
+  borderRadius: "0.5em",
   left: "1rem",
   [mq.lg]: {
     left: "-2rem",
@@ -54,6 +55,8 @@ const TextWrapper = styled.div({
   color: "var(--color-fg-muted)",
   marginBottom: "10px",
   marginLeft: "2rem",
+  backgroundColor: "var(--color-bg-default)",
+  borderRadius: "0.5em",
   [mq.lg]: {
     margin: "0",
     position: "absolute",
