@@ -55,8 +55,10 @@ const TextWrapper = styled.div({
   color: "var(--color-fg-muted)",
   marginBottom: "10px",
   marginLeft: "2rem",
-  backgroundColor: "var(--color-bg-default)",
-  borderRadius: "0.5em",
+  p: {
+    backgroundColor: "var(--color-bg-default)",
+    borderRadius: "0.5em",
+  },
   [mq.lg]: {
     margin: "0",
     position: "absolute",
