@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: ${{ echo dev }}
+    environment: ${{ GITHUB_REF_NAME == "rebrand" && "dev"}}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
