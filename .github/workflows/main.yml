@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: ${{ echo dev }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
