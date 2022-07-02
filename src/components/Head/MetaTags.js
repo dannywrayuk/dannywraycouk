@@ -18,10 +18,9 @@ export const MetaTags = ({ meta = {}, children }) => {
   const pageTitle = meta.title ? meta.title + " | Danny Wray" : "Danny Wray";
   const description =
     meta.abstract ||
-    "My personal website. I focus on software development and physics, but I post about pretty much anything.";
+    "Danny Wray is a software developer who specializes in building and sometimes designing websites.";
   const cardImage =
-    "https://dannywray.co.uk" + (meta.image || "/defaultcard.jpg");
-  const cardType = meta.image ? "summary_large_image" : "summary";
+    "https://dannywray.co.uk" + (meta.image || "/img/home-card.png");
   const siteUrl = "https://dannywray.co.uk" + (meta.route || "");
   return (
     <Head>
@@ -30,7 +29,7 @@ export const MetaTags = ({ meta = {}, children }) => {
       <meta name="description" content={description} />
       <meta property="og:image:alt" content={description} />
       <meta property="og:description" content={description} />
-      <meta name="twitter:card" content={cardType} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:image" content={cardImage} />
       <meta property="og:url" content={siteUrl} />
       <link rel="canonical" href={siteUrl}></link>
