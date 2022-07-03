@@ -8,7 +8,7 @@ export const CommonMetaTags = () => (
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#ffca1e"></meta>
+    {/* <meta name="theme-color" content="#ffca1e"></meta> */}
     <meta name="twitter:creator" content="@dannywrayuk" />
     <meta name="twitter:card" content="summary_large_image" />
   </Head>
