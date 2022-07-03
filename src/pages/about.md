@@ -4,11 +4,11 @@
   layout: plain
 ---
 
-![test](/img/boat_image.jpeg)
-
 # A little about me
 
 Hey, I'm Danny. I'm currently a software engineer at Capital One. I'm passionate about web development and all things javascript.
+
+![test](/img/boat_image.jpeg)
 
 Before I started my journey into software engineering I was a physics student. I studied theoretical physics at the University of Nottingham and graduated in 2020 with a masters degree. My thesis was in cosmology, which you can read [here](/projects/scalar-fields-in-cosmology).
 
