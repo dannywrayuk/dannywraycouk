@@ -2,7 +2,6 @@ import Head from "next/head";
 
 export const CommonMetaTags = () => (
   <Head>
-    <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta
       name="viewport"
@@ -15,7 +14,7 @@ export const CommonMetaTags = () => (
   </Head>
 );
 
-export const MetaTags = ({ meta = {}, children }) => {
+export const MetaTags = ({ meta = {} }) => {
   const pageTitle = meta.title ? meta.title + " | Danny Wray" : "Danny Wray";
   const description =
     meta.abstract ||
@@ -33,7 +32,6 @@ export const MetaTags = ({ meta = {}, children }) => {
       <meta property="og:image" content={cardImage} />
       <meta property="og:url" content={siteUrl} />
       <link rel="canonical" href={siteUrl}></link>
-      {children}
     </Head>
   );
 };

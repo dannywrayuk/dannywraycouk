@@ -2,7 +2,6 @@ import { Html, Head, Main, NextScript } from "next/document";
 import {
   GoogleFonts,
   GoogleAnalytics,
-  CommonMetaTags,
   ColorModeScript,
   KatexScript,
 } from "@components/Head";
@@ -20,7 +19,6 @@ export default () => (
           Karla: { weights: [400, 600, 700] },
         }}
       />
-      <CommonMetaTags />
       <KatexScript />
     </Head>
     <body>
