@@ -2,7 +2,6 @@ import { Text, Link, Flex, LinkButton, BorderBox } from "@components/core";
 import { TitleAndImage } from "@components/presentation/TitleAndImage";
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
-import { links } from "@utils/constants";
 
 const FloatingBubble = styled(LinkButton)({
   border: "1px solid var(--color-border-default)",
@@ -16,6 +15,13 @@ const FloatingBubble = styled(LinkButton)({
   [mq.sm]: {
     right: "2%",
     transform: "translate(0, 50%)",
+  },
+});
+
+const IntroText = styled(Text)({
+  textAlign: "center",
+  [mq.sm]: {
+    textAlign: "left",
   },
 });
 
@@ -35,10 +41,10 @@ const EmojiBanner = () => (
 
 const IntroBanner = () => (
   <BorderBox bg="bg-default">
-    <Text>
-      I'm in love with building websites, everything from design to devtools.
-      Currently, I work on the customer acquisition platform at Capital One.
-    </Text>
+    <IntroText>
+      I love javascript and building websites. I'm currently working on the
+      customer acquisition platform at Capital One.
+    </IntroText>
     <FloatingBubble href="/about" variant="noStyle" noWrap>
       <Text>
         Read more
