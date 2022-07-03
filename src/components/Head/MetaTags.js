@@ -11,6 +11,7 @@ export const CommonMetaTags = () => (
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#ffca1e"></meta>
     <meta name="twitter:creator" content="@dannywrayuk" />
+    <meta name="twitter:card" content="summary_large_image" />
   </Head>
 );
 
@@ -29,7 +30,6 @@ export const MetaTags = ({ meta = {}, children }) => {
       <meta name="description" content={description} />
       <meta property="og:image:alt" content={description} />
       <meta property="og:description" content={description} />
-      <meta name="twitter:card" content="summary_large_image" />
       <meta property="og:image" content={cardImage} />
       <meta property="og:url" content={siteUrl} />
       <link rel="canonical" href={siteUrl}></link>

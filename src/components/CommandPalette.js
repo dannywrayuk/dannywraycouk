@@ -12,7 +12,6 @@ import { BsPerson } from "react-icons/bs";
 import { BiMoon } from "react-icons/bi";
 import { toggleColourMode } from "@utils/toggleColourMode";
 import { useState } from "react";
-import { MdOutlineArticle } from "react-icons/md";
 import { useSearch } from "@utils/useSearch";
 
 const Overlay = styled.div({
@@ -70,12 +69,13 @@ const Section = styled.div({
 });
 
 const Item = styled.div({
-  padding: "0 30px",
-  height: "50px",
+  padding: "10px 30px",
+  minHeight: "50px",
   width: "100%",
   display: "flex",
   alignItems: "center",
   columnGap: "15px",
+  textAlign: "left",
   color: "var(--color-fg-subtle)",
   ":hover": {
     color: "var(--color-fg-link)",
@@ -137,8 +137,7 @@ const Results = ({ searchResults }) => (
     </Section>
     {searchResults.map((r, id) => (
       <Item key={id + "searchResult"} as={Link} href={r.item.route}>
-        <Icon as={MdOutlineArticle} />
-        <Text>{r.item.title}</Text>
+        <Text lineHeight="1.5em">{r.item.title}</Text>
       </Item>
     ))}
   </SuggestionsWrapper>

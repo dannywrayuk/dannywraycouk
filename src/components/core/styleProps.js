@@ -56,15 +56,19 @@ export const textProps = ({
   inline,
   center,
   align,
+  lineHeight,
 }) => ({
   color,
   fontSize: fontSize || (size && `var(--fs-${size})`),
   fontWeight: weight,
   display: inline && "inline",
   textAlign: align || (center && "center"),
+  lineHeight,
 });
 
 export const iconProps = ({ size = 22 }) => ({
   width: size,
+  minWidth: size,
   height: size,
+  minHeight: size,
 });
