@@ -29,15 +29,10 @@ export const BasicBottom = ({ data }) => (
   </Box>
 );
 
-export const Image = styled.img({
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-});
-
 export const ImageWrapper = styled(Flex)({
+  position: "relative",
   width: "100%",
-  height: "fit-content",
+  height: "auto",
   overflow: "hidden",
   aspectRatio: "16 / 9",
 });
