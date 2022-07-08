@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import { mq } from "@utils/breakpoints";
-import { Flex, CapsText } from "@components/core";
+import { Flex, CapsText, Image } from "@components/core";
 import { hexagonClipPath } from "@utils/constants";
-import Image from "next/image";
 
 const MeImage = styled.div({
   clipPath: hexagonClipPath,
@@ -45,7 +44,12 @@ export const TitleAndImage = () => {
   return (
     <Wrapper mt={30}>
       <MeImage>
-        <Image src="/img/me.jpeg" layout="fill" />
+        <Image
+          src="/img/me.jpeg"
+          layout="fill"
+          priority
+          sizes={{ sm: "200px", md: "300px", max: "600px" }}
+        />
       </MeImage>
       <Flex column rg={10}>
         <Title>Danny Wray</Title>

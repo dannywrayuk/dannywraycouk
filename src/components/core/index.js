@@ -5,3 +5,4 @@ export * from "./Text";
 export * from "./Heading";
 export * from "./Icon";
 export * from "./Misc";
+export * from "./Image";

@@ -30,6 +30,11 @@ export default withMDX({
   compiler: {
     styledComponents: true,
   },
+  images: {
+    loader: "custom",
+    deviceSizes: [300, 600, 1200],
+    imageSizes: [],
+  },
   env: {
     year: new Date(Date.now()).getFullYear(),
   },

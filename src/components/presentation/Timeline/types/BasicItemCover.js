@@ -1,6 +1,5 @@
-import { Heading, Link } from "@components/core";
+import { Heading, Link, Image } from "@components/core";
 import styled from "@emotion/styled";
-import Image from "next/image";
 import { BasicItemWrapper, BasicBottom, ImageWrapper } from "./common";
 
 const CoverText = styled(Heading)({
@@ -14,7 +13,11 @@ export const BasicItemCover = ({ data }) => (
   <BasicItemWrapper>
     <Link href={data.route} variant="noStyle">
       <ImageWrapper center>
-        <Image src="/img/cover-images/default.jpeg" layout="fill" />
+        <Image
+          src="/img/cover-images/default.jpeg"
+          layout="fill"
+          sizes={{ md: "80vw", max: "700px" }}
+        />
         <CoverText size="xl">{data.title}</CoverText>
       </ImageWrapper>
     </Link>

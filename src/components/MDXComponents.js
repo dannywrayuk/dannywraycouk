@@ -6,8 +6,8 @@ import {
   Flex,
   LinkInternal,
   LinkButton,
+  Image,
 } from "@components/core";
-import Image from "next/image";
 
 const Square = styled.div(
   {
@@ -54,7 +54,7 @@ export const MDXComponents = {
   ol: As(Text, { as: "ol" }),
   li: As(Text, { as: "li" }),
   table: As(Text, { as: "table" }),
-  img: As(Image, { layout: "responsive" }),
+  img: As(Image, { layout: "responsive", sizes: { md: "80vw", max: "700px" } }),
   Swatch,
   Heading,
   Text,

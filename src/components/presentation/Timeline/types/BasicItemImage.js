@@ -1,5 +1,4 @@
-import { Link } from "@components/core";
-import Image from "next/image";
+import { Link, Image } from "@components/core";
 import { BasicBottom, BasicItemWrapper, ImageWrapper } from "./common";
 
 export const BasicItemImage = ({ data }) => {
@@ -9,7 +8,11 @@ export const BasicItemImage = ({ data }) => {
     <BasicItemWrapper>
       <Link href={data.route} variant="noStyle">
         <ImageWrapper>
-          <Image src={data.image} layout="fill" />
+          <Image
+            src={data.image}
+            layout="fill"
+            sizes={{ md: "80w", max: "700px" }}
+          />
         </ImageWrapper>
       </Link>
       <BasicBottom data={data} />

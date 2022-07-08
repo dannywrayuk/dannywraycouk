@@ -1,6 +1,5 @@
-import { Link, Heading, Text, Flex } from "@components/core";
+import { Link, Heading, Text, Flex, Image } from "@components/core";
 import styled from "@emotion/styled";
-import Image from "next/image";
 
 const Wrapper = styled.div({ marginBottom: "20px" });
 

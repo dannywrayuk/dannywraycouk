@@ -5,8 +5,10 @@
     "prestart": "npm run generate",
     "start": "next dev",
     "generate": "node ./src/script/generateMeta.js",
+    "generateImages": "node ./src/script/generateImages.js",
     "prebuild": "npm run generate",
     "build": "next build && next export",
+    "postbuild": "npm run generateImages",
     "serve": "serve ./out",
     "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\""
   },
@@ -33,6 +35,7 @@
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
+    "sharp": "^0.30.7",
     "shiki": "^0.10.1",
     "unist-util-find": "^1.0.2",
     "unist-util-visit": "^4.1.0",
