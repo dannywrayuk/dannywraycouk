@@ -6,6 +6,7 @@ import {
   Flex,
   LinkInternal,
   LinkButton,
+  Image,
 } from "@components/core";
 
 const Square = styled.div(
@@ -31,6 +32,13 @@ const SideNote = styled.div({
   padding: "20px 20px 0",
 });
 
+const ImageWrapper = styled.span({
+  display: "block",
+  position: "relative",
+  width: "100%",
+  height: "700px",
+});
+
 const As = (Component, addProps, css) => (props) => {
   const Styled = styled(Component)(css);
   return <Styled {...addProps} {...props} />;
@@ -46,6 +54,7 @@ export const MDXComponents = {
   ol: As(Text, { as: "ol" }),
   li: As(Text, { as: "li" }),
   table: As(Text, { as: "table" }),
+  img: As(Image, { layout: "responsive", sizes: { md: "80vw", max: "700px" } }),
   Swatch,
   Heading,
   Text,
@@ -75,12 +84,6 @@ const ParentStyles = styled.div(
     hr: {
       borderColor: "var(--feintGrey)",
       borderStyle: "solid",
-    },
-    "img:not([class])": {
-      maxWidth: "450px",
-      margin: "0 auto",
-      display: "block",
-      width: "100%",
     },
     li: {
       paddingLeft: "1.5em",
@@ -131,11 +134,6 @@ const ParentStyles = styled.div(
     },
     "h1,h2,h3,h4": {
       margin: "60px 0 20px",
-    },
-    "p img + em": {
-      display: "block",
-      textAlign: "center",
-      color: "var(--color-fg-subtle)",
     },
   },
   ({ data }) => ({

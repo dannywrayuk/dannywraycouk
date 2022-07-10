@@ -1,9 +1,10 @@
-import { Link, Heading, Text, Flex } from "@components/core";
+import { Link, Heading, Text, Flex, Image } from "@components/core";
 import styled from "@emotion/styled";
 
 const Wrapper = styled.div({ marginBottom: "20px" });
 
 const ImageWrapper = styled.div({
+  position: "relative",
   borderRadius: "1em",
   width: "100%",
   height: "fit-content",
@@ -11,17 +12,11 @@ const ImageWrapper = styled.div({
   aspectRatio: "16 / 9",
 });
 
-const Image = styled.img({
-  width: "100%",
-  height: "100%",
-  objectFit: "cover",
-});
-
 export const ProjectCard = ({ data }) => (
   <Wrapper>
     <Link href={data.route}>
       <ImageWrapper>
-        <Image src={data.image} />
+        <Image src={data.image} layout="fill" alt={data.alt} />
       </ImageWrapper>
     </Link>
     <Flex center column mt={10}>

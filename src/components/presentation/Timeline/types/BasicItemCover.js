@@ -1,14 +1,6 @@
-import { Heading, Link } from "@components/core";
+import { Heading, Link, Image } from "@components/core";
 import styled from "@emotion/styled";
-import { BasicItemWrapper, BasicBottom, Image, ImageWrapper } from "./common";
-
-const Cover = styled(ImageWrapper)({
-  position: "relative",
-});
-
-const CoverImage = styled(Image)({
-  position: "absolute",
-});
+import { BasicItemWrapper, BasicBottom, ImageWrapper } from "./common";
 
 const CoverText = styled(Heading)({
   textAlign: "center",
@@ -20,10 +12,15 @@ const CoverText = styled(Heading)({
 export const BasicItemCover = ({ data }) => (
   <BasicItemWrapper>
     <Link href={data.route} variant="noStyle">
-      <Cover center>
-        <CoverImage src="/img/cover-images/default.jpeg" />
+      <ImageWrapper center>
+        <Image
+          src="/img/cover-images/default.jpeg"
+          layout="fill"
+          sizes={{ md: "80vw", max: "700px" }}
+          alt="a generic patterned background"
+        />
         <CoverText size="xl">{data.title}</CoverText>
-      </Cover>
+      </ImageWrapper>
     </Link>
     <BasicBottom data={data} />
   </BasicItemWrapper>

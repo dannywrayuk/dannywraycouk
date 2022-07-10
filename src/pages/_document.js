@@ -3,7 +3,6 @@ import {
   GoogleFonts,
   GoogleAnalytics,
   ColorModeScript,
-  KatexScript,
 } from "@components/Head";
 
 export default () => (
@@ -19,7 +18,6 @@ export default () => (
           Karla: { weights: [400, 600, 700] },
         }}
       />
-      <KatexScript />
     </Head>
     <body>
       <Main />

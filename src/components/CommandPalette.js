@@ -50,7 +50,7 @@ const SearchInput = styled.input({
   outline: "none",
   padding: "0 25px",
   fontFamily: "var(--Sora)",
-  fontSize: "0.9rem",
+  fontSize: "1rem",
   borderBottom: "1px solid var(--color-border-default)",
 });
 

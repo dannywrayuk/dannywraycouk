@@ -1,6 +1,5 @@
 export const ColorModeScript = () => (
   <>
-    <link href="/globals.css" rel="stylesheet" />
     <script
       dangerouslySetInnerHTML={{
         __html: `

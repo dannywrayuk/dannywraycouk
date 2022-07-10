@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import remarkFrontMatter from "remark-frontmatter";
 import withShiki from "@stefanprobst/rehype-shiki";
 import shiki from "shiki";
+import rehypeImgSize from "rehype-img-size";
 
 const highlighter = await shiki.getHighlighter({ theme: "dark-plus" });
 
@@ -18,6 +19,7 @@ const withMDX = nextMdx({
       rehypeSlug,
       () => withShiki({ highlighter }),
       () => rehypeKatex({ strict: false }),
+      () => rehypeImgSize({ dir: "public" }),
     ],
     providerImportSource: "@mdx-js/react",
   },
@@ -27,6 +29,11 @@ export default withMDX({
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
+  },
+  images: {
+    loader: "custom",
+    deviceSizes: [300, 600, 1200],
+    imageSizes: [],
   },
   env: {
     year: new Date(Date.now()).getFullYear(),

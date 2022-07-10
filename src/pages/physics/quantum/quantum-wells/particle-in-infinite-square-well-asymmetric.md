@@ -114,7 +114,7 @@ $$
 	\end{aligned} \tag{2.3.5}
 $$
 
-[![]([data:figure231])](https://www.desmos.com/calculator/ooizwuua1f)
+`[![]([data:figure231])](https://www.desmos.com/calculator/ooizwuua1f)`
 
 A plot of the wavefunction.
 

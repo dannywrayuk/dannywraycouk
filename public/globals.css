@@ -84,10 +84,13 @@ html[colorMode="dark"] {
 
 :root {
   /* Font Families */
-  --Sora: "Sora", -apple-system, sans-serif;
-  --Inter: "Inter", -apple-system, sans-serif;
-  --Montserrat: "Montserrat", -apple-system, sans-serif;
-  --Karla: "Karla", -apple-system, sans-serif;
+
+  --system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --Sora: "Sora", var(--system-fonts);
+  --Inter: "Inter", var(--system-fonts);
+  --Montserrat: "Montserrat", var(--system-fonts);
+  --Karla: "Karla", var(--system-fonts);
 
   /* Colours */
   --color-brand-primary: #ffca1e;

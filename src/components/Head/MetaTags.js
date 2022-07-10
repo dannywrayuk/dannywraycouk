@@ -3,10 +3,7 @@ import Head from "next/head";
 export const CommonMetaTags = () => (
   <Head>
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <meta property="og:type" content="website" />
     {/* <meta name="theme-color" content="#ffca1e"></meta> */}
     <meta name="twitter:creator" content="@dannywrayuk" />
