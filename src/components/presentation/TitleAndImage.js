@@ -49,6 +49,7 @@ export const TitleAndImage = () => {
           layout="fill"
           priority
           sizes={{ sm: "200px", md: "300px", max: "600px" }}
+          alt="An image of me"
         />
       </MeImage>
       <Flex column rg={10}>

@@ -17,6 +17,7 @@ export const BasicItemCover = ({ data }) => (
           src="/img/cover-images/default.jpeg"
           layout="fill"
           sizes={{ md: "80vw", max: "700px" }}
+          alt={data.title}
         />
         <CoverText size="xl">{data.title}</CoverText>
       </ImageWrapper>

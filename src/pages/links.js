@@ -69,7 +69,7 @@ const Links = () => {
       <MetaTags meta={meta} />
       <DirectionFlip>
         <Flex center column>
-          <MeImage src="/img/me.jpeg" />
+          <MeImage src="/img/me.jpeg" alt="a picture of me" />
           <Heading>@dannywrayuk</Heading>
         </Flex>
         <Flex center rg="30px" column>

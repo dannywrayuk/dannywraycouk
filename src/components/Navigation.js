@@ -66,7 +66,7 @@ export const Navigation = () => {
         <Link href="/" variant="noStyle">
           <LogoText>danny.</LogoText>
         </Link>
-        <Menu onClick={setOpen}>
+        <Menu onClick={setOpen} aria-label="menu button">
           <Icon as={IoMenu} />
         </Menu>
       </Grid>

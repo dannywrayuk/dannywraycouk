@@ -16,7 +16,7 @@ export const ProjectCard = ({ data }) => (
   <Wrapper>
     <Link href={data.route}>
       <ImageWrapper>
-        <Image src={data.image} layout="fill" />
+        <Image src={data.image} layout="fill" alt={data.title} />
       </ImageWrapper>
     </Link>
     <Flex center column mt={10}>

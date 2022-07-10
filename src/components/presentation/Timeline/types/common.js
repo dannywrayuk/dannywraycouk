@@ -22,7 +22,7 @@ export const BasicBottom = ({ data }) => (
     </Heading>
     <Text>{data.abstract}</Text>
     {data.tags && (
-      <Text color="var(--color-fg-subtle)">
+      <Text color="var(--color-fg-muted)">
         <Mapper data={data.tags} Component={Tag} />
       </Text>
     )}
