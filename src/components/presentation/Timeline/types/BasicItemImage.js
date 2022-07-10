@@ -12,7 +12,7 @@ export const BasicItemImage = ({ data }) => {
             src={data.image}
             layout="fill"
             sizes={{ md: "80w", max: "700px" }}
-            alt={data.title}
+            alt={data.alt}
           />
         </ImageWrapper>
       </Link>
