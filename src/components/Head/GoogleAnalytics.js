@@ -5,7 +5,6 @@ export const GoogleAnalytics = () => {
     <>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-TC3WVHZ3S7" />
       <Script
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
