@@ -54,7 +54,16 @@ export const MDXComponents = {
   ol: As(Text, { as: "ol" }),
   li: As(Text, { as: "li" }),
   table: As(Text, { as: "table" }),
-  img: As(Image, { layout: "responsive", sizes: { md: "80vw", max: "700px" } }),
+  img: (props) =>
+    props.width ? (
+      <Image
+        layout="responsive"
+        sizes={{ md: "80vw", max: "700px" }}
+        {...props}
+      />
+    ) : (
+      <img {...props} />
+    ),
   Swatch,
   Heading,
   Text,
@@ -126,6 +135,10 @@ const ParentStyles = styled.div(
       padding: "5px 15px",
       border: "solid 1px var(--color-border-default)",
       backgroundColor: "var(--color-bg-default)",
+    },
+    "td img[alt~='icon']": {
+      width: "32px",
+      display: "block",
     },
     ul: {
       listStylePosition: "inside",
