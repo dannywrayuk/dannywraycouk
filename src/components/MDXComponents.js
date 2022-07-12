@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import {
   Heading,
@@ -7,7 +8,12 @@ import {
   LinkInternal,
   LinkButton,
   Image,
+  Button,
+  Icon,
 } from "@components/core";
+import { AiOutlinePaperClip } from "react-icons/ai";
+import { BsCheck } from "react-icons/bs";
+import { mq } from "@utils/breakpoints";
 
 const Square = styled.div(
   {
@@ -32,12 +38,52 @@ const SideNote = styled.div({
   padding: "20px 20px 0",
 });
 
-const ImageWrapper = styled.span({
-  display: "block",
-  position: "relative",
-  width: "100%",
-  height: "700px",
+const CopyButton = styled(Button)({
+  position: "absolute",
+  right: -15,
+  top: -15,
+  padding: "8px",
+  color: "#c9d1d9",
+  borderRadius: "0.5em",
+  backgroundColor: "#343941",
+  transition: "0.3s",
+  ":hover": {
+    backgroundColor: "#57606a",
+  },
 });
+
+const Relative = styled.div({ position: "relative" });
+
+const CodeWithClipboard = (props) => {
+  const [copied, setCopied] = useState(false);
+  const contentRef = useRef(false);
+
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 5000);
+    }
+  }, [copied]);
+  return (
+    <Relative>
+      <CopyButton
+        aria-label="Copy to clipboard"
+        onClick={() => {
+          navigator.clipboard.writeText(contentRef.current.innerText);
+          setCopied(true);
+        }}
+      >
+        {copied ? (
+          <Icon as={BsCheck} color="lime" />
+        ) : (
+          <Icon as={AiOutlinePaperClip} />
+        )}
+      </CopyButton>
+      <pre ref={contentRef} {...props} />
+    </Relative>
+  );
+};
 
 const As = (Component, addProps, css) => (props) => {
   const Styled = styled(Component)(css);
@@ -64,6 +110,7 @@ export const MDXComponents = {
     ) : (
       <img {...props} />
     ),
+  pre: CodeWithClipboard,
   Swatch,
   Heading,
   Text,
@@ -82,16 +129,21 @@ const ParentStyles = styled.div(
       margin: "0 0.2em 0.25em -1.2em",
     },
     blockquote: {
-      borderLeft: "0.25em solid var(--feintGrey)",
+      borderLeft: "0.25em solid var(--color-bg-muted)",
       padding: "0 1em",
-      color: "var(--midGrey)",
+      color: "var(--color-fg-muted)",
+      backgroundColor: "var(--color-bg-default)",
+      marginBottom: "20px",
+    },
+    "blockquote p": {
+      margin: 0,
     },
     code: {
       padding: "2px 3px",
       borderRadius: "5px",
     },
     hr: {
-      borderColor: "var(--feintGrey)",
+      borderColor: "var(--color-bg-muted)",
       borderStyle: "solid",
     },
     li: {
@@ -105,16 +157,20 @@ const ParentStyles = styled.div(
     pre: {
       display: "flex",
       flexDirection: "column",
-      padding: "20px 30px",
+      padding: "20px 10px",
+      marginBottom: "20px",
       borderRadius: "5px",
       fontSize: "0.9rem",
       lineHeight: "1.5em",
       overflowX: "auto",
+      [mq.md]: {
+        padding: "20px 30px",
+      },
     },
     p: {
       marginBottom: "20px",
     },
-    "> p": {
+    "> p,li": {
       backgroundColor: "var(--color-bg-default)",
       borderRadius: "1em",
     },
