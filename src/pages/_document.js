@@ -1,15 +1,10 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import {
-  GoogleFonts,
-  GoogleAnalytics,
-  ColorModeScript,
-} from "@components/Head";
+import { GoogleFonts, ColorModeScript } from "@components/Head";
 
 export default () => (
   <Html lang="en">
     <Head>
       <ColorModeScript />
-      <GoogleAnalytics />
       <GoogleFonts
         fonts={{
           Sora: { weights: [400, 600, 700] },

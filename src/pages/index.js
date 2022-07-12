@@ -24,6 +24,6 @@ export default Home;
 export const getStaticProps = () => ({
   props: {
     // pinnedPosts: getMetadataById(["welcome", "this_site"]),
-    childPosts: getMetadataByRoute("/+(thoughts|projects)/*"),
+    childPosts: getMetadataByRoute("/+(thoughts|projects|snippets)/*"),
   },
 });

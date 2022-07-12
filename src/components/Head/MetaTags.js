@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export const CommonMetaTags = () => (
   <Head>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
     <meta property="og:type" content="website" />
     {/* <meta name="theme-color" content="#ffca1e"></meta> */}
