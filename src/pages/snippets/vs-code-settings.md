@@ -8,7 +8,13 @@ tags:
   - VS Code
 keywords:
   - settings
+  - visual studio code
+  - extension
 ---
+
+There have been a few times now, either setting up a new laptop or helping out a friend, where I've needed a copy of my vscode settings. But when I dig into my settings it's hard to tell which ones are important, and I typically end up missing some.
+
+I thought I'd do my future self a favour and create a reference copy of settings, along with some of the extensions I like.
 
 ## settings.json
 
