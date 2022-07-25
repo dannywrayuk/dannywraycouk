@@ -19,3 +19,4 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
+    secrets: inherit
