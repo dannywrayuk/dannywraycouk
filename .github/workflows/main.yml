@@ -1,7 +1,13 @@
 name: Build and Deploy
 on:
+  pull_request:
+    branches: master
+    paths-ignore:
+      - "README.md"
+      - ".gitignore"
+      - "infrastructure/**"
   push:
-    branches: [master, develop]
+    branches: master
     paths-ignore:
       - "README.md"
       - ".gitignore"
@@ -10,7 +16,7 @@ on:
 
 jobs:
   build-app:
-    name: 🏗
+    name: 🛠
     uses: ./.github/workflows/build-app.yml
 
   deploy:
