@@ -1,0 +1,23 @@
+name: Build App
+on:
+  workflow_call:
+
+jobs:
+  build-app:
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build and Export
+        run: npm run build
+
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: app
+          path: out
