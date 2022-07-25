@@ -10,26 +10,11 @@ on:
 
 jobs:
   build-app:
-    name: Build App
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build and Export
-        run: npm run build
-
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: app
-          path: out
+    name: 🏗
+    uses: ./.github/workflows/build-app.yml
 
   deploy:
-    name: Deploy
+    name: 🚀
     needs: build-app
     uses: ./.github/workflows/deploy.yml
     with:
