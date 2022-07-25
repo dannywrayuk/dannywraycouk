@@ -11,11 +11,11 @@ on:
 jobs:
   build-app:
     name: Build App
-    uses: ./.github/workflows/build-app.yml
+    uses: ./.github/workflows/build-app
 
   deploy:
     name: Deploy
     needs: build-app
-    uses: ./.github/workflows/deploy.yml
-      with:
-        environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
+    uses: ./.github/workflows/deploy
+    with:
+      environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
