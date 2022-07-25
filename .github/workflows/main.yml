@@ -31,7 +31,6 @@ jobs:
   deploy:
     name: Deploy
     needs: build-app
-    environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
     uses: ./.github/workflows/deploy.yml
     with:
       environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
