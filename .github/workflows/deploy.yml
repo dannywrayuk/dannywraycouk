@@ -19,7 +19,7 @@ jobs:
           aws-region: eu-west-2
 
       - name: Download Artifact
-        uses: actions/download-artifact@master
+        uses: actions/download-artifact@v3
         with:
           name: app
           path: out

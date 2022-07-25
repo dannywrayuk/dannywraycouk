@@ -13,13 +13,13 @@ jobs:
     name: Build App
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/build-app
+      - uses: ./.github/workflows/build-app.yml
 
   deploy:
     name: Deploy
     needs: build-app
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/deploy
+      - uses: ./.github/workflows/deploy.yml
         with:
           environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
