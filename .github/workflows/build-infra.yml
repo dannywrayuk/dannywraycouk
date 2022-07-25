@@ -1,21 +1,13 @@
-name: Cloudfront Function
+name: Build Infrastructure
 on:
-  push:
-    branches: [rebrand]
-    paths:
-      - "infrastructure/**"
-      - ".github/workflows/cloudfront.yml"
   workflow_dispatch:
 
 jobs:
-  build:
+  build-infra:
+    name: Build Infrastructure
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
       - uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}

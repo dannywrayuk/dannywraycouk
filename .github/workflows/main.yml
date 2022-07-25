@@ -1,36 +1,25 @@
-name: Web Content
+name: Build and Deploy
 on:
   push:
     branches: [master, develop]
     paths-ignore:
-      - "infrastructure/**"
       - "README.md"
       - ".gitignore"
+      - "infrastructure/**"
   workflow_dispatch:
 
 jobs:
-  build:
+  build-app:
+    name: Build App
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: ./.github/workflows/build-app
+
+  deploy:
+    name: Deploy
+    needs: build-app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/deploy
         with:
-          node-version: 16
-      - uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-west-2
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build and Export
-        run: npm run build
-
-      - name: Deploy Dev
-        run: aws s3 sync --delete ./out s3://${{ secrets.S3_URL }}
-
-      - name: Invalidate Cloudfront
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_ID }} --paths '/*'
+          environment: ${{ github.ref_name == 'master' && 'prod' || 'dev'}}
