@@ -25,6 +25,7 @@ I thought I'd do my future self a favour and create a reference copy of settings
 
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
 
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
@@ -40,16 +41,19 @@ I thought I'd do my future self a favour and create a reference copy of settings
   "terminal.integrated.tabs.enabled": false,
 
   "files.associations": {
-    "*.mdx": "markdown"
+    "*.mdx": "markdown",
+    "*.snap": "javascript"
   },
   "[markdown]": {
     "editor.wordWrap": "off"
   },
+  "extensions.ignoreRecommendations": true,
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "projectManager.git.baseFolders": ["~/Documents"],
 
-  "workbench.panel.defaultLocation": "right"
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.untitled.hint": "hidden"
 }
 ```
 
