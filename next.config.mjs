@@ -1,31 +1,7 @@
-import nextMdx from "@next/mdx";
-import mdxWrapperPlugin from "./src/utils/mdxWrapperPlugin.mjs";
-import rehypeKatex from "rehype-katex";
-import rehypeSlug from "rehype-slug";
-import remarkMath from "remark-math";
-import remarkGfm from "remark-gfm";
-import remarkFrontMatter from "remark-frontmatter";
-import withShiki from "@stefanprobst/rehype-shiki";
-import shiki from "shiki";
-import rehypeImgSize from "rehype-img-size";
+import { remarkPlugins, rehypePlugins } from "./plugins/mdPlugins.mjs";
+import metadataMutator from "./script/addExtraMetadata.js";
 
-const highlighter = await shiki.getHighlighter({ theme: "dark-plus" });
-
-const withMDX = nextMdx({
-  extension: /\.mdx|\.md?$/,
-  options: {
-    remarkPlugins: [mdxWrapperPlugin, remarkMath, remarkGfm, remarkFrontMatter],
-    rehypePlugins: [
-      rehypeSlug,
-      () => withShiki({ highlighter }),
-      () => rehypeKatex({ strict: false }),
-      () => rehypeImgSize({ dir: "public" }),
-    ],
-    providerImportSource: "@mdx-js/react",
-  },
-});
-
-export default withMDX({
+export default {
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
@@ -33,10 +9,35 @@ export default withMDX({
   images: {
     loader: "custom",
     deviceSizes: [300, 600, 1200],
-    imageSizes: [],
+    imageSizes: [300],
   },
   env: {
     year: new Date(Date.now()).getFullYear(),
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-});
+  webpack: (config, options) => {
+    config.resolve.fallback = { fs: false };
+    config.module.rules.push({
+      test: /\.mdx?$/,
+      use: [
+        options.defaultLoaders.babel,
+        {
+          loader: "@mdx-js/loader",
+          options: {
+            remarkPlugins,
+            rehypePlugins,
+            providerImportSource: "@mdx-js/react",
+            format: "mdx",
+          },
+        },
+        {
+          loader: "./plugins/md-layout-loader",
+          options: {
+            metadataMutator,
+          },
+        },
+      ],
+    });
+    return config;
+  },
+};
