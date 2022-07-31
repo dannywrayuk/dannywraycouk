@@ -1,7 +1,7 @@
 const sharp = require("sharp");
 const minimatch = require("minimatch");
-const getTree = require("./getTree");
 const path = require("path");
+const getTree = require("./getTree");
 
 const sizes = [300, 600, 1200];
 

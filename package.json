@@ -2,29 +2,25 @@
   "name": "dannywraycouk",
   "version": "2.0.0",
   "scripts": {
-    "prestart": "npm run generate",
+    "prestart": "npm run generateMetadata",
     "start": "next dev",
-    "generate": "node ./src/script/generateMeta.js",
-    "generateImages": "node ./src/script/generateImages.js",
-    "prebuild": "npm run generate",
+    "prebuild": "npm run generateMetadata",
     "build": "next build && next export",
     "postbuild": "npm run generateImages",
     "serve": "serve ./out",
-    "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\""
+    "lint": "pretty-quick --pattern \"./**/*.(js|json|ts|tsx)\"",
+    "generateMetadata": "node ./script/generateMetadata.js",
+    "generateImages": "node ./script/generateImages.js"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mdx-js/loader": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
-    "@next/mdx": "^12.1.5",
     "@stefanprobst/rehype-shiki": "^2.2.0",
     "fuse.js": "^6.6.0",
     "gray-matter": "^4.0.3",
     "keyword-extractor": "^0.0.21",
-    "mdast-util-from-markdown": "^1.2.0",
-    "mdast-util-mdx": "^2.0.0",
-    "micromark-extension-mdxjs": "^1.0.0",
     "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -36,10 +32,7 @@
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "sharp": "^0.30.7",
-    "shiki": "^0.10.1",
-    "unist-util-find": "^1.0.2",
-    "unist-util-visit": "^4.1.0",
-    "unist-util-visit-parents": "^5.1.0"
+    "shiki": "^0.10.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
