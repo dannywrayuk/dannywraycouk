@@ -38,6 +38,7 @@ I thought I'd do my future self a favour and create a reference copy of settings
   "git.confirmSync": false,
 
   "editor.hover.enabled": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "terminal.integrated.tabs.enabled": false,
 
   "files.associations": {
