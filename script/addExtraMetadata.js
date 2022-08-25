@@ -50,9 +50,9 @@ const generateKeywords = (content) => {
 };
 
 module.exports = (fm, path, content) => ({
+  ...fm,
   id: generateId(path),
   route: generateRoute(path),
-  ...fm,
   dateString: generateDateString(fm.date),
   generatedKeywords: generateKeywords(content),
 });
