@@ -31,7 +31,7 @@ export default {
           },
         },
         {
-          loader: "./plugins/md-layout-loader",
+          loader: "@dannywrayuk/md-layout-loader",
           options: {
             metadataMutator,
           },
