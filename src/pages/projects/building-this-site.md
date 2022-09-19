@@ -16,3 +16,4 @@ You can see the whole source over on [GitHub](https://github.com/dannywrayuk/dan
 ### Related Posts
 
 - [Welcome!](/thoughts/welcome)
+- [Building a Markdown layout loader](/thoughts/building-a-md-layout-loader)
