@@ -2,8 +2,10 @@ export const ColorModeScript = () => (
   <script
     dangerouslySetInnerHTML={{
       __html: `
-          const mode = localStorage.getItem('colorMode');
-          document.documentElement.setAttribute('colorMode', mode ? mode : "light");`,
+          const manual = localStorage.getItem('colorMode');
+          const preference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const mode = manual ? manual : (preference ? "dark" : "light" );
+          document.documentElement.setAttribute('colorMode', mode);`,
     }}
   />
 );
