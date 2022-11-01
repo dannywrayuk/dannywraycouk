@@ -79,7 +79,7 @@ const Links = () => {
               <Text>Email</Text>
             </Flex>
           </StyledLink>
-          <StyledLink bg="twitter" href="/">
+          <StyledLink bg="twitter" href={links.twitter}>
             <Flex cg={10} _css={{ paddingRight: "16px" }} center>
               <Icon as={AiOutlineTwitter} />
               <Text>Twitter</Text>
