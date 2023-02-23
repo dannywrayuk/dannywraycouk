@@ -6,7 +6,7 @@
 
 # A little about me
 
-Hey, I'm Danny. I'm currently a software engineer at Capital One. I'm passionate about web development and all things javascript.
+Hey, I'm Danny. I'm currently a software engineer at The Lego Group. I'm passionate about web development and all things javascript.
 
 ![A picture of me on a boat](/img/boat_image.jpeg) _Highfields Park_
 
