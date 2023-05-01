@@ -14,3 +14,17 @@ export const Button = styled.button(
   boxProps,
   useCSSProp
 );
+
+export const YellowButton = styled.button(
+  {
+    background: "var(--color-brand-primary)",
+    border: "none",
+    borderRadius: "5px",
+    color: "black",
+    display: "block",
+    cursor: "pointer",
+    padding: "5px 10px",
+  },
+  boxProps,
+  useCSSProp
+);
