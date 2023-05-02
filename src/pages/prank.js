@@ -96,7 +96,7 @@ const Prank = () => {
       playSound();
       setInterval(() => {
         playSound();
-      }, frequency * 1000 * 60);
+      }, frequency * 1000);
     }, delay * 1000 * 60);
   };
 
