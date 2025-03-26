@@ -28,7 +28,7 @@ const IntroText = styled(Text)({
 const EmojiBanner = () => (
   <Flex cg={15} rg={10} flexWrap center>
     <Text weight={600} center>
-      👨🏻‍💻 Software Engineer at The Lego Group.
+      👨🏻‍💻 Software Engineer at Monzo (ex-LEGO btw).
     </Text>
     <Text weight={600} center>
       📍 London, UK.
@@ -42,8 +42,7 @@ const EmojiBanner = () => (
 const IntroBanner = () => (
   <BorderBox bg="bg-default">
     <IntroText>
-      I love javascript and building websites. I'm currently working full stack
-      to enhance the VIP experience at The Lego Group.
+      I love javascript and building websites. I'm currently working at Monzo.
     </IntroText>
     <FloatingBubble href="/about" variant="noStyle" noWrap>
       <Text>
